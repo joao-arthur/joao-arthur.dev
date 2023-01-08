@@ -1,12 +1,13 @@
 import { useState } from "preact/hooks";
 import { Button } from "../components/Button.tsx";
 
-interface CounterProps {
-  start: number;
-}
+type propsType = {
+  readonly start: number;
+};
 
-export default function Counter(props: CounterProps) {
+export default function Counter(props: propsType) {
   const [count, setCount] = useState(props.start);
+
   return (
     <div class="flex gap-2 w-full">
       <p class="flex-grow-1 font-bold text-xl">{count}</p>
