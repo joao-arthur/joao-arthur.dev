@@ -9,7 +9,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <header>
-                <nav>
+                <nav className='flex justify-around bg-red-800'>
                     <Link href={'about'}>about</Link>
                     <Link href={'blog'}>blog</Link>
                     <Link href={'projects'}>projects</Link>
