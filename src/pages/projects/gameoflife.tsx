@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { Header } from '@/components/Header';
+import { H1 } from '@/components/H1';
+import { Footer } from '@/components/Footer';
 
 export default function GameOfLife() {
     return (
@@ -9,7 +11,10 @@ export default function GameOfLife() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active='projects' />
-            <h1>Game Of Life</h1>
+            <main className='h-full'>
+                <H1>Game Of Life</H1>
+            </main>
+            <Footer />
         </>
     );
 }

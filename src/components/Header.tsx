@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
 type propsType = {
-    active: 'about' | 'blog' | 'projects';
+    readonly active: 'about' | 'blog' | 'projects';
 }
 
 export function Header({ active }: propsType) {
     return (
-        <header className='w-1/3 mx-auto pt-3 pb-10'>
+        <header className='w-1/3 mx-auto pt-3 pb-8'>
             <nav className='flex justify-around'>
                 <Link className={active === 'about' ? 'underline' : ''} href='/'>
                     about
