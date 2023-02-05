@@ -6,16 +6,16 @@ type propsType = {
 
 export function Header({ active }: propsType) {
     return (
-        <header className='w-1/3 m-auto pt-3'>
+        <header className='w-1/3 mx-auto pt-3 pb-10'>
             <nav className='flex justify-around'>
                 <Link className={active === 'about' ? 'underline' : ''} href='/'>
                     about
                 </Link>
-                <Link className={active === 'blog' ? 'underline' : ''} href='/blog'>
-                    blog
-                </Link>
                 <Link className={active === 'projects' ? 'underline' : ''} href='/projects'>
                     projects
+                </Link>
+                <Link className={active === 'blog' ? 'underline' : ''} href='/blog'>
+                    blog
                 </Link>
             </nav>
         </header>
