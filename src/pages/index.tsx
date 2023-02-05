@@ -1,33 +1,29 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import { Header } from '@/components/Header';
 
-export default function Home() {
+export default function About() {
     return (
-        <div>
+        <>
             <Head>
-                <title>João Arthur</title>
+                <title>About | João Arthur</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header>
-                <nav className='flex justify-around bg-red-800'>
-                    <Link href={'about'}>about</Link>
-                    <Link href={'blog'}>blog</Link>
-                    <Link href={'projects'}>projects</Link>
-                </nav>
-            </header>
+            <Header active='about' />
             <main>
                 <p>
                     Passionate about great code
                 </p>
                 <h2>I know</h2>
                 <ul>
-                    <li>typescript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
                 </ul>
                 <h2>I want to learn</h2>
                 <ul>
-                    <li>rust</li>
-                    <li>zig</li>
-                    <li>elixir</li>
+                    <li>Rust</li>
+                    <li>Zig</li>
+                    <li>Elixir</li>
+                    <li>Svelte</li>
                 </ul>
                 <h2>I'm good at</h2>
                 <ul>
@@ -40,6 +36,6 @@ export default function Home() {
                     Github
                 </a>
             </footer>
-        </div>
+        </>
     );
 }

@@ -1,5 +1,15 @@
+import Head from 'next/head';
+import { Header } from '@/components/Header';
+
 export default function GameOfLife() {
     return (
-        <h1>game of life</h1>
+        <>
+            <Head>
+                <title>Game Of Life | João Arthur</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Header active='projects' />
+            <h1>Game Of Life</h1>
+        </>
     );
 }
