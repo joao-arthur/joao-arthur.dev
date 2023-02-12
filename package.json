@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsc --project tsconfig.scripts.json && node ./dist/posts.js",
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint --fix"
@@ -14,9 +15,11 @@
     "classnames": "^2.3.2",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.5"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@typescript-eslint/eslint-plugin": "5.50.0",
