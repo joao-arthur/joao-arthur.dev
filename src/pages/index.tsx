@@ -20,81 +20,81 @@ export default function About() {
                 </H1>
                 <H2>Languages</H2>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>TypeScript</span>
-                    <span className='w-1/6'>Advanced</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>TypeScript</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Advanced</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={100} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Java</span>
-                    <span className='w-1/6'>Intermediate</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Java</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Intermediate</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={75} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Rust</span>
-                    <span className='w-1/6'>Basics</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Rust</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Basics</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={50} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Zig</span>
-                    <span className='w-1/6'>Hello World</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Zig</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Elixir</span>
-                    <span className='w-1/6'>Hello World</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Elixir</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
                 </div>
                 <H2>Frontend</H2>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>React</span>
-                    <span className='w-1/6'>Advanced</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>React</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Advanced</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={100} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Next.js</span>
-                    <span className='w-1/6'>Basics</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Next.js</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Basics</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={50} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Svelte</span>
-                    <span className='w-1/6'>Hello World</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Svelte</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Sveltekit</span>
-                    <span className='w-1/6'>Hello World</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>SvelteKit</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
                 </div>
                 <H2>Backend</H2>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>NestJS</span>
-                    <span className='w-1/6'>Intermediate</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>NestJS</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Intermediate</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={75} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
-                    <span className='w-1/6'>Spring</span>
-                    <span className='w-1/6'>Intermediate</span>
-                    <div className='w-4/6 text-center'>
+                    <span style={{ flex: '1 1 0', minWidth: 80 }}>Spring</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Intermediate</span>
+                    <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={75} />
                     </div>
                 </div>

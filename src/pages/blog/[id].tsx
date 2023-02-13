@@ -35,10 +35,10 @@ export default function BlogPost({ md }: propsType) {
 export async function getStaticPaths() {
     const postsDirectory = path.join(process.cwd(), 'public/posts.json');
     const json = await fs.readFile(postsDirectory, 'utf8');
-    const posts: string[] = JSON.parse(json);
+    const posts: { name: string, title: string }[] = JSON.parse(json);
     const paths = posts
         .map(post => ({
-            params: { id: post },
+            params: { id: post.name },
         }));
 
     return { paths, fallback: false };

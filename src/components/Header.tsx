@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 
 type propsType = {
@@ -8,16 +9,31 @@ export function Header({ active }: propsType) {
     return (
         <header className='w-1/3 mx-auto pt-3 pb-8'>
             <nav className='flex justify-around'>
-                <Link className={active === 'about' ? 'underline' : ''} href='/'>
+                <Link className={classNames(
+                    {
+                        underline: active === 'about',
+                    },
+                    'px-4',
+                )} href='/'>
                     about
                 </Link>
-                <Link className={active === 'projects' ? 'underline' : ''} href='/projects'>
+                <Link className={classNames(
+                    {
+                        underline: active === 'projects',
+                    },
+                    'px-4',
+                )} href='/projects'>
                     projects
                 </Link>
-                <Link className={active === 'blog' ? 'underline' : ''} href='/blog'>
+                <Link className={classNames(
+                    {
+                        underline: active === 'blog',
+                    },
+                    'px-4',
+                )} href='/blog'>
                     blog
                 </Link>
-            </nav>
-        </header>
+            </nav >
+        </header >
     );
 }
