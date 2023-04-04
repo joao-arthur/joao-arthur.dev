@@ -6,11 +6,14 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { H1 } from '@/components/H1';
 
-type propsType = {
-    readonly posts: readonly { name: string, title: string }[];
+type props = {
+    readonly posts: readonly {
+        name: string;
+        title: string
+    }[];
 }
 
-export default function Blog({ posts }: propsType) {
+export default function Blog({ posts }: props) {
     function formatDate(name: string): string {
         const [year, month, day] = name.split('-');
         return new Date(

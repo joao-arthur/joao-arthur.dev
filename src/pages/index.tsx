@@ -21,35 +21,35 @@ export default function About() {
                 <H2>Languages</H2>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>TypeScript</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Advanced</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>advanced</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={100} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Java</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Intermediate</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>intermediate</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={75} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Rust</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Basics</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>basics</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={50} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Zig</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>hello world</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Elixir</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>hello world</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
@@ -57,28 +57,28 @@ export default function About() {
                 <H2>Frontend</H2>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>React</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Advanced</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>advanced</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={100} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Next.js</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Basics</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>basics</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={50} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Svelte</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>hello world</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>SvelteKit</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Hello World</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>hello world</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={25} />
                     </div>
@@ -86,14 +86,14 @@ export default function About() {
                 <H2>Backend</H2>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>NestJS</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Intermediate</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>intermediate</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={75} />
                     </div>
                 </div>
                 <div className='flex flex-row items-center py-1'>
                     <span style={{ flex: '1 1 0', minWidth: 80 }}>Spring</span>
-                    <span style={{ flex: '1 1 0', minWidth: 100 }}>Intermediate</span>
+                    <span style={{ flex: '1 1 0', minWidth: 100 }}>intermediate</span>
                     <div style={{ flex: '4 1 0', minWidth: 0 }}>
                         <Progress percentual={75} />
                     </div>

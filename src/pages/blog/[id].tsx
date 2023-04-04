@@ -6,7 +6,7 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
-type propsType = {
+type props = {
     md: string;
 };
 
@@ -14,7 +14,7 @@ type staticPropsType = {
     id: string;
 };
 
-export default function BlogPost({ md }: propsType) {
+export default function BlogPost({ md }: props) {
     return (
         <>
             <Head>

@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-type propsType = {
+type props = {
     readonly children: ReactNode;
 }
 
-export function Topic({ children }: propsType) {
+export function Topic({ children }: props) {
     return (
         <span className='px-3 py-1 mx-1 inline-block'>
             {children}

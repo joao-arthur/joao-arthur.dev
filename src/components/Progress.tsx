@@ -1,10 +1,10 @@
 import classnames from 'classnames';
 
-type propsType = {
+type props = {
     readonly percentual: number;
 }
 
-export function Progress({ percentual }: propsType) {
+export function Progress({ percentual }: props) {
     return (
         <div
             className={
@@ -16,7 +16,6 @@ export function Progress({ percentual }: propsType) {
                         'bg-green-500': percentual > 75 && percentual <= 100,
                     },
                 )
-
             }
             style={{
                 width: `${percentual}%`,
