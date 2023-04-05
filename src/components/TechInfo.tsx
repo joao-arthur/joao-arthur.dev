@@ -1,4 +1,4 @@
-import { Progress } from "./Progress";
+import { Progress } from './Progress';
 
 type props = {
     readonly name: string;
@@ -32,5 +32,5 @@ export function TechInfo({ name, level }: props) {
                 <Progress percentual={percentual()} />
             </div>
         </>
-    )
+    );
 }
