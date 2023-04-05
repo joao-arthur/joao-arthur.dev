@@ -13,7 +13,7 @@ export function Progress({ percentual }: props) {
                         'bg-red-500': percentual <= 25,
                         'bg-orange-500': percentual > 25 && percentual <= 50,
                         'bg-yellow-500': percentual > 50 && percentual <= 75,
-                        'bg-green-500': percentual > 75 && percentual <= 100,
+                        'bg-green-500': percentual > 75,
                     },
                 )
             }
