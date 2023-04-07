@@ -1,22 +1,26 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import type { ReactElement } from "react";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-export function Footer() {
+export function Footer(): ReactElement {
     return (
-        <footer className='flex justify-center pb-2 items-center'>
-            <a className='mx-3'
+        <footer className="flex justify-center pb-2 items-center">
+            <a
+                className="mx-3"
                 href="http://github.com/joao-arthur"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+            >
                 <AiFillGithub size={30} />
             </a>
             <a
-                className='mx-3'
+                className="mx-3"
                 href="https://www.linkedin.com/in/joao-lothamer"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+            >
                 <AiFillLinkedin size={30} />
             </a>
-            <span className='mx-3 select-none'>João Arthur</span>
+            <span className="mx-3 select-none">João Arthur</span>
         </footer>
     );
 }
