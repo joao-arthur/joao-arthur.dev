@@ -1,12 +1,7 @@
 import type { ReactElement } from "react";
 import path from "path";
 import fs from "fs/promises";
-import type {
-    GetStaticPaths,
-    GetStaticPathsContext,
-    GetStaticPathsResult,
-    GetStaticPropsContext,
-} from "next";
+import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Header } from "@/components/Header";

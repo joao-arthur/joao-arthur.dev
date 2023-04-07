@@ -12,8 +12,12 @@ export default function GameOfLife(): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="projects" />
-            <main className="h-full">
+            <main className="h-full w-full flex flex-col">
                 <H1>Game Of Life</H1>
+                <iframe
+                    src="/game-of-life/index.html"
+                    className="w-full h-full"
+                />
             </main>
             <Footer />
         </>
