@@ -1,11 +1,11 @@
 import type { ReactElement } from "react";
 import classnames from "classnames";
 
-type props = {
+type propsType = {
     readonly percentual: number;
 };
 
-export function Progress({ percentual }: props): ReactElement {
+export function Progress({ percentual }: propsType): ReactElement {
     return (
         <div
             className={classnames("rounded-xl h-5", {

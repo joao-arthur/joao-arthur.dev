@@ -1,13 +1,13 @@
 import type { ReactElement } from "react";
+import type { GetStaticPropsContext } from "next";
 import path from "path";
 import fs from "fs/promises";
-import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-type props = {
+type propsType = {
     md: string;
 };
 
@@ -15,7 +15,7 @@ type staticPropsType = {
     id: string;
 };
 
-export default function BlogPost({ md }: props): ReactElement {
+export default function BlogPost({ md }: propsType): ReactElement {
     return (
         <>
             <Head>
@@ -53,7 +53,7 @@ export async function getStaticPaths(): Promise<{
 
 export async function getStaticProps(
     context: GetStaticPropsContext<staticPropsType>,
-): Promise<{ props: props }> {
+): Promise<{ props: propsType }> {
     const post = path.join(
         process.cwd(),
         `public/blog/${context.params?.id}.md`,

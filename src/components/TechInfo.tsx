@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import { Progress } from "./Progress";
 
-type props = {
+type propsType = {
     readonly name: string;
     readonly level:
         | "HELLO_WORLD"
@@ -10,7 +10,7 @@ type props = {
         | "ADVANCED";
 };
 
-export function TechInfo({ name, level }: props): ReactElement {
+export function TechInfo({ name, level }: propsType): ReactElement {
     function description():
         | "hello world"
         | "basics"

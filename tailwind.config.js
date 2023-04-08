@@ -6,7 +6,11 @@ module.exports = {
     theme: {
         extend: {},
     },
+    variants: {
+        imageRendering: ['responsive'],
+    },
     plugins: [
         require('@tailwindcss/typography'),
+        require('tailwindcss-image-rendering')()
     ],
 };

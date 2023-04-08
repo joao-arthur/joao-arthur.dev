@@ -1,10 +1,18 @@
 import type { ReactElement } from "react";
+
+import path from "path";
+import fs from "fs/promises";
+
 import Head from "next/head";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Header } from "@/components/Header";
-import { H1 } from "@/components/H1";
 import { Footer } from "@/components/Footer";
 
-export default function GameOfLife(): ReactElement {
+type propsType = {
+    md: string;
+};
+
+export default function GameOfLife({ md }: propsType): ReactElement {
     return (
         <>
             <Head>
@@ -12,8 +20,12 @@ export default function GameOfLife(): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="projects" />
-            <main className="h-full w-full flex flex-col">
-                <H1>Game Of Life</H1>
+            <main className="h-full w-full">
+                <div className="prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated">
+                    <ReactMarkdown>
+                        {md}
+                    </ReactMarkdown>
+                </div>
                 <iframe
                     src="/game-of-life/index.html"
                     className="w-full h-full"
@@ -22,4 +34,20 @@ export default function GameOfLife(): ReactElement {
             <Footer />
         </>
     );
+}
+
+export async function getStaticProps(): Promise<
+    { props: propsType }
+> {
+    const post = path.join(
+        process.cwd(),
+        `public/projects/game-of-life.md`,
+    );
+    const md = await fs.readFile(post, "utf8");
+
+    return {
+        props: {
+            md,
+        },
+    };
 }

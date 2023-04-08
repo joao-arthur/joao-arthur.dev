@@ -2,11 +2,11 @@ import type { ReactElement } from "react";
 import classNames from "classnames";
 import Link from "next/link";
 
-type props = {
+type propsType = {
     readonly active: "about" | "blog" | "projects";
 };
 
-export function Header({ active }: props): ReactElement {
+export function Header({ active }: propsType): ReactElement {
     return (
         <header className="w-1/3 mx-auto pt-3 pb-8">
             <nav className="flex justify-around">
