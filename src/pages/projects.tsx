@@ -20,7 +20,7 @@ export default function Projects(): ReactElement {
                         <Link href="/projects/game-of-life">
                             <div className="px-10 shadow-md bg-slate-100">
                                 <H1 className="text-gray-800">
-                                    Game Of Life
+                                    Conway's Game Of Life
                                 </H1>
                             </div>
                         </Link>
