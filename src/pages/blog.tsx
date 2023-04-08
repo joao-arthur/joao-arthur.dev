@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { H1 } from "@/components/H1";
+import { Main } from "@/components/Main";
 
 type propsType = {
     readonly posts: readonly {
@@ -31,7 +32,7 @@ export default function Blog({ posts }: propsType): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="blog" />
-            <main className="h-full">
+            <Main>
                 {posts.map((post) => (
                     <Link key={post.name} href={`/blog/${post.name}`}>
                         <div className="px-10 shadow-md bg-slate-100 flex flex-col">
@@ -44,7 +45,7 @@ export default function Blog({ posts }: propsType): ReactElement {
                         </div>
                     </Link>
                 ))}
-            </main>
+            </Main>
             <Footer />
         </>
     );

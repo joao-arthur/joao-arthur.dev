@@ -6,6 +6,7 @@ import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Main } from "@/components/Main";
 
 type propsType = {
     md: string;
@@ -23,11 +24,13 @@ export default function BlogPost({ md }: propsType): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="blog" />
-            <main className="h-full prose">
-                <ReactMarkdown>
-                    {md}
-                </ReactMarkdown>
-            </main>
+            <Main>
+                <div className="prose">
+                    <ReactMarkdown>
+                        {md}
+                    </ReactMarkdown>
+                </div>
+            </Main>
             <Footer />
         </>
     );

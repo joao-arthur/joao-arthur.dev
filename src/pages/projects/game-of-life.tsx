@@ -7,6 +7,7 @@ import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Main } from "@/components/Main";
 
 type propsType = {
     md: string;
@@ -20,7 +21,7 @@ export default function GameOfLife({ md }: propsType): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="projects" />
-            <main className="h-full w-full">
+            <Main>
                 <div className="prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated">
                     <ReactMarkdown>
                         {md}
@@ -30,7 +31,7 @@ export default function GameOfLife({ md }: propsType): ReactElement {
                     src="/game-of-life/index.html"
                     className="w-full h-full"
                 />
-            </main>
+            </Main>
             <Footer />
         </>
     );

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { H1 } from "@/components/H1";
+import { Main } from "@/components/Main";
 
 export default function Projects(): ReactElement {
     return (
@@ -13,7 +14,7 @@ export default function Projects(): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="projects" />
-            <main className="h-full">
+            <Main>
                 <Link href="/projects/gameoflife">
                     <section>
                         <Link href="/projects/game-of-life">
@@ -25,7 +26,7 @@ export default function Projects(): ReactElement {
                         </Link>
                     </section>
                 </Link>
-            </main>
+            </Main>
             <Footer />
         </>
     );

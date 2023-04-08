@@ -6,6 +6,7 @@ import { H1 } from "@/components/H1";
 import { H2 } from "@/components/H2";
 import { Topic } from "@/components/Topic";
 import { TechInfo } from "@/components/TechInfo";
+import { Main } from "@/components/Main";
 
 export default function About(): ReactElement {
     return (
@@ -15,7 +16,7 @@ export default function About(): ReactElement {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="about" />
-            <main className="h-full">
+            <Main>
                 <H1>
                     Passionate about great code.
                 </H1>
@@ -61,7 +62,7 @@ export default function About(): ReactElement {
                 <Topic>unit testing</Topic>
                 <Topic>design patterns</Topic>
                 <Topic>data structures</Topic>
-            </main>
+            </Main>
             <Footer />
         </>
     );
