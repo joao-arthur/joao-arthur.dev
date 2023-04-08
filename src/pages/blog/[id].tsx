@@ -25,7 +25,7 @@ export default function BlogPost({ md }: propsType): ReactElement {
             </Head>
             <Header active="blog" />
             <Main>
-                <div className="prose">
+                <div className="prose m-auto">
                     <ReactMarkdown>
                         {md}
                     </ReactMarkdown>

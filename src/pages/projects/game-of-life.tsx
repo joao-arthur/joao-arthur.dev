@@ -22,7 +22,7 @@ export default function GameOfLife({ md }: propsType): ReactElement {
             </Head>
             <Header active="projects" />
             <Main>
-                <div className="prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated">
+                <div className="prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated m-auto">
                     <ReactMarkdown>
                         {md}
                     </ReactMarkdown>
