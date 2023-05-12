@@ -17,7 +17,7 @@ export default function GameOfLife({ md }: propsType): ReactElement {
     return (
         <>
             <Head>
-                <title>Game Of Life | João Arthur</title>
+                <title>Conway's Game Of Life | João Arthur</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header active="projects" />
