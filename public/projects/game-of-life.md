@@ -2,7 +2,7 @@
 
 ## Definition
 
-> The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+> The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970
 
 The automaton happens in a grid which each cell can be dead or alive. At each step in time, the group of alive cells is determined by the following rules:
 - Alive cells survive with 2 or 3 alive neighbors.
@@ -55,7 +55,7 @@ const grid = new Map([
 );
 ```
 
-> using a "Set" would also cut the mustard **in this scenario**, since a alive cell have only one state.
+> using a "Set" would also cut the mustard **in this scenario**, since a alive cell has only one state
 
 One important aspect is that, with a Map, we can no longer count on an array index, we must use another way to identify the cell position, i.e., a **coordinate system**, like the **cartesian plane**.
 
