@@ -30,24 +30,12 @@ export default function About(): ReactElement {
                 <div className="flex flex-row items-center py-1">
                     <TechInfo name="Rust" level="BASICS" />
                 </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Zig" level="HELLO_WORLD" />
-                </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Elixir" level="HELLO_WORLD" />
-                </div>
                 <H2>Frontend</H2>
                 <div className="flex flex-row items-center py-1">
                     <TechInfo name="React" level="ADVANCED" />
                 </div>
                 <div className="flex flex-row items-center py-1">
                     <TechInfo name="Next.js" level="BASICS" />
-                </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Svelte" level="HELLO_WORLD" />
-                </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="SvelteKit" level="HELLO_WORLD" />
                 </div>
                 <H2>Backend</H2>
                 <div className="flex flex-row items-center py-1">

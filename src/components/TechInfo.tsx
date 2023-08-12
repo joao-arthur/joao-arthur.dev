@@ -28,14 +28,14 @@ export function TechInfo({ name, level }: propsType): ReactElement {
         }
     }
 
-    function percentual(): 25 | 50 | 75 | 100 {
+    function percentual(): 10 | 30 | 60 | 100 {
         switch (level) {
             case "HELLO_WORLD":
-                return 25;
+                return 10;
             case "BASICS":
-                return 50;
+                return 30;
             case "INTERMEDIATE":
-                return 75;
+                return 60;
             case "ADVANCED":
                 return 100;
         }
