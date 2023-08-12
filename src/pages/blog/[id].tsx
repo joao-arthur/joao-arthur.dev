@@ -46,10 +46,7 @@ export async function getStaticPaths(): Promise<{
     );
     const json = await fs.readFile(postsDirectory, "utf8");
     const posts: { name: string; title: string }[] = JSON.parse(json);
-    const paths = posts
-        .map((post) => ({
-            params: { id: post.name },
-        }));
+    const paths = posts.map((post) => ({ params: { id: post.name } }));
 
     return { paths, fallback: false };
 }
@@ -63,9 +60,5 @@ export async function getStaticProps(
     );
     const md = await fs.readFile(post, "utf8");
 
-    return {
-        props: {
-            md,
-        },
-    };
+    return { props: { md } };
 }

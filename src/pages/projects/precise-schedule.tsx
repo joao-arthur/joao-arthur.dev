@@ -13,9 +13,7 @@ type propsType = {
     md: string;
 };
 
-export default function PreciseSchedule(
-    { md }: propsType,
-): ReactElement {
+export default function PreciseSchedule({ md }: propsType): ReactElement {
     return (
         <>
             <Head>
@@ -39,18 +37,12 @@ export default function PreciseSchedule(
     );
 }
 
-export async function getStaticProps(): Promise<
-    { props: propsType }
-> {
+export async function getStaticProps(): Promise<{ props: propsType }> {
     const post = path.join(
         process.cwd(),
         `public/projects/precise-schedule.md`,
     );
     const md = await fs.readFile(post, "utf8");
 
-    return {
-        props: {
-            md,
-        },
-    };
+    return { props: { md } };
 }

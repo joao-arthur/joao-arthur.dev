@@ -33,27 +33,30 @@ export default function Blog({ posts }: propsType): ReactElement {
             </Head>
             <Header active="blog" />
             <Main>
-                {posts.map((post) => (
-                    <Link key={post.name} href={`/blog/${post.name}`}>
-                        <div className="px-10 shadow-md bg-slate-100 flex flex-col">
-                            <H1 className="text-gray-800">
-                                {post.title}
-                            </H1>
-                            <span className="self-end pb-2 text-gray-600">
-                                {formatDate(post.name)}
-                            </span>
-                        </div>
-                    </Link>
-                ))}
+                <section className="flex flex-col gap-5">
+                    {posts.map((post) => (
+                        <Link
+                            key={post.name}
+                            href={`/blog/${post.name}`}
+                        >
+                            <div className="px-10 shadow-md bg-slate-100 flex flex-col">
+                                <H1 className="text-gray-800">
+                                    {post.title}
+                                </H1>
+                                <span className="self-end pb-2 text-gray-600">
+                                    {formatDate(post.name)}
+                                </span>
+                            </div>
+                        </Link>
+                    ))}
+                </section>
             </Main>
             <Footer />
         </>
     );
 }
 
-export async function getStaticProps(): Promise<
-    { props: propsType }
-> {
+export async function getStaticProps(): Promise<{ props: propsType }> {
     const postsDirectory = path.join(
         process.cwd(),
         "public/posts.json",
@@ -61,9 +64,5 @@ export async function getStaticProps(): Promise<
     const json = await fs.readFile(postsDirectory, "utf8");
     const posts: { name: string; title: string }[] = JSON.parse(json);
 
-    return {
-        props: {
-            posts,
-        },
-    };
+    return { props: { posts } };
 }

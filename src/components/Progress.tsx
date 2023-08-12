@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import classnames from "classnames";
+import { cl } from "@/lib/cl";
 
 type propsType = {
     readonly percentual: number;
@@ -8,12 +8,15 @@ type propsType = {
 export function Progress({ percentual }: propsType): ReactElement {
     return (
         <div
-            className={classnames("rounded-xl h-5", {
-                "bg-red-500": percentual <= 25,
-                "bg-orange-500": percentual > 25 && percentual <= 50,
-                "bg-yellow-500": percentual > 50 && percentual <= 75,
-                "bg-green-500": percentual > 75,
-            })}
+            className={cl(
+                "rounded-xl h-5",
+                {
+                    "bg-red-500": percentual <= 25,
+                    "bg-orange-500": percentual > 25 && percentual <= 50,
+                    "bg-yellow-500": percentual > 50 && percentual <= 75,
+                    "bg-green-500": percentual > 75,
+                },
+            )}
             style={{
                 width: `${percentual}%`,
                 backgroundImage:

@@ -37,18 +37,12 @@ export default function GameOfLife({ md }: propsType): ReactElement {
     );
 }
 
-export async function getStaticProps(): Promise<
-    { props: propsType }
-> {
+export async function getStaticProps(): Promise<{ props: propsType }> {
     const post = path.join(
         process.cwd(),
         `public/projects/game-of-life.md`,
     );
     const md = await fs.readFile(post, "utf8");
 
-    return {
-        props: {
-            md,
-        },
-    };
+    return { props: { md } };
 }

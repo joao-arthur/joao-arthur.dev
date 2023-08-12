@@ -15,24 +15,22 @@ export default function Projects(): ReactElement {
             </Head>
             <Header active="projects" />
             <Main>
-                <Link href="/projects/gameoflife">
-                    <section className="flex flex-col gap-5">
-                        <Link href="/projects/game-of-life">
-                            <div className="px-10 shadow-md bg-slate-100">
-                                <H1 className="text-gray-800">
-                                    Conway's Game Of Life
-                                </H1>
-                            </div>
-                        </Link>
-                        <Link href="/projects/precise-schedule">
-                            <div className="px-10 shadow-md bg-slate-100">
-                                <H1 className="text-gray-800">
-                                    Precise Schedule
-                                </H1>
-                            </div>
-                        </Link>
-                    </section>
-                </Link>
+                <section className="flex flex-col gap-5">
+                    <Link href="/projects/game-of-life">
+                        <div className="px-10 shadow-md bg-slate-100">
+                            <H1 className="text-gray-800">
+                                Conway's Game Of Life
+                            </H1>
+                        </div>
+                    </Link>
+                    <Link href="/projects/precise-schedule">
+                        <div className="px-10 shadow-md bg-slate-100">
+                            <H1 className="text-gray-800">
+                                Precise Schedule
+                            </H1>
+                        </div>
+                    </Link>
+                </section>
             </Main>
             <Footer />
         </>

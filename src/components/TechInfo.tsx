@@ -11,11 +11,7 @@ type propsType = {
 };
 
 export function TechInfo({ name, level }: propsType): ReactElement {
-    function description():
-        | "hello world"
-        | "basics"
-        | "intermediate"
-        | "advanced" {
+    function description(): string {
         switch (level) {
             case "HELLO_WORLD":
                 return "hello world";
@@ -28,7 +24,7 @@ export function TechInfo({ name, level }: propsType): ReactElement {
         }
     }
 
-    function percentual(): 10 | 30 | 60 | 100 {
+    function percentual(): number {
         switch (level) {
             case "HELLO_WORLD":
                 return 10;
