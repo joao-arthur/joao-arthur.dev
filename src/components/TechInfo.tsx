@@ -1,5 +1,4 @@
 import type { ReactElement } from "react";
-import { Progress } from "./Progress";
 
 type propsType = {
     readonly name: string;
@@ -24,30 +23,14 @@ export function TechInfo({ name, level }: propsType): ReactElement {
         }
     }
 
-    function percentual(): number {
-        switch (level) {
-            case "HELLO_WORLD":
-                return 10;
-            case "BASICS":
-                return 30;
-            case "INTERMEDIATE":
-                return 60;
-            case "ADVANCED":
-                return 100;
-        }
-    }
-
     return (
         <>
-            <span style={{ flex: "1 1 0", minWidth: 80 }}>
+            <span>
                 {name}
             </span>
-            <span style={{ flex: "1 1 0", minWidth: 100 }}>
+            <span>
                 {description()}
             </span>
-            <div style={{ flex: "4 1 0", minWidth: 0 }}>
-                <Progress percentual={percentual()} />
-            </div>
         </>
     );
 }

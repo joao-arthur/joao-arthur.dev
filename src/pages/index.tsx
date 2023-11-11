@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { H1 } from "@/components/H1";
 import { H2 } from "@/components/H2";
 import { Topic } from "@/components/Topic";
-import { TechInfo } from "@/components/TechInfo";
 import { Main } from "@/components/Main";
 
 export default function About(): ReactElement {
@@ -21,28 +20,40 @@ export default function About(): ReactElement {
                     Passionate about great code.
                 </H1>
                 <H2>Languages</H2>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="TypeScript" level="ADVANCED" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>TypeScript</span>
+                    <span>Advanced</span>
                 </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Java" level="INTERMEDIATE" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>Java</span>
+                    <span>Intermediate</span>
                 </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Rust" level="BASICS" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>Rust</span>
+                    <span>Basics</span>
                 </div>
                 <H2>Frontend</H2>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="React" level="ADVANCED" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>React</span>
+                    <span>Advanced</span>
                 </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Next.js" level="BASICS" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>Next</span>
+                    <span>Basics</span>
                 </div>
                 <H2>Backend</H2>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="NestJS" level="INTERMEDIATE" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>NestJS</span>
+                    <span>Intermediate</span>
                 </div>
-                <div className="flex flex-row items-center py-1">
-                    <TechInfo name="Spring" level="INTERMEDIATE" />
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>Spring</span>
+                    <span>Intermediate</span>
+                </div>
+                <H2>Mobile</H2>
+                <div className="flex flex-row gap-x-2 py-1">
+                    <span>React Native</span>
+                    <span>Advanced</span>
                 </div>
                 <H2>Interests</H2>
                 <Topic>clean code</Topic>
