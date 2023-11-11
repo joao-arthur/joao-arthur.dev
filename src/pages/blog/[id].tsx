@@ -3,7 +3,7 @@ import type { GetStaticPropsContext } from "next";
 import path from "path";
 import fs from "fs/promises";
 import Head from "next/head";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Markdown from "react-markdown";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
@@ -26,9 +26,9 @@ export default function BlogPost({ md }: propsType): ReactElement {
             <Header active="blog" />
             <Main>
                 <div className="prose m-auto">
-                    <ReactMarkdown>
+                    <Markdown>
                         {md}
-                    </ReactMarkdown>
+                    </Markdown>
                 </div>
             </Main>
             <Footer />

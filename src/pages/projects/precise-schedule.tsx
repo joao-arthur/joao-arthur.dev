@@ -4,7 +4,7 @@ import path from "path";
 import fs from "fs/promises";
 
 import Head from "next/head";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Markdown from "react-markdown";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
@@ -23,9 +23,9 @@ export default function PreciseSchedule({ md }: propsType): ReactElement {
             <Header active="projects" />
             <Main>
                 <div className="prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated m-auto">
-                    <ReactMarkdown>
+                    <Markdown>
                         {md}
-                    </ReactMarkdown>
+                    </Markdown>
                 </div>
                 <iframe
                     src="/precise-schedule/index.html"
