@@ -61,6 +61,7 @@ export default function About(): ReactElement {
                 <Topic>unit testing</Topic>
                 <Topic>design patterns</Topic>
                 <Topic>data structures</Topic>
+                <Topic>linux</Topic>
             </Main>
             <Footer />
         </>
