@@ -15,7 +15,11 @@ This automaton occurs on a grid where each cell can be either dead or alive. At 
 The idea of this approach is to store the state of **every** cell.
 
 ```ts
-const grid = [[0, 1, 0], [1, 1, 1], [0, 1, 0]];
+const grid = [
+    [0, 1, 0],
+    [1, 1, 1],
+    [0, 1, 0]
+];
 ```
 
 In the case of a square grid, the **number** of items in the array will be equal to the **square** of the grid's **length**:
@@ -51,8 +55,8 @@ The idea of this approach is to store only the state of **living** cells.
 const grid = new Map([
     ['(0, 1)', 1],
     ['(-4, 2)', 1],
-    ['(7, -3)', 1]]
-);
+    ['(7, -3)', 1]
+]);
 ```
 
 > Using a "Set" would also suffice **in this scenario**, since a living cell has only one state
