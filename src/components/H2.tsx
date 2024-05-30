@@ -1,9 +1,9 @@
-import type { ReactElement, ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 
-type propsType = {
+type Props = {
     readonly children: ReactNode;
 };
 
-export function H2({ children }: propsType): ReactElement {
+export function H2({ children }: Props): JSX.Element {
     return <h2 className="text-xl pt-5 py-2">{children}</h2>;
 }

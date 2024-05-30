@@ -1,15 +1,15 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 
-type propsType = {
+type Props = {
     readonly name: string;
     readonly level:
-        | "HELLO_WORLD"
-        | "BASICS"
-        | "INTERMEDIATE"
-        | "ADVANCED";
+    | "HELLO_WORLD"
+    | "BASICS"
+    | "INTERMEDIATE"
+    | "ADVANCED";
 };
 
-export function TechInfo({ name, level }: propsType): ReactElement {
+export function TechInfo({ name, level }: Props): JSX.Element {
     function description(): string {
         switch (level) {
             case "HELLO_WORLD":

@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 import path from "path";
 import fs from "fs/promises";
 import Head from "next/head";
@@ -8,14 +8,14 @@ import { Footer } from "@/components/Footer";
 import { H1 } from "@/components/H1";
 import { Main } from "@/components/Main";
 
-type propsType = {
+type Props = {
     readonly posts: readonly {
         name: string;
         title: string;
     }[];
 };
 
-export default function Blog({ posts }: propsType): ReactElement {
+export default function Blog({ posts }: Props): JSX.Element {
     function formatDate(name: string): string {
         const [year, month, day] = name.split("-");
         return new Date(
@@ -56,7 +56,7 @@ export default function Blog({ posts }: propsType): ReactElement {
     );
 }
 
-export async function getStaticProps(): Promise<{ props: propsType }> {
+export async function getStaticProps(): Promise<{ props: Props }> {
     const postsDirectory = path.join(
         process.cwd(),
         "public/posts.json",

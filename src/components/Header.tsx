@@ -1,12 +1,12 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 import Link from "next/link";
 import { cl } from "@/lib/cl";
 
-type propsType = {
+type Props = {
     readonly active: "about" | "blog" | "projects";
 };
 
-export function Header({ active }: propsType): ReactElement {
+export function Header({ active }: Props): JSX.Element {
     return (
         <header className="w-1/3 mx-auto pt-3 pb-8">
             <nav className="flex justify-around">

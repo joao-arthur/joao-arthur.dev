@@ -1,9 +1,9 @@
-import type { ReactElement, ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 
-type propsType = {
+type Props = {
     readonly children: ReactNode;
 };
 
-export function Main({ children }: propsType): ReactElement {
+export function Main({ children }: Props): JSX.Element {
     return <main className="h-full overflow-auto">{children}</main>;
 }

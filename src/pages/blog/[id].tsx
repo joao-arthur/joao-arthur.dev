@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 import type { GetStaticPropsContext } from "next";
 import path from "path";
 import fs from "fs/promises";
@@ -8,7 +8,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
 
-type propsType = {
+type Props = {
     md: string;
 };
 
@@ -16,7 +16,7 @@ type staticPropsType = {
     id: string;
 };
 
-export default function BlogPost({ md }: propsType): ReactElement {
+export default function BlogPost({ md }: Props): JSX.Element {
     return (
         <>
             <Head>
@@ -53,7 +53,7 @@ export async function getStaticPaths(): Promise<{
 
 export async function getStaticProps(
     context: GetStaticPropsContext<staticPropsType>,
-): Promise<{ props: propsType }> {
+): Promise<{ props: Props }> {
     const post = path.join(
         process.cwd(),
         `public/blog/${context.params?.id}.md`,

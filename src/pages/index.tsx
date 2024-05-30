@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 import Head from "next/head";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,7 +7,7 @@ import { H2 } from "@/components/H2";
 import { Topic } from "@/components/Topic";
 import { Main } from "@/components/Main";
 
-export default function About(): ReactElement {
+export default function About(): JSX.Element {
     return (
         <>
             <Head>

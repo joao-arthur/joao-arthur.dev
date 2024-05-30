@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 
 import path from "path";
 import fs from "fs/promises";
@@ -9,11 +9,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
 
-type propsType = {
+type Props = {
     md: string;
 };
 
-export default function GameOfLife({ md }: propsType): ReactElement {
+export default function GameOfLife({ md }: Props): JSX.Element {
     return (
         <>
             <Head>
@@ -37,7 +37,7 @@ export default function GameOfLife({ md }: propsType): ReactElement {
     );
 }
 
-export async function getStaticProps(): Promise<{ props: propsType }> {
+export async function getStaticProps(): Promise<{ props: Props }> {
     const post = path.join(
         process.cwd(),
         `public/projects/game-of-life.md`,

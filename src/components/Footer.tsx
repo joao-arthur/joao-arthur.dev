@@ -1,7 +1,7 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-export function Footer(): ReactElement {
+export function Footer(): JSX.Element {
     return (
         <footer className="flex justify-center pt-2 pb-2 items-center">
             <a
