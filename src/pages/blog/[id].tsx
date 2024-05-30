@@ -5,15 +5,14 @@ import fs from "fs/promises";
 import Head from "next/head";
 import Markdown from "react-markdown";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
 
 type Props = {
-    md: string;
+    readonly md: string;
 };
 
-type staticPropsType = {
-    id: string;
+type StaticProps = {
+    readonly id: string;
 };
 
 export default function BlogPost({ md }: Props): JSX.Element {
@@ -31,7 +30,6 @@ export default function BlogPost({ md }: Props): JSX.Element {
                     </Markdown>
                 </div>
             </Main>
-            <Footer />
         </>
     );
 }
@@ -52,7 +50,7 @@ export async function getStaticPaths(): Promise<{
 }
 
 export async function getStaticProps(
-    context: GetStaticPropsContext<staticPropsType>,
+    context: GetStaticPropsContext<StaticProps>,
 ): Promise<{ props: Props }> {
     const post = path.join(
         process.cwd(),

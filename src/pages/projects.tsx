@@ -2,7 +2,6 @@ import type { JSX } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { H1 } from "@/components/H1";
 import { Main } from "@/components/Main";
 
@@ -32,7 +31,6 @@ export default function Projects(): JSX.Element {
                     </Link>
                 </section>
             </Main>
-            <Footer />
         </>
     );
 }

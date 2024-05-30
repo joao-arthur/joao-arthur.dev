@@ -6,11 +6,10 @@ import fs from "fs/promises";
 import Head from "next/head";
 import Markdown from "react-markdown";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
 
 type Props = {
-    md: string;
+    readonly md: string;
 };
 
 export default function PreciseSchedule({ md }: Props): JSX.Element {
@@ -32,7 +31,6 @@ export default function PreciseSchedule({ md }: Props): JSX.Element {
                     className="w-full h-full"
                 />
             </Main>
-            <Footer />
         </>
     );
 }

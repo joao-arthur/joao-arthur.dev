@@ -4,14 +4,13 @@ import fs from "fs/promises";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { H1 } from "@/components/H1";
 import { Main } from "@/components/Main";
 
 type Props = {
     readonly posts: readonly {
-        name: string;
-        title: string;
+        readonly name: string;
+        readonly title: string;
     }[];
 };
 
@@ -51,7 +50,6 @@ export default function Blog({ posts }: Props): JSX.Element {
                     ))}
                 </section>
             </Main>
-            <Footer />
         </>
     );
 }
