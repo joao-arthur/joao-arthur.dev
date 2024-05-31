@@ -1,8 +1,8 @@
 import type { JSX } from "react";
 import Head from "next/head";
-import { Header } from "@/components/Header";
-import { Main } from "@/components/Main";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { Header } from "../components/Header";
+import { Main } from "../components/Main";
 
 export default function About(): JSX.Element {
     return (

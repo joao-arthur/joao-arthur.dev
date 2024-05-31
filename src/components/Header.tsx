@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import Link from "next/link";
-import { cl } from "@/lib/cl";
+import { cl } from "../lib/cl";
 
 type Props = {
     readonly active: "about" | "blog" | "projects";

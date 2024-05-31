@@ -1,8 +1,8 @@
-import type { JSX, ReactNode } from "react";
-import { cl } from "@/lib/cl";
+import type { JSX } from "react";
+import { cl } from "../lib/cl";
 
 type Props = {
-    readonly children: ReactNode;
+    readonly children: JSX.Element | string;
     readonly className?: string;
 };
 

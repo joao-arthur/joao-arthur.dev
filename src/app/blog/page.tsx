@@ -1,28 +1,20 @@
 import type { JSX } from "react";
-import path from "path";
-import fs from "fs/promises";
 import Head from "next/head";
 import Link from "next/link";
-import { Header } from "@/components/Header";
-import { H1 } from "@/components/H1";
-import { Main } from "@/components/Main";
+import { Header } from "../../components/Header";
+import { H1 } from "../../components/H1";
+import { Main } from "../../components/Main";
 
-type Props = {
-    readonly posts: readonly {
-        readonly name: string;
-        readonly title: string;
-    }[];
-};
+type Post = {
+    readonly name: string;
+    readonly title: string;
+}
 
-export default function Blog({ posts }: Props): JSX.Element {
-    function formatDate(name: string): string {
-        const [year, month, day] = name.split("-");
-        return new Date(
-            Number(year),
-            Number(month) - 1,
-            Number(day),
-        ).toLocaleDateString();
-    }
+export default function Blog(): JSX.Element {
+    const posts: readonly Post[] = [
+        { name: "2023-08-11", title: "Thoughts on Layered Architecture and market" },
+        { name: "2023-08-12", title: "Thoughts on interfaces" }
+    ];
 
     return (
         <>
@@ -43,7 +35,6 @@ export default function Blog({ posts }: Props): JSX.Element {
                                     {post.title}
                                 </H1>
                                 <span className="self-end pb-2 text-gray-600">
-                                    {formatDate(post.name)}
                                 </span>
                             </div>
                         </Link>
@@ -52,15 +43,4 @@ export default function Blog({ posts }: Props): JSX.Element {
             </Main>
         </>
     );
-}
-
-export async function getStaticProps(): Promise<{ props: Props }> {
-    const postsDirectory = path.join(
-        process.cwd(),
-        "public/posts.json",
-    );
-    const json = await fs.readFile(postsDirectory, "utf8");
-    const posts: { name: string; title: string }[] = JSON.parse(json);
-
-    return { props: { posts } };
 }

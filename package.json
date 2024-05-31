@@ -5,11 +5,13 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "prebuild": "tsc --project tsconfig.scripts.json && node ./dist/posts.js",
         "build": "next build && next export",
         "start": "next start"
     },
     "dependencies": {
+        "@mdx-js/loader": "3.0.1",
+        "@mdx-js/react": "3.0.1",
+        "@next/mdx": "14.2.3",
         "classnames": "2.5.1",
         "next": "14.2.3",
         "react": "18.3.1",
@@ -19,6 +21,7 @@
     },
     "devDependencies": {
         "@tailwindcss/typography": "0.5.13",
+        "@types/mdx": "2.0.13",
         "@types/node": "20.12.13",
         "@types/react": "18.3.3",
         "autoprefixer": "10.4.19",
