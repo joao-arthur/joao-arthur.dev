@@ -1,7 +1,7 @@
-import type { ReactNode } from "react";
+import type { JSX } from "react";
 
 type Props = {
-    readonly children: ReactNode;
+    readonly children: JSX.Element;
 };
 
 export function Main({ children }: Props): JSX.Element {

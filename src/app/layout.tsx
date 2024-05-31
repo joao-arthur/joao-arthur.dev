@@ -1,9 +1,16 @@
 import type { JSX } from "react";
-import localFont from "next/font/local";
+import Head from "next/head";
+import { Ubuntu } from "next/font/google";
 import { cl } from "../lib/cl";
+import { Main } from "../components/Main";
 import "../styles/globals.css";
+import { Header } from "../components/Header";
 
-const myFont = localFont({ src: "./fonts/AgaveNerdFont-Regular.ttf" });
+const myFont = Ubuntu({
+    style: 'normal',
+    subsets: ['latin'],
+    weight: "400",
+});
 
 type Props = {
     readonly children: JSX.Element;
@@ -12,7 +19,13 @@ type Props = {
 export default function RootLayout({ children }: Props): JSX.Element {
     return (
         <html lang="en" className={cl(myFont.className, "w-svw h-svh")}>
-            <body className="w-full h-full">{children}</body>
+            <Head>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <body className="w-full h-full">
+                <Header active="about" />
+                <Main>{children}</Main>
+            </body>
         </html>
     );
 }
