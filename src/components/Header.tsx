@@ -11,24 +11,32 @@ export function Header(): JSX.Element {
     return (
         <header className="mx-auto pt-3 pb-8">
             <nav className="flex justify-around">
-                <Link
-                    className={cl({ underline: pathname === "/" }, "px-4")}
-                    href="/"
-                >
-                    about
-                </Link>
-                <Link
-                    className={cl({ underline: pathname.startsWith("/project") }, "px-4")}
-                    href="/project"
-                >
-                    projects
-                </Link>
-                <Link
-                    className={cl({ underline: pathname.startsWith("/blog") }, "px-4")}
-                    href="/blog"
-                >
-                    blog
-                </Link>
+                <div className="flex">
+                    <div className="px-10">
+                        <Link
+                            className={cl({ underline: pathname === "/" })}
+                            href="/"
+                        >
+                            about
+                        </Link>
+                    </div>
+                    <div className="px-10">
+                        <Link
+                            className={cl({ underline: pathname.startsWith("/project") })}
+                            href="/project"
+                        >
+                            projects
+                        </Link>
+                    </div>
+                    <div className="px-10">
+                        <Link
+                            className={cl({ underline: pathname.startsWith("/blog") })}
+                            href="/blog"
+                        >
+                            blog
+                        </Link>
+                    </div>
+                </div>
             </nav>
         </header>
     );

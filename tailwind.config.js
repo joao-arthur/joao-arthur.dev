@@ -7,6 +7,12 @@ module.exports = {
         extend: {
             width: {
                 '200': '50rem'
+            },
+            maxWidth: {
+                '200': '50rem'
+            },
+            minWidth: {
+                '200': '50rem'
             }
         },
     },
