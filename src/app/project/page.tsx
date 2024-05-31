@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { useHeaderStore } from "../../lib/useHeaderStore";
 
 type Project = {
     readonly id: string;
@@ -14,12 +13,9 @@ export const metadata: Metadata = {
 };
 
 export default function Projects(): JSX.Element {
-    const { setPage } = useHeaderStore();
-    setPage("project");
-
     const projects: readonly Project[] = [
-        { id: "game-of-life", title: "Conway's Game Of Life", date: '2023-05-07' },
-        { id: "precise-schedule", title: "Precise Schedule", date: '2023-08-11' },
+        { id: "game-of-life", title: "Conway's Game Of Life", date: "2023-05-07" },
+        { id: "precise-schedule", title: "Precise Schedule", date: "2023-08-11" },
     ];
 
     return (
