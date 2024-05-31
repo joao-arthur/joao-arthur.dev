@@ -1,12 +1,15 @@
 import type { JSX } from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 import Link from "next/link";
 import { useHeaderStore } from "../../lib/useHeaderStore";
-import { H1 } from "../../components/H1";
 
 type Project = {
     readonly id: string;
     readonly title: string;
+};
+
+export const metadata: Metadata = {
+    title: "Projects | João Arthur",
 };
 
 export default function Projects(): JSX.Element {
@@ -19,21 +22,16 @@ export default function Projects(): JSX.Element {
     ];
 
     return (
-        <>
-            <Head>
-                <title>Projects | João Arthur</title>
-            </Head>
-            <section className="flex flex-col gap-5">
-                {projects.map((project) => (
-                    <Link href={`/project/post/${project.id}`} key={project.id}>
-                        <div className="px-10 shadow-md bg-slate-100">
-                            <H1 className="text-gray-800">
-                                {project.title}
-                            </H1>
-                        </div>
-                    </Link>
-                ))}
-            </section>
-        </>
+        <section className="flex flex-col gap-5">
+            {projects.map((project) => (
+                <Link href={`/project/post/${project.id}`} key={project.id}>
+                    <div className="px-10 shadow-md bg-slate-100">
+                        <h1 className="text-2xl pt-4 pb-2 text-gray-800">
+                            {project.title}
+                        </h1>
+                    </div>
+                </Link>
+            ))}
+        </section>
     );
 }

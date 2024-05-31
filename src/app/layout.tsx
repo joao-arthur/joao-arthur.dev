@@ -1,10 +1,8 @@
 import type { JSX } from "react";
-import Head from "next/head";
 import { Ubuntu } from "next/font/google";
 import { cl } from "../lib/cl";
-import { Main } from "../components/Main";
-import "../styles/globals.css";
 import { Header } from "../components/Header";
+import "../styles/globals.css";
 
 const myFont = Ubuntu({
     style: "normal",
@@ -19,12 +17,11 @@ type Props = {
 export default function RootLayout({ children }: Props): JSX.Element {
     return (
         <html lang="en" className={cl(myFont.className, "w-svw h-svh overflow-hidden")}>
-            <Head>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
             <body className="w-full h-full overflow-hidden">
                 <Header />
-                <Main>{children}</Main>
+                <main className="h-full overflow-auto px-5">
+                    {children}
+                </main>
             </body>
         </html>
     );

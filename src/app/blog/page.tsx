@@ -1,12 +1,15 @@
 import type { JSX } from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 import Link from "next/link";
 import { useHeaderStore } from "../../lib/useHeaderStore";
-import { H1 } from "../../components/H1";
 
 type Post = {
     readonly name: string;
     readonly title: string;
+};
+
+export const metadata: Metadata = {
+    title: "Blog | João Arthur",
 };
 
 export default function Blog(): JSX.Element {
@@ -19,26 +22,22 @@ export default function Blog(): JSX.Element {
     ];
 
     return (
-        <>
-            <Head>
-                <title>Blog | João Arthur</title>
-            </Head>
-            <section className="flex flex-col gap-5">
-                {posts.map((post) => (
-                    <Link
-                        key={post.name}
-                        href={`/blog/post/${post.name}`}
-                    >
-                        <div className="px-10 shadow-md bg-slate-100 flex flex-col">
-                            <H1 className="text-gray-800">
-                                {post.title}
-                            </H1>
-                            <span className="self-end pb-2 text-gray-600">
-                            </span>
-                        </div>
-                    </Link>
-                ))}
-            </section>
-        </>
+        <section className="flex flex-col gap-5">
+            {posts.map((post) => (
+                <Link
+                    key={post.name}
+                    href={`/blog/post/${post.name}`}
+                >
+                    <div className="px-10 shadow-md bg-slate-100 flex flex-col">
+                        <h1 className="text-2xl pt-4 pb-2 text-gray-800">
+                            {post.title}
+                        </h1>
+                        <span className="self-end pb-2 text-gray-600">
+                            {}
+                        </span>
+                    </div>
+                </Link>
+            ))}
+        </section>
     );
 }

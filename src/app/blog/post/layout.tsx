@@ -6,10 +6,8 @@ type Props = {
 
 export default function BlogPost({ children }: Props): JSX.Element {
     return (
-        <>
-            <div className="prose m-auto pb-24">
-                {children}
-            </div>
-        </>
+        <div className="prose m-auto pb-24">
+            {children}
+        </div>
     );
 }

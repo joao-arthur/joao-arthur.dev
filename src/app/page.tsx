@@ -1,13 +1,14 @@
 import type { JSX } from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+
+export const metadata: Metadata = {
+    title: "About | João Arthur",
+};
 
 export default function About(): JSX.Element {
     return (
         <>
-            <Head>
-                <title>About | João Arthur</title>
-            </Head>
             <h1 className="text-2xl pt-4 pb-2">I believe in open software</h1>
             <div className="flex flex-wrap gap-2">
                 <div className="w-80 bg-gray-100 rounded text-center">
