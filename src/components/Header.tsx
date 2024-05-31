@@ -7,7 +7,7 @@ export function Header(): JSX.Element {
     const { page } = useHeaderStore();
 
     return (
-        <header className="w-1/3 mx-auto pt-3 pb-8">
+        <header className="mx-auto pt-3 pb-8">
             <nav className="flex justify-around">
                 <Link
                     className={cl({ underline: page === "about" }, "px-4")}
