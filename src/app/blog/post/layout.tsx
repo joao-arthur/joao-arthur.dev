@@ -1,9 +1,13 @@
-import type { ReactElement } from "react";
+import type { JSX } from "react";
 
-export default function BlogPost({ children }: any): ReactElement {
+type Props = {
+    readonly children: JSX.Element;
+};
+
+export default function BlogPost({ children }: Props): JSX.Element {
     return (
         <>
-            <div className="prose m-auto pb-10">
+            <div className="prose m-auto pb-24">
                 {children}
             </div>
         </>

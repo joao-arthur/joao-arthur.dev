@@ -1,29 +1,28 @@
 import type { JSX } from "react";
 import Link from "next/link";
 import { cl } from "../lib/cl";
+import { useHeaderStore } from "../lib/useHeaderStore";
 
-type Props = {
-    readonly active: "about" | "blog" | "projects";
-};
+export function Header(): JSX.Element {
+    const { page } = useHeaderStore();
 
-export function Header({ active }: Props): JSX.Element {
     return (
         <header className="w-1/3 mx-auto pt-3 pb-8">
             <nav className="flex justify-around">
                 <Link
-                    className={cl({ underline: active === "about" }, "px-4")}
+                    className={cl({ underline: page === "about" }, "px-4")}
                     href="/"
                 >
                     about
                 </Link>
                 <Link
-                    className={cl({ underline: active === "projects" }, "px-4")}
-                    href="/projects"
+                    className={cl({ underline: page === "project" }, "px-4")}
+                    href="/project"
                 >
                     projects
                 </Link>
                 <Link
-                    className={cl({ underline: active === "blog" }, "px-4")}
+                    className={cl({ underline: page === "blog" }, "px-4")}
                     href="/blog"
                 >
                     blog

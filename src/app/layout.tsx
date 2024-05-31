@@ -7,8 +7,8 @@ import "../styles/globals.css";
 import { Header } from "../components/Header";
 
 const myFont = Ubuntu({
-    style: 'normal',
-    subsets: ['latin'],
+    style: "normal",
+    subsets: ["latin"],
     weight: "400",
 });
 
@@ -18,12 +18,12 @@ type Props = {
 
 export default function RootLayout({ children }: Props): JSX.Element {
     return (
-        <html lang="en" className={cl(myFont.className, "w-svw h-svh")}>
+        <html lang="en" className={cl(myFont.className, "w-svw h-svh overflow-hidden")}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body className="w-full h-full">
-                <Header active="about" />
+            <body className="w-full h-full overflow-hidden">
+                <Header />
                 <Main>{children}</Main>
             </body>
         </html>

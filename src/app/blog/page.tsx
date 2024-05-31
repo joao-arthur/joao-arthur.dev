@@ -1,17 +1,21 @@
 import type { JSX } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useHeaderStore } from "../../lib/useHeaderStore";
 import { H1 } from "../../components/H1";
 
 type Post = {
     readonly name: string;
     readonly title: string;
-}
+};
 
 export default function Blog(): JSX.Element {
+    const { setPage } = useHeaderStore();
+    setPage("project");
+
     const posts: readonly Post[] = [
         { name: "2023-08-11", title: "Thoughts on Layered Architecture and market" },
-        { name: "2023-08-12", title: "Thoughts on interfaces" }
+        { name: "2023-08-12", title: "Thoughts on interfaces" },
     ];
 
     return (
