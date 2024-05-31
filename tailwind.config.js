@@ -4,7 +4,11 @@ module.exports = {
         './src/**/*.tsx',
     ],
     theme: {
-        extend: {},
+        extend: {
+            width: {
+                '200': '50rem'
+            }
+        },
     },
     variants: {
         imageRendering: ['responsive'],

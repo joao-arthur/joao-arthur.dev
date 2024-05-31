@@ -2,7 +2,7 @@ import type { JSX } from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "2023-08-12 | João Arthur",
+    title: "Thoughts on interfaces | João Arthur",
 };
 
 type Props = {
