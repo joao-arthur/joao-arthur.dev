@@ -21,18 +21,7 @@ export function Button({ children }: Props): JSX.Element {
                 background: `linear-gradient(135deg, ${light}, ${dark})`,
             }}
         >
-            <div
-                className={cl(
-                    "w-11 h-11",
-                    "flex items-center justify-center",
-                    "rounded-full",
-                )}
-                style={{
-                    background: `linear-gradient(315deg, ${light}, ${dark})`,
-                }}
-            >
                 {children}
-            </div>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { Title } from "../components/Title";
@@ -18,20 +18,20 @@ export default function About(): JSX.Element {
                     <div className="w-52 h-52">
                         <Title label="Languages" />
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="TypeScript"/>
-                            <SubTitle label="Advanced"/>
+                            <SubTitle label="TypeScript" />
+                            <SubTitle label="Advanced" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="Java"/>
-                            <SubTitle label="Intermediate"/>
+                            <SubTitle label="Java" />
+                            <SubTitle label="Intermediate" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="Rust"/>
-                            <SubTitle label="Basics"/>
+                            <SubTitle label="Rust" />
+                            <SubTitle label="Basics" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="C"/>
-                            <SubTitle label="Basics"/>
+                            <SubTitle label="C" />
+                            <SubTitle label="Basics" />
                         </div>
                     </div>
                 </Card>
@@ -39,12 +39,12 @@ export default function About(): JSX.Element {
                     <div className="w-52 h-52">
                         <Title label="Frontend" />
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="React"/>
-                            <SubTitle label="Advanced"/>
+                            <SubTitle label="React" />
+                            <SubTitle label="Advanced" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="Next"/>
-                            <SubTitle label="Basics"/>
+                            <SubTitle label="Next" />
+                            <SubTitle label="Basics" />
                         </div>
                     </div>
                 </Card>
@@ -52,12 +52,12 @@ export default function About(): JSX.Element {
                     <div className="w-52 h-52">
                         <Title label="Backend" />
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="NestJS"/>
-                            <SubTitle label="Intermediate"/>
+                            <SubTitle label="NestJS" />
+                            <SubTitle label="Intermediate" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="Spring"/>
-                            <SubTitle label="Intermediate"/>
+                            <SubTitle label="Spring" />
+                            <SubTitle label="Intermediate" />
                         </div>
                     </div>
                 </Card>
@@ -65,16 +65,16 @@ export default function About(): JSX.Element {
                     <div className="w-52 h-52">
                         <Title label="Mobile" />
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="React"/>
-                            <SubTitle label="Advanced"/>
+                            <SubTitle label="React" />
+                            <SubTitle label="Advanced" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="Flutter"/>
-                            <SubTitle label="Basics"/>
+                            <SubTitle label="Flutter" />
+                            <SubTitle label="Basics" />
                         </div>
                         <div className="flex flex-row gap-x-2 py-1">
-                            <SubTitle label="Kotlin"/>
-                            <SubTitle label="Basics"/>
+                            <SubTitle label="Kotlin" />
+                            <SubTitle label="Basics" />
                         </div>
                     </div>
                 </Card>
@@ -92,7 +92,7 @@ export default function About(): JSX.Element {
                 </Card>
             </div>
             <footer className="flex justify-center pt-2 pb-2 items-center">
-                <Title label="Contact"/>
+                <Title label="Contact" />
                 <div className="mx-3">
                     <a
                         href="http://github.com/joao-arthur"
@@ -100,7 +100,7 @@ export default function About(): JSX.Element {
                         rel="noopener noreferrer"
                     >
                         <Button>
-                            <AiFillGithub color="white" size={30} />
+                            <FaGithubAlt color="white" size={30} />
                         </Button>
                     </a>
                 </div>
@@ -111,7 +111,7 @@ export default function About(): JSX.Element {
                         rel="noopener noreferrer"
                     >
                         <Button>
-                            <AiFillLinkedin size={30} color="white" />
+                            <FaLinkedinIn size={30} color="white" />
                         </Button>
                     </a>
                 </div>

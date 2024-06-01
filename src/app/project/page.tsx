@@ -30,7 +30,7 @@ export default function Blog(): JSX.Element {
                             <Card>
                                 <div className="h-40 w-full">
                                     <Title label={project.name} />
-                                    <SubTitle label={project.date}/>
+                                    <SubTitle label={project.date} />
                                 </div>
                             </Card>
                         </div>

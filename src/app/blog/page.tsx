@@ -29,7 +29,7 @@ export default function Blog(): JSX.Element {
                             <Card>
                                 <div className="h-40 w-full">
                                     <Title label={post.name} />
-                                    <SubTitle label={post.id}/>
+                                    <SubTitle label={post.id} />
                                 </div>
                             </Card>
                         </div>
