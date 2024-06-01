@@ -25,7 +25,7 @@ export default function Blog(): JSX.Element {
             {posts.map((post) => (
                 <div key={post.id} className="w-full max-w-200 p-5">
                     <Link href={`/blog/post/${post.id}`}>
-                        <div className="grow-1 shrink-1 max-w-200 min-w-0 mx-2 my">
+                        <div className="grow-1 shrink-1 max-w-200 min-w-0">
                             <Card>
                                 <div className="h-40 w-full">
                                     <Title label={post.name} />

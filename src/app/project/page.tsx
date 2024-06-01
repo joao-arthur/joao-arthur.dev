@@ -26,7 +26,7 @@ export default function Blog(): JSX.Element {
             {projects.map((project) => (
                 <div key={project.id} className="flex flex-col w-full max-w-200 p-5">
                     <Link href={`/project/post/${project.id}`}>
-                        <div className="grow-1 shrink-1 max-w-200 min-w-0 mx-2">
+                        <div className="grow-1 shrink-1 max-w-200 min-w-0">
                             <Card>
                                 <div className="h-40 w-full">
                                     <Title label={project.name} />

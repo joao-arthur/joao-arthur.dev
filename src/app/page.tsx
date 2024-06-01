@@ -1,11 +1,9 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
-import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 import { Card } from "../components/Card";
-import { Button } from "../components/Button";
 import { Title } from "../components/Title";
 import { SubTitle } from "../components/SubTitle";
+import { Footer } from "../features/Footer";
 
 export const metadata: Metadata = {
     title: "About | João Arthur",
@@ -13,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function About(): JSX.Element {
     return (
-        <>
-            <div className="flex flex-wrap gap-5 pt-5 justify-center">
+        <section>
+            <div className="flex flex-col gap-5 py-10 justify-center">
                 <Card>
                     <div className="w-52 h-52">
                         <Title label="Languages" />
@@ -92,39 +90,7 @@ export default function About(): JSX.Element {
                     </div>
                 </Card>
             </div>
-
-            <Card>
-                <Title label="Contact" />
-                <div className="flex justify-center items-center gap-x-5">
-                    <Button>
-                        <a
-                            href="http://github.com/joao-arthur"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithubAlt size={30} className="w-16 h-16 p-4" color="white" />
-                        </a>
-                    </Button>
-                    <Button>
-                        <a
-                            href="https://www.linkedin.com/in/joao-lothamer"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaLinkedinIn size={30} className="w-16 h-16 p-4" color="white" />
-                        </a>
-                    </Button>
-                    <Button>
-                        <a
-                            href="mailto://joao.lothamer@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <MdEmail size={30} className="w-16 h-16 p-4" color="white" />
-                        </a>
-                    </Button>
-                </div>
-            </Card>
-        </>
+            <Footer />
+        </section>
     );
 }

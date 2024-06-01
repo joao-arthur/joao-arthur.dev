@@ -1,26 +1,25 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
+import styles from "./Card.module.css";
 
 type Props = {
     readonly children: JSX.Element | readonly JSX.Element[];
 };
 
 export function Card({ children }: Props): JSX.Element {
-    const dark = "#0369a1";
-    const light = "#0ea5e9";
+    const dark = "#881337";
+    const light = "#be123c";
 
     return (
         <div
             className={cl(
                 "overflow-hidden",
-                "p-6",
+                "p-5 flex items-center justify-center",
                 "rounded-3xl",
-                "border-sky-600 active:border-sky-700",
-                "bg-sky-100 active:bg-sky-200",
+                "bg-rose-100 rounded-2xl",
+                "bg-rose-100 active:bg-rose-200",
+                styles.card,
             )}
-            style={{
-                background: `linear-gradient(135deg, ${light}, ${dark})`,
-            }}
         >
             {children}
         </div>

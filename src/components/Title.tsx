@@ -6,7 +6,7 @@ type Props = {
 
 export function Title({ label }: Props): JSX.Element {
     return (
-        <h1 className="text-2xl text-sky-900 font-bold">
+        <h1 className="text-2xl text-rose-800 font-bold">
             {label}
         </h1>
     );
