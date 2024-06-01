@@ -6,15 +6,22 @@ type Props = {
 };
 
 export function Card({ children }: Props): JSX.Element {
+    const dark = "#0369a1";
+    const light = "#0ea5e9";
+
     return (
         <div
             className={cl(
                 "overflow-hidden",
                 "p-6",
                 "rounded-3xl",
-                "shadow-md border-emerald-600 active:border-emerald-700",
-                "bg-emerald-100 active:bg-emerald-200",
+                "border-sky-600 active:border-sky-700",
+                "bg-sky-100 active:bg-sky-200",
             )}
+            style={{
+                boxShadow: "0px 2px 5px 0px #1f1f1f",
+                background: `linear-gradient(135deg, ${light}, ${dark})`,
+            }}
         >
             {children}
         </div>

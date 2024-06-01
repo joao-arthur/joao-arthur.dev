@@ -9,7 +9,8 @@ export function Header(): JSX.Element {
     const pathname = usePathname();
 
     return (
-        <header className="mx-auto pt-3 pb-8">
+        <header className="w-full bg-sky-700 h-16">
+            <div className="w-full h-12 bg-sky-500">
             <nav className="flex justify-around">
                 <div className="flex">
                     <div className="px-10">
@@ -38,6 +39,7 @@ export function Header(): JSX.Element {
                     </div>
                 </div>
             </nav>
+            </div>
         </header>
     );
 }

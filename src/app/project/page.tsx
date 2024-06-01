@@ -1,7 +1,9 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
-import { Card } from "../../components/Card";
 import Link from "next/link";
+import { Card } from "../../components/Card";
+import { Title } from "../../components/Title";
+import { SubTitle } from "../../components/SubTitle";
 
 type Project = {
     readonly id: string;
@@ -27,12 +29,8 @@ export default function Blog(): JSX.Element {
                         <div className="grow-1 shrink-1 max-w-200 min-w-0 mx-2">
                             <Card>
                                 <div className="h-40 w-full">
-                                    <h1 className="text-2xl text-teal-900 font-bold">
-                                        {project.name}
-                                    </h1>
-                                    <h2 className="text-teal-900">
-                                        {project.date}
-                                    </h2>
+                                    <Title label={project.name} />
+                                    <SubTitle label={project.date}/>
                                 </div>
                             </Card>
                         </div>

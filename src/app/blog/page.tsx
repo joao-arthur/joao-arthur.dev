@@ -2,6 +2,8 @@ import type { JSX } from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Card } from "../../components/Card";
+import { Title } from "../../components/Title";
+import { SubTitle } from "../../components/SubTitle";
 
 type Post = {
     readonly id: string;
@@ -26,12 +28,8 @@ export default function Blog(): JSX.Element {
                         <div className="grow-1 shrink-1 max-w-200 min-w-0 mx-2 my">
                             <Card>
                                 <div className="h-40 w-full">
-                                    <h1 className="text-2xl text-teal-900 font-bold">
-                                        {post.name}
-                                    </h1>
-                                    <h2 className="text-teal-900">
-                                        {post.id}
-                                    </h2>
+                                    <Title label={post.name} />
+                                    <SubTitle label={post.id}/>
                                 </div>
                             </Card>
                         </div>
