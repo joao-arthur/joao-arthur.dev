@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
 import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { Title } from "../components/Title";
@@ -91,31 +92,39 @@ export default function About(): JSX.Element {
                     </div>
                 </Card>
             </div>
-            <footer className="flex justify-center pt-2 pb-2 items-center">
+
+            <Card>
                 <Title label="Contact" />
-                <div className="mx-3">
-                    <a
-                        href="http://github.com/joao-arthur"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button>
-                            <FaGithubAlt color="white" size={30} />
-                        </Button>
-                    </a>
+                <div className="flex justify-center items-center gap-x-5">
+                    <Button>
+                        <a
+                            href="http://github.com/joao-arthur"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaGithubAlt size={30} className="w-16 h-16 p-4" color="white" />
+                        </a>
+                    </Button>
+                    <Button>
+                        <a
+                            href="https://www.linkedin.com/in/joao-lothamer"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaLinkedinIn size={30} className="w-16 h-16 p-4" color="white" />
+                        </a>
+                    </Button>
+                    <Button>
+                        <a
+                            href="mailto://joao.lothamer@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <MdEmail size={30} className="w-16 h-16 p-4" color="white" />
+                        </a>
+                    </Button>
                 </div>
-                <div className="mx-3">
-                    <a
-                        href="https://www.linkedin.com/in/joao-lothamer"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button>
-                            <FaLinkedinIn size={30} color="white" />
-                        </Button>
-                    </a>
-                </div>
-            </footer>
+            </Card>
         </>
     );
 }

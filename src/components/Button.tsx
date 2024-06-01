@@ -1,27 +1,23 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
+import styles from "./Button.module.css";
 
 type Props = {
     readonly children: JSX.Element;
+    readonly onClick?: () => void;
 };
 
-export function Button({ children }: Props): JSX.Element {
-    const dark = "#075985";
-    const light = "#0284c7";
-
+export function Button({ children, onClick }: Props): JSX.Element {
     return (
-        <div
+        <button
             className={cl(
-                "w-16 h-16",
                 "flex items-center justify-center",
                 "rounded-3xl",
+                styles.button,
             )}
-            style={{
-                boxShadow: "0px 2px 6px 0px #1f1f1f",
-                background: `linear-gradient(135deg, ${light}, ${dark})`,
-            }}
+            onClick={onClick}
         >
-                {children}
-        </div>
+            {children}
+        </button>
     );
 }

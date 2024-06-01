@@ -19,7 +19,6 @@ export function Card({ children }: Props): JSX.Element {
                 "bg-sky-100 active:bg-sky-200",
             )}
             style={{
-                boxShadow: "0px 2px 5px 0px #1f1f1f",
                 background: `linear-gradient(135deg, ${light}, ${dark})`,
             }}
         >

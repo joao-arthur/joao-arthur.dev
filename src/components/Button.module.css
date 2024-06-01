@@ -1,0 +1,7 @@
+.button {
+    background: linear-gradient(135deg, #0284c7, #075985);
+}
+
+.button:active {
+    background: linear-gradient(135deg, #075985, #0284c7);
+} 
