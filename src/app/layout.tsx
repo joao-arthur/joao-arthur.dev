@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Props): JSX.Element {
         <html lang="en" className={cl(myFont.className, "w-svw h-svh overflow-hidden")}>
             <body className="w-full h-full overflow-hidden">
                 <Header />
-                <main className="h-full overflow-auto px-5">
+                <main className="w-full h-full overflow-auto px-5">
                     {children}
                 </main>
             </body>

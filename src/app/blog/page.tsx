@@ -21,12 +21,22 @@ export default function Blog(): JSX.Element {
     return (
         <section className="flex flex-col items-center gap-y-5 w-full h-full">
             {posts.map((post) => (
-                <Card
-                    key={post.id}
-                    title={post.name}
-                    subTitle={post.id}
-                    href={`/blog/post/${post.id}`}
-                />
+                <div key={post.id} className="w-full max-w-200 p-5">
+                    <Link href={`/blog/post/${post.id}`}>
+                        <div className="grow-1 shrink-1 max-w-200 min-w-0 mx-2 my">
+                            <Card>
+                                <div className="h-40 w-full">
+                                    <h1 className="text-2xl text-teal-900 font-bold">
+                                        {post.name}
+                                    </h1>
+                                    <h2 className="text-teal-900">
+                                        {post.id}
+                                    </h2>
+                                </div>
+                            </Card>
+                        </div>
+                    </Link>
+                </div>
             ))}
         </section>
     );

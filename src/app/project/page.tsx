@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
 import { Card } from "../../components/Card";
+import Link from "next/link";
 
 type Project = {
     readonly id: string;
@@ -21,12 +22,22 @@ export default function Blog(): JSX.Element {
     return (
         <section className="flex flex-col items-center gap-y-5 w-full h-full">
             {projects.map((project) => (
-                <Card
-                    key={project.id}
-                    title={project.name}
-                    subTitle={project.date}
-                    href={`/project/post/${project.id}`}
-                />
+                <div key={project.id} className="flex flex-col w-full max-w-200 p-5">
+                    <Link href={`/project/post/${project.id}`}>
+                        <div className="grow-1 shrink-1 max-w-200 min-w-0 mx-2">
+                            <Card>
+                                <div className="h-40 w-full">
+                                    <h1 className="text-2xl text-teal-900 font-bold">
+                                        {project.name}
+                                    </h1>
+                                    <h2 className="text-teal-900">
+                                        {project.date}
+                                    </h2>
+                                </div>
+                            </Card>
+                        </div>
+                    </Link>
+                </div>
             ))}
         </section>
     );
