@@ -22,9 +22,9 @@ export function Header(): JSX.Element {
                             title="About"
                         />
                         <HeaderItem
-                            active={pathname.startsWith("/project")}
-                            href="/project"
-                            title="Projects"
+                            active={pathname.startsWith("/portfolio")}
+                            href="/portfolio"
+                            title="Portfolio"
                         />
                         <HeaderItem
                             active={pathname.startsWith("/blog")}
@@ -32,7 +32,7 @@ export function Header(): JSX.Element {
                             title="Blog"
                         />
                     </div>
-                    <div className="flex">
+                    <div className="hidden">
                         <Button onClick={() => setTheme(!theme)}>
                             {theme
                                 ? <FaRegMoon size={30} className="w-16 h-16 p-5" color="#fecdd3" />

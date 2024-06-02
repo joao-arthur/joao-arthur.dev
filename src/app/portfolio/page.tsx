@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card } from "../../components/Card";
 import { Title } from "../../components/Title";
 import { SubTitle } from "../../components/SubTitle";
+import { LayoutContainer } from "../../components/LayoutContainer";
 
 type Project = {
     readonly id: string;
@@ -22,10 +23,10 @@ export default function Blog(): JSX.Element {
     ];
 
     return (
-        <section className="flex flex-col items-center gap-y-5 w-full h-full">
+        <LayoutContainer>
             {projects.map((project) => (
                 <div key={project.id} className="flex flex-col w-full max-w-200 p-5">
-                    <Link href={`/project/post/${project.id}`}>
+                    <Link href={`/portfolio/post/${project.id}`}>
                         <div className="grow-1 shrink-1 max-w-200 min-w-0">
                             <Card>
                                 <div className="h-40 w-full">
@@ -37,6 +38,6 @@ export default function Blog(): JSX.Element {
                     </Link>
                 </div>
             ))}
-        </section>
+        </LayoutContainer>
     );
 }

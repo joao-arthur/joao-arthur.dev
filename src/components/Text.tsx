@@ -4,10 +4,10 @@ type Props = {
     readonly label: string;
 };
 
-export function SubTitle({ label }: Props): JSX.Element {
+export function Text({ label }: Props): JSX.Element {
     return (
-        <h2 className="text-rose-800 font-bold">
+        <p className="text-rose-700">
             {label}
-        </h2>
+        </p>
     );
 }
