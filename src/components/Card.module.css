@@ -1,0 +1,11 @@
+.card {
+    box-shadow: 
+        -3px -3px 8px #fff1f2,
+        3px 3px 8px #fecdd3;
+}
+
+.card:active {
+    box-shadow: 
+        3px 3px 8px #fda4af inset,
+        -3px -3px 8px #fff1f2 inset; 
+}

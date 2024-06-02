@@ -1,32 +1,27 @@
 import type { JSX } from "react";
-import Link from "next/link";
 import { cl } from "../lib/cl";
+import styles from "./Card.module.css";
 
 type Props = {
-    readonly title: string;
-    readonly subTitle: string;
-    readonly href: string;
+    readonly children: JSX.Element | readonly JSX.Element[];
 };
 
-export function Card({ title, subTitle, href }: Props): JSX.Element {
+export function Card({ children }: Props): JSX.Element {
+    const dark = "#881337";
+    const light = "#be123c";
+
     return (
-        <div className="flex flex-col w-full max-w-200 p-5 overflow-hidden">
-            <Link href={href}>
-                <div className={
-                    cl(
-                        "grow-1 shrink-1 max-w-200 min-w-0 h-40",
-                        "mx-2 p-6",
-                        "shadow-md",
-                        "bg-amber-50 rounded-2xl",
-                        )}>
-                    <h1 className="text-2xl text-amber-900 font-bold">
-                        {title}
-                    </h1>
-                    <span className="text-amber-800">
-                        {subTitle}
-                    </span>
-                </div>
-            </Link>
+        <div
+            className={cl(
+                "overflow-hidden",
+                "p-5 flex items-center justify-center",
+                "rounded-3xl",
+                "bg-rose-100 rounded-2xl",
+                "bg-rose-100 active:bg-rose-200",
+                styles.card,
+            )}
+        >
+            {children}
         </div>
     );
 }

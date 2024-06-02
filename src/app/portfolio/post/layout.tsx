@@ -5,13 +5,13 @@ type Props = {
     readonly children: JSX.Element;
 };
 
-export default function BlogPost({ children }: Props): JSX.Element {
+export default function ProjectPost({ children }: Props): JSX.Element {
     return (
         <div className="w-full px-5">
             <div
                 className={cl(
-                    "prose",
-                    "flex flex-col m-auto pb-12 pt-5 px-5",
+                    "prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
+                    "flex flex-col pb-12 pt-5 m-auto",
                 )}
             >
                 {children}
