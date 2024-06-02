@@ -22,12 +22,12 @@ export function Header(): JSX.Element {
                             title="About"
                         />
                         <HeaderItem
-                            active={pathname.startsWith("/portfolio")}
+                            active={pathname === "/portfolio"}
                             href="/portfolio"
                             title="Portfolio"
                         />
                         <HeaderItem
-                            active={pathname.startsWith("/blog")}
+                            active={pathname === "/blog"}
                             href="/blog"
                             title="Blog"
                         />

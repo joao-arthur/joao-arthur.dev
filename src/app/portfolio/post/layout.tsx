@@ -7,13 +7,15 @@ type Props = {
 
 export default function ProjectPost({ children }: Props): JSX.Element {
     return (
-        <div
-            className={cl(
-                "prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
-                "flex flex-col pb-24 pt-5 m-auto",
-            )}
-        >
-            {children}
+        <div className="w-full px-5">
+            <div
+                className={cl(
+                    "prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
+                    "flex flex-col pb-12 pt-5 m-auto",
+                )}
+            >
+                {children}
+            </div>
         </div>
     );
 }

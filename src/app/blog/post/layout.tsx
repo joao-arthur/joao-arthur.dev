@@ -7,13 +7,15 @@ type Props = {
 
 export default function BlogPost({ children }: Props): JSX.Element {
     return (
-        <div
-            className={cl(
-                "prose",
-                "flex flex-col m-auto pb-24 pt-5",
-            )}
-        >
-            {children}
+        <div className="w-full px-5">
+            <div
+                className={cl(
+                    "prose",
+                    "flex flex-col m-auto pb-12 pt-5 px-5",
+                )}
+            >
+                {children}
+            </div>
         </div>
     );
 }
