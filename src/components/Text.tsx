@@ -5,9 +5,5 @@ type Props = {
 };
 
 export function Text({ label }: Props): JSX.Element {
-    return (
-        <p className="text-rose-700">
-            {label}
-        </p>
-    );
+    return <p className="text-rose-700">{label}</p>;
 }

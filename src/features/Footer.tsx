@@ -5,7 +5,8 @@ import { Button } from "../components/Button";
 
 export function Footer(): JSX.Element {
     return (
-        <div className="w-full bg-rose-800 h-32 flex items-end">
+        <div className="w-full flex flex-col">
+            <div className="w-full h-3 bg-rose-800" />
             <div className="w-full h-24 bg-rose-700 flex justify-center items-center gap-x-5">
                 <Button>
                     <a

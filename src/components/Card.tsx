@@ -7,9 +7,6 @@ type Props = {
 };
 
 export function Card({ children }: Props): JSX.Element {
-    const dark = "#881337";
-    const light = "#be123c";
-
     return (
         <div
             className={cl(

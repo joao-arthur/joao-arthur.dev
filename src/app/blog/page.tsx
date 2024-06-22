@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Card } from "../../components/Card";
 import { Title } from "../../components/Title";
 import { SubTitle } from "../../components/SubTitle";
-import { LayoutContainer } from "../../components/LayoutContainer";
 
 type Post = {
     readonly id: string;
@@ -22,21 +21,19 @@ export default function Blog(): JSX.Element {
     ];
 
     return (
-        <LayoutContainer>
+        <section className="w-full min-h-full flex flex-col gap-y-10 max-w-200 px-10">
             {posts.map((post) => (
-                <div key={post.id} className="w-full max-w-200 p-5">
-                    <Link href={`/blog/post/${post.id}`}>
-                        <div className="grow-1 shrink-1 max-w-200 min-w-0">
-                            <Card>
-                                <div className="h-40 w-full">
-                                    <Title label={post.name} />
-                                    <SubTitle label={post.id} />
-                                </div>
-                            </Card>
-                        </div>
-                    </Link>
-                </div>
+                <Link key={post.id} href={`/blog/post/${post.id}`}>
+                    <div className="grow-1 shrink-1 max-w-200 min-w-0">
+                        <Card>
+                            <div className="h-40 w-full">
+                                <Title label={post.name} />
+                                <SubTitle label={post.id} />
+                            </div>
+                        </Card>
+                    </div>
+                </Link>
             ))}
-        </LayoutContainer>
+        </section>
     );
 }
