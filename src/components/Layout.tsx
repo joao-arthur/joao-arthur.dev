@@ -106,7 +106,7 @@ export function Container({ children }: ContainerProps): JSX.Element {
             className={cl(
                 "w-full",
                 "flex flex-col items-center gap-y-5",
-                "bg-prm-98 dark:bg-prm-5",
+                "bg-prm-95 dark:bg-prm-5",
             )}
         >
             {children}

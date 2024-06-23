@@ -1,9 +1,9 @@
 import type { JSX } from "react";
-import type { IdPageProps, Params, Post } from "../../../../lib/types";
+import type { IdPageProps } from "../../../../lib/types";
 import { cl } from "../../../../lib/cl";
 import Markdown from "react-markdown";
 
-export async function generateStaticParams(): Promise<Params> {
+export async function generateStaticParams() {
     const posts = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/blog")
         .then((res) => res.json());
     return posts
