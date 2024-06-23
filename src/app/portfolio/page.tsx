@@ -1,9 +1,8 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Card } from "../../components/Card";
-import { Title } from "../../components/Title";
-import { SubTitle } from "../../components/SubTitle";
+import { Typo } from "../../components/Typo";
+import { Layout } from "../../components/Layout";
 
 type Project = {
     readonly id: string;
@@ -22,19 +21,19 @@ export default function Blog(): JSX.Element {
     ];
 
     return (
-        <section className="w-full min-h-full flex flex-col gap-y-10 max-w-200 px-10">
+        <Layout.Content>
             {projects.map((project) => (
                 <Link key={project.id} href={`/portfolio/post/${project.id}`}>
                     <div className="grow-1 shrink-1 max-w-200 min-w-0">
-                        <Card>
+                        <Layout.Card>
                             <div className="h-40 w-full">
-                                <Title label={project.name} />
-                                <SubTitle label={project.date} />
+                                <Typo.Title label={project.name} />
+                                <Typo.SubTitle label={project.date} />
                             </div>
-                        </Card>
+                        </Layout.Card>
                     </div>
                 </Link>
             ))}
-        </section>
+        </Layout.Content>
     );
 }

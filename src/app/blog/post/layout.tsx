@@ -10,8 +10,8 @@ export default function BlogPost({ children }: Props): JSX.Element {
         <div className="w-full px-5">
             <div
                 className={cl(
-                    "prose",
-                    "flex flex-col m-auto pb-12 pt-5 px-5",
+                    "prose dark:prose-invert prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
+                    "flex flex-col pb-12 pt-5 m-auto",
                 )}
             >
                 {children}

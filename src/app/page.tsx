@@ -1,10 +1,7 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
-import { Card } from "../components/Card";
-import { Title } from "../components/Title";
-import { SubTitle } from "../components/SubTitle";
-import { Progress } from "../components/Progress";
-import { Text } from "../components/Text";
+import { Layout } from "../components/Layout";
+import { Typo } from "../components/Typo";
 
 export const metadata: Metadata = {
     title: "About | João Arthur",
@@ -12,102 +9,102 @@ export const metadata: Metadata = {
 
 export default function About(): JSX.Element {
     return (
-        <section className="flex flex-col gap-y-10 w-full max-w-200 px-10">
-            <Card>
+        <Layout.Content>
+            <Layout.Card>
                 <div className="flex flex-col gap-y-5 h-96 w-full">
-                    <Title label="Languages" />
-                    <Text label="Experience in Object Orientation, Structured Programming and a bit of Functional Programming" />
+                    <Typo.Title label="Languages" />
+                    <Typo.Text label="Experience in Object Orientation, Structured Programming and a bit of Functional Programming" />
                     <div>
-                        <SubTitle label="TypeScript" />
-                        <Progress percentual={100} />
+                        <Typo.SubTitle label="TypeScript" />
+                        <Layout.Progress percentual={100} />
                     </div>
                     <div>
-                        <SubTitle label="Java" />
-                        <Progress percentual={50} />
+                        <Typo.SubTitle label="Java" />
+                        <Layout.Progress percentual={50} />
                     </div>
                     <div>
-                        <SubTitle label="Rust" />
-                        <Progress percentual={25} />
+                        <Typo.SubTitle label="Rust" />
+                        <Layout.Progress percentual={25} />
                     </div>
                     <div>
-                        <SubTitle label="C" />
-                        <Progress percentual={25} />
+                        <Typo.SubTitle label="C" />
+                        <Layout.Progress percentual={25} />
                     </div>
                 </div>
-            </Card>
-            <Card>
+            </Layout.Card>
+            <Layout.Card>
                 <div className="flex flex-col gap-y-5 h-96 w-full">
-                    <Title label="Frontend" />
-                    <Text label="I create websites that run on every device, using JSX, flat and material design, data integration with https requests and websockets" />
+                    <Typo.Title label="Frontend" />
+                    <Typo.Text label="I create websites that run on every device, using JSX, flat and material design, data integration with https requests and websockets" />
                     <div>
-                        <SubTitle label="React" />
-                        <Progress percentual={100} />
+                        <Typo.SubTitle label="React" />
+                        <Layout.Progress percentual={100} />
                     </div>
                     <div>
-                        <SubTitle label="Next" />
-                        <Progress percentual={50} />
+                        <Typo.SubTitle label="Next" />
+                        <Layout.Progress percentual={50} />
                     </div>
                 </div>
-            </Card>
-            <Card>
+            </Layout.Card>
+            <Layout.Card>
                 <div className="flex flex-col gap-y-5 h-96 w-full">
-                    <Title label="Backend" />
-                    <Text label="I create services with database integration and queue systems" />
+                    <Typo.Title label="Backend" />
+                    <Typo.Text label="I create services with database integration and queue systems" />
                     <div>
-                        <SubTitle label="NestJS" />
-                        <Progress percentual={50} />
+                        <Typo.SubTitle label="NestJS" />
+                        <Layout.Progress percentual={50} />
                     </div>
                     <div>
-                        <SubTitle label="Spring" />
-                        <Progress percentual={50} />
+                        <Typo.SubTitle label="Spring" />
+                        <Layout.Progress percentual={50} />
                     </div>
                     <div>
-                        <SubTitle label="Microservices" />
-                        <Progress percentual={25} />
+                        <Typo.SubTitle label="Microservices" />
+                        <Layout.Progress percentual={25} />
                     </div>
                 </div>
-            </Card>
-            <Card>
+            </Layout.Card>
+            <Layout.Card>
                 <div className="flex flex-col gap-y-5 h-96 w-full">
-                    <Title label="Mobile" />
-                    <Text label="I create native apps can can run on every device and android native apps" />
+                    <Typo.Title label="Mobile" />
+                    <Typo.Text label="I create native apps can can run on every device and android native apps" />
                     <div>
-                        <SubTitle label="React native" />
-                        <Progress percentual={100} />
+                        <Typo.SubTitle label="React native" />
+                        <Layout.Progress percentual={100} />
                     </div>
                     <div>
-                        <SubTitle label="Expo" />
-                        <Progress percentual={50} />
+                        <Typo.SubTitle label="Expo" />
+                        <Layout.Progress percentual={50} />
                     </div>
                     <div>
-                        <SubTitle label="Flutter" />
-                        <Progress percentual={25} />
+                        <Typo.SubTitle label="Flutter" />
+                        <Layout.Progress percentual={25} />
                     </div>
                     <div>
-                        <SubTitle label="Kotlin" />
-                        <Progress percentual={25} />
+                        <Typo.SubTitle label="Kotlin" />
+                        <Layout.Progress percentual={25} />
                     </div>
                 </div>
-            </Card>
-            <Card>
+            </Layout.Card>
+            <Layout.Card>
                 <div className="flex flex-col gap-y-5 h-96 w-full">
-                    <Title label="Interests" />
-                    <Text label="I apply techniques to make my projects easy to enhance, fix and adapt" />
-                    <SubTitle label="Unit Testing" />
-                    <SubTitle label="Clean Code" />
-                    <SubTitle label="Clean Architecture" />
-                    <SubTitle label="Design Patterns" />
-                    <SubTitle label="Data Structures" />
+                    <Typo.Title label="Interests" />
+                    <Typo.Text label="I apply techniques to make my projects easy to enhance, fix and adapt" />
+                    <Typo.SubTitle label="Unit Testing" />
+                    <Typo.SubTitle label="Clean Code" />
+                    <Typo.SubTitle label="Clean Architecture" />
+                    <Typo.SubTitle label="Design Patterns" />
+                    <Typo.SubTitle label="Data Structures" />
                 </div>
-            </Card>
-            <Card>
+            </Layout.Card>
+            <Layout.Card>
                 <div className="flex flex-col gap-y-5 h-96 w-full">
-                    <Title label="OS" />
-                    <Text label="I know how to use, configure and manage UNIX-Like systems" />
-                    <SubTitle label="Linux" />
-                    <SubTitle label="FOSS" />
+                    <Typo.Title label="OS" />
+                    <Typo.Text label="I know how to use, configure and manage UNIX-Like systems" />
+                    <Typo.SubTitle label="Linux" />
+                    <Typo.SubTitle label="FOSS" />
                 </div>
-            </Card>
-        </section>
+            </Layout.Card>
+        </Layout.Content>
     );
 }

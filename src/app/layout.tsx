@@ -3,7 +3,7 @@ import { Ubuntu } from "next/font/google";
 import { cl } from "../lib/cl";
 import { Header } from "../features/Header";
 import { Footer } from "../features/Footer";
-import { LayoutContainer } from "../components/LayoutContainer";
+import { Layout } from "../components/Layout";
 import "../styles/globals.css";
 
 const myFont = Ubuntu({
@@ -21,11 +21,11 @@ export default function RootLayout({ children }: Props): JSX.Element {
         <html lang="en" className={cl(myFont.className, "w-svw h-svh overflow-hidden")}>
             <body className="flex flex-col w-full h-full overflow-hidden">
                 <main className="w-full h-full overflow-y-auto overflow-x-hidden min-w-0">
-                    <LayoutContainer>
+                    <Layout.Container>
                         <Header />
                         {children}
                         <Footer />
-                    </LayoutContainer>
+                    </Layout.Container>
                 </main>
             </body>
         </html>

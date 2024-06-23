@@ -10,7 +10,7 @@ export default function ProjectPost({ children }: Props): JSX.Element {
         <div className="w-full px-5">
             <div
                 className={cl(
-                    "prose prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
+                    "prose dark:prose-invert prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
                     "flex flex-col pb-12 pt-5 m-auto",
                 )}
             >
