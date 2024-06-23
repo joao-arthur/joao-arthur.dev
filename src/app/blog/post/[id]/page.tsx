@@ -3,6 +3,14 @@ import type { IdPageProps } from "../../../../lib/types";
 import { cl } from "../../../../lib/cl";
 import Markdown from "react-markdown";
 
+export async function generateStaticParams() {
+    const posts = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/blog")
+        .then((res) => res.json());
+    return posts
+        .map((post) => post.name.slice(0, -3))
+        .map((id) => ({ id }));
+}
+
 export default async function Page({ params: { id } }: IdPageProps): Promise<JSX.Element> {
     const post = await fetch(
         `https://raw.githubusercontent.com/joao-arthur/assets/main/blog/${id}.md`,
