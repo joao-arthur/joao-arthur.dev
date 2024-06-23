@@ -1,7 +1,9 @@
 import type { JSX } from "react";
 import type { IdPageProps } from "../../../../lib/types";
-import { cl } from "../../../../lib/cl";
 import Markdown from "react-markdown";
+import { Prism } from "react-syntax-highlighter";
+import { cl } from "../../../../lib/cl";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export async function generateStaticParams() {
     const posts = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/portfolio")
@@ -25,7 +27,23 @@ export default async function Page({ params: { id } }: IdPageProps): Promise<JSX
                     "flex flex-col pb-12 pt-5 m-auto",
                 )}
             >
-                <Markdown>{post}</Markdown>
+                <Markdown
+                    components={{
+                        code({ children, className, node, ...rest }) {
+                            return (
+                                <Prism
+                                    PreTag="div"
+                                    children={String(children).replace(/\n$/, "")}
+                                    language={"javascript"}
+                                    style={oneDark}
+                                    showLineNumbers
+                                />
+                            );
+                        },
+                    }}
+                >
+                    {post}
+                </Markdown>
             </div>
         </div>
     );
