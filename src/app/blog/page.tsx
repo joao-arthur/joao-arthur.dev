@@ -1,23 +1,19 @@
 import type { JSX } from "react";
+import type { Post } from "../../lib/types";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Typo } from "../../components/Typo";
 import { Layout } from "../../components/Layout";
 
-type Post = {
-    readonly id: string;
-    readonly name: string;
-};
-
 export const metadata: Metadata = {
     title: "Blog | João Arthur",
 };
 
-export default function Blog(): JSX.Element {
-    const posts: readonly Post[] = [
-        { id: "2023-08-12", name: "Thoughts on interfaces" },
-        { id: "2023-08-11", name: "Thoughts on Layered Architecture and Market" },
-    ];
+export default async function BlogPage(): Promise<JSX.Element> {
+    const posts: readonly Post[] = await fetch(
+        "https://raw.githubusercontent.com/joao-arthur/assets/main/blog.json",
+        { cache: "force-cache" },
+    ).then((res) => res.json());
 
     return (
         <Layout.Content>
@@ -27,7 +23,7 @@ export default function Blog(): JSX.Element {
                         <Layout.Card>
                             <div className="h-40 w-full">
                                 <Typo.Title label={post.name} />
-                                <Typo.SubTitle label={post.id} />
+                                <Typo.SubTitle label={post.date} />
                             </div>
                         </Layout.Card>
                     </div>

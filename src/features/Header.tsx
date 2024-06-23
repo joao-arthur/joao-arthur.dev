@@ -12,17 +12,19 @@ export function Header(): JSX.Element {
     const pathname = usePathname();
     const [theme, setTheme] = useState(false);
 
-    useEffect(()=> {
+    useEffect(() => {
         setTheme(window.document.body.classList.contains("dark"));
     }, []);
 
     return (
         <div className="w-full flex flex-col">
-            <div className={cl(
-                "w-full h-20",
-                "flex justify-center items-center",
-                "bg-prm-50 dark:bg-prm-20",
-                )}>
+            <div
+                className={cl(
+                    "w-full h-20",
+                    "flex justify-center items-center",
+                    "bg-prm-50 dark:bg-prm-20",
+                )}
+            >
                 <div className="flex items-center w-full px-5">
                     <div className="flex grow gap-x-5">
                         <HeaderItem

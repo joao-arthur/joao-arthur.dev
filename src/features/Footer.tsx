@@ -8,11 +8,13 @@ export function Footer(): JSX.Element {
     return (
         <div className="w-full flex flex-col">
             <div className="w-full h-3 bg-prm-40 dark:bg-prm-15" />
-            <div className={cl(
-                "w-full h-24",
-                "flex justify-center items-center gap-x-5",
-                "bg-prm-50 dark:bg-prm-20"
-                )}>
+            <div
+                className={cl(
+                    "w-full h-24",
+                    "flex justify-center items-center gap-x-5",
+                    "bg-prm-50 dark:bg-prm-20",
+                )}
+            >
                 <Layout.Button>
                     <a
                         href="http://github.com/joao-arthur"

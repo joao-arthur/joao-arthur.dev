@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
-import styles from './layout.module.css';
+import styles from "./layout.module.css";
 
 type ContolledButtonProps = {
     readonly children: JSX.Element;
