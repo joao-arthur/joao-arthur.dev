@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: IdPageProps): Promise<JSX.Element> {
-    const {id} = await params;
+    const { id } = await params;
     const post = await fetch(
         `https://raw.githubusercontent.com/joao-arthur/assets/main/portfolio/${id}/en.md`,
         { cache: "force-cache" },

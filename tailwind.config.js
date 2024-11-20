@@ -9,6 +9,7 @@ module.exports = {
             colors: {
                 prm: {
                     "0": "var(--color-prm-0)",
+                    "3": "var(--color-prm-3)",
                     "5": "var(--color-prm-5)",
                     "10": "var(--color-prm-10)",
                     "15": "var(--color-prm-15)",
@@ -69,13 +70,16 @@ module.exports = {
                 },
             },
             width: {
-                "200": "50rem"
+                "200": "50rem",
+                "400": "100rem",
             },
             maxWidth: {
-                "200": "50rem"
+                "200": "50rem",
+                "400": "100rem",
             },
             minWidth: {
-                "200": "50rem"
+                "200": "50rem",
+                "400": "100rem",
             }
         },
     },

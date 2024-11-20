@@ -7,12 +7,11 @@ import { cl } from "../lib/cl";
 export function Footer(): JSX.Element {
     return (
         <div className="w-full flex flex-col">
-            <div className="w-full h-3 bg-prm-40 dark:bg-prm-15" />
             <div
                 className={cl(
                     "w-full h-24",
                     "flex justify-center items-center gap-x-5",
-                    "bg-prm-50 dark:bg-prm-20",
+                    "bg-prm-40 dark:bg-prm-15",
                 )}
             >
                 <Layout.Button>
@@ -21,7 +20,7 @@ export function Footer(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FaGithubAlt size={30} className="w-16 h-16 p-4" color="#fecdd3" />
+                        <FaGithubAlt size={30} className="w-16 h-16 p-4" color="#d5e3ff" />
                     </a>
                 </Layout.Button>
                 <Layout.Button>
@@ -30,7 +29,7 @@ export function Footer(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FaLinkedinIn size={30} className="w-16 h-16 p-4" color="#fecdd3" />
+                        <FaLinkedinIn size={30} className="w-16 h-16 p-4" color="#d5e3ff" />
                     </a>
                 </Layout.Button>
                 <Layout.Button>
@@ -39,7 +38,7 @@ export function Footer(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <MdEmail size={30} className="w-16 h-16 p-4" color="#fecdd3" />
+                        <MdEmail size={30} className="w-16 h-16 p-4" color="#d5e3ff" />
                     </a>
                 </Layout.Button>
             </div>

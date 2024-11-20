@@ -5,6 +5,7 @@
 @layer base {
     :root {
         --color-prm-0: #000000;
+        --color-prm-3: #000516;
         --color-prm-5: #001129;
         --color-prm-10: #001b3c;
         --color-prm-15: #00264e;

@@ -14,8 +14,11 @@ export function HeaderItem({ active, href, title }: Props): JSX.Element {
     if (active) {
         return (
             <Layout.ControlledButton key={`header-${title.toLocaleLowerCase()}`} pressed>
-                <div className="w-24 h-12 flex justify-center items-center">
-                    <h2 className="text-rose-200">{title}</h2>
+                <div>
+                    <div className="w-24 h-12 flex justify-center items-center">
+                        <h2 className="text-prm-95">{title}</h2>
+                    </div>
+                    <div className="bg-prm-25 dark:bg-prm-30 h-2"></div>
                 </div>
             </Layout.ControlledButton>
         );
@@ -27,7 +30,7 @@ export function HeaderItem({ active, href, title }: Props): JSX.Element {
                     pressed={false}
                 >
                     <div className="w-24 h-12 flex justify-center items-center">
-                        <h2 className="text-rose-200">{title}</h2>
+                        <h2 className="text-prm-95">{title}</h2>
                     </div>
                 </Layout.ControlledButton>
             </Link>
