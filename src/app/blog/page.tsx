@@ -22,7 +22,7 @@ export default async function BlogPage(): Promise<JSX.Element> {
                     <div className="grow-1 shrink-1 max-w-200 min-w-0">
                         <Layout.Card>
                             <div className="h-40 w-full">
-                                <Typo.Title label={post.name} />
+                                <Typo.Title label={post.name.en} />
                                 <Typo.SubTitle label={post.date} />
                             </div>
                         </Layout.Card>

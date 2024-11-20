@@ -1,6 +1,9 @@
 export type Post = {
     readonly id: string;
-    readonly name: string;
+    readonly name: {
+        readonly en: string;
+        readonly pt: string;
+    };
     readonly date: string;
 };
 
