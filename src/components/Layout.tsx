@@ -10,8 +10,8 @@ function ControlledButton({ children, pressed }: ContolledButtonProps): JSX.Elem
     return (
         <button
             className={cl(
-                "flex items-center justify-center",
-                "rounded-3xl",
+                "flex items-center justify-center ",
+                "rounded-3xl cursor-pointer",
             )}
             disabled={pressed}
         >
@@ -31,7 +31,7 @@ function Button({ children, onClick }: ButtonProps): JSX.Element {
             className={cl(
                 "flex items-center justify-center",
                 "rounded-3xl",
-                "bg-prm-700",
+                "bg-(--color-prm-70)",
             )}
             onClick={onClick}
         >
@@ -51,8 +51,8 @@ function Card({ children }: CardProps): JSX.Element {
                 "overflow-hidden",
                 "p-5 flex items-center justify-center",
                 "rounded-2xl",
-                "bg-prm-90",
-                "dark:bg-prm-30",
+                "bg-(--color-prm-90)",
+                "dark:bg-(--color-prm-30)",
             )}
         >
             {children}
@@ -67,10 +67,9 @@ type ProgressProps = {
 function Progress({ percentual }: ProgressProps): JSX.Element {
     return (
         <div
-            className={cl("rounded-xl h-5 w-full")}
+            className={cl("rounded-xl h-5 w-full bg-zinc-400")}
             style={{
                 backgroundSize: "50px 50px",
-                background: "linear-gradient(#808080, #ababab)",
             }}
         >
             <div
@@ -82,8 +81,6 @@ function Progress({ percentual }: ProgressProps): JSX.Element {
                 })}
                 style={{
                     width: `${percentual}%`,
-                    backgroundImage:
-                        "linear-gradient(45deg, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3) 75%, transparent 75%, transparent 100%)",
                     backgroundSize: "50px 50px",
                 }}
             />

@@ -22,7 +22,7 @@ export function Header(): JSX.Element {
                 className={cl(
                     "w-full",
                     "flex justify-center items-center",
-                    "bg-prm-40 dark:bg-prm-15",
+                    "bg-(--color-prm-40) dark:bg-(--color-prm-15)",
                 )}
             >
                 <div className="flex items-center w-full px-5">

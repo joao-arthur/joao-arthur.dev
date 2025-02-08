@@ -11,7 +11,7 @@ export function Footer(): JSX.Element {
                 className={cl(
                     "w-full h-24",
                     "flex justify-center items-center gap-x-5",
-                    "bg-prm-40 dark:bg-prm-15",
+                    "bg-(--color-prm-40) dark:bg-(--color-prm-15)",
                 )}
             >
                 <Layout.Button>
