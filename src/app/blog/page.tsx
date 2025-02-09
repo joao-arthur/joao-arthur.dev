@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import type { Post } from "../../lib/types";
+import type { BlogPost } from "../../lib/types";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Typo } from "../../components/Typo";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage(): Promise<JSX.Element> {
-    const posts: readonly Post[] = await fetch(
+    const posts: readonly BlogPost[] = await fetch(
         "https://raw.githubusercontent.com/joao-arthur/assets/main/blog.json",
         { cache: "force-cache" },
     ).then((res) => res.json());
