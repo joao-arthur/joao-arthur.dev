@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
+import { Typography } from "@mui/material";
 
 type TitleProps = {
     readonly label: string;
@@ -8,14 +9,9 @@ type TitleProps = {
 
 function Title({ label, center }: TitleProps): JSX.Element {
     return (
-        <h1
-            className={cl(
-                { "text-center": center },
-                "text-2xl font-bold text-zinc-700 dark:text-zinc-100",
-            )}
-        >
+        <Typography variant="h4">
             {label}
-        </h1>
+        </Typography>
     );
 }
 
@@ -25,9 +21,7 @@ type TextProps = {
 
 function Text({ label }: TextProps): JSX.Element {
     return (
-        <p className="text-zinc-700 dark:text-zinc-100">
-            {label}
-        </p>
+        <Typography>{label}</Typography>
     );
 }
 
@@ -37,9 +31,9 @@ type SubTitleProps = {
 
 function SubTitle({ label }: SubTitleProps): JSX.Element {
     return (
-        <h2 className="font-bold text-zinc-700 dark:text-zinc-100">
+        <Typography variant="h6">
             {label}
-        </h2>
+        </Typography>
     );
 }
 

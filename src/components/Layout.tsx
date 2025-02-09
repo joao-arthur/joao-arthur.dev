@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
+import { Card, CardContent } from "@mui/material";
 
 type ContolledButtonProps = {
     readonly children: JSX.Element;
@@ -42,19 +43,13 @@ type CardProps = {
     readonly children: JSX.Element | readonly JSX.Element[];
 };
 
-function Card({ children }: CardProps): JSX.Element {
+function CustomCard({ children }: CardProps): JSX.Element {
     return (
-        <div
-            className={cl(
-                "overflow-hidden",
-                "p-5 flex items-center justify-center",
-                "rounded-2xl",
-                "bg-prm-90",
-                "dark:bg-prm-30",
-            )}
-        >
-            {children}
-        </div>
+        <Card variant="elevation">
+            <CardContent>
+                {children}
+            </CardContent>
+        </Card>
     );
 }
 
@@ -90,7 +85,7 @@ type ContainerProps = {
 
 export function Container({ children }: ContainerProps): JSX.Element {
     return (
-        <section className="w-full flex flex-col items-center bg-white dark:bg-black">
+        <section className="w-full flex flex-col items-center">
             {children}
         </section>
     );
@@ -113,7 +108,7 @@ export function Content({ children }: ContentProps): JSX.Element {
 export const Layout = {
     ControlledButton,
     Button,
-    Card,
+    Card: CustomCard,
     Progress,
     Container,
     Content,
