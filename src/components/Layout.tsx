@@ -9,10 +9,7 @@ type ContolledButtonProps = {
 function ControlledButton({ children, pressed }: ContolledButtonProps): JSX.Element {
     return (
         <button
-            className={cl(
-                "flex items-center justify-center ",
-                "rounded-3xl cursor-pointer",
-            )}
+            className="flex items-center justify-center rounded-3xl cursor-pointer"
             disabled={pressed}
         >
             {children}
@@ -30,8 +27,9 @@ function Button({ children, onClick }: ButtonProps): JSX.Element {
         <button
             className={cl(
                 "flex items-center justify-center",
-                "rounded-3xl",
-                "bg-(--color-prm-70)",
+                "rounded-3xl cursor-pointer",
+                "dark:hover:bg-prm-20 dark:active:bg-prm-30",
+                "hover:bg-prm-50 active:bg-prm-60",
             )}
             onClick={onClick}
         >
@@ -51,8 +49,8 @@ function Card({ children }: CardProps): JSX.Element {
                 "overflow-hidden",
                 "p-5 flex items-center justify-center",
                 "rounded-2xl",
-                "bg-(--color-prm-90)",
-                "dark:bg-(--color-prm-30)",
+                "bg-prm-90",
+                "dark:bg-prm-30",
             )}
         >
             {children}
@@ -67,10 +65,8 @@ type ProgressProps = {
 function Progress({ percentual }: ProgressProps): JSX.Element {
     return (
         <div
-            className={cl("rounded-xl h-5 w-full bg-zinc-400")}
-            style={{
-                backgroundSize: "50px 50px",
-            }}
+            className="rounded-xl h-5 w-full bg-zinc-400"
+            style={{ backgroundSize: "50px 50px" }}
         >
             <div
                 className={cl("rounded-xl h-5", {
@@ -94,13 +90,7 @@ type ContainerProps = {
 
 export function Container({ children }: ContainerProps): JSX.Element {
     return (
-        <section
-            className={cl(
-                "w-full",
-                "flex flex-col items-center",
-                "bg-white dark:bg-black",
-            )}
-        >
+        <section className="w-full flex flex-col items-center bg-white dark:bg-black">
             {children}
         </section>
     );
@@ -113,9 +103,7 @@ type ContentProps = {
 export function Content({ children }: ContentProps): JSX.Element {
     return (
         <div className="w-full min-h-screen flex justify-center">
-            <section
-                className={cl("grow flex flex-col gap-y-10 max-w-200 px-10 py-5")}
-            >
+            <section className="grow flex flex-col gap-y-10 max-w-200 px-10 py-5">
                 {children}
             </section>
         </div>

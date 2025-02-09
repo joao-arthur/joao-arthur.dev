@@ -10,11 +10,8 @@ function Title({ label, center }: TitleProps): JSX.Element {
     return (
         <h1
             className={cl(
-                {
-                    "text-center": center,
-                },
-                "text-2xl font-bold",
-                "text-(--color-prm-5) dark:text-(--color-prm-95)",
+                { "text-center": center },
+                "text-2xl font-bold text-zinc-700 dark:text-zinc-100",
             )}
         >
             {label}
@@ -28,11 +25,7 @@ type TextProps = {
 
 function Text({ label }: TextProps): JSX.Element {
     return (
-        <p
-            className={cl(
-                "text-(--color-prm-5) dark:text-(--color-prm-95)",
-            )}
-        >
+        <p className="text-zinc-700 dark:text-zinc-100">
             {label}
         </p>
     );
@@ -44,12 +37,7 @@ type SubTitleProps = {
 
 function SubTitle({ label }: SubTitleProps): JSX.Element {
     return (
-        <h2
-            className={cl(
-                "font-bold",
-                "text-(--color-prm-5) dark:text-(--color-prm-95)",
-            )}
-        >
+        <h2 className="font-bold text-zinc-700 dark:text-zinc-100">
             {label}
         </h2>
     );

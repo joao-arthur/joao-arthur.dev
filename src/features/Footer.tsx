@@ -9,9 +9,9 @@ export function Footer(): JSX.Element {
         <div className="w-full flex flex-col">
             <div
                 className={cl(
-                    "w-full h-24",
+                    "w-full h-20",
                     "flex justify-center items-center gap-x-5",
-                    "bg-(--color-prm-40) dark:bg-(--color-prm-15)",
+                    "bg-prm-40 dark:bg-prm-15",
                 )}
             >
                 <Layout.Button>
@@ -20,7 +20,7 @@ export function Footer(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FaGithubAlt size={30} className="w-16 h-16 p-4" color="#d5e3ff" />
+                        <FaGithubAlt size={30} className="w-16 h-16 p-4" color="white" />
                     </a>
                 </Layout.Button>
                 <Layout.Button>
@@ -29,7 +29,7 @@ export function Footer(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FaLinkedinIn size={30} className="w-16 h-16 p-4" color="#d5e3ff" />
+                        <FaLinkedinIn size={30} className="w-16 h-16 p-4" color="white" />
                     </a>
                 </Layout.Button>
                 <Layout.Button>
@@ -38,7 +38,7 @@ export function Footer(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <MdEmail size={30} className="w-16 h-16 p-4" color="#d5e3ff" />
+                        <MdEmail size={30} className="w-16 h-16 p-4" color="white" />
                     </a>
                 </Layout.Button>
             </div>
