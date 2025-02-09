@@ -1,9 +1,8 @@
 import type { JSX } from "react";
 import { Ubuntu } from "next/font/google";
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from "@mui/material/styles";
 import { cl } from "../lib/cl";
 import { Header } from "../features/Header";
-import { Footer } from "../features/Footer";
 import { theme } from "../features/theme";
 import { Layout } from "../components/Layout";
 import "../styles/globals.css";
@@ -29,7 +28,6 @@ export default function RootLayout({ children }: Props): JSX.Element {
                         <Layout.Container>
                             <Header />
                             {children}
-                            <Footer />
                         </Layout.Container>
                     </ThemeProvider>
                 </main>

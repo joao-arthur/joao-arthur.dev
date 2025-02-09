@@ -1,8 +1,8 @@
-'use client';
-import { createTheme } from '@mui/material/styles';
+"use client";
+import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
     colorSchemes: {
         dark: true,
-    }
+    },
 });

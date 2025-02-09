@@ -2,62 +2,139 @@
 
 import type { JSX } from "react";
 import { usePathname } from "next/navigation";
-import { FaArrowLeft, FaRegMoon, FaRegSun } from "react-icons/fa6";
+import { useColorScheme } from "@mui/material";
+import React, { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import DarkMode from "@mui/icons-material/DarkMode";
+import LightMode from "@mui/icons-material/LightMode";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import CloseIcon from "@mui/icons-material/Close";
+import Divider from "@mui/material/Divider";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import { Layout } from "../components/Layout";
-import { cl } from "../lib/cl";
-import { Button, useColorScheme } from "@mui/material";
+import { Computer, Person, RssFeed } from "@mui/icons-material";
 
 export function Header(): JSX.Element {
+    const [open, setOpen] = useState(false);
     const pathname = usePathname();
     const colorScheme = useColorScheme();
 
     return (
-        <div className="w-full flex flex-col">
-            <div
-                className={cl(
-                    "w-full h-18",
-                    "flex justify-center items-center",
-                    "bg-prm-40 dark:bg-prm-15",
-                )}
-            >
-                <div className="flex items-center w-full px-5">
-                    <div className="flex grow gap-x-5">
-                        <Button sx={{ width: "7rem" }} variant="contained">About</Button>
-                        <Button sx={{ width: "7rem" }} variant="contained">Portfolio</Button>
-                        <Button sx={{ width: "7rem" }} variant="contained">Blog</Button>
-                    </div>
-                    <div className="flex flex-row gap-x-5">
-                        {pathname.includes("/post/")
-                            ? (
-                                <Layout.Button
-                                    onClick={() => {
-                                        window.history.back();
-                                    }}
-                                >
-                                    <FaArrowLeft
-                                        size={24}
-                                        className="w-14 h-14 p-5"
-                                        color="white"
-                                    />
-                                </Layout.Button>
-                            )
-                            : null}
-                        <Layout.Button
-                            onClick={() => {
-                                if (colorScheme?.mode === "dark") {
-                                    colorScheme.setMode("light")
-                                } else {
-                                    colorScheme.setMode("dark")
-                                }
+        <AppBar position="static">
+            <Container>
+                <Toolbar>
+                    <IconButton
+                        onClick={() => {
+                            setOpen(true);
+                        }}
+                        sx={{ mr: 2 }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <IconButton
+                        onClick={() => {
+                            if (colorScheme?.mode === "dark") {
+                                colorScheme.setMode("light");
+                            } else {
+                                colorScheme.setMode("dark");
+                            }
+                        }}
+                        sx={{ mr: 2 }}
+                    >
+                        {colorScheme?.mode === "dark" ? <DarkMode /> : <LightMode />}
+                    </IconButton>
+                    <Drawer
+                        anchor="left"
+                        open={open}
+                        onClose={() => {
+                            setOpen(false);
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                p: 2,
+                                height: 1,
                             }}
                         >
-                            {colorScheme?.mode === "dark"
-                                ? <FaRegMoon size={24} className="w-14 h-14 p-5" color="white" />
-                                : <FaRegSun size={24} className="w-14 h-14 p-5" color="white" />}
-                        </Layout.Button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <Box sx={{ mb: 2 }}>
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        <Person />
+                                    </ListItemIcon>
+                                    <ListItemText primary="About" />
+                                </ListItemButton>
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        <Computer />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Portfolio" />
+                                </ListItemButton>
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        <RssFeed />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Blog" />
+                                </ListItemButton>
+                            </Box>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                }}
+                            >
+                                <Layout.Button>
+                                    <a
+                                        href="http://github.com/joao-arthur"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FaGithubAlt
+                                            size={30}
+                                            className="w-16 h-16 p-4"
+                                            color="white"
+                                        />
+                                    </a>
+                                </Layout.Button>
+                                <Layout.Button>
+                                    <a
+                                        href="https://www.linkedin.com/in/joao-lothamer"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FaLinkedinIn
+                                            size={30}
+                                            className="w-16 h-16 p-4"
+                                            color="white"
+                                        />
+                                    </a>
+                                </Layout.Button>
+                                <Layout.Button>
+                                    <a
+                                        href="mailto://joao.lothamer@gmail.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <MdEmail
+                                            size={30}
+                                            className="w-16 h-16 p-4"
+                                            color="white"
+                                        />
+                                    </a>
+                                </Layout.Button>
+                            </Box>
+                        </Box>
+                    </Drawer>
+                </Toolbar>
+            </Container>
+        </AppBar>
     );
 }

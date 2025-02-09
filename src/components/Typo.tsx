@@ -20,9 +20,7 @@ type TextProps = {
 };
 
 function Text({ label }: TextProps): JSX.Element {
-    return (
-        <Typography>{label}</Typography>
-    );
+    return <Typography>{label}</Typography>;
 }
 
 type SubTitleProps = {
