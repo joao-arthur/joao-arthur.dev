@@ -2,8 +2,8 @@ import type { JSX } from "react";
 import type { PortfolioPost } from "../../lib/types";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Typo } from "../../components/Typo";
 import { Layout } from "../../components/Layout";
+import { Card, CardContent, Typography } from "@mui/material";
 
 export const metadata: Metadata = {
     title: "Projects | João Arthur",
@@ -20,12 +20,14 @@ export default async function PortfolioPage(): Promise<JSX.Element> {
             {posts.map((project) => (
                 <Link key={project.id} href={`/portfolio/post/${project.id}`}>
                     <div className="grow-1 shrink-1 max-w-200 min-w-0">
-                        <Layout.Card>
-                            <div className="h-40 w-full">
-                                <Typo.Title label={project.name} />
-                                <Typo.SubTitle label={project.date} />
-                            </div>
-                        </Layout.Card>
+                        <Card variant="elevation">
+                            <CardContent>
+                                <div className="h-40 w-full">
+                                    <Typography variant="h4">{project.name}</Typography>
+                                    <Typography variant="h6">{project.date}</Typography>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </div>
                 </Link>
             ))}

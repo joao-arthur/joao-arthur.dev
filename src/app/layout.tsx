@@ -4,7 +4,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { cl } from "../lib/cl";
 import { Header } from "../features/Header";
 import { theme } from "../features/theme";
-import { Layout } from "../components/Layout";
 import "../styles/globals.css";
 import { CssBaseline } from "@mui/material";
 
@@ -25,10 +24,10 @@ export default function RootLayout({ children }: Props): JSX.Element {
                 <main className="w-full h-full overflow-y-auto overflow-x-hidden min-w-0">
                     <ThemeProvider theme={theme}>
                         <CssBaseline />
-                        <Layout.Container>
+                        <section className="w-full flex flex-col items-center">
                             <Header />
                             {children}
-                        </Layout.Container>
+                        </section>
                     </ThemeProvider>
                 </main>
             </body>

@@ -1,22 +1,5 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
-import { Card, CardContent } from "@mui/material";
-
-type ContolledButtonProps = {
-    readonly children: JSX.Element;
-    readonly pressed: boolean;
-};
-
-function ControlledButton({ children, pressed }: ContolledButtonProps): JSX.Element {
-    return (
-        <button
-            className="flex items-center justify-center rounded-3xl cursor-pointer"
-            disabled={pressed}
-        >
-            {children}
-        </button>
-    );
-}
 
 type ButtonProps = {
     readonly children: JSX.Element;
@@ -36,20 +19,6 @@ function Button({ children, onClick }: ButtonProps): JSX.Element {
         >
             {children}
         </button>
-    );
-}
-
-type CardProps = {
-    readonly children: JSX.Element | readonly JSX.Element[];
-};
-
-function CustomCard({ children }: CardProps): JSX.Element {
-    return (
-        <Card variant="elevation">
-            <CardContent>
-                {children}
-            </CardContent>
-        </Card>
     );
 }
 
@@ -79,18 +48,6 @@ function Progress({ percentual }: ProgressProps): JSX.Element {
     );
 }
 
-type ContainerProps = {
-    readonly children: JSX.Element | JSX.Element[];
-};
-
-export function Container({ children }: ContainerProps): JSX.Element {
-    return (
-        <section className="w-full flex flex-col items-center">
-            {children}
-        </section>
-    );
-}
-
 type ContentProps = {
     readonly children: JSX.Element | JSX.Element[];
 };
@@ -106,10 +63,7 @@ export function Content({ children }: ContentProps): JSX.Element {
 }
 
 export const Layout = {
-    ControlledButton,
     Button,
-    Card: CustomCard,
     Progress,
-    Container,
     Content,
 };

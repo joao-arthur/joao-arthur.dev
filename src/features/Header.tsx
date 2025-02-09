@@ -13,8 +13,6 @@ import LightMode from "@mui/icons-material/LightMode";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import CloseIcon from "@mui/icons-material/Close";
-import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -22,6 +20,7 @@ import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Layout } from "../components/Layout";
 import { Computer, Person, RssFeed } from "@mui/icons-material";
+import Link from "next/link";
 
 export function Header(): JSX.Element {
     const [open, setOpen] = useState(false);
@@ -66,24 +65,45 @@ export function Header(): JSX.Element {
                             }}
                         >
                             <Box sx={{ mb: 2 }}>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        <Person />
-                                    </ListItemIcon>
-                                    <ListItemText primary="About" />
-                                </ListItemButton>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        <Computer />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Portfolio" />
-                                </ListItemButton>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        <RssFeed />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Blog" />
-                                </ListItemButton>
+                                <Link
+                                    href="/"
+                                    onClick={() => {
+                                        setOpen(false);
+                                    }}
+                                >
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <Person />
+                                        </ListItemIcon>
+                                        <ListItemText primary="About" />
+                                    </ListItemButton>
+                                </Link>
+                                <Link
+                                    href="portfolio"
+                                    onClick={() => {
+                                        setOpen(false);
+                                    }}
+                                >
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <Computer />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Portfolio" />
+                                    </ListItemButton>
+                                </Link>
+                                <Link
+                                    href="blog"
+                                    onClick={() => {
+                                        setOpen(false);
+                                    }}
+                                >
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <RssFeed />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Blog" />
+                                    </ListItemButton>
+                                </Link>
                             </Box>
                             <Box
                                 sx={{
