@@ -1,9 +1,10 @@
 import type { JSX } from "react";
 import { Ubuntu } from "next/font/google";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 import { cl } from "../lib/cl";
 import { Header } from "../features/Header";
-import { Footer } from "../features/Footer";
-import { Layout } from "../components/Layout";
+import { theme } from "../features/theme";
 import "../styles/globals.css";
 
 const myFont = Ubuntu({
@@ -21,11 +22,13 @@ export default function RootLayout({ children }: Props): JSX.Element {
         <html lang="en" className={cl(myFont.className, "w-svw h-svh overflow-hidden")}>
             <body className="flex flex-col w-full h-full overflow-hidden">
                 <main className="w-full h-full overflow-y-auto overflow-x-hidden min-w-0">
-                    <Layout.Container>
-                        <Header />
-                        {children}
-                        <Footer />
-                    </Layout.Container>
+                    <ThemeProvider theme={theme}>
+                        <CssBaseline />
+                        <section className="w-full flex flex-col items-center">
+                            <Header />
+                            {children}
+                        </section>
+                    </ThemeProvider>
                 </main>
             </body>
         </html>

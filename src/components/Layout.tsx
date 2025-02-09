@@ -1,63 +1,6 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
 
-type ContolledButtonProps = {
-    readonly children: JSX.Element;
-    readonly pressed: boolean;
-};
-
-function ControlledButton({ children, pressed }: ContolledButtonProps): JSX.Element {
-    return (
-        <button
-            className="flex items-center justify-center rounded-3xl cursor-pointer"
-            disabled={pressed}
-        >
-            {children}
-        </button>
-    );
-}
-
-type ButtonProps = {
-    readonly children: JSX.Element;
-    readonly onClick?: () => void;
-};
-
-function Button({ children, onClick }: ButtonProps): JSX.Element {
-    return (
-        <button
-            className={cl(
-                "flex items-center justify-center",
-                "rounded-3xl cursor-pointer",
-                "dark:hover:bg-prm-20 dark:active:bg-prm-30",
-                "hover:bg-prm-50 active:bg-prm-60",
-            )}
-            onClick={onClick}
-        >
-            {children}
-        </button>
-    );
-}
-
-type CardProps = {
-    readonly children: JSX.Element | readonly JSX.Element[];
-};
-
-function Card({ children }: CardProps): JSX.Element {
-    return (
-        <div
-            className={cl(
-                "overflow-hidden",
-                "p-5 flex items-center justify-center",
-                "rounded-2xl",
-                "bg-prm-90",
-                "dark:bg-prm-30",
-            )}
-        >
-            {children}
-        </div>
-    );
-}
-
 type ProgressProps = {
     readonly percentual: number;
 };
@@ -84,18 +27,6 @@ function Progress({ percentual }: ProgressProps): JSX.Element {
     );
 }
 
-type ContainerProps = {
-    readonly children: JSX.Element | JSX.Element[];
-};
-
-export function Container({ children }: ContainerProps): JSX.Element {
-    return (
-        <section className="w-full flex flex-col items-center bg-white dark:bg-black">
-            {children}
-        </section>
-    );
-}
-
 type ContentProps = {
     readonly children: JSX.Element | JSX.Element[];
 };
@@ -111,10 +42,6 @@ export function Content({ children }: ContentProps): JSX.Element {
 }
 
 export const Layout = {
-    ControlledButton,
-    Button,
-    Card,
     Progress,
-    Container,
     Content,
 };
