@@ -1,27 +1,6 @@
 import type { JSX } from "react";
 import { cl } from "../lib/cl";
 
-type ButtonProps = {
-    readonly children: JSX.Element;
-    readonly onClick?: () => void;
-};
-
-function Button({ children, onClick }: ButtonProps): JSX.Element {
-    return (
-        <button
-            className={cl(
-                "flex items-center justify-center",
-                "rounded-3xl cursor-pointer",
-                "dark:hover:bg-prm-20 dark:active:bg-prm-30",
-                "hover:bg-prm-50 active:bg-prm-60",
-            )}
-            onClick={onClick}
-        >
-            {children}
-        </button>
-    );
-}
-
 type ProgressProps = {
     readonly percentual: number;
 };
@@ -63,7 +42,6 @@ export function Content({ children }: ContentProps): JSX.Element {
 }
 
 export const Layout = {
-    Button,
     Progress,
     Content,
 };

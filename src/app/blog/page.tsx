@@ -2,8 +2,8 @@ import type { JSX } from "react";
 import type { BlogPost } from "../../lib/types";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Layout } from "../../components/Layout";
 import { Card, CardContent, Typography } from "@mui/material";
+import { Layout } from "../../components/Layout";
 
 export const metadata: Metadata = {
     title: "Blog | João Arthur",

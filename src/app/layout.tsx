@@ -1,11 +1,11 @@
 import type { JSX } from "react";
 import { Ubuntu } from "next/font/google";
 import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 import { cl } from "../lib/cl";
 import { Header } from "../features/Header";
 import { theme } from "../features/theme";
 import "../styles/globals.css";
-import { CssBaseline } from "@mui/material";
 
 const myFont = Ubuntu({
     style: "normal",

@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import type { IdPageProps } from "../../../../lib/types";
-import { cl } from "../../../../lib/cl";
 import Markdown from "react-markdown";
+import { cl } from "../../../../lib/cl";
 
 export async function generateStaticParams() {
     const posts = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/blog")

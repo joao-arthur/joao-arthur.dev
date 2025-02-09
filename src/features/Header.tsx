@@ -2,75 +2,63 @@
 
 import type { JSX } from "react";
 import { usePathname } from "next/navigation";
-import { useColorScheme } from "@mui/material";
 import React, { useState } from "react";
+import Link from "next/link";
+import { useColorScheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import DarkMode from "@mui/icons-material/DarkMode";
-import LightMode from "@mui/icons-material/LightMode";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { Layout } from "../components/Layout";
-import { Computer, Person, RssFeed } from "@mui/icons-material";
-import Link from "next/link";
+import Menu from "@mui/icons-material/Menu";
+import DarkMode from "@mui/icons-material/DarkMode";
+import LightMode from "@mui/icons-material/LightMode";
+import Computer from "@mui/icons-material/Computer";
+import Person from "@mui/icons-material/Person";
+import RssFeed from "@mui/icons-material/RssFeed";
+import GitHub from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import Email from "@mui/icons-material/Email";
 
 export function Header(): JSX.Element {
-    const [open, setOpen] = useState(false);
+    const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
     const pathname = usePathname();
     const colorScheme = useColorScheme();
+
+    function openHamburger() {
+        setHamburgerIsOpen(true);
+    }
+
+    function closeHamburger() {
+        setHamburgerIsOpen(false);
+    }
+
+    function toggleDarkMode() {
+        if (colorScheme?.mode === "dark") {
+            colorScheme.setMode("light");
+        } else {
+            colorScheme.setMode("dark");
+        }
+    }
 
     return (
         <AppBar position="static">
             <Container>
                 <Toolbar>
-                    <IconButton
-                        onClick={() => {
-                            setOpen(true);
-                        }}
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
+                    <IconButton sx={{ mr: 2 }} onClick={openHamburger}>
+                        <Menu />
                     </IconButton>
-                    <IconButton
-                        onClick={() => {
-                            if (colorScheme?.mode === "dark") {
-                                colorScheme.setMode("light");
-                            } else {
-                                colorScheme.setMode("dark");
-                            }
-                        }}
-                        sx={{ mr: 2 }}
-                    >
+                    <IconButton sx={{ mr: 2 }} onClick={toggleDarkMode}>
                         {colorScheme?.mode === "dark" ? <DarkMode /> : <LightMode />}
                     </IconButton>
-                    <Drawer
-                        anchor="left"
-                        open={open}
-                        onClose={() => {
-                            setOpen(false);
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                p: 2,
-                                height: 1,
-                            }}
-                        >
-                            <Box sx={{ mb: 2 }}>
-                                <Link
-                                    href="/"
-                                    onClick={() => {
-                                        setOpen(false);
-                                    }}
-                                >
+                    <Drawer anchor="left" open={hamburgerIsOpen} onClose={closeHamburger}>
+                        <Box sx={{ p: 2 , display: 'flex', flexDirection:"column", height: "100%"}}>
+                            <Box>
+                                <Link href="/" onClick={closeHamburger}>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <Person />
@@ -78,12 +66,7 @@ export function Header(): JSX.Element {
                                         <ListItemText primary="About" />
                                     </ListItemButton>
                                 </Link>
-                                <Link
-                                    href="portfolio"
-                                    onClick={() => {
-                                        setOpen(false);
-                                    }}
-                                >
+                                <Link href="portfolio" onClick={closeHamburger}>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <Computer />
@@ -91,12 +74,7 @@ export function Header(): JSX.Element {
                                         <ListItemText primary="Portfolio" />
                                     </ListItemButton>
                                 </Link>
-                                <Link
-                                    href="blog"
-                                    onClick={() => {
-                                        setOpen(false);
-                                    }}
-                                >
+                                <Link href="blog" onClick={closeHamburger}>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <RssFeed />
@@ -105,51 +83,35 @@ export function Header(): JSX.Element {
                                     </ListItemButton>
                                 </Link>
                             </Box>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                <Layout.Button>
-                                    <a
-                                        href="http://github.com/joao-arthur"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <FaGithubAlt
-                                            size={30}
-                                            className="w-16 h-16 p-4"
-                                            color="white"
-                                        />
-                                    </a>
-                                </Layout.Button>
-                                <Layout.Button>
-                                    <a
-                                        href="https://www.linkedin.com/in/joao-lothamer"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <FaLinkedinIn
-                                            size={30}
-                                            className="w-16 h-16 p-4"
-                                            color="white"
-                                        />
-                                    </a>
-                                </Layout.Button>
-                                <Layout.Button>
-                                    <a
-                                        href="mailto://joao.lothamer@gmail.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <MdEmail
-                                            size={30}
-                                            className="w-16 h-16 p-4"
-                                            color="white"
-                                        />
-                                    </a>
-                                </Layout.Button>
+                            <Box sx={{ flexGrow: 1}}/>
+                            <Box sx={{ display: "flex", columnGap: 2}}>
+                                <a
+                                    href="http://github.com/joao-arthur"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <IconButton>
+                                        <GitHub fontSize="large" />
+                                    </IconButton>
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/joao-lothamer"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <IconButton>
+                                        <LinkedIn fontSize="large" />
+                                    </IconButton>
+                                </a>
+                                <a
+                                    href="mailto://joao.lothamer@gmail.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <IconButton>
+                                        <Email fontSize="large" />
+                                    </IconButton>
+                                </a>
                             </Box>
                         </Box>
                     </Drawer>
