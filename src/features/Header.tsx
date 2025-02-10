@@ -4,7 +4,7 @@ import type { JSX } from "react";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, MenuItem, useColorScheme } from "@mui/material";
+import { Alert, Menu, MenuItem, useColorScheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -34,12 +34,12 @@ export function Header(): JSX.Element {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-      setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
-      setAnchorEl(null);
+        setAnchorEl(null);
     };
-    
+
     function openHamburger() {
         setHamburgerIsOpen(true);
     }
@@ -64,11 +64,11 @@ export function Header(): JSX.Element {
                         <IconButton onClick={openHamburger}>
                             <MenuIcon />
                         </IconButton>
-                        <div className="grow"/>
+                        <div className="grow" />
                         <IconButton onClick={toggleDarkMode}>
                             {colorScheme?.mode === "dark" ? <DarkMode /> : <LightMode />}
                         </IconButton>
-                        <IconButton onClick={handleClick} >
+                        <IconButton onClick={handleClick}>
                             <Translate />
                         </IconButton>
                     </Toolbar>
@@ -102,7 +102,7 @@ export function Header(): JSX.Element {
                             </ListItemButton>
                         </Link>
                     </Box>
-                    <div className="grow"/>
+                    <div className="grow" />
                     <Box sx={{ display: "flex", columnGap: 2 }}>
                         <a
                             href="http://github.com/joao-arthur"
@@ -139,6 +139,7 @@ export function Header(): JSX.Element {
                 open={open}
                 onClose={handleClose}
             >
+                <Alert severity="warning">Under construction</Alert>
                 <MenuItem onClick={() => {}}>🇧🇷 Português</MenuItem>
                 <MenuItem onClick={() => {}}>🇦🇷 Castellano</MenuItem>
                 <MenuItem onClick={() => {}}>🇺🇸 English</MenuItem>

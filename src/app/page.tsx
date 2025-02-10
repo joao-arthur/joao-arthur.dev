@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
 import { Layout } from "../components/Layout";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, LinearProgress, Typography } from "@mui/material";
 
 export const metadata: Metadata = {
     title: "About | João Arthur",
@@ -20,7 +20,7 @@ export default function About(): JSX.Element {
                         </Typography>
                         <div>
                             <Typography variant="h6">TypeScript</Typography>
-                            <Layout.Progress percentual={100} />
+                            <LinearProgress variant="determinate" value={100} />
                             <Typography>
                                 Experience in web, server and mobile applications, and all its
                                 ecossystems
@@ -28,7 +28,7 @@ export default function About(): JSX.Element {
                         </div>
                         <div>
                             <Typography variant="h6">Java</Typography>
-                            <Layout.Progress percentual={50} />
+                            <LinearProgress variant="determinate" value={50} />
                             <Typography>
                                 I have experience in server environments, creating scalable backend
                                 applications
@@ -36,7 +36,7 @@ export default function About(): JSX.Element {
                         </div>
                         <div>
                             <Typography variant="h6">Rust</Typography>
-                            <Layout.Progress percentual={40} />
+                            <LinearProgress variant="determinate" value={40} />
                             <Typography>
                                 Basic experience creating server and web applications with Web
                                 Assembly
@@ -55,11 +55,11 @@ export default function About(): JSX.Element {
                         </Typography>
                         <div>
                             <Typography variant="h6">React</Typography>
-                            <Layout.Progress percentual={90} />
+                            <LinearProgress variant="determinate" value={90} />
                         </div>
                         <div>
                             <Typography variant="h6">Next</Typography>
-                            <Layout.Progress percentual={50} />
+                            <LinearProgress variant="determinate" value={50} />
                         </div>
                     </div>
                 </CardContent>
@@ -73,15 +73,15 @@ export default function About(): JSX.Element {
                         </Typography>
                         <div>
                             <Typography variant="h6">Spring</Typography>
-                            <Layout.Progress percentual={50} />
+                            <LinearProgress variant="determinate" value={50} />
                         </div>
                         <div>
                             <Typography variant="h6">Microservices</Typography>
-                            <Layout.Progress percentual={40} />
+                            <LinearProgress variant="determinate" value={40} />
                         </div>
                         <div>
                             <Typography variant="h6">NestJS</Typography>
-                            <Layout.Progress percentual={30} />
+                            <LinearProgress variant="determinate" value={30} />
                         </div>
                     </div>
                 </CardContent>
@@ -95,19 +95,19 @@ export default function About(): JSX.Element {
                         </Typography>
                         <div>
                             <Typography variant="h6">React native</Typography>
-                            <Layout.Progress percentual={90} />
+                            <LinearProgress variant="determinate" value={90} />
                         </div>
                         <div>
                             <Typography variant="h6">Expo</Typography>
-                            <Layout.Progress percentual={60} />
+                            <LinearProgress variant="determinate" value={60} />
                         </div>
                         <div>
                             <Typography variant="h6">Kotlin</Typography>
-                            <Layout.Progress percentual={40} />
+                            <LinearProgress variant="determinate" value={40} />
                         </div>
                         <div>
                             <Typography variant="h6">Flutter</Typography>
-                            <Layout.Progress percentual={20} />
+                            <LinearProgress variant="determinate" value={20} />
                         </div>
                     </div>
                 </CardContent>
