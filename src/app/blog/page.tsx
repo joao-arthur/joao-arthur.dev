@@ -19,16 +19,14 @@ export default async function BlogPage(): Promise<JSX.Element> {
         <Layout.Content>
             {posts.map((post) => (
                 <Link key={post.id} href={`/blog/post/${post.id}`}>
-                    <div className="grow-1 shrink-1 max-w-200 min-w-0">
-                        <Card variant="elevation">
-                            <CardContent>
-                                <div className="h-40 w-full">
-                                    <Typography variant="h4">{post.name.en}</Typography>
-                                    <Typography variant="h6">{post.date}</Typography>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
+                    <Card variant="elevation">
+                        <CardContent>
+                            <div className="h-40 w-full">
+                                <Typography variant="h4">{post.name.en}</Typography>
+                                <Typography variant="h6">{post.date}</Typography>
+                            </div>
+                        </CardContent>
+                    </Card>
                 </Link>
             ))}
         </Layout.Content>
