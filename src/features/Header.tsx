@@ -85,7 +85,7 @@ export function Header(): JSX.Element {
                                 <ListItemText primary="About" />
                             </ListItemButton>
                         </Link>
-                        <Link href="portfolio" onClick={closeHamburger}>
+                        <Link href="/portfolio" onClick={closeHamburger}>
                             <ListItemButton>
                                 <ListItemIcon>
                                     <Computer />
@@ -93,7 +93,7 @@ export function Header(): JSX.Element {
                                 <ListItemText primary="Portfolio" />
                             </ListItemButton>
                         </Link>
-                        <Link href="blog" onClick={closeHamburger}>
+                        <Link href="/blog" onClick={closeHamburger}>
                             <ListItemButton>
                                 <ListItemIcon>
                                     <RssFeed />
