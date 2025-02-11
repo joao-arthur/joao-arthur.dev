@@ -1,12 +1,11 @@
 import type { JSX } from "react";
 import type { IdPageProps } from "../../../../lib/types";
-import Markdown from "react-markdown";
-import { cl } from "../../../../lib/cl";
+import { MarkdownPost } from "../../../../components/MarkdownPost";
 
 export async function generateStaticParams() {
-    const posts = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/blog")
-        .then((res) => res.json());
-    return posts.map((post) => ({ id: post.name }));
+    const res = await fetch("http://localhost:1337/blog.json");
+    const posts = await res.json();
+    return posts.map((post) => ({ id: post.id }));
 }
 
 export default async function Page({ params }: IdPageProps): Promise<JSX.Element> {
@@ -16,16 +15,5 @@ export default async function Page({ params }: IdPageProps): Promise<JSX.Element
         { cache: "force-cache" },
     ).then((res) => res.text());
 
-    return (
-        <div className="w-full px-5">
-            <div
-                className={cl(
-                    "prose dark:prose-invert prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
-                    "flex flex-col pb-12 pt-5 m-auto",
-                )}
-            >
-                <Markdown>{post}</Markdown>
-            </div>
-        </div>
-    );
+    return <MarkdownPost>{post}</MarkdownPost>;
 }

@@ -1,14 +1,11 @@
 import type { JSX } from "react";
 import type { IdPageProps } from "../../../../lib/types";
-import Markdown from "react-markdown";
-import { Prism } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { cl } from "../../../../lib/cl";
+import { MarkdownPost } from "../../../../components/MarkdownPost";
 
 export async function generateStaticParams() {
-    const posts = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/portfolio")
-        .then((res) => res.json());
-    return posts.map((post) => ({ id: post.name }));
+    const res = await fetch("http://localhost:1337/portfolio.json");
+    const posts = await res.json();
+    return posts.map((post) => ({ id: post.id }));
 }
 
 export default async function Page({ params }: IdPageProps): Promise<JSX.Element> {
@@ -18,32 +15,5 @@ export default async function Page({ params }: IdPageProps): Promise<JSX.Element
         { cache: "force-cache" },
     ).then((res) => res.text());
 
-    return (
-        <div className="w-full px-5">
-            <div
-                className={cl(
-                    "prose dark:prose-invert prose-img:w-32 prose-img:h-w-32 prose-img:rendering-pixelated",
-                    "flex flex-col pb-12 pt-5 m-auto",
-                )}
-            >
-                <Markdown
-                    components={{
-                        code({ children, className, node, ...rest }) {
-                            return (
-                                <Prism
-                                    PreTag="div"
-                                    children={String(children).replace(/\n$/, "")}
-                                    language="javascript"
-                                    style={oneDark}
-                                    showLineNumbers
-                                />
-                            );
-                        },
-                    }}
-                >
-                    {post}
-                </Markdown>
-            </div>
-        </div>
-    );
+    return <MarkdownPost>{post}</MarkdownPost>;
 }
