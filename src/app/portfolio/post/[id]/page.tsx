@@ -3,7 +3,7 @@ import type { IdPageProps } from "../../../../lib/types";
 import { MarkdownPost } from "../../../../components/MarkdownPost";
 
 export async function generateStaticParams() {
-    const res = await fetch("http://localhost:1337/portfolio.json");
+    const res = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/portfolio");
     const posts = await res.json();
     return posts.map((post) => ({ id: post.id }));
 }
