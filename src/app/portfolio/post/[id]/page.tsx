@@ -4,8 +4,8 @@ import { MarkdownPost } from "../../../../components/MarkdownPost";
 
 export async function generateStaticParams() {
     const res = await fetch("https://api.github.com/repos/joao-arthur/assets/contents/portfolio");
-    const posts = await res.json();
-    return posts.map((post) => ({ id: post.id }));
+    const contents = await res.json();
+    return contents.map((post) => ({ id: post.name }));
 }
 
 export default async function Page({ params }: IdPageProps): Promise<JSX.Element> {
