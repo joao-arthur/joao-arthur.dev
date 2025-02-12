@@ -26,6 +26,7 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import Email from "@mui/icons-material/Email";
 import Translate from "@mui/icons-material/Translate";
 import Close from "@mui/icons-material/Close";
+import ArrowBack from "@mui/icons-material/ArrowBack";
 
 export function Header(): JSX.Element {
     const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
@@ -58,6 +59,10 @@ export function Header(): JSX.Element {
         }
     }
 
+    function goBack() {
+        window.history.back();
+    }
+
     return (
         <>
             <AppBar position="sticky">
@@ -66,6 +71,13 @@ export function Header(): JSX.Element {
                         <IconButton onClick={openHamburger}>
                             <MenuIcon />
                         </IconButton>
+                        {pathname.includes("/post/")
+                            ? (
+                                <IconButton onClick={goBack}>
+                                    <ArrowBack />
+                                </IconButton>
+                            )
+                            : null}
                         <div className="grow" />
                         <IconButton onClick={toggleDarkMode}>
                             {colorScheme?.mode === "dark" ? <DarkMode /> : <LightMode />}

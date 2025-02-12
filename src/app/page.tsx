@@ -1,7 +1,10 @@
 import type { JSX } from "react";
 import { Metadata } from "next";
 import { Layout } from "../components/Layout";
-import { Card, CardContent, Chip, LinearProgress, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
 
 export const metadata: Metadata = {
     title: "About | João Arthur",
