@@ -23,7 +23,7 @@ export default async function PortfolioPage(): Promise<JSX.Element> {
                         <CardMedia
                             sx={{ height: 450 }}
                             image={`/images/${project.id}.png`}
-                            title="green iguana"
+                            title={project.name}
                         />
                         <CardContent>
                             <div className="h-40 w-full">
