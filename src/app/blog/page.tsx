@@ -10,10 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage(): Promise<JSX.Element> {
-    const posts: readonly BlogPost[] = await fetch(
-        "https://raw.githubusercontent.com/joao-arthur/assets/main/blog.json",
-        { cache: "force-cache" },
-    ).then((res) => res.json());
+    const res = await fetch(globalThis.process.env.URL_BLOG, { cache: "force-cache" });
+    const posts: readonly BlogPost[] = await res.json();
 
     return (
         <Layout.Content>

@@ -10,10 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default async function PortfolioPage(): Promise<JSX.Element> {
-    const posts: readonly PortfolioPost[] = await fetch(
-        "https://raw.githubusercontent.com/joao-arthur/assets/main/portfolio.json",
-        { cache: "force-cache" },
-    ).then((res) => res.json());
+    const res = await fetch(globalThis.process.env.URL_PORTFOLIO, { cache: "force-cache" });
+    const posts: readonly PortfolioPost[] = await res.json();
 
     return (
         <Layout.Content>
