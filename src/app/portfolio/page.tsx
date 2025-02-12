@@ -2,7 +2,7 @@ import type { JSX } from "react";
 import type { PortfolioPost } from "../../lib/types";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
 import { Layout } from "../../components/Layout";
 
 export const metadata: Metadata = {
@@ -23,10 +23,14 @@ export default async function PortfolioPage(): Promise<JSX.Element> {
                             image={`/images/${project.id}.png`}
                             title={project.name}
                         />
-                        <CardContent>
-                            <div className="h-40 w-full">
+                        <CardContent sx={{height: "12rem"}}>
+                            <div className="w-full">
                                 <Typography variant="h4">{project.name}</Typography>
-                                <Typography variant="h6">{project.date}</Typography>
+                                <Typography variant="h6">{new Date(project.date).toLocaleDateString()}</Typography>
+                            </div>
+                            <div>
+                                {project['languages'].map(lang =>  <Chip key={lang} color="primary" label={lang} sx={{ fontSize: 20 }} />)}
+                                {project['stack'].map(tech =>  <Chip key={tech} color="secondary" label={tech} sx={{ fontSize: 20 }} />)}
                             </div>
                         </CardContent>
                     </Card>

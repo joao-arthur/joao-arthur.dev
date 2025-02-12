@@ -21,7 +21,7 @@ export default async function BlogPage(): Promise<JSX.Element> {
                         <CardContent>
                             <div className="h-40 w-full">
                                 <Typography variant="h4">{post.name.en}</Typography>
-                                <Typography variant="h6">{post.date}</Typography>
+                                <Typography variant="h6">{new Date(post.date).toLocaleDateString()}</Typography>
                             </div>
                         </CardContent>
                     </Card>

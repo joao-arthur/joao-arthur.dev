@@ -10,7 +10,9 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: IdPageProps): Promise<JSX.Element> {
     const { id } = await params;
-    const res =  await fetch(`${globalThis.process.env.URL_BLOG_POST}/${id}/en.md`, { cache: "force-cache" });
+    const res = await fetch(`${globalThis.process.env.URL_BLOG_POST}/${id}/en.md`, {
+        cache: "force-cache",
+    });
     const post = await res.text();
 
     return <MarkdownPost>{post}</MarkdownPost>;
