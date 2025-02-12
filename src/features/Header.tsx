@@ -4,16 +4,17 @@ import type { JSX } from "react";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Alert, Menu, MenuItem, useColorScheme } from "@mui/material";
+import { useColorScheme } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import Alert from "@mui/material/Alert";
+import MenuItem from "@mui/material/MenuItem";
+import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import DarkMode from "@mui/icons-material/DarkMode";
 import LightMode from "@mui/icons-material/LightMode";
@@ -24,6 +25,7 @@ import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Email from "@mui/icons-material/Email";
 import Translate from "@mui/icons-material/Translate";
+import Close from "@mui/icons-material/Close";
 
 export function Header(): JSX.Element {
     const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
@@ -58,7 +60,7 @@ export function Header(): JSX.Element {
 
     return (
         <>
-            <AppBar position="static">
+            <AppBar position="sticky">
                 <Container>
                     <Toolbar>
                         <IconButton onClick={openHamburger}>
@@ -74,43 +76,55 @@ export function Header(): JSX.Element {
                     </Toolbar>
                 </Container>
             </AppBar>
-            <Drawer anchor="left" open={hamburgerIsOpen} onClose={closeHamburger}>
-                <Box sx={{ p: 2, display: "flex", flexDirection: "column", height: "100%" }}>
-                    <Box>
+            <Drawer
+                anchor="left"
+                open={hamburgerIsOpen}
+                onClose={closeHamburger}
+                sx={(theme) => ({ textAlign: "left" })}
+            >
+                <Box
+                    sx={(theme) => ({
+                        p: 2,
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "100%",
+                        [theme.breakpoints.down("sm")]: { width: "100vw" },
+                    })}
+                >
+                    <div className="flex justify-end">
+                        <IconButton sx={{ transition: "color 1s" }} onClick={closeHamburger}>
+                            <Close fontSize="large" sx={{ fontSize: 40 }} />
+                        </IconButton>
+                    </div>
+                    <div className="flex flex-col gap-y-4 pt-6">
                         <Link href="/" onClick={closeHamburger}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <Person />
-                                </ListItemIcon>
-                                <ListItemText primary="About" />
-                            </ListItemButton>
+                            <div className="flex pl-2 gap-x-6">
+                                <Person sx={{ color: "black", fontSize: 35 }} />
+                                <Typography variant="h4">About</Typography>
+                            </div>
                         </Link>
                         <Link href="/portfolio" onClick={closeHamburger}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <Computer />
-                                </ListItemIcon>
-                                <ListItemText primary="Portfolio" />
-                            </ListItemButton>
+                            <div className="flex pl-2 gap-x-6">
+                                <Computer sx={{ color: "gray", fontSize: 35 }} />
+                                <Typography variant="h4">Portfolio</Typography>
+                            </div>
                         </Link>
                         <Link href="/blog" onClick={closeHamburger}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <RssFeed />
-                                </ListItemIcon>
-                                <ListItemText primary="Blog" />
-                            </ListItemButton>
+                            <div className="flex pl-2 gap-x-6">
+                                <RssFeed sx={{ color: "#f78422", fontSize: 35 }} />
+                                <Typography variant="h4">Blog</Typography>
+                            </div>
                         </Link>
-                    </Box>
+                    </div>
                     <div className="grow" />
-                    <Box sx={{ display: "flex", columnGap: 2 }}>
+                    <Box sx={{ display: "flex", columnGap: 2, justifyContent: "center" }}>
                         <a
                             href="http://github.com/joao-arthur"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <IconButton>
-                                <GitHub fontSize="large" />
+                                <GitHub sx={{ color: "black", fontSize: 50 }} />
                             </IconButton>
                         </a>
                         <a
@@ -119,7 +133,10 @@ export function Header(): JSX.Element {
                             rel="noopener noreferrer"
                         >
                             <IconButton>
-                                <LinkedIn fontSize="large" />
+                                <LinkedIn
+                                    fontSize="large"
+                                    sx={{ color: "#0073b2", fontSize: 50 }}
+                                />
                             </IconButton>
                         </a>
                         <a
@@ -128,7 +145,7 @@ export function Header(): JSX.Element {
                             rel="noopener noreferrer"
                         >
                             <IconButton>
-                                <Email fontSize="large" />
+                                <Email fontSize="large" sx={{ color: "#f74343", fontSize: 50 }} />
                             </IconButton>
                         </a>
                     </Box>

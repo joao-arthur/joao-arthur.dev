@@ -2,7 +2,11 @@ import type { JSX } from "react";
 import type { PortfolioPost } from "../../lib/types";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
 import { Layout } from "../../components/Layout";
 
 export const metadata: Metadata = {
