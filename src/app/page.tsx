@@ -10,36 +10,37 @@ export const metadata: Metadata = {
 export default function About(): JSX.Element {
     return (
         <Layout.Content>
+            <img style={{ alignSelf: "center", borderRadius: "7rem", width: 320 }} className="radius-md" src="/images/myself.jpg" />
+            <Typography variant="h2" sx={{ textAlign: "center"}}>Hi, I'm João Arthur</Typography>
+            <Typography variant="h5" sx={{ textAlign: "justify"}}>I'm a 24 years old developer based in Brazil. I love solving problems with code. I have 6 years of experience in web development with JavaScript, TypeScript and NodeJS. I try to apply  clean
+            code, clean architecture and unit tests in my projects.</Typography>
+            <a>
+            <Typography variant="h5">You can download my cv here.</Typography>
+            </a>
             <Card variant="elevation">
                 <CardContent>
                     <div className="flex flex-col gap-y-5 min-h-96 w-full">
-                        <Typography variant="h4">Languages</Typography>
+                        <Typography variant="h4">Programming languages</Typography>
                         <Typography>
-                            I have knowledge in Object Orientation and Structured Programming. The
-                            languages I know the most are the following:
+                            I have knowledge in <i>Object Orientation</i> and <i>Structured Programming</i>
                         </Typography>
                         <div>
                             <Typography variant="h6">TypeScript</Typography>
-                            <LinearProgress variant="determinate" value={100} />
                             <Typography>
-                                Experience in web, server and mobile applications, and all its
+                                <b>Web</b>, <b>server</b>, <b>desktop</b> and <b>mobile</b> applications, and all its
                                 ecossystems
                             </Typography>
                         </div>
                         <div>
                             <Typography variant="h6">Java</Typography>
-                            <LinearProgress variant="determinate" value={50} />
                             <Typography>
-                                I have experience in server environments, creating scalable backend
-                                applications
+                                <b>Server</b> environments, creating scalable backend applications
                             </Typography>
                         </div>
                         <div>
                             <Typography variant="h6">Rust</Typography>
-                            <LinearProgress variant="determinate" value={40} />
                             <Typography>
-                                Basic experience creating server and web applications with Web
-                                Assembly
+                                Basic experience creating <b>server</b> and <b>desktop</b> applications, and <b>web</b> applications with <i>Web Assembly</i>
                             </Typography>
                         </div>
                     </div>
