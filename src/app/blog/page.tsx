@@ -19,9 +19,11 @@ export default async function BlogPage(): Promise<JSX.Element> {
                 <Link key={post.id} href={`/blog/post/${post.id}`}>
                     <Card variant="elevation">
                         <CardContent>
-                            <div className="h-40 w-full">
+                            <div className="min-h-40 w-full">
                                 <Typography variant="h4">{post.name.en}</Typography>
-                                <Typography variant="h6">{new Date(post.date).toLocaleDateString()}</Typography>
+                                <Typography variant="h6">
+                                    {new Date(post.date).toLocaleDateString()}
+                                </Typography>
                             </div>
                         </CardContent>
                     </Card>

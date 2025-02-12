@@ -23,14 +23,34 @@ export default async function PortfolioPage(): Promise<JSX.Element> {
                             image={`/images/${project.id}.png`}
                             title={project.name}
                         />
-                        <CardContent sx={{height: "12rem"}}>
-                            <div className="w-full">
+                        <CardContent>
+                            <div className="w-full mb-4">
                                 <Typography variant="h4">{project.name}</Typography>
-                                <Typography variant="h6">{new Date(project.date).toLocaleDateString()}</Typography>
+                                <Typography variant="h6">
+                                    {new Date(project.date).toLocaleDateString()}
+                                </Typography>
                             </div>
-                            <div>
-                                {project['languages'].map(lang =>  <Chip key={lang} color="primary" label={lang} sx={{ fontSize: 20 }} />)}
-                                {project['stack'].map(tech =>  <Chip key={tech} color="secondary" label={tech} sx={{ fontSize: 20 }} />)}
+                            <div className="flex flex-col gap-3">
+                                <div className="flex flex-wrap gap-3">
+                                    {project.languages.map((lang) => (
+                                        <Chip
+                                            key={lang}
+                                            color="primary"
+                                            label={lang}
+                                            sx={{ fontSize: 20 }}
+                                        />
+                                    ))}
+                                </div>
+                                <div className="flex flex-wrap gap-3">
+                                    {project.stack.map((tech) => (
+                                        <Chip
+                                            key={tech}
+                                            color="secondary"
+                                            label={tech}
+                                            sx={{ fontSize: 20 }}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                         </CardContent>
                     </Card>
