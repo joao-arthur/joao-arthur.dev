@@ -10,15 +10,15 @@
         height: 50px;
         border-radius: 20px;   
         cursor: pointer;
-        background-color: #d5e3ff;
-        color: #001b3c;
+        background-color: #d0d0d0;
+        color: #2f2f2f;
 
     }
 
     :global(.dark) {
         button {
-            background-color: #001b3c;
-            color: #d5e3ff;
+            background-color: #2f2f2f;
+            color: #d0d0d0;
         }
     }
 </style>

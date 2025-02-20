@@ -26,7 +26,7 @@
                 </A>
                 <BadgeContainer>
                     {#each post.technologies as technology}
-                        <Badge>{technology}</Badge>
+                        <Badge color="blue">{technology}</Badge>
                     {/each}
                 </BadgeContainer>
             </CardContent>

@@ -7,7 +7,8 @@
         padding: 0;
         margin: 0;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
         color: black;
         overflow-wrap: break-word;
     }

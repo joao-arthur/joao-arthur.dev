@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { children, href, target= undefined } = $props();
+    let { children, href, target= undefined, decorated = false } = $props();
 </script>
 
 <style>
@@ -8,8 +8,14 @@
         padding: 0;
         text-decoration: none;
     }
+
+    .decorated {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 5px;
+    }
 </style>
 
-<a {href}>
+<a {href} {target} class={decorated ? "decorated" : ""}>
     {@render children?.()}
 </a>

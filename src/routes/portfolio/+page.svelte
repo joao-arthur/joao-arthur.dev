@@ -29,12 +29,12 @@
             <CardContent>
                 <BadgeContainer>
                     {#each post.languages as language}
-                        <Badge>{language}</Badge>
+                        <Badge color="blue">{language}</Badge>
                     {/each}
                 </BadgeContainer>
                 <BadgeContainer>
                     {#each post.technologies as technology}
-                        <Badge>{technology}</Badge>
+                        <Badge color="yellow">{technology}</Badge>
                     {/each}
                 </BadgeContainer>
                 <P>git link</P>

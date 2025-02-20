@@ -8,8 +8,9 @@
         margin: 0;
         font-weight: bold;
         font-size: 3rem;
-        color: black;
+        line-height: 4rem;
         overflow-wrap: break-word;
+        color: black;
     }
 
     :global(.dark) {

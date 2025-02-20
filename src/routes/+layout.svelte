@@ -23,8 +23,10 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="/css/global.css" />
-
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    />
     <link
         rel="alternate"
         type="application/rss+xml"
