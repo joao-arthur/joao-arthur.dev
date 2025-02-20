@@ -78,6 +78,8 @@ Currently, the settings are the following:
 - **Size:** The amount of zoom in the screen
 - **FPS:** The desired FPS for render
 
+[Click here to try it!](/libre_game_of_life/index.html)
+
 ## Reference
 
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life

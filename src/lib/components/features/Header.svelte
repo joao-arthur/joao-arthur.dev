@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { page } from '$app/state';
+    import { page } from "$app/state";
     import { theme } from "$lib/assets/js/store";
     import ThemeDark from "../icons/ThemeDark.svelte";
     import ThemeLight from "../icons/ThemeLight.svelte";
@@ -57,13 +57,18 @@
 <header>
     <div class="containerAux">
         <div class="contentleft">
-            {#if page.url.pathname.startsWith("/portfolio/") || page.url.pathname.startsWith("/blog/")}
-                <IconButton onclick={() => { history.back() }}>
+            {#if page.url.pathname.startsWith("/portfolio/") ||
+                    page.url.pathname.startsWith("/blog/")}
+                <IconButton
+                    onclick={() => {
+                        history.back();
+                    }}
+                >
                     <ArrowBack></ArrowBack>
                 </IconButton>
             {/if}
         </div>
-        <div style="flex: 1 1 0; min-width: 0px;"></div>
+        <div style="flex: 1 1 0; min-width: 0px"></div>
         <div class="contentright">
             <IconButton
                 onclick={() => {

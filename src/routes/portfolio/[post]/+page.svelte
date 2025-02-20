@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Content from '$lib/components/features/Content.svelte';
-    import H1 from '$lib/components/typography/H1.svelte';
+    import Content from "$lib/components/features/Content.svelte";
+    import H1 from "$lib/components/typography/H1.svelte";
 
     let { data } = $props();
     const {
@@ -85,11 +85,25 @@
         color: #bd93f9;
     }
 
-    :global(.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted) {
+    :global(
+        .token.selector,
+        .token.attr-name,
+        .token.string,
+        .token.char,
+        .token.builtin,
+        .token.inserted
+    ) {
         color: #50fa7b;
     }
 
-    :global(.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable) {
+    :global(
+        .token.operator,
+        .token.entity,
+        .token.url,
+        .language-css .token.string,
+        .style .token.string,
+        .token.variable
+    ) {
         color: #f8f8f2;
     }
 
@@ -120,12 +134,11 @@
 
 <Content>
     <article>
-    <H1>{title}</H1>
-    <div style="padding-bottom: 10px">
-        <p><b>Published</b> {created_at}</p>
-        <p><b>Updated</b> {updated_at}</p>
-    </div>
+        <H1>{title}</H1>
+        <div style="padding-bottom: 10px">
+            <p><b>Published</b> {created_at}</p>
+            <p><b>Updated</b> {updated_at}</p>
+        </div>
         <PostContent />
     </article>
 </Content>
-

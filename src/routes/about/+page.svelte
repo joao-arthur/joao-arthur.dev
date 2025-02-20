@@ -24,25 +24,29 @@
     />
     <H1>Hi, I'm João Arthur</H1>
     <P>
-        I'm a 24 years old developer based in Brazil. I've been solving problems
-        with code for over 6 years using JavaScript, TypeScript and NodeJS. I
-        apply <b>Clean Code</b>, <b>Clean Architecture</b> and <b>Unit Tests</b>
-        when it is possible. 
+        I'm a 24 years old developer based in Brazil. I've been solving problems with code for over
+        6 years using JavaScript, TypeScript and NodeJS. I apply <b>Clean Code</b>, <b>Clean
+            Architecture</b> and <b>Unit Tests</b>
+        when it is possible.
     </P>
-    <A href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-en.pdf" target="_blank" decorated={true}>
+    <A
+        href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-en.pdf"
+        target="_blank"
+        decorated={true}
+    >
         <H4>Download my cv</H4>
     </A>
     <Card>
         <CardContent>
             <H2>Programming languages</H2>
             <P>I have knowledge in Object Orientation and Structured Programming</P>
-            <br/>
+            <br />
             <H3>TypeScript</H3>
             <P>Web, server, desktop and mobile applications, and all its ecossystems</P>
-            <br/>
+            <br />
             <H3>Java</H3>
             <P>Server environments, creating scalable backend applications</P>
-            <br/>
+            <br />
             <H3>Rust</H3>
             <P>
                 Basic experience creating server and desktop applications, and web applications with

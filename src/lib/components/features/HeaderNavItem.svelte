@@ -32,14 +32,13 @@
 </style>
 
 {#if disabled}
-<div class="disabled">
-    {@render children?.()}
-</div>
-{:else}
-<A {href}>
-    <div class="enabled">
+    <div class="disabled">
         {@render children?.()}
     </div>
-</A>
+{:else}
+    <A {href}>
+        <div class="enabled">
+            {@render children?.()}
+        </div>
+    </A>
 {/if}
-

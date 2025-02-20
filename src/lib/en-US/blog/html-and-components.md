@@ -82,7 +82,7 @@ Currently, even on **vanilla JavaScript**, it is possible to create custom HTML 
 
                 connectedCallback() {
                     const shadow = this.attachShadow(
-                        { mode: "open" }
+                        { mode: "open" },
                     );
                     const content = document
                         .createElement("div");
@@ -102,7 +102,7 @@ Currently, even on **vanilla JavaScript**, it is possible to create custom HTML 
 
             customElements.define(
                 "red-square",
-                RedSquare
+                RedSquare,
             );
         </script>
     </head>

@@ -46,3 +46,5 @@ Through the process, I learned:
 - That the architecture is more important than the code
 
 ## Final Application
+
+[Click here to see!](/precise_schedule/index.html)

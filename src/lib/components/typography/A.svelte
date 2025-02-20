@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { children, href, target= undefined, decorated = false } = $props();
+    let { children, href, target = undefined, decorated = false } = $props();
 </script>
 
 <style>

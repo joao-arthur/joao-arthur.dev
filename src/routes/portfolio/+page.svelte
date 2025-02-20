@@ -39,8 +39,16 @@
                     {/each}
                 </BadgeContainer>
                 <BadgeContainer>
-                    <A href="" target="blank"><IconButton onclick={() => {}}><ComGithub></ComGithub></IconButton></A>
-                    <A href={post.repository} target="blank"><IconButton onclick={() => {}}><ComGithub></ComGithub></IconButton></A>
+                    <A href="" target="blank">
+                        <IconButton onclick={() => {}}>
+                            <ComGithub></ComGithub>
+                        </IconButton>
+                    </A>
+                    <A href={post.repository} target="blank">
+                        <IconButton onclick={() => {}}>
+                            <ComGithub></ComGithub>
+                        </IconButton>
+                    </A>
                     <P>{post.license}</P>
                 </BadgeContainer>
             </CardContent>

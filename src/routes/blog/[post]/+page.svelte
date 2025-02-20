@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Content from '$lib/components/features/Content.svelte';
+    import Content from "$lib/components/features/Content.svelte";
 
     let { data } = $props();
     const { title, excerpt, created_at, updated_at } = data.meta;
@@ -76,11 +76,25 @@
         color: #bd93f9;
     }
 
-    :global(.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted) {
+    :global(
+        .token.selector,
+        .token.attr-name,
+        .token.string,
+        .token.char,
+        .token.builtin,
+        .token.inserted
+    ) {
         color: #50fa7b;
     }
 
-    :global(.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable) {
+    :global(
+        .token.operator,
+        .token.entity,
+        .token.url,
+        .language-css .token.string,
+        .style .token.string,
+        .token.variable
+    ) {
         color: #f8f8f2;
     }
 
