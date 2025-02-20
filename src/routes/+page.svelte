@@ -1,3 +1,3 @@
-<head>
+<svelte:head>
     <title>João Arthur</title>
-</head>
+</svelte:head>

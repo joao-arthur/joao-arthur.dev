@@ -1,16 +1,15 @@
 <script lang="ts">
     import Content from "$lib/components/features/Content.svelte";
-    import H1 from "$lib/components/typography/H1.svelte";
 
     let { data } = $props();
     const {
         title,
-        description,
+        repository,
+        license,
         created_at,
         updated_at,
         languages,
-        technologies,
-        img_url,
+        technologies
     } = data.meta;
     const { PostContent } = data;
 </script>
@@ -32,6 +31,52 @@
 
     :global(.dark main) {
         color: white;
+    }
+
+    :global(h1) {
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    :global(h2) {
+        font-weight: bold;
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    :global(h3) {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    :global(h4) {
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    :global(span, p, li) {
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    :global(table) {
+        margin: 2rem 0;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    :global(thead) {
+        text-align: left;
+    }
+
+    :global(tbody tr) {
+        line-height: 2rem;
+        border-top: solid 1px white;
     }
 
     :global(pre) {
@@ -134,11 +179,14 @@
 
 <Content>
     <article>
-        <H1>{title}</H1>
-        <div style="padding-bottom: 10px">
-            <p><b>Published</b> {created_at}</p>
-            <p><b>Updated</b> {updated_at}</p>
-        </div>
         <PostContent />
+        <div style="padding: 30px 0px;">
+            <p><b>Published:</b> {created_at}</p>
+            <p><b>Updated:</b> {updated_at}</p>
+            <p><b>Repository:</b> {repository}</p>
+            <p><b>License:</b> {license}</p>
+            <p><b>Programming languages:</b> {languages.join(", ")}</p>
+            <p><b>Technologies:</b> {technologies.join(", ")}</p>
+        </div>
     </article>
 </Content>

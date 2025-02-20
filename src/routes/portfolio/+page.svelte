@@ -9,6 +9,8 @@
     import A from "$lib/components/typography/A.svelte";
     import IconButton from "$lib/components/design/IconButton.svelte";
     import ComGithub from "$lib/components/icons/ComGithub.svelte";
+    import Play from "$lib/components/icons/Play.svelte";
+    import Balance from "$lib/components/icons/Balance.svelte";
 
     let { data } = $props();
 </script>
@@ -41,7 +43,7 @@
                 <BadgeContainer>
                     <A href={post.app_url} target="blank">
                         <IconButton onclick={() => {}}>
-                            <ComGithub></ComGithub>
+                            <Play></Play>
                         </IconButton>
                     </A>
                     <A href={post.repository} target="blank">
@@ -49,7 +51,10 @@
                             <ComGithub></ComGithub>
                         </IconButton>
                     </A>
-                    <P>{post.license}</P>
+                    <Badge color="blue">
+                        <Balance></Balance>
+                        <P>{post.license}</P>
+                    </Badge>
                 </BadgeContainer>
             </CardContent>
         </Card>

@@ -9,6 +9,7 @@
         border-radius: 20px;
         overflow: hidden;
         background-color: #ebebeb;
+        list-style: none;
     }
 
     :global(.dark) {
