@@ -7,6 +7,8 @@
     import CardContent from "$lib/components/design/CardContent.svelte";
     import BadgeContainer from "$lib/components/design/BadgeContainer.svelte";
     import A from "$lib/components/typography/A.svelte";
+    import IconButton from "$lib/components/design/IconButton.svelte";
+    import ComGithub from "$lib/components/icons/ComGithub.svelte";
 
     let { data } = $props();
 </script>
@@ -22,7 +24,6 @@
                 <CardContent>
                     <H1>{post.title}</H1>
                     <P>{post.description}</P>
-                    <P>{new Date(post.created_at).toLocaleDateString()}</P>
                 </CardContent>
                 <img src={post.img_url} alt="" />
             </A>
@@ -37,8 +38,11 @@
                         <Badge color="yellow">{technology}</Badge>
                     {/each}
                 </BadgeContainer>
-                <P>git link</P>
-                <P>project</P>
+                <BadgeContainer>
+                    <A href="" target="blank"><IconButton onclick={() => {}}><ComGithub></ComGithub></IconButton></A>
+                    <A href={post.repository} target="blank"><IconButton onclick={() => {}}><ComGithub></ComGithub></IconButton></A>
+                    <P>{post.license}</P>
+                </BadgeContainer>
             </CardContent>
         </Card>
     {/each}
