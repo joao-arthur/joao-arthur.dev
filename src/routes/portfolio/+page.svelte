@@ -39,7 +39,7 @@
                     {/each}
                 </BadgeContainer>
                 <BadgeContainer>
-                    <A href="" target="blank">
+                    <A href={post.app_url} target="blank">
                         <IconButton onclick={() => {}}>
                             <ComGithub></ComGithub>
                         </IconButton>

@@ -12,6 +12,7 @@ technologies:
   - "Web Assembly"
   - "NextJS"
 img_url: "/images/libre_game_of_life.png"
+app_url: "/app/libre_game_of_life/index.html"
 ---
 
 # libre_game_of_life
@@ -78,7 +79,7 @@ Currently, the settings are the following:
 - **Size:** The amount of zoom in the screen
 - **FPS:** The desired FPS for render
 
-[Click here to try it!](/libre_game_of_life/index.html)
+[Click here to try it!](/app/libre_game_of_life/index.html)
 
 ## Reference
 

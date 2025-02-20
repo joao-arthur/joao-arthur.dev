@@ -10,6 +10,7 @@ languages:
 technologies:
   - "NextJS"
 img_url: "/images/precise_schedule.png"
+app_url: "/app/precise_schedule/index.html"
 ---
 
 # precise_schedule
@@ -47,4 +48,4 @@ Through the process, I learned:
 
 ## Final Application
 
-[Click here to see!](/precise_schedule/index.html)
+[Click here to see!](/app/precise_schedule/index.html)
