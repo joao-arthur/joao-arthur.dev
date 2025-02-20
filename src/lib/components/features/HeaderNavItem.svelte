@@ -1,7 +1,7 @@
 <script lang="ts">
     import A from "../typography/A.svelte";
 
-    let { children, href } = $props();
+    let { children, href, disabled } = $props();
 </script>
 
 <style>
@@ -10,18 +10,36 @@
         width: 250px;
         align-items: center;
         justify-content: center;
+    }
+
+    .enabled {
         color: black;
     }
 
+    .disabled {
+        color: #8e8e8e;
+    }
+
     :global(.dark) {
-        div {
+        .enabled {
             color: white;
+        }
+
+        .disabled {
+            color: #646464;
         }
     }
 </style>
 
+{#if disabled}
+<div class="disabled">
+    {@render children?.()}
+</div>
+{:else}
 <A {href}>
-    <div>
+    <div class="enabled">
         {@render children?.()}
     </div>
 </A>
+{/if}
+

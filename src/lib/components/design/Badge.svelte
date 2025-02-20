@@ -30,7 +30,7 @@
     }
 </style>
 
-<div class={color}>
+<div class={color === "blue" ? "blue" : color === "yellow" ? "yellow" : ""}>
     <Span>
         {@render children?.()}
     </Span>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { children } = $props();
+    let { children, inherit = false } = $props();
 </script>
 
 <style>
@@ -17,9 +17,13 @@
         h2 {
             color: white;
         }
+
+        .inherit {
+            color: inherit;
+        }
     }
 </style>
 
-<h2>
+<h2 class={inherit ? "inherit" : ""}>
     {@render children?.()}
 </h2>

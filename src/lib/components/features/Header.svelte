@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { page } from '$app/state';
     import { theme } from "$lib/assets/js/store";
     import ThemeDark from "../icons/ThemeDark.svelte";
     import ThemeLight from "../icons/ThemeLight.svelte";
@@ -56,9 +57,11 @@
 <header>
     <div class="containerAux">
         <div class="contentleft">
-            <IconButton onclick={() => {}}>
-                <ArrowBack></ArrowBack>
-            </IconButton>
+            {#if page.url.pathname.startsWith("/portfolio/") || page.url.pathname.startsWith("/blog/")}
+                <IconButton onclick={() => { history.back() }}>
+                    <ArrowBack></ArrowBack>
+                </IconButton>
+            {/if}
         </div>
         <div style="flex: 1 1 0; min-width: 0px;"></div>
         <div class="contentright">
@@ -83,17 +86,17 @@
         </div>
     </div>
     <div class="containerNavBar">
-        <HeaderNavItem href="/about">
+        <HeaderNavItem href="/about" disabled={page.url.pathname === "/about"}>
             <Person size={35}></Person>
-            <H2>About</H2>
+            <H2 inherit={page.url.pathname === "/about"}>About</H2>
         </HeaderNavItem>
-        <HeaderNavItem href="/portfolio">
+        <HeaderNavItem href="/portfolio" disabled={page.url.pathname === "/portfolio"}>
             <Computer size={35}></Computer>
-            <H2>Portfolio</H2>
+            <H2 inherit={page.url.pathname === "/portfolio"}>Portfolio</H2>
         </HeaderNavItem>
-        <HeaderNavItem href="/blog">
+        <HeaderNavItem href="/blog" disabled={page.url.pathname === "/blog"}>
             <RSS size={35}></RSS>
-            <H2>Blog</H2>
+            <H2 inherit={page.url.pathname === "/blog"}>Blog</H2>
         </HeaderNavItem>
     </div>
 </header>
