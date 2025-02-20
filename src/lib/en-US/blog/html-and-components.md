@@ -4,52 +4,101 @@ description: "Why React became so popular? How was the way here?"
 created_at: "2024-06-31"
 updated_at: "2024-06-31"
 technologies:
-  - "sveltekit"
-  - "markdown"
+  - "HTML"
+  - "React"
 ---
 
 # HTML And Components
 
 Why React became so popular? How was the way here?
 
-## From HTML To React
+## Components
 
-Web is much younger than the compuper and operational systems, because of that, its development is
-still happening.
+Web projects are made of **HTML**, **CSS** and **JS**, which correspond to layout, style and behavior.
 
-Until early 2000, web project had **HTML**, **CSS** and **JS** and the websites were hosted through
-**application servers**. In this scenario, it was possible to reuse scripts and styles, but not
-layout.
+A **component** is a concept that represent the union of these characteristics into a defined piece of layout: a header, a menu, a badge, an input, and so on.   
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <style>
-            div {
+            .redSquare {
                 width: 200px;
                 height: 200px;
                 background-color: red;
             }
         </style>
+        <script>
+            function onClick() {
+                alert(
+                    "You clicked the red square!"
+                );
+            }
+        </script>
     </head>
     <body>
-        <div></div>
+        <div
+            class="redSquare"
+            onClick="onClick()"
+        ></div>
     </body>
 </html>
 ```
+> A red square "component" in plain **HTML**
 
-With the development of **XMLHTTPRequest** and **JQuery**, the applications gave an importante step,
-since now, the page skeletons could be mounted, and then feeded with **HTTP** requests on the
-client. At this moment, there were a change into **client-side render**, and a rustic form of
-componentization was possible, through HTML segregation and **DOM** dynamism.
+In order to possess a component, we need to reuse and to divide **CSS**, **JS** and **HTML** in many files.
 
-The next step was given by **AngularJS** in 2010, that helped popularize **NodeJS** on frontend
-applications and brought once and for all the concept of components for building style and behavior,
-and **OOP** on **JavaScript**.
+It has always been easy to reuse **CSS** and **JS**, however the same was not true for **HTML**, until recently.
 
-The emergence of **React** in 2014 displaced **AngularJS** because of the simplicity it offered by
-transforming components into functions, and the page building into _composing components_.
+## Templates
+
+Web applications serve pages through an **application server**. For each route, they have to return an **HTML** content, as an **HTTP** response. The **HTML** can link many **CSS** and **JS** files, but no other **HTML** ones. The solution was to build the **HTML** dinamically on the server.
+
+The technique for this was to use **templates**. The concept is to define a special syntax for text files, in order to replace the original string with binded values in runtime.
+
+```html
+<p>Hello, my name is <TMPL_VAR NAME=USER>!</p>
+```
+> **Perl** template in (HTML-Template)[https://metacpan.org/pod/HTML::Template]
+
+```html
+<p>Hello, my name is {{user}}!</p>
+```
+> **PHP** template in (Twig)[https://twig.symfony.com/]
+
+```html
+<p>Hello, my name is <?=$this->e($name)?></p>
+```
+> **PHP** template in (Plates)[https://platesphp.com]
+
+Templates solved a problem: Now it was possible to reuse **HTML**, **CSS** and **JS**. But there was no union between these concepts directly, unless the developer intended to, with project folder or architectural organization.
+
+## JQuery
+
+With the development of **XMLHTTPRequest** and **JQuery Ajax**, it became possible to mount the
+skeletons on the server, and then feed them with **HTTP** requests on the
+client. This was a change from **SSR (server-side rendering)** to **CSR (client-side rendering)**.
+
+```html
+<script>
+$.get('/user', function (data) {
+    $('p').append(data.firstName);
+}); 
+</script>
+
+<p>Hello, </p>
+```
+> JQuery HTTP GET, with **DOM** manipulation
+
+## AngularJS
+
+In 2010, **AngularJS** helped popularize **NodeJS** on frontend
+applications and brought once and for all the concept of components, with **OOP** on **JavaScript**.
+
+## React
+
+The emergence of **React** in 2014 displaced **AngularJS** because of simplicity. Components are functions, and page building is to _compose components_.
 
 ```js
 export function RedSquare() {
@@ -64,10 +113,11 @@ export function RedSquare() {
     );
 }
 ```
+> A red square component in React
 
-## Impact Of Componentization
+## Web Components
 
-Currently, even on **vanilla JavaScript**, it is possible to create custom HTML tags, by the
+Currently, even on **vanilla JavaScript**, it is possible to create custom **HTML** tags, with the
 **WebComponents API**.
 
 ```html
@@ -111,8 +161,11 @@ Currently, even on **vanilla JavaScript**, it is possible to create custom HTML 
     </body>
 </html>
 ```
+> A red square webcomponent
 
-The idea of components is so powerful that it did not only affected web developmente scenario. A
+## Sailing another seas
+
+The idea of **components** is so powerful that it did not only affected web developmente scenario. A
 worth example is the **Android** applications. Android uses natively a **XML** API to define layout,
 which is _conceptually_ very close to **HTML**.
 

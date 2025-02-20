@@ -10,9 +10,9 @@ technologies:
 
 # UNIX-Like And Packages
 
-Why sometimes everything seems messy on Linux? why the whole free software community still uses C?
+Why sometimes everything seems messy on Linux? Why the whole Free Software community still uses C?
 
-## Make Way For Linux
+## Linux Packages
 
 Generalizing, when someone begins on Linux, it happens with a famous distribution. After install, it
 is possible to install the programs using terminal commands. Usually, these commands are just

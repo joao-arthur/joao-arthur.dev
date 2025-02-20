@@ -4,8 +4,9 @@ description: "Is there a way to make a big project easy to implement, easy to te
 created_at: "2023-08-12"
 updated_at: "2023-08-12"
 technologies:
+  - "TypeScript"
+  - "Java"
   - "Rust"
-  - "markdown"
 ---
 
 # Interfaces
@@ -68,10 +69,9 @@ This abstracts implementation and let you think about **input** and **output**.
 
 ## Pitfalls
 
-- If you apply interfaces exhaustively, the code indirection makes it hard to follow the code. As a
+- If you apply interfaces exhaustively, the indirection makes it hard to follow the code. As a
   rule of thumb, use interfaces for: **External resources** (HTTP requests, database connections...)
-  and **dependency injection** (When these resources are passed as arguments of functions, exactly
-  as in the previous example)
+  and **dependency injection** (When these resources are passed as arguments of functions, as in the previous example)
 
 - There is two problems that a type-system may not cover:
 
@@ -101,9 +101,9 @@ In order to compare this code to another languages, suppose:
 - **user** is an required argument
 - If **user** is correctly saved, the saved user is returned
 
-### Typescript
+### TypeScript
 
-Typescript supports union types, that allow typing required and null values:
+TypeScript supports union types, that allow typing required and null values:
 
 ```ts
 function createUser(
@@ -121,7 +121,7 @@ function createUser(
 
 Java provides:
 
-- Annotation syntax that allows for **@Nullable** and **@NotNull** (There are many implementations
+- Annotation syntax that allows for `@Nullable` and `@NotNull` (There are many implementations
   from different libs)
 - **throws** keyword to make error handling explicit
 - _Mockito_ and similar libraries to mock injected dependencies during runtime
@@ -149,7 +149,7 @@ Rust has a unique type-system because it has:
 - _Option_ data structure to handle present or absent values
 - _Result_ data structure to handle success or error values
 
-The _Option_ and _Result_ work like enums, so it is necessary to handle each case:
+The _Option_ and _Result_ are enums, so it is necessary to handle each case:
 
 ```rust
 pub fn create_user(
