@@ -69,7 +69,7 @@ A aplicação do usuário, responsável por renderizar o canvas, as configuraç�
 - **Size:** A quantidade de zoom na tela
 - **FPS:** O FPS desejado para a renderização
 
-[Clique aqui para experimentar!](/libre_game_of_life/index.html)
+[Clique aqui para experimentar!](/app/libre_game_of_life/index.html)
 
 ## Referência
 

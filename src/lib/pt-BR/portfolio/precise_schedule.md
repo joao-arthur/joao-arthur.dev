@@ -50,4 +50,4 @@ Através do processo eu aprendi:
 
 ## Aplicação Final
 
-[Clique aqui para ver!](/precise_schedule/index.html)
+[Clique aqui para ver!](/app/precise_schedule/index.html)

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/state";
-    import { theme } from "$lib/assets/js/store";
+    import { language, theme } from "$lib/assets/js/store";
     import ThemeDark from "../icons/ThemeDark.svelte";
     import ThemeLight from "../icons/ThemeLight.svelte";
     import Person from "../icons/Person.svelte";
@@ -13,9 +13,13 @@
     import IconButton from "../design/IconButton.svelte";
 
     let currTheme;
+    let currLang;
 
     theme.subscribe((value) => {
         currTheme = value;
+    });
+    language.subscribe((value) => {
+        currLang = value;
     });
 </script>
 
@@ -91,17 +95,17 @@
         </div>
     </div>
     <div class="containerNavBar">
-        <HeaderNavItem href="/en-US/about" disabled={page.url.pathname === "/en-US/about"}>
+        <HeaderNavItem href={`/${currLang}/about`} disabled={page.url.pathname === `/${currLang}/about`}>
             <Person size={35}></Person>
-            <H2 inherit={page.url.pathname === "/en-US/about"}>About</H2>
+            <H2 inherit={page.url.pathname === `/${currLang}/about`}>About</H2>
         </HeaderNavItem>
-        <HeaderNavItem href="/en-US/portfolio" disabled={page.url.pathname === "/en-US/portfolio"}>
+        <HeaderNavItem href={`/${currLang}/portfolio`} disabled={page.url.pathname === `/${currLang}/portfolio`}>
             <Computer size={35}></Computer>
-            <H2 inherit={page.url.pathname === "/en-US/portfolio"}>Portfolio</H2>
+            <H2 inherit={page.url.pathname === `/${currLang}/portfolio`}>Portfolio</H2>
         </HeaderNavItem>
-        <HeaderNavItem href="/en-US/blog" disabled={page.url.pathname === "/en-US/blog"}>
+        <HeaderNavItem href={`/${currLang}/blog`} disabled={page.url.pathname === `/${currLang}/blog`}>
             <RSS size={35}></RSS>
-            <H2 inherit={page.url.pathname === "/en-US/blog"}>Blog</H2>
+            <H2 inherit={page.url.pathname === `/${currLang}/blog`}>Blog</H2>
         </HeaderNavItem>
     </div>
 </header>

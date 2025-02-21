@@ -174,7 +174,9 @@
         <div style="padding: 30px 0px">
             <p><b>Published:</b> {created_at}</p>
             <p><b>Updated:</b> {updated_at}</p>
-            <p><b>Technologies:</b> {technologies.join(", ")}</p>
+            {#if technologies}
+                <p><b>Technologies:</b> {technologies.join(", ")}</p>
+            {/if}
         </div>
     </article>
 </Content>
