@@ -2,7 +2,7 @@
 title: "HTML And Components"
 description: "Why React became so popular? How was the way here?"
 created_at: "2024-06-31"
-updated_at: "2024-06-31"
+updated_at: "2025-02-20"
 technologies:
   - "HTML"
   - "React"

@@ -22,7 +22,7 @@
 <Content>
     {#each data.posts as post}
         <Card>
-            <A href="/portfolio/{post.slug}">
+            <A href="/en-US/portfolio/{post.slug}">
                 <CardContent>
                     <H1>{post.title}</H1>
                     <P>{post.description}</P>

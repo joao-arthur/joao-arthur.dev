@@ -1,17 +1,9 @@
 <script lang="ts">
     import Header from "$lib/components/features/Header.svelte";
     import Footer from "$lib/components/features/Footer.svelte";
-    import { preloadCode } from "$app/navigation";
-    import { onMount } from "svelte";
     import { theme } from "$lib/assets/js/store";
 
     let { data, children } = $props();
-
-    onMount(() => {
-        preloadCode("/about");
-        preloadCode("/portfolio");
-        preloadCode("/blog");
-    });
 
     theme.subscribe((value) => {
         if (value === "dark") {

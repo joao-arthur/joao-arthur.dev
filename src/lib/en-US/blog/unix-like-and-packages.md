@@ -2,7 +2,7 @@
 title: "UNIX-Like And Packages"
 description: "Why sometimes everything seems messy on Linux? why the whole free software community still uses C?"
 created_at: "2024-06-30"
-updated_at: "2024-06-30"
+updated_at: "2025-02-20"
 technologies:
   - "Linux"
   - "C"

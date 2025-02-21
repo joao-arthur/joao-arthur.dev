@@ -15,6 +15,8 @@ app_url: "/app/precise_schedule/index.html"
 
 # precise_schedule
 
+FLOSS Web Schedule Application
+
 ## The Original Project
 
 In 2018, I developed a Java schedule application named PreciseSchedule. Back then, I lacked

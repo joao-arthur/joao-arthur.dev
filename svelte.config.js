@@ -9,14 +9,7 @@ const config = {
     kit: {
         adapter: adapter(),
         prerender: {
-            entries: [
-                "*",
-                //  "/blog/",
-                //  "/blog/*",
-                //  "/portfolio/",
-                //  "/portfolio/*",
-                //  "/about/",
-            ],
+            entries: ["*"],
         },
     },
 

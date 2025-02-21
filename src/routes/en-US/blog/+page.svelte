@@ -19,7 +19,7 @@
     {#each data.posts as post}
         <Card>
             <CardContent>
-                <A href="/blog/{post.slug}">
+                <A href="/en-US/blog/{post.slug}">
                     <H1>{post.title}</H1>
                     <P>{post.description}</P>
                     <P>{new Date(post.created_at).toLocaleDateString()}</P>

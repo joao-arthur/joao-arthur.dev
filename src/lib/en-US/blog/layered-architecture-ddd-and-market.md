@@ -2,7 +2,7 @@
 title: "Clean Architecture, DDD And Market"
 description: "If Clean Architecture and DDD provide many advatanges, why isn't everyone using them?"
 created_at: "2023-08-11"
-updated_at: "2023-08-11"
+updated_at: "2025-02-20"
 ---
 
 # Clean Architecture, DDD And Market

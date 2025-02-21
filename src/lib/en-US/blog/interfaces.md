@@ -2,7 +2,7 @@
 title: "Interfaces"
 description: "Is there a way to make a big project easy to implement, easy to test and type-safe?"
 created_at: "2023-08-12"
-updated_at: "2023-08-12"
+updated_at: "2025-02-20"
 technologies:
   - "TypeScript"
   - "Java"

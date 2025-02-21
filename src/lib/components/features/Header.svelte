@@ -91,17 +91,17 @@
         </div>
     </div>
     <div class="containerNavBar">
-        <HeaderNavItem href="/about" disabled={page.url.pathname === "/about"}>
+        <HeaderNavItem href="/en-US/about" disabled={page.url.pathname === "/en-US/about"}>
             <Person size={35}></Person>
-            <H2 inherit={page.url.pathname === "/about"}>About</H2>
+            <H2 inherit={page.url.pathname === "/en-US/about"}>About</H2>
         </HeaderNavItem>
-        <HeaderNavItem href="/portfolio" disabled={page.url.pathname === "/portfolio"}>
+        <HeaderNavItem href="/en-US/portfolio" disabled={page.url.pathname === "/en-US/portfolio"}>
             <Computer size={35}></Computer>
-            <H2 inherit={page.url.pathname === "/portfolio"}>Portfolio</H2>
+            <H2 inherit={page.url.pathname === "/en-US/portfolio"}>Portfolio</H2>
         </HeaderNavItem>
-        <HeaderNavItem href="/blog" disabled={page.url.pathname === "/blog"}>
+        <HeaderNavItem href="/en-US/blog" disabled={page.url.pathname === "/en-US/blog"}>
             <RSS size={35}></RSS>
-            <H2 inherit={page.url.pathname === "/blog"}>Blog</H2>
+            <H2 inherit={page.url.pathname === "/en-US/blog"}>Blog</H2>
         </HeaderNavItem>
     </div>
 </header>

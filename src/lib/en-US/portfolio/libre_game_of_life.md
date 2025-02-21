@@ -17,6 +17,8 @@ app_url: "/app/libre_game_of_life/index.html"
 
 # libre_game_of_life
 
+FLOSS Implementation of Conway's Game Of Life
+
 > The _Game of Life_ is a cellular automaton devised by the british mathematician John Horton Conway
 > in 1970
 
