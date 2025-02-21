@@ -11,9 +11,11 @@
     import H2 from "../typography/H2.svelte";
     import HeaderNavItem from "./HeaderNavItem.svelte";
     import IconButton from "../design/IconButton.svelte";
+    import { goto } from "$app/navigation";
 
     let currTheme;
     let currLang;
+    let component = null
 
     theme.subscribe((value) => {
         currTheme = value;
@@ -21,6 +23,7 @@
     language.subscribe((value) => {
         currLang = value;
     });
+
 </script>
 
 <style>
@@ -89,9 +92,16 @@
                     <ThemeLight></ThemeLight>
                 {/if}
             </IconButton>
-            <IconButton onclick={() => {}}>
+            <IconButton onclick={() => {component.showModal()}}>
                 <Translate></Translate>
             </IconButton>
+            <dialog bind:this={component}>
+                <button onclick={() => {component.close()}} >Close</button>
+                <div style="display: flex; flex-direction: column;">
+                    <button disabled={currLang === "en-US"} onclick={() => {language.set("en-US"); goto(`/en-US/${page.url.pathname.slice(7)}`); }}>English</button>
+                    <button disabled={currLang === "pt-BR"} onclick={() => {language.set("pt-BR"); goto(`/pt-BR/${page.url.pathname.slice(7)}`); }}>Português</button>
+                </div>
+            </dialog>
         </div>
     </div>
     <div class="containerNavBar">
