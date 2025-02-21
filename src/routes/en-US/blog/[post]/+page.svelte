@@ -171,7 +171,7 @@
 <Content>
     <article>
         <PostContent />
-        <div style="padding: 30px 0px;">
+        <div style="padding: 30px 0px">
             <p><b>Published:</b> {created_at}</p>
             <p><b>Updated:</b> {updated_at}</p>
             <p><b>Technologies:</b> {technologies.join(", ")}</p>

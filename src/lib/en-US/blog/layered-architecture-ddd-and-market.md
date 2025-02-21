@@ -7,8 +7,7 @@ updated_at: "2025-02-20"
 
 # Clean Architecture, DDD And Market
 
-If **Clean Architecture** and **DDD** provide many advatanges, why isn't everyone
-using them?
+If **Clean Architecture** and **DDD** provide many advatanges, why isn't everyone using them?
 
 ## Code
 

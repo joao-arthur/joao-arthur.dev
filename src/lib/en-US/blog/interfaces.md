@@ -69,9 +69,10 @@ This abstracts implementation and let you think about **input** and **output**.
 
 ## Pitfalls
 
-- If you apply interfaces exhaustively, the indirection makes it hard to follow the code. As a
-  rule of thumb, use interfaces for: **External resources** (HTTP requests, database connections...)
-  and **dependency injection** (When these resources are passed as arguments of functions, as in the previous example)
+- If you apply interfaces exhaustively, the indirection makes it hard to follow the code. As a rule
+  of thumb, use interfaces for: **External resources** (HTTP requests, database connections...) and
+  **dependency injection** (When these resources are passed as arguments of functions, as in the
+  previous example)
 
 - There is two problems that a type-system may not cover:
 
@@ -121,8 +122,8 @@ function createUser(
 
 Java provides:
 
-- Annotation syntax that allows for `@Nullable` and `@NotNull` (There are many implementations
-  from different libs)
+- Annotation syntax that allows for `@Nullable` and `@NotNull` (There are many implementations from
+  different libs)
 - **throws** keyword to make error handling explicit
 - _Mockito_ and similar libraries to mock injected dependencies during runtime
 

@@ -22,6 +22,10 @@
             color: inherit;
         }
     }
+
+    .inherit {
+        color: inherit;
+    }
 </style>
 
 <h2 class={inherit ? "inherit" : ""}>

@@ -9,7 +9,7 @@
         created_at,
         updated_at,
         languages,
-        technologies
+        technologies,
     } = data.meta;
     const { PostContent } = data;
 </script>
@@ -180,7 +180,7 @@
 <Content>
     <article>
         <PostContent />
-        <div style="padding: 30px 0px;">
+        <div style="padding: 30px 0px">
             <p><b>Published:</b> {created_at}</p>
             <p><b>Updated:</b> {updated_at}</p>
             <p><b>Repository:</b> {repository}</p>

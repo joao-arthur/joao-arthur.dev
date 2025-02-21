@@ -19,7 +19,7 @@
 <Content>
     <div>
         <H1>{page.status}</H1>
-        {#if (page.status === 404)}
+        {#if page.status === 404}
             <P>There is nothing to see here</P>
         {/if}
     </div>

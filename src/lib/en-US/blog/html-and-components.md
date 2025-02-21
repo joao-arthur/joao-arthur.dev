@@ -14,9 +14,11 @@ Why React became so popular? How was the way here?
 
 ## Components
 
-Web projects are made of **HTML**, **CSS** and **JS**, which correspond to layout, style and behavior.
+Web projects are made of **HTML**, **CSS** and **JS**, which correspond to layout, style and
+behavior.
 
-A **component** is a concept that represent the union of these characteristics into a defined piece of layout: a header, a menu, a badge, an input, and so on.   
+A **component** is a concept that represent the union of these characteristics into a defined piece
+of layout: a header, a menu, a badge, an input, and so on.
 
 ```html
 <!DOCTYPE html>
@@ -32,7 +34,7 @@ A **component** is a concept that represent the union of these characteristics i
         <script>
             function onClick() {
                 alert(
-                    "You clicked the red square!"
+                    "You clicked the red square!",
                 );
             }
         </script>
@@ -41,64 +43,78 @@ A **component** is a concept that represent the union of these characteristics i
         <div
             class="redSquare"
             onClick="onClick()"
-        ></div>
+        >
+        </div>
     </body>
 </html>
 ```
+
 > A red square "component" in plain **HTML**
 
-In order to possess a component, we need to reuse and to divide **CSS**, **JS** and **HTML** in many files.
+In order to possess a component, we need to reuse and to divide **CSS**, **JS** and **HTML** in many
+files.
 
-It has always been easy to reuse **CSS** and **JS**, however the same was not true for **HTML**, until recently.
+It has always been easy to reuse **CSS** and **JS**, however the same was not true for **HTML**,
+until recently.
 
 ## Templates
 
-Web applications serve pages through an **application server**. For each route, they have to return an **HTML** content, as an **HTTP** response. The **HTML** can link many **CSS** and **JS** files, but no other **HTML** ones. The solution was to build the **HTML** dinamically on the server.
+Web applications serve pages through an **application server**. For each route, they have to return
+an **HTML** content, as an **HTTP** response. The **HTML** can link many **CSS** and **JS** files,
+but no other **HTML** ones. The solution was to build the **HTML** dinamically on the server.
 
-The technique for this was to use **templates**. The concept is to define a special syntax for text files, in order to replace the original string with binded values in runtime.
+The technique for this was to use **templates**. The concept is to define a special syntax for text
+files, in order to replace the original string with binded values in runtime.
 
 ```html
 <p>Hello, my name is <TMPL_VAR NAME=USER>!</p>
 ```
+
 > **Perl** template in (HTML-Template)[https://metacpan.org/pod/HTML::Template]
 
 ```html
 <p>Hello, my name is {{user}}!</p>
 ```
+
 > **PHP** template in (Twig)[https://twig.symfony.com/]
 
 ```html
 <p>Hello, my name is <?=$this->e($name)?></p>
 ```
+
 > **PHP** template in (Plates)[https://platesphp.com]
 
-Templates solved a problem: Now it was possible to reuse **HTML**, **CSS** and **JS**. But there was no union between these concepts directly, unless the developer intended to, with project folder or architectural organization.
+Templates solved a problem: Now it was possible to reuse **HTML**, **CSS** and **JS**. But there was
+no union between these concepts directly, unless the developer intended to, with project folder or
+architectural organization.
 
 ## JQuery
 
 With the development of **XMLHTTPRequest** and **JQuery Ajax**, it became possible to mount the
-skeletons on the server, and then feed them with **HTTP** requests on the
-client. This was a change from **SSR (server-side rendering)** to **CSR (client-side rendering)**.
+skeletons on the server, and then feed them with **HTTP** requests on the client. This was a change
+from **SSR (server-side rendering)** to **CSR (client-side rendering)**.
 
 ```html
 <script>
-$.get('/user', function (data) {
-    $('p').append(data.firstName);
-}); 
+    $.get("/user", function (data) {
+        $("p").append(data.firstName);
+    });
 </script>
 
-<p>Hello, </p>
+<p>Hello,</p>
 ```
+
 > JQuery HTTP GET, with **DOM** manipulation
 
 ## AngularJS
 
-In 2010, **AngularJS** helped popularize **NodeJS** on frontend
-applications and brought once and for all the concept of components, with **OOP** on **JavaScript**.
+In 2010, **AngularJS** helped popularize **NodeJS** on frontend applications and brought once and
+for all the concept of components, with **OOP** on **JavaScript**.
 
 ## React
 
-The emergence of **React** in 2014 displaced **AngularJS** because of simplicity. Components are functions, and page building is to _compose components_.
+The emergence of **React** in 2014 displaced **AngularJS** because of simplicity. Components are
+functions, and page building is to _compose components_.
 
 ```js
 export function RedSquare() {
@@ -113,6 +129,7 @@ export function RedSquare() {
     );
 }
 ```
+
 > A red square component in React
 
 ## Web Components
@@ -161,6 +178,7 @@ Currently, even on **vanilla JavaScript**, it is possible to create custom **HTM
     </body>
 </html>
 ```
+
 > A red square webcomponent
 
 ## Sailing another seas
