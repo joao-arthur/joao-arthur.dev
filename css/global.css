@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("/fonts/UbuntuMono-Regular.ttf"), format("ttf");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("/fonts/UbuntuMono-Italic.ttf"), format("ttf");
+    font-display: swap;
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("/fonts/UbuntuMono-Bold.ttf"), format("ttf");
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("/fonts/UbuntuMono-BoldItalic.ttf"), format("ttf");
+    font-display: swap;
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+    font-family: Ubuntu Mono;
+
+    --color-prm-3: #000516;
+    --color-prm-5: #001129;
+    --color-prm-10: #001b3c;
+    --color-prm-15: #00264e;
+    --color-prm-20: #003061;
+    --color-prm-25: #003b74;
+    --color-prm-30: #084786;
+    --color-prm-35: #1e5393;
+    --color-prm-40: #2d5fa0;
+    --color-prm-50: #4a78ba;
+    --color-prm-60: #6592d6;
+    --color-prm-70: #80adf3;
+    --color-prm-80: #a7c8ff;
+    --color-prm-90: #d5e3ff;
+    --color-prm-95: #ecf1ff;
+    --color-prm-98: #f9f9ff;
+    --color-prm-99: #fdfbff;
+
+    --color-sec-5: #08111f;
+    --color-sec-10: #131c2a;
+    --color-sec-15: #1d2635;
+    --color-sec-20: #283140;
+    --color-sec-25: #333c4b;
+    --color-sec-30: #3e4757;
+    --color-sec-35: #4a5363;
+    --color-sec-40: #565f6f;
+    --color-sec-50: #6f7789;
+    --color-sec-60: #8891a3;
+    --color-sec-70: #a3abbe;
+    --color-sec-80: #bec7da;
+    --color-sec-90: #dae3f6;
+    --color-sec-95: #ecf1ff;
+    --color-sec-98: #f9f9ff;
+    --color-sec-99: #fdfbff;
+
+    --color-ter-5: #1b0922;
+    --color-ter-10: #27142d;
+    --color-ter-15: #321f38;
+    --color-ter-20: #3d2943;
+    --color-ter-25: #49344f;
+    --color-ter-30: #543f5b;
+    --color-ter-35: #614b67;
+    --color-ter-40: #6d5674;
+    --color-ter-50: #876f8d;
+    --color-ter-60: #a288a8;
+    --color-ter-70: #bda2c3;
+    --color-ter-80: #dabddf;
+    --color-ter-90: #f7d9fc;
+    --color-ter-95: #feebff;
+    --color-ter-98: #fff7fb;
+    --color-ter-99: #fffbff;
+
+    --color-neu-5: #101113;
+    --color-neu-10: #1a1c1e;
+    --color-neu-15: #252628;
+    --color-neu-20: #2f3033;
+    --color-neu-25: #3a3b3e;
+    --color-neu-30: #46474a;
+    --color-neu-35: #525255;
+    --color-neu-40: #5e5e61;
+    --color-neu-50: #77777a;
+    --color-neu-60: #919094;
+    --color-neu-70: #ababae;
+    --color-neu-80: #c7c6c9;
+    --color-neu-90: #e3e2e5;
+    --color-neu-95: #f2f0f4;
+    --color-neu-98: #faf9fc;
+    --color-neu-99: #fdfbff;
+
+    --color-neu-var-5: #0e1117;
+    --color-neu-var-10: #181c22;
+    --color-neu-var-15: #23262c;
+    --color-neu-var-20: #2d3037;
+    --color-neu-var-25: #383b42;
+    --color-neu-var-30: #44474e;
+    --color-neu-var-35: #4f5259;
+    --color-neu-var-40: #5b5e66;
+    --color-neu-var-50: #74777f;
+    --color-neu-var-60: #8e9098;
+    --color-neu-var-70: #a9abb3;
+    --color-neu-var-80: #c4c6cf;
+    --color-neu-var-90: #e0e2eb;
+    --color-neu-var-95: #eff0f9;
+    --color-neu-var-98: #f9f9ff;
+    --color-neu-var-99: #fdfbff;
+}
