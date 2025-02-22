@@ -1,3 +1,34 @@
 {
-	"download_cv": "Download my curriculum here"
+    "header_about": "About",
+    "header_portfolio": "Portfolio",
+    "header_blog": "Blog",
+
+    "header_title_dark_theme": "Dark Theme",
+    "header_title_light_theme": "Light theme",
+    "header_title_translate": "Change language",
+
+    "about_myself_title": "",
+    "about_title": "Hi, I'm João Arthur",
+    "about_subtitle": "I'm a 24 years old developer based in Brazil. I've been solving problems with code for over 6 years using JavaScript, TypeScript and NodeJS. I apply Clean Code, Clean Architecture and Unit Tests when it is possible.",
+    "download_cv": "Download my curriculum here",
+    "about_programming_languages_title": "Programming languages",
+    "about_programming_languages_subtitle": "I have knowledge in Object Orientation and Structured Programming",
+    "about_typescript": "Web, server, desktop and mobile applications, and all its ecossystems",
+    "about_java": "Server environments, creating scalable backend applications",
+    "about_rust": "Basic experience creating server and desktop applications, and web applications with Web Assembly",
+    "about_frontend": "I create websites that run on every device, using JSX, flat and material design, data integration with https requests and websockets",
+    "about_backend": "I create Rest APIs with database integration and queue systems",
+    "about_desktop": "I create desktop applications for Linux",
+    "about_mobile": "I create native apps can can run on every device and Android native apps",
+    "about_os": "I know how to use, configure and manage Linux systems. I have solid knowledge in Arch and Debian based distributions",
+
+    "post_created_at": "Published",
+    "post_updated_at": "Updated",
+    "post_repository": "Repository",
+    "post_license": "License",
+    "post_programming_languages": "Programming languages",
+    "post_technologies": "Technologies",
+
+    "project_run": "",
+    "project_repository": ""
 }

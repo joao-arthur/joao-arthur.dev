@@ -105,7 +105,7 @@
             <H2>OS</H2>
             <P>
                 I know how to use, configure and manage Linux systems. I have solid knowledge in
-                Arch and Debian based distributions.
+                Arch and Debian based distributions
             </P>
             <BadgeContainer>
                 <Badge color="blue">Arch</Badge>

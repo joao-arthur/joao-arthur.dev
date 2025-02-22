@@ -1,3 +1,34 @@
 {
-	"download_cv": "Baixe o meu currículo aqui"
+    "header_about": "Sobre",
+    "header_portfolio": "Portifólio",
+    "header_blog": "Blog",
+
+    "header_title_dark_theme": "Tema escuro",
+    "header_title_light_theme": "Tema claro",
+    "header_title_translate": "Mude a língua",
+
+    "about_myself_title": "",
+    "about_title": "Olá, eu sou João Arthur",
+    "about_subtitle": "Sou um desenvolvedor de 24 anos que mora no Brasil. Faz 6 anos que eu resolvo problemas com código em JavaScript, TypeScript and NodeJS. Eu aplico Código Limpo, Arquitetura Limpa e Testes Unitários quando é possível",
+    "download_cv": "Baixe o meu currículo aqui",
+    "about_programming_languages_title": "Linguagens de Programação",
+    "about_programming_languages_subtitle": "Possuo conhecimento em Orientação a Objetos e Programação Estruturada",
+    "about_typescript": "Aplicações web, servidores, desktop e mobile, e todo o seu ecossistema",
+    "about_java": "Ambientes de servidor, criando aplicações backend escaláveis",
+    "about_rust": "Experiência básica criando aplicações desktop e servidores, e aplicações web com Web Assembly",
+    "about_frontend": "Crio sites que rodam em qualquer dispositivo, usando JSX, flat e material design, integração de dados com requisições http e websockets",
+    "about_backend": "Crio APIs Rest que integram banco de dados e sistemas de filas",
+    "about_desktop": "Crio aplicações desktop para Linux",
+    "about_mobile": "Crio aplicativos nativos que rodam em qualquer dispositivo e aplicativos nativos Android",
+    "about_os": "Sei como usar, configurar e gerenciar sistemas Linux. Possuo conhecimento sólido em distribuições baseadas em Arch e Debian",
+
+    "post_created_at": "Publicado",
+    "post_updated_at": "Atualizado",
+    "post_repository": "Repositório",
+    "post_license": "Licença",
+    "post_programming_languages": "Linguagens de programação",
+    "post_technologies": "Tecnologias",
+
+    "project_run": "",
+    "project_repository": ""
 }
