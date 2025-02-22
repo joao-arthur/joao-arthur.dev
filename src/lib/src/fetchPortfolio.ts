@@ -1,21 +1,17 @@
-/*
-type PortfolioPost = {
-    readonly title: string;
-    readonly description: string;
-    readonly license: string;
-    readonly repository: string;
-    readonly created_at: string;
-    readonly updated_at: string;
-    readonly languages: readonly string[];
-    readonly technologies: readonly string[];
-    readonly img_url: string;
-    readonly app_url: string;
-}
-*/
+import type { Language, PortfolioPost } from "./types";
+import { portfolio_en_us, portfolio_pt_br } from "./posts";
 
-export async function fetchPortfolio() {
+function postsByLanguage(language: Language) {
+    switch (language) {
+        case "en-US": return portfolio_en_us;
+        case "pt-BR": return portfolio_pt_br;
+    }
+}
+
+export async function fetchPortfolio(language: Language): Promise<readonly PortfolioPost[]> {
+    const importedPosts = postsByLanguage(language);
     const posts = await Promise.all(
-        Object.entries(import.meta.glob("/src/lib/assets/en-US/portfolio/*.md")).map(
+        Object.entries(importedPosts).map(
             async ([path, resolver]) => {
                 const { metadata } = await resolver();
                 const slug = path.split("/").pop().slice(0, -3);
@@ -23,6 +19,6 @@ export async function fetchPortfolio() {
             },
         ),
     );
-    const sortedPosts = posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-    return { posts: sortedPosts };
+    posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    return posts;
 }

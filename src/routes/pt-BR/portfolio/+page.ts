@@ -1,13 +1,11 @@
-export async function load() {
-    const posts = await Promise.all(
-        Object.entries(import.meta.glob("../../../lib/assets/pt-BR/portfolio/*.md")).map(
-            async ([path, resolver]) => {
-                const { metadata } = await resolver();
-                const slug = path.split("/").pop().slice(0, -3);
-                return { ...metadata, slug };
-            },
-        ),
-    );
-    const sortedPosts = posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-    return { posts: sortedPosts };
+import type { PortfolioPost } from "$lib/src/types";
+import { fetchPortfolio } from "$lib/src/fetchPortfolio";
+
+type Props = {
+    posts: readonly PortfolioPost[];
+}
+
+export async function load(): Promise<Props> {
+    const posts = await fetchPortfolio("pt-BR");
+    return { posts };
 }

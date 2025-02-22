@@ -1,16 +1,17 @@
-/*
-type BlogPost = {
-    readonly title: string;
-    readonly description: string;
-    readonly created_at: string;
-    readonly updated_at: string;
-    readonly technologies: readonly string[];
-}
-*/
+import type { BlogPost, Language } from "./types";
+import { blog_en_us, blog_pt_br } from "./posts";
 
-export async function fetchBlog() {
+function postsByLanguage(language: Language) {
+    switch (language) {
+        case "en-US": return blog_en_us;
+        case "pt-BR": return blog_pt_br;
+    }
+}
+
+export async function fetchBlog(language: Language): Promise<readonly BlogPost[]> {
+    const importedPosts = postsByLanguage(language);
     const posts = await Promise.all(
-        Object.entries(import.meta.glob("/src/lib/assets/en-US/blog/*.md")).map(
+        Object.entries(importedPosts).map(
             async ([path, resolver]) => {
                 const { metadata } = await resolver();
                 const slug = path.split("/").pop().slice(0, -3);
@@ -18,6 +19,6 @@ export async function fetchBlog() {
             },
         ),
     );
-    const sortedPosts = posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-    return { posts: sortedPosts };
+    posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    return posts;
 }

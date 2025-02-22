@@ -1,19 +1,18 @@
 <script lang="ts">
     import Header from "$lib/components/layout/Header.svelte";
     import Footer from "$lib/components/layout/Footer.svelte";
-    import { language, theme } from "$lib/src/store.js";
+    import { appLanguage, appTheme } from "$lib/src/store.js";
     import { onMount } from "svelte";
     import { page } from "$app/state";
 
     let { data, children } = $props();
 
     onMount(() => {
-        console.log();
         let eriofher = new URL(page.url).pathname;
         if (eriofher.startsWith("/en-US")) {
-            language.set("en-US");
+            appLanguage.set("en-US");
         } else if (eriofher.startsWith("/pt-BR")) {
-            language.set("pt-BR");
+            appLanguage.set("pt-BR");
         } else {
             const userLangs = window.navigator.languages.map((l) => l.slice(0, 2));
 
@@ -22,22 +21,22 @@
             for (const lang of userLangs) {
                 if (lang === "en") {
                     setted = true;
-                    language.set("en-US");
+                    appLanguage.set("en-US");
                     break;
                 }
                 if (lang === "pt") {
                     setted = true;
-                    language.set("pt-BR");
+                    appLanguage.set("pt-BR");
                     break;
                 }
             }
             if (!setted) {
-                language.set("en-US");
+                appLanguage.set("en-US");
             }
         }
     });
 
-    theme.subscribe((value) => {
+    appTheme.subscribe((value) => {
         if (value === "dark") {
             globalThis.document?.body?.classList?.add("dark");
         } else {

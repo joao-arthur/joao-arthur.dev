@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/state";
-    import { language, theme } from "../../src/store";
+    import { appLanguage, appTheme } from "../../src/store.js";
     import ThemeDark from "../design/icons/ThemeDark.svelte";
     import ThemeLight from "../design/icons/ThemeLight.svelte";
     import Person from "../design/icons/Person.svelte";
@@ -17,10 +17,10 @@
     let currLang;
     let component = null;
 
-    theme.subscribe((value) => {
+    appTheme.subscribe((value) => {
         currTheme = value;
     });
-    language.subscribe((value) => {
+    appLanguage.subscribe((value) => {
         currLang = value;
     });
 </script>
@@ -79,9 +79,9 @@
             <IconButton
                 onclick={() => {
                     if (currTheme === "dark") {
-                        theme.set("light");
+                        appTheme.set("light");
                     } else {
-                        theme.set("dark");
+                        appTheme.set("dark");
                     }
                 }}
             >
@@ -110,7 +110,7 @@
                     <button
                         disabled={currLang === "en-US"}
                         onclick={() => {
-                            language.set("en-US");
+                            appLanguage.set("en-US");
                             goto(`/en-US/${page.url.pathname.slice(7)}`);
                         }}
                     >
@@ -119,7 +119,7 @@
                     <button
                         disabled={currLang === "pt-BR"}
                         onclick={() => {
-                            language.set("pt-BR");
+                            appLanguage.set("pt-BR");
                             goto(`/pt-BR/${page.url.pathname.slice(7)}`);
                         }}
                     >

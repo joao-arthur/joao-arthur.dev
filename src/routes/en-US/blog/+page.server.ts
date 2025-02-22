@@ -1,13 +1,11 @@
-export async function load({ url, fetch }) {
-    const posts = await Promise.all(
-        Object.entries(import.meta.glob("../../../lib/assets/en-US/blog/*.md")).map(
-            async ([path, resolver]) => {
-                const { metadata } = await resolver();
-                const slug = path.split("/").pop().slice(0, -3);
-                return { ...metadata, slug };
-            },
-        ),
-    );
-    const sortedPosts = posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-    return { posts: sortedPosts };
+import type { BlogPost } from '$lib/src/types';
+import { fetchBlog } from '$lib/src/fetchBlog.js';
+
+type Props = {
+    posts: readonly BlogPost[];
+}
+
+export async function load(): Promise<Props> {
+    const posts = await fetchBlog("en-US");
+    return { posts };
 }
