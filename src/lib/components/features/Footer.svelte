@@ -10,6 +10,7 @@
     footer {
         background-color: #ebebeb;
         width: 100%;
+        padding-bottom: 2rem;
     }
 
     :global(.dark) {

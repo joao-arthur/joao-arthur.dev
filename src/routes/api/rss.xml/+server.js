@@ -1,6 +1,6 @@
 export const prerender = true;
 
-export const GET = async () => {
+export async function GET() {
     const data = await Promise.all(
         Object.entries(import.meta.glob("$lib/en-US/blog/*.md")).map(async ([path, page]) => {
             const { metadata } = await page();
@@ -24,7 +24,7 @@ export const GET = async () => {
             headers,
         },
     );
-};
+}
 
 const render = (posts) =>
     `<?xml version="1.0" encoding="UTF-8" ?>

@@ -23,16 +23,15 @@
         style="align-self: center; width: 300px; height: auto; border-radius: 30%"
     />
     <H1>Hi, I'm João Arthur</H1>
-    <P>
+    <P justify>
         I'm a 24 years old developer based in Brazil. I've been solving problems with code for over
         6 years using JavaScript, TypeScript and NodeJS. I apply <b>Clean Code</b>, <b>Clean
-            Architecture</b> and <b>Unit Tests</b>
-        when it is possible.
+            Architecture</b> and <b>Unit Tests</b> when it is possible.
     </P>
     <A
         href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-en.pdf"
         target="_blank"
-        decorated={true}
+        decorated
     >
         <H4>Download my cv</H4>
     </A>
@@ -64,13 +63,14 @@
             <BadgeContainer>
                 <Badge color="blue">React</Badge>
                 <Badge color="blue">Next.js</Badge>
+                <Badge color="blue">Svelte</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>
     <Card>
         <CardContent>
             <H2>Backend</H2>
-            <P>I create services with database integration and queue systems</P>
+            <P>I create Rest APIs with database integration and queue systems</P>
             <BadgeContainer>
                 <Badge color="blue">Spring</Badge>
                 <Badge color="blue">NestJS</Badge>
@@ -103,8 +103,8 @@
         <CardContent>
             <H2>OS</H2>
             <P>
-                I know how to use, configure and manage Linux systems. based on I have solid
-                knowledge in Arch and Debian based distributions.
+                I know how to use, configure and manage Linux systems. I have solid knowledge in
+                Arch and Debian based distributions.
             </P>
             <BadgeContainer>
                 <Badge color="blue">Arch</Badge>

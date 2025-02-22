@@ -1,6 +1,7 @@
 ---
 title: "Interfaces"
-description: "Is there a way to make a big project easy to implement, easy to test and type-safe?"
+description: "Existe alguma forma de tornar um projeto grande fácil de implementar, fácil de testar testar e
+com segurança de tipos?"
 created_at: "2023-08-12"
 updated_at: "2025-02-20"
 technologies:
@@ -12,7 +13,7 @@ technologies:
 # Interfaces
 
 Existe alguma forma de tornar um _projeto grande_ fácil de _implementar_, fácil de testar _testar_ e
-com _segurança de tipo_?
+com _segurança de tipos_?
 
 ## Tipos De Dado
 

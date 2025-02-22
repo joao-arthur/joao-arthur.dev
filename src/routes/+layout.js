@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 export const prerender = true;
 export const csr = true;
 
-export const load = async ({ url }) => {
+export async function load({ url }) {
     try {
         return {
             path: url.pathname,
@@ -11,4 +11,4 @@ export const load = async ({ url }) => {
     } catch (err) {
         error(500, err);
     }
-};
+}

@@ -15,7 +15,7 @@
 
     let currTheme;
     let currLang;
-    let component = null
+    let component = null;
 
     theme.subscribe((value) => {
         currTheme = value;
@@ -23,7 +23,6 @@
     language.subscribe((value) => {
         currLang = value;
     });
-
 </script>
 
 <style>
@@ -92,28 +91,63 @@
                     <ThemeLight></ThemeLight>
                 {/if}
             </IconButton>
-            <IconButton onclick={() => {component.showModal()}}>
+            <IconButton
+                onclick={() => {
+                    component.showModal();
+                }}
+            >
                 <Translate></Translate>
             </IconButton>
             <dialog bind:this={component}>
-                <button onclick={() => {component.close()}} >Close</button>
-                <div style="display: flex; flex-direction: column;">
-                    <button disabled={currLang === "en-US"} onclick={() => {language.set("en-US"); goto(`/en-US/${page.url.pathname.slice(7)}`); }}>English</button>
-                    <button disabled={currLang === "pt-BR"} onclick={() => {language.set("pt-BR"); goto(`/pt-BR/${page.url.pathname.slice(7)}`); }}>Português</button>
+                <button
+                    onclick={() => {
+                        component.close();
+                    }}
+                >
+                    Close
+                </button>
+                <div style="display: flex; flex-direction: column">
+                    <button
+                        disabled={currLang === "en-US"}
+                        onclick={() => {
+                            language.set("en-US");
+                            goto(`/en-US/${page.url.pathname.slice(7)}`);
+                        }}
+                    >
+                        English
+                    </button>
+                    <button
+                        disabled={currLang === "pt-BR"}
+                        onclick={() => {
+                            language.set("pt-BR");
+                            goto(`/pt-BR/${page.url.pathname.slice(7)}`);
+                        }}
+                    >
+                        Português
+                    </button>
                 </div>
             </dialog>
         </div>
     </div>
     <div class="containerNavBar">
-        <HeaderNavItem href={`/${currLang}/about`} disabled={page.url.pathname === `/${currLang}/about`}>
+        <HeaderNavItem
+            href={`/${currLang}/about`}
+            disabled={page.url.pathname === `/${currLang}/about`}
+        >
             <Person size={35}></Person>
             <H2 inherit={page.url.pathname === `/${currLang}/about`}>About</H2>
         </HeaderNavItem>
-        <HeaderNavItem href={`/${currLang}/portfolio`} disabled={page.url.pathname === `/${currLang}/portfolio`}>
+        <HeaderNavItem
+            href={`/${currLang}/portfolio`}
+            disabled={page.url.pathname === `/${currLang}/portfolio`}
+        >
             <Computer size={35}></Computer>
             <H2 inherit={page.url.pathname === `/${currLang}/portfolio`}>Portfolio</H2>
         </HeaderNavItem>
-        <HeaderNavItem href={`/${currLang}/blog`} disabled={page.url.pathname === `/${currLang}/blog`}>
+        <HeaderNavItem
+            href={`/${currLang}/blog`}
+            disabled={page.url.pathname === `/${currLang}/blog`}
+        >
             <RSS size={35}></RSS>
             <H2 inherit={page.url.pathname === `/${currLang}/blog`}>Blog</H2>
         </HeaderNavItem>

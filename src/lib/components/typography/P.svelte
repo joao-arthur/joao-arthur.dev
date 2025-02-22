@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { children } = $props();
+    let { children, justify = false } = $props();
 </script>
 
 <style>
@@ -16,8 +16,12 @@
             color: white;
         }
     }
+
+    .justify {
+        text-align: justify;
+    }
 </style>
 
-<p>
+<p class={justify ? "justify" : ""}>
     {@render children?.()}
 </p>

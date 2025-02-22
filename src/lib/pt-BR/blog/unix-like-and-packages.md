@@ -1,6 +1,6 @@
 ---
-title: "UNIX-Like And Packages"
-description: "Why sometimes everything seems messy on Linux? why the whole free software community still uses C?"
+title: "UNIX-Like E Pacotes"
+description: "Por que as vezes tudo parece uma bagunça no Linux? Por que toda a comunidade de Software Livre ainda usa C?"
 created_at: "2024-06-30"
 updated_at: "2025-02-20"
 technologies:
@@ -10,7 +10,7 @@ technologies:
 
 # UNIX-Like E Pacotes
 
-Por que as vezes tudo parece bagunçado no Linux? Por que toda a comunidade de software livre ainda
+Por que as vezes tudo parece uma bagunça no Linux? Por que toda a comunidade de Software Livre ainda
 usa C?
 
 ## Abram Alas Para O Linux

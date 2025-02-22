@@ -2,20 +2,12 @@
     import Content from "$lib/components/features/Content.svelte";
 
     let { data } = $props();
-    const {
-        title,
-        repository,
-        license,
-        created_at,
-        updated_at,
-        languages,
-        technologies,
-    } = data.meta;
+    const post = data.meta;
     const { PostContent } = data;
 </script>
 
 <svelte:head>
-    <title>{title}</title>
+    <title>{post.title}</title>
     <!--<meta data-key="description" name="description" content={excerpt} />-->
     <!--<meta name="twitter:title" content={title} />-->
     <!--<meta name="twitter:description" content={excerpt} />-->
@@ -179,14 +171,15 @@
 
 <Content>
     <article>
+        <img style="border-radius: 20px" src={post.img_url} alt="" />
         <PostContent />
         <div style="padding: 30px 0px">
-            <p><b>Published:</b> {created_at}</p>
-            <p><b>Updated:</b> {updated_at}</p>
-            <p><b>Repository:</b> {repository}</p>
-            <p><b>License:</b> {license}</p>
-            <p><b>Programming languages:</b> {languages.join(", ")}</p>
-            <p><b>Technologies:</b> {technologies.join(", ")}</p>
+            <p><b>Published:</b> {post.created_at}</p>
+            <p><b>Updated:</b> {post.updated_at}</p>
+            <p><b>Repository:</b> {post.repository}</p>
+            <p><b>License:</b> {post.license}</p>
+            <p><b>Programming languages:</b> {post.languages.join(", ")}</p>
+            <p><b>Technologies:</b> {post.technologies.join(", ")}</p>
         </div>
     </article>
 </Content>

@@ -2,18 +2,18 @@
     import Content from "$lib/components/features/Content.svelte";
 
     let { data } = $props();
-    const { title, excerpt, created_at, updated_at, technologies } = data.meta;
+    const post = data.meta;
     const { PostContent } = data;
 </script>
 
 <svelte:head>
-    <title>{title}</title>
-    <meta data-key="description" name="description" content={excerpt} />
+    <title>{post.title}</title>
+    <meta data-key="description" name="description" content={post.excerpt} />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content={title} />
-    <meta name="twitter:title" content={title} />
-    <meta property="og:description" content={excerpt} />
-    <meta name="twitter:description" content={excerpt} />
+    <meta property="og:title" content={post.title} />
+    <meta name="twitter:title" content={post.title} />
+    <meta property="og:description" content={post.excerpt} />
+    <meta name="twitter:description" content={post.excerpt} />
 </svelte:head>
 
 <style>
@@ -172,10 +172,10 @@
     <article>
         <PostContent />
         <div style="padding: 30px 0px">
-            <p><b>Published:</b> {created_at}</p>
-            <p><b>Updated:</b> {updated_at}</p>
-            {#if technologies}
-                <p><b>Technologies:</b> {technologies.join(", ")}</p>
+            <p><b>Published:</b> {post.created_at}</p>
+            <p><b>Updated:</b> {post.updated_at}</p>
+            {#if post.technologies}
+                <p><b>Technologies:</b> {post.technologies.join(", ")}</p>
             {/if}
         </div>
     </article>

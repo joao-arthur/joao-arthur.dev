@@ -22,35 +22,34 @@
         alt="João Arthur"
         style="align-self: center; width: 300px; height: auto; border-radius: 30%"
     />
-    <H1>Hi, I'm João Arthur</H1>
-    <P>
-        I'm a 24 years old developer based in Brazil. I've been solving problems with code for over
-        6 years using JavaScript, TypeScript and NodeJS. I apply <b>Clean Code</b>, <b>Clean
-            Architecture</b> and <b>Unit Tests</b>
-        when it is possible.
+    <H1>Olá, eu sou João Arthur</H1>
+    <P justify>
+        Sou um desenvolvedor de 24 anos que mora no Brasil. Faz 6 anos que eu resolvo problemas com
+        código em JavaScript, TypeScript and NodeJS. Eu aplico <b>Código Limpo</b>, <b>Arquitetura
+            Limpa</b> e <b>Testes Unitários</b> quando é possível.
     </P>
     <A
-        href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-en.pdf"
+        href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-pt.pdf"
         target="_blank"
-        decorated={true}
+        decorated
     >
-        <H4>Download my cv</H4>
+        <H4>Baixe o meu currículo</H4>
     </A>
     <Card>
         <CardContent>
-            <H2>Programming languages</H2>
-            <P>I have knowledge in Object Orientation and Structured Programming</P>
+            <H2>Linguagens de Programação</H2>
+            <P>Possuo conhecimento em Orientação a Objetos e Programação Estruturada</P>
             <br />
             <H3>TypeScript</H3>
-            <P>Web, server, desktop and mobile applications, and all its ecossystems</P>
+            <P>Aplicações web, servidores, desktop e mobile, e todo o seu ecossistema</P>
             <br />
             <H3>Java</H3>
-            <P>Server environments, creating scalable backend applications</P>
+            <P>Ambientes de servidor, criando aplicações backend escaláveis</P>
             <br />
             <H3>Rust</H3>
             <P>
-                Basic experience creating server and desktop applications, and web applications with
-                Web Assembly
+                Experiência básica criando aplicações desktop e servidores, e aplicações web com Web
+                Assembly
             </P>
         </CardContent>
     </Card>
@@ -58,19 +57,20 @@
         <CardContent>
             <H2>Frontend</H2>
             <P>
-                I create websites that run on every device, using JSX, flat and material design,
-                data integration with https requests and websockets
+                Crio sites que rodam em qualquer dispositivo, usando JSX, flat e material design,
+                integração de dados com requisições http e websockets
             </P>
             <BadgeContainer>
                 <Badge color="blue">React</Badge>
                 <Badge color="blue">Next.js</Badge>
+                <Badge color="blue">Svelte</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>
     <Card>
         <CardContent>
             <H2>Backend</H2>
-            <P>I create services with database integration and queue systems</P>
+            <P>Crio APIs Rest que integram banco de dados e sistemas de filas</P>
             <BadgeContainer>
                 <Badge color="blue">Spring</Badge>
                 <Badge color="blue">NestJS</Badge>
@@ -80,7 +80,7 @@
     <Card>
         <CardContent>
             <H2>Desktop</H2>
-            <P>I create desktop applications for Linux</P>
+            <P>Crio aplicações desktop para Linux</P>
             <BadgeContainer>
                 <Badge color="blue">GTK</Badge>
                 <Badge color="blue">Electron</Badge>
@@ -90,7 +90,10 @@
     <Card>
         <CardContent>
             <H2>Mobile</H2>
-            <P>I create native apps can can run on every device and Android native apps</P>
+            <P>
+                Crio aplicativos nativos que rodam em qualquer dispositivo e aplicativos nativos
+                Android
+            </P>
             <BadgeContainer>
                 <Badge color="blue">React Native</Badge>
                 <Badge color="blue">Expo</Badge>
@@ -103,8 +106,8 @@
         <CardContent>
             <H2>OS</H2>
             <P>
-                I know how to use, configure and manage Linux systems. based on I have solid
-                knowledge in Arch and Debian based distributions.
+                Sei como usar, configurar e gerenciar sistemas Linux. Possuo conhecimento sólido em
+                distribuições baseadas em Arch e Debian
             </P>
             <BadgeContainer>
                 <Badge color="blue">Arch</Badge>

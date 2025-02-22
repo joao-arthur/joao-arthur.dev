@@ -1,6 +1,6 @@
 ---
-title: "HTML And Components"
-description: "Why React became so popular? How was the way here?"
+title: "HTML E Componentes"
+description: "Por que o React se tornou tão popular? Como foi o caminho até aqui?"
 created_at: "2024-06-31"
 updated_at: "2025-02-20"
 technologies:
