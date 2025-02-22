@@ -10,6 +10,7 @@
     import H3 from "$lib/components/typography/H3.svelte";
     import H4 from "$lib/components/typography/H4.svelte";
     import A from "$lib/components/typography/A.svelte";
+    import { m } from "$lib/i18n/m";
 </script>
 
 <svelte:head>
@@ -33,7 +34,7 @@
         target="_blank"
         decorated
     >
-        <H4>Download my cv</H4>
+        <H4>{m("en-US").download_cv}</H4>
     </A>
     <Card>
         <CardContent>
