@@ -1,14 +1,14 @@
 <script lang="ts">
     import { page } from "$app/state";
-    import { language, theme } from "$lib/assets/js/store";
-    import ThemeDark from "../icons/ThemeDark.svelte";
-    import ThemeLight from "../icons/ThemeLight.svelte";
-    import Person from "../icons/Person.svelte";
-    import Computer from "../icons/Computer.svelte";
-    import RSS from "../icons/RSS.svelte";
-    import Translate from "../icons/Translate.svelte";
-    import ArrowBack from "../icons/ArrowBack.svelte";
-    import H2 from "../typography/H2.svelte";
+    import { language, theme } from "../../src/store";
+    import ThemeDark from "../design/icons/ThemeDark.svelte";
+    import ThemeLight from "../design/icons/ThemeLight.svelte";
+    import Person from "../design/icons/Person.svelte";
+    import Computer from "../design/icons/Computer.svelte";
+    import RSS from "../design/icons/RSS.svelte";
+    import Translate from "../design/icons/Translate.svelte";
+    import ArrowBack from "../design/icons/ArrowBack.svelte";
+    import H2 from "../design/typography/H2.svelte";
     import HeaderNavItem from "./HeaderNavItem.svelte";
     import IconButton from "../design/IconButton.svelte";
     import { goto } from "$app/navigation";

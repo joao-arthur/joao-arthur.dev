@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { goto } from "$app/navigation";
-    import Content from "$lib/components/features/Content.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
 
     onMount(() => {
         const userLangs = window.navigator.languages.map((l) => l.slice(0, 2));

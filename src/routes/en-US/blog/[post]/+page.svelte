@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Content from "$lib/components/features/Content.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
 
     let { data } = $props();
     const post = data.meta;

@@ -10,7 +10,7 @@ type BlogPost = {
 
 export async function fetchBlog() {
     const posts = await Promise.all(
-        Object.entries(import.meta.glob("/src/lib/en-US/blog/*.md")).map(
+        Object.entries(import.meta.glob("/src/lib/assets/en-US/blog/*.md")).map(
             async ([path, resolver]) => {
                 const { metadata } = await resolver();
                 const slug = path.split("/").pop().slice(0, -3);

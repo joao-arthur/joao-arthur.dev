@@ -1,16 +1,16 @@
 <script lang="ts">
-    import Content from "$lib/components/features/Content.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
     import Card from "$lib/components/design/Card.svelte";
-    import P from "$lib/components/typography/P.svelte";
-    import H1 from "$lib/components/typography/H1.svelte";
+    import P from "$lib/components/design/typography/P.svelte";
+    import H1 from "$lib/components/design/typography/H1.svelte";
     import Badge from "$lib/components/design/Badge.svelte";
     import CardContent from "$lib/components/design/CardContent.svelte";
     import BadgeContainer from "$lib/components/design/BadgeContainer.svelte";
-    import A from "$lib/components/typography/A.svelte";
+    import A from "$lib/components/design/typography/A.svelte";
     import IconButton from "$lib/components/design/IconButton.svelte";
-    import ComGithub from "$lib/components/icons/ComGithub.svelte";
-    import Play from "$lib/components/icons/Play.svelte";
-    import Balance from "$lib/components/icons/Balance.svelte";
+    import ComGithub from "$lib/components/design/icons/ComGithub.svelte";
+    import Play from "$lib/components/design/icons/Play.svelte";
+    import Balance from "$lib/components/design/icons/Balance.svelte";
 
     let { data } = $props();
 </script>

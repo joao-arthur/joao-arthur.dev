@@ -2,7 +2,7 @@ export const prerender = true;
 
 export async function GET() {
     const data = await Promise.all(
-        Object.entries(import.meta.glob("$lib/en-US/blog/*.md")).map(async ([path, page]) => {
+        Object.entries(import.meta.glob("$lib/assets/en-US/blog/*.md")).map(async ([path, page]) => {
             const { metadata } = await page();
             const slug = path.split("/").pop().split(".").shift();
             return { ...metadata, slug };

@@ -2,7 +2,7 @@ import { error } from "@sveltejs/kit";
 
 export async function load({ params }) {
     try {
-        const post = await import(`../../../../lib/en-US/portfolio/${params.post}.md`);
+        const post = await import(`../../../../lib/assets/en-US/portfolio/${params.post}.md`);
         return {
             PostContent: post.default,
             meta: { ...post.metadata, slug: params.post },

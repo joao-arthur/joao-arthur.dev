@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Span from "../typography/Span.svelte";
+    import Span from "./typography/Span.svelte";
 
     let { children, color } = $props();
 </script>

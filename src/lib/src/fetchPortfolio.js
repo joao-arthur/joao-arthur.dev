@@ -15,7 +15,7 @@ type PortfolioPost = {
 
 export async function fetchPortfolio() {
     const posts = await Promise.all(
-        Object.entries(import.meta.glob("/src/lib/en-US/portfolio/*.md")).map(
+        Object.entries(import.meta.glob("/src/lib/assets/en-US/portfolio/*.md")).map(
             async ([path, resolver]) => {
                 const { metadata } = await resolver();
                 const slug = path.split("/").pop().slice(0, -3);

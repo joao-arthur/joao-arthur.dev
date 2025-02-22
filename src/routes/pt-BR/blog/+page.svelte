@@ -1,12 +1,12 @@
 <script lang="ts">
     import Card from "$lib/components/design/Card.svelte";
-    import Content from "$lib/components/features/Content.svelte";
-    import H1 from "$lib/components/typography/H1.svelte";
-    import P from "$lib/components/typography/P.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
+    import H1 from "$lib/components/design/typography/H1.svelte";
+    import P from "$lib/components/design/typography/P.svelte";
     import Badge from "$lib/components/design/Badge.svelte";
     import CardContent from "$lib/components/design/CardContent.svelte";
     import BadgeContainer from "$lib/components/design/BadgeContainer.svelte";
-    import A from "$lib/components/typography/A.svelte";
+    import A from "$lib/components/design/typography/A.svelte";
 
     let { data } = $props();
 </script>

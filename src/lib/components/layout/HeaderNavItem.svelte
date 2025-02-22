@@ -1,5 +1,5 @@
 <script lang="ts">
-    import A from "../typography/A.svelte";
+    import A from "../design/typography/A.svelte";
 
     let { children, href, disabled } = $props();
 </script>

@@ -1,9 +1,9 @@
 <script lang="ts">
-    import ComLinkedin from "../icons/ComLinkedin.svelte";
-    import ComGithub from "../icons/ComGithub.svelte";
-    import Mail from "../icons/Mail.svelte";
-    import RSS from "../icons/RSS.svelte";
-    import A from "../typography/A.svelte";
+    import ComLinkedin from "../design/icons/ComLinkedin.svelte";
+    import ComGithub from "../design/icons/ComGithub.svelte";
+    import Mail from "../design/icons/Mail.svelte";
+    import RSS from "../design/icons/RSS.svelte";
+    import A from "../design/typography/A.svelte";
 </script>
 
 <style>

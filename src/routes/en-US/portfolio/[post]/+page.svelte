@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Content from "$lib/components/features/Content.svelte";
-    import A from "$lib/components/typography/A.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
+    import A from "$lib/components/design/typography/A.svelte";
 
     let { data } = $props();
     const post = data.meta;

@@ -1,16 +1,16 @@
 <script lang="ts">
     import Card from "$lib/components/design/Card.svelte";
-    import Content from "$lib/components/features/Content.svelte";
-    import H1 from "$lib/components/typography/H1.svelte";
-    import P from "$lib/components/typography/P.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
+    import H1 from "$lib/components/design/typography/H1.svelte";
+    import P from "$lib/components/design/typography/P.svelte";
     import Badge from "$lib/components/design/Badge.svelte";
     import BadgeContainer from "$lib/components/design/BadgeContainer.svelte";
     import CardContent from "$lib/components/design/CardContent.svelte";
-    import H2 from "$lib/components/typography/H2.svelte";
-    import H3 from "$lib/components/typography/H3.svelte";
-    import H4 from "$lib/components/typography/H4.svelte";
-    import A from "$lib/components/typography/A.svelte";
-    import { m } from "$lib/i18n/m";
+    import H2 from "$lib/components/design/typography/H2.svelte";
+    import H3 from "$lib/components/design/typography/H3.svelte";
+    import H4 from "$lib/components/design/typography/H4.svelte";
+    import A from "$lib/components/design/typography/A.svelte";
+    import { m } from "$lib/src/i18n/m";
 </script>
 
 <svelte:head>

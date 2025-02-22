@@ -1,6 +1,6 @@
 export async function load() {
     const posts = await Promise.all(
-        Object.entries(import.meta.glob("../../../lib/pt-BR/portfolio/*.md")).map(
+        Object.entries(import.meta.glob("../../../lib/assets/pt-BR/portfolio/*.md")).map(
             async ([path, resolver]) => {
                 const { metadata } = await resolver();
                 const slug = path.split("/").pop().slice(0, -3);

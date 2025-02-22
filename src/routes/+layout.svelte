@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Header from "$lib/components/features/Header.svelte";
-    import Footer from "$lib/components/features/Footer.svelte";
-    import { language, theme } from "$lib/assets/js/store";
+    import Header from "$lib/components/layout/Header.svelte";
+    import Footer from "$lib/components/layout/Footer.svelte";
+    import { language, theme } from "$lib/src/store";
     import { onMount } from "svelte";
     import { page } from "$app/state";
 

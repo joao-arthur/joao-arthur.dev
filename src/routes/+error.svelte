@@ -1,8 +1,8 @@
 <script lang="ts">
     import { page } from "$app/state";
-    import Content from "$lib/components/features/Content.svelte";
-    import H1 from "$lib/components/typography/H1.svelte";
-    import P from "$lib/components/typography/P.svelte";
+    import Content from "$lib/components/layout/Content.svelte";
+    import H1 from "$lib/components/design/typography/H1.svelte";
+    import P from "$lib/components/design/typography/P.svelte";
 </script>
 
 <style>
