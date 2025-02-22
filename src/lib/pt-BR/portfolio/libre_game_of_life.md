@@ -1,6 +1,6 @@
 ---
 title: "libre_game_of_life"
-description: "FLOSS Implementation of Conway's Game Of Life"
+description: "Implementação FLOSS do Jogo da Vida de Conway"
 license: "GNU AGPLv3"
 repository: "https://github.com/joao-arthur/libre_game_of_life"
 created_at: "2023-05-07"
@@ -17,7 +17,9 @@ app_url: "/app/libre_game_of_life/index.html"
 
 # libre_game_of_life
 
-> O Jogo da Vida é um autômato celular criado pelo matemático britânico John Horton Conway em 1970
+Implementação FLOSS do Jogo da Vida de Conway
+
+> O _Jogo da Vida_ é um autômato celular criado pelo matemático britânico John Horton Conway em 1970
 
 ## Regras
 
@@ -29,9 +31,7 @@ cada etapa de tempo, o que determina o estado de cada célula são as seguintes 
 
 ## Minha implementação
 
-Eu implementei uma versão do _Jogo da Vida_ em _Rust_, chamado **libre_game_of_life**. É um
-_Software Livre (GNU AGPL v3.0)_, e você pode
-[baixar ele aqui!](https://github.com/joao-arthur/libre_game_of_life)
+Eu implementei uma versão do _Jogo da Vida_ em _Rust_.
 
 ```rust
 let grid = HashMap::from([
@@ -78,8 +78,6 @@ Assembly_. Atualmente, as configurações são as seguintes:
 - **Size:** A quantidade de zoom na tela
 - **FPS:** O FPS desejado para a renderização
 
-[Clique aqui para experimentar!](/app/libre_game_of_life/index.html)
-
 ## Referência
 
-https://pt.wikipedia.org/wiki/Jogo_da_vida
+https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life

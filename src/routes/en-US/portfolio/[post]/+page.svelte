@@ -1,5 +1,6 @@
 <script lang="ts">
     import Content from "$lib/components/features/Content.svelte";
+    import A from "$lib/components/typography/A.svelte";
 
     let { data } = $props();
     const post = data.meta;
@@ -172,6 +173,7 @@
 <Content>
     <article>
         <img style="border-radius: 20px" src={post.img_url} alt="" />
+        <A href={post.app_url}><h2>Click here to try</h2></A>
         <PostContent />
         <div style="padding: 30px 0px">
             <p><b>Published:</b> {post.created_at}</p>

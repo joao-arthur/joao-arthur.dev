@@ -13,7 +13,9 @@ img_url: "/images/precise_schedule.png"
 app_url: "/app/precise_schedule/index.html"
 ---
 
-# Precise Schedule
+# precise_schedule
+
+Aplicação FLOSS de uma agenda web
 
 ## O Projeto Original
 
@@ -47,7 +49,3 @@ Através do processo eu aprendi:
 - A limitar as funcionalidades ao essencial
 - Começar o desenvolvimento por funcionalidades-chave
 - Que arquitetura é mais importante que o código
-
-## Aplicação Final
-
-[Clique aqui para ver!](/app/precise_schedule/index.html)

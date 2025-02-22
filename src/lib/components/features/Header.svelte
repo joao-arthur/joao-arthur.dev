@@ -135,14 +135,28 @@
             disabled={page.url.pathname === `/${currLang}/about`}
         >
             <Person size={35}></Person>
-            <H2 inherit={page.url.pathname === `/${currLang}/about`}>About</H2>
+            <H2 inherit={page.url.pathname === `/${currLang}/about`}>
+                {#if currLang === "en-US"}
+                    About
+                {/if}
+                {#if currLang === "pt-BR"}
+                    Sobre
+                {/if}
+            </H2>
         </HeaderNavItem>
         <HeaderNavItem
             href={`/${currLang}/portfolio`}
             disabled={page.url.pathname === `/${currLang}/portfolio`}
         >
             <Computer size={35}></Computer>
-            <H2 inherit={page.url.pathname === `/${currLang}/portfolio`}>Portfolio</H2>
+            <H2 inherit={page.url.pathname === `/${currLang}/portfolio`}>
+                {#if currLang === "en-US"}
+                    Portfolio
+                {/if}
+                {#if currLang === "pt-BR"}
+                    Portfólio
+                {/if}
+            </H2>
         </HeaderNavItem>
         <HeaderNavItem
             href={`/${currLang}/blog`}

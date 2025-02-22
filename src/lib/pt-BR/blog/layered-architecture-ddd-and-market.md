@@ -53,7 +53,7 @@ particulamente verdade no desenvolvimento web, que passou por vários períodos 
 **HTML** plano, então **JavaScript**, então **JSF** e **applets**, então **JQuery**, então
 **React**.
 
-## Conclusion
+## Conclusão
 
 Isso ocorre porque companhias lucram mais com software bugado hoje, do que com um software que
 funciona amanhã. Esse ciclo não começou hoje e não vai sumir tão cedo. Seus efeitos estão ao nosso

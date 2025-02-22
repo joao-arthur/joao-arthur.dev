@@ -32,9 +32,7 @@ each time step, what determines the state of each cell are the following rules:
 
 ## My implementation
 
-I implemented a version of _Game of Life_ in _Rust_, called **libre_game_of_life**. It is an _Free
-Software (GNU AGPL v3.0)_, and you can
-[download it here!](https://github.com/joao-arthur/libre_game_of_life)
+I implemented a version of _Game of Life_ in _Rust_.
 
 ```rust
 let grid = HashMap::from([
@@ -80,8 +78,6 @@ Currently, the settings are the following:
 - **Gap:** A visual option, for aesthetics
 - **Size:** The amount of zoom in the screen
 - **FPS:** The desired FPS for render
-
-[Click here to try it!](/app/libre_game_of_life/index.html)
 
 ## Reference
 

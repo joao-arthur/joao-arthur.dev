@@ -47,7 +47,3 @@ Through the process, I learned:
 - To shrink the features to their essentials
 - To start development by core functionality
 - That the architecture is more important than the code
-
-## Final Application
-
-[Click here to see!](/app/precise_schedule/index.html)
