@@ -10,7 +10,7 @@
     "about_myself_title": "",
     "about_title": "Hi, I'm João Arthur",
     "about_subtitle": "I'm a 24 years old developer based in Brazil. I've been solving problems with code for over 6 years using JavaScript, TypeScript and NodeJS. I apply Clean Code, Clean Architecture and Unit Tests when it is possible.",
-    "download_cv": "Download my curriculum here",
+    "about_download_cv": "Download my curriculum here",
     "about_programming_languages_title": "Programming languages",
     "about_programming_languages_subtitle": "I have knowledge in Object Orientation and Structured Programming",
     "about_typescript": "Web, server, desktop and mobile applications, and all its ecossystems",

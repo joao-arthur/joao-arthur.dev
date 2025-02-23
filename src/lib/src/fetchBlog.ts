@@ -14,7 +14,7 @@ export async function fetchBlog(language: Language): Promise<readonly BlogPost[]
         Object.entries(importedPosts).map(
             async ([path, resolver]) => {
                 const { metadata } = await resolver();
-                const slug = path.split("/").pop().slice(0, -3);
+                const slug = path.split(/[\/|\.]/).at(-2);
                 return { ...metadata, slug };
             },
         ),

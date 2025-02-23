@@ -1,5 +1,9 @@
 <script lang="ts">
-    let { children } = $props();
+    type Props = {
+        readonly children ?: any;
+    }
+
+    let { children }: Props = $props();
 </script>
 
 <style>

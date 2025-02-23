@@ -10,7 +10,7 @@
     "about_myself_title": "",
     "about_title": "Olá, eu sou João Arthur",
     "about_subtitle": "Sou um desenvolvedor de 24 anos que mora no Brasil. Faz 6 anos que eu resolvo problemas com código em JavaScript, TypeScript and NodeJS. Eu aplico Código Limpo, Arquitetura Limpa e Testes Unitários quando é possível",
-    "download_cv": "Baixe o meu currículo aqui",
+    "about_download_cv": "Baixe o meu currículo aqui",
     "about_programming_languages_title": "Linguagens de Programação",
     "about_programming_languages_subtitle": "Possuo conhecimento em Orientação a Objetos e Programação Estruturada",
     "about_typescript": "Aplicações web, servidores, desktop e mobile, e todo o seu ecossistema",

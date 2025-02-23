@@ -154,7 +154,7 @@
                     Portfolio
                 {/if}
                 {#if currLang === "pt-BR"}
-                    Portfólio
+                    Portifólio
                 {/if}
             </H2>
         </HeaderNavItem>

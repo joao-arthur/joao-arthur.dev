@@ -2,6 +2,7 @@ export type Theme = "dark" | "light";
 export type Language = "en-US" | "pt-BR";
 
 export type BlogPost = {
+    readonly slug: string;
     readonly title: string;
     readonly description: string;
     readonly created_at: string;
@@ -10,6 +11,7 @@ export type BlogPost = {
 }
 
 export type PortfolioPost = {
+    readonly slug: string;
     readonly title: string;
     readonly description: string;
     readonly license: string;
