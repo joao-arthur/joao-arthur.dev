@@ -1,12 +1,10 @@
+import { fetchBlogPost } from "$lib/src/fetchBlogPost";
 import { error } from "@sveltejs/kit";
 
 export async function load({ params }) {
     try {
-        const post = await import(`../../../../lib/assets/en-US/blog/${params.post}.md`);
-        return {
-            PostContent: post.default,
-            meta: { ...post.metadata, slug: params.post },
-        };
+        const post = await fetchBlogPost("en-US", params.post);
+        return post;
     } catch (err) {
         error(404, err);
     }
