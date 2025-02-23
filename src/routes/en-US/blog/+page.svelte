@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Blog from "$lib/components/features/blog.svelte";
+    import PostList from "$lib/components/features/PostList.svelte";
 
     const { data } = $props();
 </script>
@@ -8,4 +8,4 @@
     <title>Blog | João Arthur</title>
 </svelte:head>
 
-<Blog language="en-US" posts={data.posts}></Blog>
+<PostList language="en-US" posts={data.posts} feature="blog"></PostList>

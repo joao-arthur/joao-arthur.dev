@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { Language, Theme } from "$lib/src/types.js";
     import { page } from "$app/state";
     import { appLanguage, appTheme } from "../../src/store.js";
     import ThemeDark from "../design/icons/ThemeDark.svelte";
@@ -13,9 +14,9 @@
     import IconButton from "../design/IconButton.svelte";
     import { goto } from "$app/navigation";
 
-    let currTheme;
-    let currLang;
-    let component = null;
+    let currTheme: Theme;
+    let currLang: Language;
+    let component: HTMLDialogElement | null = null;
 
     appTheme.subscribe((value) => {
         currTheme = value;

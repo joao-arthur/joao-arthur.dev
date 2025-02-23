@@ -171,7 +171,9 @@
 <Content>
     <article>
         <img style="border-radius: 20px" src={post.img_url} alt="" />
-        <A href={post.app_url}><h2>{locale.post_try}</h2></A>
+        {#if post.app_url}
+            <A href={post.app_url}><h2>{locale.post_try}</h2></A>
+        {/if}
         <Component></Component>
         <div style="padding: 30px 0px">
             <p><b>{locale.post_created_at}:</b> {post.created_at}</p>

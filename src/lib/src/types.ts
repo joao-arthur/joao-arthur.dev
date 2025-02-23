@@ -1,5 +1,6 @@
 export type Theme = "dark" | "light";
 export type Language = "en-US" | "pt-BR";
+export type TextFeature = "portfolio" | "blog";
 
 export type Post = {
     readonly slug: string;
