@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Language, PortfolioPost } from "$lib/src/types";
+    import type { Language, Post } from "$lib/src/types";
     import Content from "$lib/components/layout/Content.svelte";
     import Card from "$lib/components/design/Card.svelte";
     import P from "$lib/components/design/typography/P.svelte";
@@ -15,8 +15,8 @@
 
     type Props = {
         readonly language: Language;
-        readonly posts: readonly PortfolioPost[];
-    }
+        readonly posts: readonly Post[];
+    };
 
     let { posts, language }: Props = $props();
 </script>
@@ -33,7 +33,7 @@
             </A>
             <CardContent>
                 <BadgeContainer>
-                    {#each post.languages as language}
+                    {#each post.programming_languages as language}
                         <Badge color="blue">{language}</Badge>
                     {/each}
                 </BadgeContainer>

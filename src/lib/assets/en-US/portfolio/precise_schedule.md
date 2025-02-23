@@ -5,7 +5,7 @@ license: "GNU AGPLv3"
 repository: "https://github.com/joao-arthur/precise_schedule"
 created_at: "2023-08-11"
 updated_at: "2025-02-12"
-languages:
+programming_languages:
   - "TypeScript"
 technologies:
   - "NextJS"

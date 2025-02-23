@@ -5,7 +5,7 @@ license: "GNU AGPLv3"
 repository: "https://github.com/joao-arthur/libre_game_of_life"
 created_at: "2023-05-07"
 updated_at: "2025-02-12"
-languages:
+programming_languages:
   - "Rust"
   - "TypeScript"
 technologies:

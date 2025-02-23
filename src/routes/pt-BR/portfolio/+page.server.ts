@@ -1,9 +1,9 @@
-import type { PortfolioPost } from "$lib/src/types";
+import type { Post } from "$lib/src/types";
 import { fetchPortfolio } from "$lib/src/fetchPortfolio";
 
 type Data = {
-    readonly posts: readonly PortfolioPost[];
-}
+    readonly posts: readonly Post[];
+};
 
 export async function load(): Promise<Data> {
     const posts = await fetchPortfolio("pt-BR");

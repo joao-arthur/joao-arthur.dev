@@ -1,9 +1,15 @@
-import type { Language } from "./types";
+import type { Component } from "svelte";
+import type { Language, Post } from "./types";
 
-export async function fetchBlogPost(language: Language, id: string) {
-    const post = await import(`../assets/${language}/blog/${id}.md`);
+type Data = {
+    readonly post: Post;
+    readonly Component: Component;
+};
+
+export async function fetchBlogPost(language: Language, slug: string): Promise<Data> {
+    const post = await import(`../assets/${language}/blog/${slug}.md`);
     return {
-        PostContent: post.default,
-        meta: { ...post.metadata, slug: id },
+        Component: post.default,
+        post: { ...post.metadata, slug },
     };
 }

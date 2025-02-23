@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { BlogPost, Language } from "$lib/src/types";
+    import type { Language, Post } from "$lib/src/types";
     import Card from "$lib/components/design/Card.svelte";
     import Content from "$lib/components/layout/Content.svelte";
     import H1 from "$lib/components/design/typography/H1.svelte";
@@ -11,8 +11,8 @@
 
     type Props = {
         readonly language: Language;
-        readonly posts: readonly BlogPost[];
-    }
+        readonly posts: readonly Post[];
+    };
 
     let { posts, language }: Props = $props();
 </script>

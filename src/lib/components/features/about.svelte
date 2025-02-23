@@ -15,9 +15,9 @@
 
     type Props = {
         readonly language: Language;
-    }
+    };
 
-    const {language}: Props = $props();
+    const { language }: Props = $props();
 </script>
 
 <Content>
@@ -33,7 +33,7 @@
         target="_blank"
         decorated
     >
-        <H4>{m("pt-BR").about_download_cv}</H4>
+        <H4>{m(language).about_download_cv}</H4>
     </A>
     <Card>
         <CardContent>

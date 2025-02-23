@@ -1,7 +1,7 @@
 <script lang="ts">
     type Props = {
-        readonly children ?: any;
-    }
+        readonly children?: any;
+    };
 
     let { children }: Props = $props();
 </script>

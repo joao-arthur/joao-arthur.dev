@@ -1,9 +1,9 @@
-import type { BlogPost } from '$lib/src/types';
-import { fetchBlog } from '$lib/src/fetchBlog.js';
+import type { Post } from "$lib/src/types";
+import { fetchBlog } from "$lib/src/fetchBlog.js";
 
 type Data = {
-    readonly posts: readonly BlogPost[];
-}
+    readonly posts: readonly Post[];
+};
 
 export async function load(): Promise<Data> {
     const posts = await fetchBlog("en-US");

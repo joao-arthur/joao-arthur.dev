@@ -1,16 +1,16 @@
 <script lang="ts">
-    import type { Language } from "$lib/src/types";
+    import type { Component } from "svelte";
+    import type { Language, Post } from "$lib/src/types";
     import Content from "$lib/components/layout/Content.svelte";
     import { m } from "$lib/src/i18n/m";
 
     type Props = {
         readonly language: Language;
-    }
+        readonly post: Post;
+        readonly Component: Component;
+    };
 
-    let { data, language }: Props = $props();
-    const post = data.meta;
-    const { PostContent } = data;
-
+    let { language, post, Component }: Props = $props();
 </script>
 
 <style>
@@ -167,12 +167,12 @@
 
 <Content>
     <article>
-        <PostContent />
+        <Component></Component>
         <div style="padding: 30px 0px">
-            <p><b>{m(language)}:</b> {post.created_at}</p>
-            <p><b>{m(language)}:</b> {post.updated_at}</p>
+            <p><b>{m(language).post_created_at}:</b> {post.created_at}</p>
+            <p><b>{m(language).post_updated_at}:</b> {post.updated_at}</p>
             {#if post.technologies}
-                <p><b>{m(language)}:</b> {post.technologies.join(", ")}</p>
+                <p><b>{m(language).post_technologies}:</b> {post.technologies.join(", ")}</p>
             {/if}
         </div>
     </article>

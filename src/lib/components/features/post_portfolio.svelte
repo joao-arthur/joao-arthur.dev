@@ -1,16 +1,17 @@
 <script lang="ts">
-    import type { Language } from "$lib/src/types";
+    import type { Component } from "svelte";
+    import type { Language, Post } from "$lib/src/types";
     import Content from "$lib/components/layout/Content.svelte";
     import A from "$lib/components/design/typography/A.svelte";
     import { m } from "$lib/src/i18n/m";
 
     type Props = {
         readonly language: Language;
-    }
+        readonly post: Post;
+        readonly Component: Component;
+    };
 
-    let { data, language }:Props = $props();
-    const post = data.meta;
-    const { PostContent } = data;
+    let { language, post, Component }: Props = $props();
 </script>
 
 <style>
@@ -169,16 +170,18 @@
 <Content>
     <article>
         <img style="border-radius: 20px" src={post.img_url} alt="" />
-        <A href={post.app_url}><h2>{m(language)}</h2></A>
-        <PostContent />
+        <A href={post.app_url}><h2>{m(language).post_try}</h2></A>
+        <Component></Component>
         <div style="padding: 30px 0px">
-            <p><b>{m(language)}:</b> {post.created_at}</p>
-            <p><b>{m(language)}:</b> {post.updated_at}</p>
-            <p><b>{m(language)}:</b> {post.repository}</p>
-            <p><b>{m(language)}:</b> {post.license}</p>
-            <p><b>{m(language)}:</b> {post.languages.join(", ")}</p>
-            <p><b>{m(language)}:</b> {post.technologies.join(", ")}</p>
+            <p><b>{m(language).post_created_at}:</b> {post.created_at}</p>
+            <p><b>{m(language).post_updated_at}:</b> {post.updated_at}</p>
+            <p><b>{m(language).post_repository}:</b> {post.repository}</p>
+            <p><b>{m(language).post_license}:</b> {post.license}</p>
+            <p>
+                <b>{m(language).post_programming_languages}:</b>
+                {post.programming_languages.join(", ")}
+            </p>
+            <p><b>{m(language).post_technologies}:</b> {post.technologies.join(", ")}</p>
         </div>
     </article>
 </Content>
-
