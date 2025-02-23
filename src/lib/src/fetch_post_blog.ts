@@ -6,10 +6,10 @@ type Data = {
     readonly Component: Component;
 };
 
-export async function fetchBlogPost(language: Language, slug: string): Promise<Data> {
+export async function fetch_post_blog(language: Language, slug: string): Promise<Data> {
     const post = await import(`../assets/${language}/blog/${slug}.md`);
     return {
-        Component: post.default,
         post: { ...post.metadata, slug },
+        Component: post.default,
     };
 }

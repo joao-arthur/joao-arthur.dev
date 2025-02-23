@@ -1,5 +1,5 @@
 <script lang="ts">
-    import About from "$lib/components/features/about.svelte";
+    import About from "$lib/components/features/About.svelte";
 </script>
 
 <svelte:head>

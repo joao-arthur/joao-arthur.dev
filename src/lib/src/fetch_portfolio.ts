@@ -1,17 +1,17 @@
 import type { Language, Post } from "./types";
-import { blog_en_us, blog_pt_br } from "./posts";
+import { portfolio_en_us, portfolio_pt_br } from "./posts";
 
-function postsByLanguage(language: Language) {
+function posts_by_language(language: Language) {
     switch (language) {
         case "en-US":
-            return blog_en_us;
+            return portfolio_en_us;
         case "pt-BR":
-            return blog_pt_br;
+            return portfolio_pt_br;
     }
 }
 
-export async function fetchBlog(language: Language): Promise<readonly Post[]> {
-    const importedPosts = postsByLanguage(language);
+export async function fetch_portfolio(language: Language): Promise<readonly Post[]> {
+    const importedPosts = posts_by_language(language);
     const posts = await Promise.all(
         Object.entries(importedPosts).map(
             async ([path, resolver]) => {

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Post from "$lib/components/features/post.svelte";
+    import Post from "$lib/components/features/Post.svelte";
 
     const { data } = $props();
     const { Component, post } = data;

@@ -6,7 +6,7 @@ type Data = {
     readonly Component: Component;
 };
 
-export async function fetchPortfolioPost(language: Language, slug: string): Promise<Data> {
+export async function fetch_post_portfolio(language: Language, slug: string): Promise<Data> {
     const post = await import(`../assets/${language}/portfolio/${slug}.md`);
     return {
         post: { ...post.metadata, slug },
