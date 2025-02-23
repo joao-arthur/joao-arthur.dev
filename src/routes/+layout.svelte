@@ -1,40 +1,9 @@
 <script lang="ts">
     import Header from "$lib/components/layout/Header.svelte";
     import Footer from "$lib/components/layout/Footer.svelte";
-    import { appLanguage, appTheme } from "$lib/src/store.js";
-    import { onMount } from "svelte";
-    import { page } from "$app/state";
+    import { appTheme } from "$lib/src/store.js";
 
     const { data, children } = $props();
-
-    onMount(() => {
-        let eriofher = new URL(page.url).pathname;
-        if (eriofher.startsWith("/en-US")) {
-            appLanguage.set("en-US");
-        } else if (eriofher.startsWith("/pt-BR")) {
-            appLanguage.set("pt-BR");
-        } else {
-            const userLangs = window.navigator.languages.map((l) => l.slice(0, 2));
-
-            let setted = false;
-
-            for (const lang of userLangs) {
-                if (lang === "en") {
-                    setted = true;
-                    appLanguage.set("en-US");
-                    break;
-                }
-                if (lang === "pt") {
-                    setted = true;
-                    appLanguage.set("pt-BR");
-                    break;
-                }
-            }
-            if (!setted) {
-                appLanguage.set("en-US");
-            }
-        }
-    });
 
     appTheme.subscribe((value) => {
         if (value === "dark") {
