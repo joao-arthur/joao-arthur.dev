@@ -1,7 +1,7 @@
 <script lang="ts">
-    import PostBlog from "$lib/components/features/post_blog.svelte";
+    import Post from "$lib/components/features/post.svelte";
 
-    let { data } = $props();
+    const { data } = $props();
     const { Component, post } = data;
 </script>
 
@@ -15,4 +15,4 @@
     <meta name="twitter:description" content={data.post.description} />
 </svelte:head>
 
-<PostBlog language="en-US" {post} {Component}></PostBlog>
+<Post language="en-US" {post} {Component}></Post>

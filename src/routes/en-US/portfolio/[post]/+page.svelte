@@ -1,7 +1,7 @@
 <script lang="ts">
-    import PostPortfolio from "$lib/components/features/post_portfolio.svelte";
+    import Post from "$lib/components/features/post.svelte";
 
-    let { data } = $props();
+    const { data } = $props();
     const { Component, post } = data;
 </script>
 
@@ -15,4 +15,4 @@
     <meta name="twitter:description" content={data.post.description} />
 </svelte:head>
 
-<PostPortfolio language="en-US" {post} {Component}></PostPortfolio>
+<Post language="en-US" {post} {Component}></Post>

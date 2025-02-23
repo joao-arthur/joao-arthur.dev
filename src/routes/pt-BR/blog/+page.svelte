@@ -1,7 +1,7 @@
 <script lang="ts">
     import Blog from "$lib/components/features/blog.svelte";
 
-    let { data } = $props();
+    const { data } = $props();
 </script>
 
 <svelte:head>

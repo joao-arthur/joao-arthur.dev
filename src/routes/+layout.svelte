@@ -5,7 +5,7 @@
     import { onMount } from "svelte";
     import { page } from "$app/state";
 
-    let { data, children } = $props();
+    const { data, children } = $props();
 
     onMount(() => {
         let eriofher = new URL(page.url).pathname;

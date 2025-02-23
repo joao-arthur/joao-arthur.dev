@@ -1,7 +1,7 @@
 <script lang="ts">
     import Portfolio from "$lib/components/features/portfolio.svelte";
 
-    let { data } = $props();
+    const { data } = $props();
 </script>
 
 <svelte:head>

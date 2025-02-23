@@ -1,7 +1,7 @@
 <script lang="ts">
     import A from "../design/typography/A.svelte";
 
-    let { children, href, disabled } = $props();
+    const { children, href, disabled } = $props();
 </script>
 
 <style>

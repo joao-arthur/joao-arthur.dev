@@ -18,42 +18,43 @@
     };
 
     const { language }: Props = $props();
+    const locale = m(language);
 </script>
 
 <Content>
     <img
         src="/images/myself.jpg"
         style="align-self: center; width: 300px; height: auto; border-radius: 30%"
-        alt={m(language).about_myself_title}
+        alt={locale.about_myself_title}
     />
-    <H1>{m(language).about_title}</H1>
-    <P justify>{m(language).about_subtitle}</P>
+    <H1>{locale.about_title}</H1>
+    <P justify>{locale.about_subtitle}</P>
     <A
         href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-pt.pdf"
         target="_blank"
         decorated
     >
-        <H4>{m(language).about_download_cv}</H4>
+        <H4>{locale.about_download_cv}</H4>
     </A>
     <Card>
         <CardContent>
-            <H2>{m(language).about_programming_languages_title}</H2>
-            <P>{m(language).about_programming_languages_subtitle}</P>
+            <H2>{locale.about_programming_languages_title}</H2>
+            <P>{locale.about_programming_languages_subtitle}</P>
             <br />
             <H3>TypeScript</H3>
-            <P>{m(language).about_typescript}</P>
+            <P>{locale.about_typescript}</P>
             <br />
             <H3>Java</H3>
-            <P>{m(language).about_java}</P>
+            <P>{locale.about_java}</P>
             <br />
             <H3>Rust</H3>
-            <P>{m(language).about_rust}</P>
+            <P>{locale.about_rust}</P>
         </CardContent>
     </Card>
     <Card>
         <CardContent>
             <H2>Frontend</H2>
-            <P>{m(language).about_frontend}</P>
+            <P>{locale.about_frontend}</P>
             <BadgeContainer>
                 <Badge color="blue">React</Badge>
                 <Badge color="blue">Next.js</Badge>
@@ -64,7 +65,7 @@
     <Card>
         <CardContent>
             <H2>Backend</H2>
-            <P>{m(language).about_backend}</P>
+            <P>{locale.about_backend}</P>
             <BadgeContainer>
                 <Badge color="blue">Spring</Badge>
                 <Badge color="blue">NestJS</Badge>
@@ -74,7 +75,7 @@
     <Card>
         <CardContent>
             <H2>Desktop</H2>
-            <P>{m(language).about_desktop}</P>
+            <P>{locale.about_desktop}</P>
             <BadgeContainer>
                 <Badge color="blue">GTK</Badge>
                 <Badge color="blue">Electron</Badge>
@@ -84,7 +85,7 @@
     <Card>
         <CardContent>
             <H2>Mobile</H2>
-            <P>{m(language).about_mobile}</P>
+            <P>{locale.about_mobile}</P>
             <BadgeContainer>
                 <Badge color="blue">React Native</Badge>
                 <Badge color="blue">Expo</Badge>
@@ -96,7 +97,7 @@
     <Card>
         <CardContent>
             <H2>OS</H2>
-            <P>{m(language).about_os}</P>
+            <P>{locale.about_os}</P>
             <BadgeContainer>
                 <Badge color="blue">Arch</Badge>
                 <Badge color="blue">Debian</Badge>

@@ -3,7 +3,7 @@
         readonly children?: any;
     };
 
-    let { children }: Props = $props();
+    const { children }: Props = $props();
 </script>
 
 <style>

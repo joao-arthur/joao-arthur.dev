@@ -18,7 +18,7 @@
         readonly posts: readonly Post[];
     };
 
-    let { posts, language }: Props = $props();
+    const { posts, language }: Props = $props();
 </script>
 
 <Content>

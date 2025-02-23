@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { children, inherit = false } = $props();
+    const { children, inherit = false } = $props();
 </script>
 
 <style>

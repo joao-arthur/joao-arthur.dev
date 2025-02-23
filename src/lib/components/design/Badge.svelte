@@ -1,7 +1,7 @@
 <script lang="ts">
     import Span from "./typography/Span.svelte";
 
-    let { children, color } = $props();
+    const { children, color } = $props();
 </script>
 
 <style>
