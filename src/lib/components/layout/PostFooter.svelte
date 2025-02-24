@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Language, Post } from "$lib/src/types";
     import { m } from "$lib/src/i18n/m";
+    import P from "../design/typography/P.svelte";
 
     type Props = {
         readonly language: Language;
@@ -19,20 +20,20 @@
 </style>
 
 <div>
-    <p><b>{locale.post_created_at}:</b> {post.created_at}</p>
-    <p><b>{locale.post_updated_at}:</b> {post.updated_at}</p>
+    <P><b>{locale.post_created_at}:</b> {post.created_at}</P>
+    <P><b>{locale.post_updated_at}:</b> {post.updated_at}</P>
     {#if post.license}
-        <p><b>{locale.post_license}:</b> {post.license}</p>
+        <P><b>{locale.post_license}:</b> {post.license}</P>
     {/if}
     {#if post.repository}
-        <p><b>{locale.post_repository}:</b> {post.repository}</p>
+        <P><b>{locale.post_repository}:</b> {post.repository}</P>
     {/if}
     {#if post.programming_languages}
-        <p>
+        <P>
             <b>{locale.post_programming_languages}:</b> {post.programming_languages.join(", ")}
-        </p>
+        </P>
     {/if}
     {#if post.technologies}
-        <p><b>{locale.post_technologies}:</b> {post.technologies.join(", ")}</p>
+        <P><b>{locale.post_technologies}:</b> {post.technologies.join(", ")}</P>
     {/if}
 </div>

@@ -6,9 +6,9 @@
     button {
         border: none;
         padding: 0;
-        width: 50px;
-        height: 50px;
-        border-radius: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 25px;
         cursor: pointer;
         background-color: #d0d0d0;
         color: #2f2f2f;

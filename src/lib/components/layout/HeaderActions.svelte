@@ -7,11 +7,13 @@
     .container {
         display: flex;
         justify-content: end;
+        align-items: center;
     }
 
     .content {
+        justify-items: center;
         display: flex;
-        column-gap: 8px;
+        gap: 1rem;
     }
 </style>
 

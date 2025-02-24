@@ -20,6 +20,45 @@
     let component: HTMLDialogElement | null = null;
 </script>
 
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        row-gap: 1rem;
+    }
+
+    dialog {
+        padding: 30px;
+        width: 50%;
+        height: 50%;
+        background-color: white;
+        border: none;
+        border-radius: 1rem;
+
+        min-width: 300px;
+        min-height: 500px;
+    }
+
+    button {
+        font-size: 3rem;
+        border: none;
+        color: black;
+        border-radius: 1rem;
+    }
+
+    :global(.dark) {
+        dialog {
+            background-color: black;
+        }
+
+        button {
+            background-color: #ababab;
+            color: white;
+        }
+    }
+</style>
+
 <IconButton
     onclick={() => {
         component.showModal();
@@ -28,21 +67,19 @@
     <Translate></Translate>
 </IconButton>
 <dialog bind:this={component}>
-    <button
+    <IconButton
         onclick={() => {
             component.close();
         }}
-    >
-        Close
-    </button>
-    <div style="display: flex; flex-direction: column">
+    >x</IconButton>
+    <div>
         <button
             disabled={language === "en-US"}
             onclick={() => {
                 goto(`/en-US/${page.url.pathname.slice(7)}`);
             }}
         >
-            English
+            🇺🇸 English
         </button>
         <button
             disabled={language === "pt-BR"}
@@ -50,7 +87,7 @@
                 goto(`/pt-BR/${page.url.pathname.slice(7)}`);
             }}
         >
-            Português
+            🇧🇷 Português
         </button>
     </div>
 </dialog>
