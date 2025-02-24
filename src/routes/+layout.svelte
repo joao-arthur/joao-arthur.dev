@@ -29,7 +29,7 @@
 
 <style>
     main {
-        background-color: white;
+        background-color: var(--color-prm-98);
         width: 100%;
         height: 100%;
         overflow-y: auto;
@@ -39,7 +39,7 @@
 
     :global(.dark) {
         main {
-            background-color: black;
+            background-color: var(--color-prm-3);
         }
     }
 

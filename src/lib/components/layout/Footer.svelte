@@ -8,14 +8,14 @@
 
 <style>
     footer {
-        background-color: #ebebeb;
         width: 100%;
         padding-bottom: 2rem;
+        background-color: var(--color-prm-90);
     }
 
     :global(.dark) {
         footer {
-            background-color: #1c1c1c;
+            background-color: var(--color-prm-10);
         }
     }
 
@@ -27,12 +27,28 @@
     }
 
     div {
-        color: black;
+        color: var(--color-prm-10);
+    }
+
+    div:hover {
+        color: var(--color-prm-20);
+    }
+
+    div:active {
+        color: var(--color-prm-30);
     }
 
     :global(.dark) {
         div {
-            color: white;
+            color: var(--color-prm-90);
+        }
+
+        div:hover {
+            color: var(--color-prm-80);
+        }
+
+        div:active {
+            color: var(--color-prm-70);
         }
     }
 </style>

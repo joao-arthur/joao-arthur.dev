@@ -5,6 +5,8 @@
     import type { Language } from "$lib/src/types";
     import { page } from "$app/state";
     import { goto } from "$app/navigation";
+    import H2 from "../design/typography/H2.svelte";
+    import H3 from "../design/typography/H3.svelte";
 
     const pathname = new URL(page.url).pathname;
     const language = (function get_language(): Language {
@@ -21,35 +23,71 @@
 </script>
 
 <style>
-    div {
+    .header {
+        background-color: var(--color-prm-90);
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        column-gap: 1rem;
+    }
+
+    .footer {
+        background-color: var(--color-prm-90);
+        display: flex;
+        padding: 30px;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .content {
         display: flex;
         flex-direction: column;
-        padding-top: 2rem;
+        padding: 30px;
         row-gap: 1rem;
     }
 
     dialog {
-        padding: 30px;
-        width: 50%;
-        height: 50%;
-        background-color: white;
+        padding: 0;
         border: none;
         border-radius: 1rem;
+        background-color: var(--color-prm-98);
+    }
 
-        min-width: 300px;
-        min-height: 500px;
+    dialog::backdrop {
+        background-color: var(--color-prm-10);
+        opacity: 0.5;
     }
 
     button {
-        font-size: 3rem;
+        cursor: pointer;
         border: none;
-        color: black;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         border-radius: 1rem;
+        background-color: var(--color-prm-90);
+    }
+
+    button:hover {
+        background-color: var(--color-prm-80);
+    }
+
+    button:active {
+        background-color: var(--color-prm-70);
+    }
+
+    button:disabled {
+        cursor: unset;
+        background-color: var(--color-sec-90);
     }
 
     :global(.dark) {
         dialog {
-            background-color: black;
+            background-color: var(--color-prm-10);
+        }
+
+        dialog::backdrop {
+            background-color: var(--color-prm-90);
+            opacity: 0.5;
         }
 
         button {
@@ -67,19 +105,17 @@
     <Translate></Translate>
 </IconButton>
 <dialog bind:this={component}>
-    <IconButton
-        onclick={() => {
-            component.close();
-        }}
-    >x</IconButton>
-    <div>
+    <div class="header">
+        <H2>Nova lingua</H2>
+    </div>
+    <div class="content">
         <button
             disabled={language === "en-US"}
             onclick={() => {
                 goto(`/en-US/${page.url.pathname.slice(7)}`);
             }}
         >
-            🇺🇸 English
+            <H3 disabled={language === "en-US"}>🇺🇸 English</H3>
         </button>
         <button
             disabled={language === "pt-BR"}
@@ -87,7 +123,16 @@
                 goto(`/pt-BR/${page.url.pathname.slice(7)}`);
             }}
         >
-            🇧🇷 Português
+            <H3 disabled={language === "pt-BR"}>🇧🇷 Português</H3>
+        </button>
+    </div>
+    <div class="footer">
+        <button
+            onclick={() => {
+                component?.close();
+            }}
+        >
+            <H3>Fechar</H3>
         </button>
     </div>
 </dialog>

@@ -10,12 +10,12 @@
         font-size: 3rem;
         line-height: 4rem;
         overflow-wrap: break-word;
-        color: black;
+        color: var(--color-prm-10);
     }
 
     :global(.dark) {
         h1 {
-            color: white;
+            color: var(--color-prm-90);
         }
     }
 </style>

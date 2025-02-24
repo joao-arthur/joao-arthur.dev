@@ -8,13 +8,13 @@
         min-width: 0px;
         border-radius: 20px;
         overflow: hidden;
-        background-color: #ebebeb;
         list-style: none;
+        background-color: var(--color-prm-90);
     }
 
     :global(.dark) {
         li {
-            background-color: #1c1c1c;
+            background-color: var(--color-prm-10);
         }
     }
 </style>

@@ -13,20 +13,20 @@
     }
 
     .enabled {
-        color: black;
+        color: var(--color-prm-10);
     }
 
     .disabled {
-        color: #8e8e8e;
+        color: var(--color-sec-50);
     }
 
     :global(.dark) {
         .enabled {
-            color: white;
+            color: var(--color-prm-90);
         }
 
         .disabled {
-            color: #646464;
+            color: var(--color-sec-70);
         }
     }
 </style>

@@ -9,12 +9,12 @@
         font-weight: bold;
         font-size: 2rem;
         line-height: 2.5rem;
-        color: black;
+        color: var(--color-prm-10);
     }
 
     :global(.dark) {
         h3 {
-            color: white;
+            color: var(--color-prm-90);
         }
     }
 </style>

@@ -7,8 +7,10 @@
         display: flex;
         padding: 0;
         margin: 0;
-        color: black;
+        font-size: 1.5rem;
+        line-height: 2rem;
         align-items: center;
+        color: black;
     }
 
     :global(.dark) {

@@ -22,6 +22,27 @@
     const { posts, language, feature }: Props = $props();
 </script>
 
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        border: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 60px;
+        border-radius: 25px;
+        background-color: var(--color-prm-98);
+        color: var(--color-prm-30);
+    }
+
+    :global(.dark) {
+        div {
+            background-color: var(--color-prm-3);
+            color: var(--color-prm-70);
+        }
+    }
+</style>
+
 <Content>
     {#each posts as post}
         <Card>
@@ -53,23 +74,23 @@
                     <BadgeContainer>
                         {#if post.app_url}
                             <A href={post.app_url} target="blank">
-                                <IconButton onclick={() => {}}>
+                                <IconButton>
                                     <Play></Play>
                                 </IconButton>
                             </A>
                         {/if}
                         {#if post.repository}
                             <A href={post.repository} target="blank">
-                                <IconButton onclick={() => {}}>
+                                <IconButton>
                                     <ComGithub></ComGithub>
                                 </IconButton>
                             </A>
                         {/if}
                         {#if post.license}
-                            <Badge color="blue">
+                            <div>
                                 <Balance></Balance>
                                 <P>{post.license}</P>
-                            </Badge>
+                            </div>
                         {/if}
                     </BadgeContainer>
                 {/if}

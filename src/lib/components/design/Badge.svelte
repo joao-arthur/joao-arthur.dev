@@ -2,6 +2,16 @@
     import Span from "./typography/Span.svelte";
 
     const { children, color } = $props();
+
+    function get_class() {
+        if (color === "blue") {
+            return "blue";
+        }
+        if (color === "yellow") {
+            return "yellow";
+        }
+        return "";
+    }
 </script>
 
 <style>
@@ -30,7 +40,7 @@
     }
 </style>
 
-<div class={color === "blue" ? "blue" : color === "yellow" ? "yellow" : ""}>
+<div class={get_class()}>
     <Span>
         {@render children?.()}
     </Span>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    const { children, inherit = false } = $props();
+    const { children, disabled = false } = $props();
 </script>
 
 <style>
@@ -9,25 +9,25 @@
         font-weight: bold;
         font-size: 2.5rem;
         line-height: 3rem;
-        color: black;
         overflow-wrap: break-word;
+        color: var(--color-prm-10);
+    }
+
+    .disabled {
+        color: var(--color-sec-50);
     }
 
     :global(.dark) {
         h2 {
-            color: white;
+            color: var(--color-prm-90);
         }
 
-        .inherit {
-            color: inherit;
+        .disabled {
+            color: var(--color-sec-70);
         }
-    }
-
-    .inherit {
-        color: inherit;
     }
 </style>
 
-<h2 class={inherit ? "inherit" : ""}>
+<h2 class={disabled ? "disabled" : ""}>
     {@render children?.()}
 </h2>
