@@ -15,7 +15,15 @@
     .enabled {
         color: var(--color-prm-10);
     }
+/*
+    .enabled:hover {
+        color: var(--color-prm-20);
+    }
 
+    .enabled:active {
+        color: var(--color-prm-30);
+    }
+*/
     .disabled {
         color: var(--color-sec-50);
     }
@@ -24,6 +32,15 @@
         .enabled {
             color: var(--color-prm-90);
         }
+/*
+        .enabled:hover {
+            color: var(--color-prm-80);
+        }
+
+        .enabled:active {
+            color: var(--color-prm-70);
+        }
+        */
 
         .disabled {
             color: var(--color-sec-70);

@@ -22,7 +22,7 @@
     "about_mobile": "I create native apps can can run on every device and Android native apps",
     "about_os": "I know how to use, configure and manage Linux systems. I have solid knowledge in Arch and Debian based distributions",
 
-    "post_try": "Click here to try",
+    "post_try": "Click here to try it",
     "post_created_at": "Published",
     "post_updated_at": "Updated",
     "post_repository": "Repository",
@@ -30,6 +30,6 @@
     "post_programming_languages": "Programming languages",
     "post_technologies": "Technologies",
 
-    "project_run": "",
-    "project_repository": ""
+    "dialog_title": "Set language",
+    "dialog_close": "Close"
 }

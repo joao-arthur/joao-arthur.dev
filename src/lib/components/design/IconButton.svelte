@@ -16,10 +16,12 @@
 
     button:hover {
         background-color: var(--color-prm-80);
+        color: var(--color-prm-30);
     }
 
     button:active {
         background-color: var(--color-prm-70);
+        color: var(--color-prm-20);
     }
 
     :global(.dark) {
@@ -30,10 +32,12 @@
 
         button:hover {
             background-color: var(--color-prm-15);
+            color: var(--color-prm-80);
         }
 
         button:active {
             background-color: var(--color-prm-20);
+            color: var(--color-prm-90);
         }
     }
 </style>
