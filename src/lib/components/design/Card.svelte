@@ -9,12 +9,12 @@
         border-radius: 20px;
         overflow: hidden;
         list-style: none;
-        background-color: var(--color-prm-90);
+        background-color: var(--color-green-90);
     }
 
     :global(.dark) {
         li {
-            background-color: var(--color-prm-10);
+            background-color: var(--color-green-12);
         }
     }
 </style>

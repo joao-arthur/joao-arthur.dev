@@ -27,7 +27,7 @@
 
 <style>
     .header {
-        background-color: var(--color-prm-90);
+        background-color: var(--color-green-90);
         display: flex;
         align-items: center;
         padding: 30px;
@@ -35,7 +35,7 @@
     }
 
     .footer {
-        background-color: var(--color-prm-90);
+        background-color: var(--color-green-90);
         display: flex;
         padding: 30px;
         align-items: center;
@@ -59,7 +59,7 @@
         padding: 0;
         border: none;
         border-radius: 1rem;
-        background-color: var(--color-prm-98);
+        background-color: var(--color-green-98);
         min-width: 410px;
     }
 
@@ -76,7 +76,7 @@
     }
 
     dialog::backdrop {
-        background-color: var(--color-prm-10);
+        background-color: var(--color-green-12);
         opacity: 0.5;
     }
 
@@ -86,15 +86,15 @@
         padding-top: 2rem;
         padding-bottom: 2rem;
         border-radius: 1rem;
-        background-color: var(--color-prm-90);
+        background-color: var(--color-green-90);
     }
 
     button:hover {
-        background-color: var(--color-prm-80);
+        background-color: var(--color-green-86);
     }
 
     button:active {
-        background-color: var(--color-prm-70);
+        background-color: var(--color-green-82);
     }
 
     button:disabled {
@@ -103,43 +103,61 @@
     }
 
     .footer button {
-        border: 2px solid var(--color-prm-70);
+        background-color: var(--color-green-70);
+    }
+
+    .footer button:hover {
+        background-color: var(--color-green-65);
+    }
+
+    .footer button:active {
+        background-color: var(--color-green-60);
     }
 
     :global(.dark) {
         dialog {
-            background-color: var(--color-prm-3);
+            background-color: var(--color-green-4);
         }
 
         .header, .footer {
-            background-color: var(--color-prm-10);
+            background-color: var(--color-green-10);
         }
 
         dialog::backdrop {
-            background-color: var(--color-prm-90);
+            background-color: var(--color-green-96);
             opacity: 0.5;
         }
 
         button {
-            background-color: var(--color-prm-10);
+            background-color: var(--color-green-10);
             color: white;
         }
 
         button:hover {
-            background-color: var(--color-prm-20);
+            background-color: var(--color-green-20);
         }
 
         button:active {
-            background-color: var(--color-prm-30);
+            background-color: var(--color-green-30);
         }
 
         button:disabled {
             background-color: var(--color-sec-10);
         }
 
+
         .footer button {
-            border: 2px solid var(--color-prm-30);
+            background-color: var(--color-green-16);
         }
+
+        .footer button:hover {
+            background-color: var(--color-green-18);
+        }
+
+        .footer button:active {
+            background-color: var(--color-green-20);
+        }
+
     }
 </style>
 

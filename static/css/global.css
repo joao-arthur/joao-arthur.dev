@@ -34,37 +34,6 @@ body {
     margin: 0;
     font-family: Ubuntu Mono;
 
-    --color-prm-3: #000516;
-    --color-prm-5: #001129;
-    --color-prm-10: #001b3c;
-    --color-prm-15: #00264e;
-    --color-prm-20: #003061;
-    --color-prm-25: #003b74;
-    --color-prm-30: #084786;
-    --color-prm-35: #1e5393;
-    --color-prm-40: #2d5fa0;
-    --color-prm-50: #4a78ba;
-    --color-prm-60: #6592d6;
-    --color-prm-70: #80adf3;
-    --color-prm-80: #a7c8ff;
-    --color-prm-90: #d5e3ff;
-    --color-prm-95: #ecf1ff;
-    --color-prm-98: #f9f9ff;
-
-    --color-sec-10: #131c2a;
-    --color-sec-15: #1d2635;
-    --color-sec-20: #283140;
-    --color-sec-25: #333c4b;
-    --color-sec-30: #3e4757;
-    --color-sec-35: #4a5363;
-    --color-sec-40: #565f6f;
-    --color-sec-50: #6f7789;
-    --color-sec-60: #8891a3;
-    --color-sec-70: #a3abbe;
-    --color-sec-80: #bec7da;
-    --color-sec-90: #dae3f6;
-    --color-sec-95: #ecf1ff;
-
     --color-green-2: #000500;
     --color-green-4: #000A01;
     --color-green-6: #000F01;
@@ -96,4 +65,30 @@ body {
     --color-green-94: #B3FFB9;
     --color-green-96: #CCFFD0;
     --color-green-98: #E6FFE8;
+
+    --color-sec-10: #131c2a;
+    --color-sec-50: #6f7789;
+    --color-sec-70: #a3abbe;
+    --color-sec-90: #dae3f6;
+
+    --color-purple-5: #0c0410;
+    --color-purple-10: #18081f;
+    --color-purple-15: #250d2f;
+    --color-purple-20: #31113e;
+    --color-purple-25: #3d154e;
+    --color-purple-30: #49195e;
+    --color-purple-35: #551d6d;
+    --color-purple-40: #62227d;
+    --color-purple-45: #6e268c;
+    --color-purple-50: #7a2a9c;
+    --color-purple-50: #7a2a9c;
+    --color-purple-55: #873fa6;
+    --color-purple-60: #9555b0;
+    --color-purple-65: #a26aba;
+    --color-purple-70: #af7fc4;
+    --color-purple-75: #bd95ce;
+    --color-purple-80: #caaad7;
+    --color-purple-85: #d7bfe1;
+    --color-purple-90: #e4d4eb;
+    --color-purple-95: #f2eaf5;
 }

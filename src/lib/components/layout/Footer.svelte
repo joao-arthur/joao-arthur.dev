@@ -10,12 +10,12 @@
     footer {
         width: 100%;
         padding-bottom: 2rem;
-        background-color: var(--color-prm-90);
+        background-color: var(--color-green-90);
     }
 
     :global(.dark) {
         footer {
-            background-color: var(--color-prm-10);
+            background-color: var(--color-green-10);
         }
     }
 
@@ -27,28 +27,28 @@
     }
 
     div {
-        color: var(--color-prm-10);
+        color: var(--color-green-20);
     }
 
     div:hover {
-        color: var(--color-prm-20);
+        color: var(--color-green-30);
     }
 
     div:active {
-        color: var(--color-prm-30);
+        color: var(--color-green-40);
     }
 
     :global(.dark) {
         div {
-            color: var(--color-prm-90);
+            color: var(--color-green-90);
         }
 
         div:hover {
-            color: var(--color-prm-80);
+            color: var(--color-green-80);
         }
 
         div:active {
-            color: var(--color-prm-70);
+            color: var(--color-green-70);
         }
     }
 </style>

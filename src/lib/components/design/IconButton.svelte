@@ -10,34 +10,34 @@
         height: 60px;
         border-radius: 25px;
         cursor: pointer;
-        background-color: var(--color-prm-98);
-        color: var(--color-prm-40);
+        background-color: var(--color-green-75);
+        color: var(--color-green-45);
     }
 
     button:hover {
-        background-color: var(--color-prm-80);
-        color: var(--color-prm-30);
+        background-color: var(--color-green-70);
+        color: var(--color-green-40);
     }
 
     button:active {
-        background-color: var(--color-prm-70);
-        color: var(--color-prm-20);
+        background-color: var(--color-green-65);
+        color: var(--color-green-35);
     }
 
     :global(.dark) {
         button {
-            background-color: var(--color-prm-3);
-            color: var(--color-prm-70);
+            background-color: var(--color-green-20);
+            color: var(--color-green-70);
         }
 
         button:hover {
-            background-color: var(--color-prm-15);
-            color: var(--color-prm-80);
+            background-color: var(--color-green-25);
+            color: var(--color-green-75);
         }
 
         button:active {
-            background-color: var(--color-prm-20);
-            color: var(--color-prm-90);
+            background-color: var(--color-green-30);
+            color: var(--color-green-80);
         }
     }
 </style>

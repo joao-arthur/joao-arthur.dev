@@ -9,12 +9,12 @@
         font-weight: bold;
         font-size: 1rem;
         line-height: 1.5rem;
-        color: var(--color-prm-10);
+        color: var(--color-green-20);
     }
 
     :global(.dark) {
         h5 {
-            color: var(--color-prm-90);
+            color: var(--color-green-94);
         }
     }
 </style>
