@@ -8,12 +8,12 @@
         margin: 0;
         font-size: 1.5rem;
         line-height: 2rem;
-        color: var(--color-green-20);
+        color: var(--color-prm-20);
     }
 
     :global(.dark) {
         p {
-            color: var(--color-green-94);
+            color: var(--color-prm-76);
         }
     }
 

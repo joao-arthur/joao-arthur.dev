@@ -13,15 +13,15 @@
     }
 
     .enabled {
-        color: var(--color-green-20);
+        color: var(--color-prm-20);
     }
 /*
     .enabled:hover {
-        color: var(--color-green-20);
+        color: var(--color-prm-20);
     }
 
     .enabled:active {
-        color: var(--color-green-30);
+        color: var(--color-prm-28);
     }
 */
     .disabled {
@@ -30,15 +30,15 @@
 
     :global(.dark) {
         .enabled {
-            color: var(--color-green-94);
+            color: var(--color-prm-76);
         }
 /*
         .enabled:hover {
-            color: var(--color-green-80);
+            color: var(--color-prm-60);
         }
 
         .enabled:active {
-            color: var(--color-green-70);
+            color: var(--color-prm-52);
         }
         */
 

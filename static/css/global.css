@@ -34,61 +34,139 @@ body {
     margin: 0;
     font-family: Ubuntu Mono;
 
-    --color-green-2: #000500;
     --color-green-4: #000A01;
-    --color-green-6: #000F01;
-    --color-green-8: #001402;
-    --color-green-10: #001902;
+    --color-green-8: #001902;
     --color-green-12: #001D02;
-    --color-green-14: #002203;
-    --color-green-16: #002703;
-    --color-green-18: #002C04;
+    --color-green-16: #002C04;
     --color-green-20: #003104;
-    --color-green-25: #004205;
-    --color-green-30: #005307;
-    --color-green-35: #006508;
-    --color-green-40: #00760A;
-    --color-green-45: #00870B;
-    --color-green-50: #00980D;
-    --color-green-55: #00A90E;
-    --color-green-60: #00BA0F;
-    --color-green-65: #00CC11;
-    --color-green-70: #00DD12;
-    --color-green-75: #00EE14;
-    --color-green-80: #00FF15;
-    --color-green-82: #1AFF2C;
-    --color-green-84: #33FF44;
-    --color-green-86: #4CFF5B;
-    --color-green-88: #66FF73;
-    --color-green-90: #80FF8A;
-    --color-green-92: #99FFA1;
-    --color-green-94: #B3FFB9;
-    --color-green-96: #CCFFD0;
-    --color-green-98: #E6FFE8;
+    --color-green-24: #004205;
+    --color-green-28: #005307;
+    --color-green-32: #006508;
+    --color-green-36: #00760A;
+    --color-green-40: #00870B;
+    --color-green-44: #00BA0F;
+    --color-green-48: #00CC11;
+    --color-green-52: #00DD12;
+    --color-green-56: #00EE14;
+    --color-green-60: #00FF15;
+    --color-green-64: #1AFF2C;
+    --color-green-68: #4CFF5B;
+    --color-green-72: #80FF8A;
+    --color-green-76: #B3FFB9;
+    --color-green-80: #CCFFD0;
+    --color-green-84: #E6FFE8;
+
+    --color-purple-2: #060208;
+    --color-purple-6: #130618;
+    --color-purple-10: #1f0b28;
+    --color-purple-14: #2c0f38;
+    --color-purple-18: #391348;
+    --color-purple-22: #451858;
+    --color-purple-26: #521c68;
+    --color-purple-30: #5e2079;
+    --color-purple-34: #6b2589;
+    --color-purple-38: #772999;
+    --color-purple-42: #842da9;
+    --color-purple-46: #9132b9;
+    --color-purple-50: #9d36c9;
+    --color-purple-54: #a546cd;
+    --color-purple-58: #ad56d2;
+    --color-purple-62: #b566d6;
+    --color-purple-66: #bc76da;
+    --color-purple-70: #c486df;
+    --color-purple-74: #cc97e3;
+    --color-purple-78: #d4a7e7;
+    --color-purple-82: #dcb7ec;
+    --color-purple-86: #e4c7f0;
+    --color-purple-90: #ebd7f4;
+    --color-purple-94: #f3e7f9;
+    --color-purple-98: #fbf7fd;
+
+    --color-brick-2:#080402;
+    --color-brick-6: #180c06;
+    --color-brick-10: #28140b;
+    --color-brick-14: #381b0f;
+    --color-brick-18: #482313;
+    --color-brick-22: #582b18;
+    --color-brick-26: #68331c;
+    --color-brick-30: #793b20;
+    --color-brick-34: #894325;
+    --color-brick-38: #994a29;
+    --color-brick-42: #a9522d;
+    --color-brick-46: #b95a32;
+    --color-brick-50: #c96236;
+    --color-brick-54: #cd6e46;
+    --color-brick-58: #d27b56;
+    --color-brick-62: #d68866;
+    --color-brick-66: #da9476;
+    --color-brick-70: #dfa186;
+    --color-brick-74: #e3ad97;
+    --color-brick-78: #e7baa7;
+    --color-brick-82: #ecc6b7;
+    --color-brick-86: #f0d3c7;
+    --color-brick-90: #f4e0d7;
+    --color-brick-94: #f9ece7;
+    --color-brick-98: #fdf9f7;
+
+    --color-brick-2: #020802;
+    --color-brick-6: #061807;
+    --color-brick-10: #0b280b;
+    --color-brick-14: #0f3810;
+    --color-brick-18: #134814;
+    --color-brick-22: #185819;
+    --color-brick-26: #1c681d;
+    --color-brick-30: #207922;
+    --color-brick-34: #258927;
+    --color-brick-38: #29992b;
+    --color-brick-42: #2da930;
+    --color-brick-46: #32b934;
+    --color-brick-50: #36c939;
+    --color-brick-54: #46cd49;
+    --color-brick-58: #56d258;
+    --color-brick-62: #66d668;
+    --color-brick-66: #76da78;
+    --color-brick-70: #86df88;
+    --color-brick-74: #97e398;
+    --color-brick-78: #a7e7a8;
+    --color-brick-82: #b7ecb8;
+    --color-brick-86: #c7f0c7;
+    --color-brick-90: #d7f4d7;
+    --color-brick-94: #e7f9e7;
+    --color-brick-98: #f7fdf7;
+
+
+
+
+
+
+
+
+
+
+    --color-prm-4: var(--color-green-4);
+    --color-prm-8: var(--color-green-8);
+    --color-prm-12: var(--color-green-12);
+    --color-prm-16: var(--color-green-16);
+    --color-prm-20: var(--color-green-20);
+    --color-prm-24: var(--color-green-24);
+    --color-prm-28: var(--color-green-28);
+    --color-prm-32: var(--color-green-32);
+    --color-prm-36: var(--color-green-36);
+    --color-prm-40: var(--color-green-40);
+    --color-prm-44: var(--color-green-44);
+    --color-prm-48: var(--color-green-48);
+    --color-prm-52: var(--color-green-52);
+    --color-prm-56: var(--color-green-56);
+    --color-prm-60: var(--color-green-60);
+    --color-prm-64: var(--color-green-64);
+    --color-prm-68: var(--color-green-68);
+    --color-prm-72: var(--color-green-72);
+    --color-prm-76: var(--color-green-76);
+    --color-prm-80: var(--color-green-80);
+    --color-prm-84: var(--color-green-84);
 
     --color-sec-10: #131c2a;
     --color-sec-50: #6f7789;
     --color-sec-70: #a3abbe;
     --color-sec-90: #dae3f6;
-
-    --color-purple-5: #0c0410;
-    --color-purple-10: #18081f;
-    --color-purple-15: #250d2f;
-    --color-purple-20: #31113e;
-    --color-purple-25: #3d154e;
-    --color-purple-30: #49195e;
-    --color-purple-35: #551d6d;
-    --color-purple-40: #62227d;
-    --color-purple-45: #6e268c;
-    --color-purple-50: #7a2a9c;
-    --color-purple-50: #7a2a9c;
-    --color-purple-55: #873fa6;
-    --color-purple-60: #9555b0;
-    --color-purple-65: #a26aba;
-    --color-purple-70: #af7fc4;
-    --color-purple-75: #bd95ce;
-    --color-purple-80: #caaad7;
-    --color-purple-85: #d7bfe1;
-    --color-purple-90: #e4d4eb;
-    --color-purple-95: #f2eaf5;
 }

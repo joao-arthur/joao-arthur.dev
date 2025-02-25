@@ -10,7 +10,7 @@
         font-size: 2.5rem;
         line-height: 3rem;
         overflow-wrap: break-word;
-        color: var(--color-green-20);
+        color: var(--color-prm-20);
     }
 
     .disabled {
@@ -19,7 +19,7 @@
 
     :global(.dark) {
         h2 {
-            color: var(--color-green-94);
+            color: var(--color-prm-76);
         }
 
         .disabled {

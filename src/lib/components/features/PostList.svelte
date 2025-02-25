@@ -31,14 +31,14 @@
         padding-right: 20px;
         height: 60px;
         border-radius: 25px;
-        background-color: var(--color-green-75);
-        color: var(--color-green-45);
+        background-color: var(--color-prm-56);
+        color: var(--color-prm-40);
     }
 
     :global(.dark) {
         div {
-            background-color: var(--color-green-20);
-            color: var(--color-green-70);
+            background-color: var(--color-prm-20);
+            color: var(--color-prm-52);
         }
     }
 </style>
