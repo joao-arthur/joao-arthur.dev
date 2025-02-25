@@ -29,17 +29,17 @@
 
 <style>
     main {
-        background-color: var(--color-prm-84);
         width: 100%;
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
         min-width: 0;
+        background-color: var(--color-prm-94);
     }
 
     :global(.dark) {
         main {
-            background-color: var(--color-prm-4);
+            background-color: var(--color-prm-6);
         }
     }
 

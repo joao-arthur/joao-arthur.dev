@@ -56,9 +56,9 @@
             <H2>Frontend</H2>
             <P>{locale.about_frontend}</P>
             <BadgeContainer>
-                <Badge color="blue">React</Badge>
-                <Badge color="blue">Next.js</Badge>
-                <Badge color="blue">Svelte</Badge>
+                <Badge color="green">React</Badge>
+                <Badge color="green">Next.js</Badge>
+                <Badge color="green">Svelte</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>
@@ -67,8 +67,8 @@
             <H2>Backend</H2>
             <P>{locale.about_backend}</P>
             <BadgeContainer>
-                <Badge color="blue">Spring</Badge>
-                <Badge color="blue">NestJS</Badge>
+                <Badge color="green">Spring</Badge>
+                <Badge color="green">NestJS</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>
@@ -77,8 +77,8 @@
             <H2>Desktop</H2>
             <P>{locale.about_desktop}</P>
             <BadgeContainer>
-                <Badge color="blue">GTK</Badge>
-                <Badge color="blue">Electron</Badge>
+                <Badge color="green">GTK</Badge>
+                <Badge color="green">Electron</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>
@@ -87,10 +87,10 @@
             <H2>Mobile</H2>
             <P>{locale.about_mobile}</P>
             <BadgeContainer>
-                <Badge color="blue">React Native</Badge>
-                <Badge color="blue">Expo</Badge>
-                <Badge color="blue">Flutter</Badge>
-                <Badge color="blue">Android (Kotlin)</Badge>
+                <Badge color="green">React Native</Badge>
+                <Badge color="green">Expo</Badge>
+                <Badge color="green">Flutter</Badge>
+                <Badge color="green">Android (Kotlin)</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>
@@ -99,8 +99,8 @@
             <H2>OS</H2>
             <P>{locale.about_os}</P>
             <BadgeContainer>
-                <Badge color="blue">Arch</Badge>
-                <Badge color="blue">Debian</Badge>
+                <Badge color="green">Arch</Badge>
+                <Badge color="green">Debian</Badge>
             </BadgeContainer>
         </CardContent>
     </Card>

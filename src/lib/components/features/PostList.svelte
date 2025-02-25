@@ -31,21 +31,21 @@
         padding-right: 20px;
         height: 60px;
         border-radius: 25px;
-        background-color: var(--color-prm-56);
-        color: var(--color-prm-40);
+        background-color: var(--color-prm-78);
+        color: var(--color-prm-50);
     }
 
     :global(.dark) {
         div {
-            background-color: var(--color-prm-20);
-            color: var(--color-prm-52);
+            background-color: var(--color-prm-26);
+            color: var(--color-prm-62);
         }
     }
 </style>
 
 <Content>
     {#each posts as post}
-        <Card>
+        <Card title={post.title}>
             <A href={`/${language}/${feature}/${post.slug}`}>
                 <CardContent>
                     <H1>{post.title}</H1>
@@ -59,7 +59,7 @@
                 {#if post.programming_languages}
                     <BadgeContainer>
                         {#each post.programming_languages as language}
-                            <Badge color="blue">{language}</Badge>
+                            <Badge color="green">{language}</Badge>
                         {/each}
                     </BadgeContainer>
                 {/if}

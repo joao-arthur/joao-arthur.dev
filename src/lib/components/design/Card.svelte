@@ -1,5 +1,5 @@
 <script lang="ts">
-    const { children } = $props();
+    const { children, title } = $props();
 </script>
 
 <style>
@@ -9,16 +9,16 @@
         border-radius: 20px;
         overflow: hidden;
         list-style: none;
-        background-color: var(--color-prm-72);
+        background-color: var(--color-prm-86);
     }
 
     :global(.dark) {
         li {
-            background-color: var(--color-prm-12);
+            background-color: var(--color-prm-14);
         }
     }
 </style>
 
-<li>
+<li title={title}>
     {@render children?.()}
 </li>

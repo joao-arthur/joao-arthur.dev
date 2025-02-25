@@ -13,7 +13,7 @@
     }
 
     .enabled {
-        color: var(--color-prm-20);
+        color: var(--color-prm-30);
     }
 /*
     .enabled:hover {
@@ -30,7 +30,7 @@
 
     :global(.dark) {
         .enabled {
-            color: var(--color-prm-76);
+            color: var(--color-prm-74);
         }
 /*
         .enabled:hover {

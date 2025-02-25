@@ -18,12 +18,12 @@
         padding-bottom: 10px;
         padding: 15px 20px;
         gap: 1rem;
-        background-color: var(--color-prm-72);
+        background-color: var(--color-prm-86);
     }
 
     :global(.dark) {
         header {
-            background-color: var(--color-prm-8);
+            background-color: var(--color-prm-14);
         }
     }
 

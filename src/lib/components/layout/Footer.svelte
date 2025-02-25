@@ -10,12 +10,12 @@
     footer {
         width: 100%;
         padding-bottom: 2rem;
-        background-color: var(--color-prm-72);
+        background-color: var(--color-prm-86);
     }
 
     :global(.dark) {
         footer {
-            background-color: var(--color-prm-8);
+            background-color: var(--color-prm-14);
         }
     }
 
@@ -27,28 +27,28 @@
     }
 
     div {
-        color: var(--color-prm-20);
+        color: var(--color-prm-26);
     }
 
     div:hover {
-        color: var(--color-prm-28);
+        color: var(--color-prm-34);
     }
 
     div:active {
-        color: var(--color-prm-36);
+        color: var(--color-prm-42);
     }
 
     :global(.dark) {
         div {
-            color: var(--color-prm-72);
+            color: var(--color-prm-82);
         }
 
         div:hover {
-            color: var(--color-prm-60);
+            color: var(--color-prm-74);
         }
 
         div:active {
-            color: var(--color-prm-52);
+            color: var(--color-prm-66);
         }
     }
 </style>
@@ -56,12 +56,12 @@
 <footer>
     <nav>
         <A href="http://github.com/joao-arthur" target="_blank">
-            <div>
+            <div >
                 <ComGithub size={50}></ComGithub>
             </div>
         </A>
         <A href="https://www.linkedin.com/in/joao-lothamer" target="_blank">
-            <div>
+            <div >
                 <ComLinkedin size={50}></ComLinkedin>
             </div>
         </A>

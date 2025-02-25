@@ -160,30 +160,31 @@ body {
     --color-green-94: #f9f6e7;
     --color-green-98: #fdfcf7;
 
-    --color-prm-4: var(--color-purple-2);
-    --color-prm-8: var(--color-purple-6);
-    --color-prm-12: var(--color-purple-10);
-    --color-prm-16: var(--color-purple-14);
-    --color-prm-20: var(--color-purple-18);
-    --color-prm-24: var(--color-purple-22);
-    --color-prm-28: var(--color-purple-26);
-    --color-prm-32: var(--color-purple-30);
-    --color-prm-36: var(--color-purple-34);
-    --color-prm-40: var(--color-purple-38);
-    --color-prm-44: var(--color-purple-42);
-    --color-prm-48: var(--color-purple-46);
-    --color-prm-52: var(--color-purple-50);
-    --color-prm-56: var(--color-purple-54);
-    --color-prm-60: var(--color-purple-58);
-    --color-prm-64: var(--color-purple-62);
-    --color-prm-68: var(--color-purple-66);
-    --color-prm-72: var(--color-purple-70);
-    --color-prm-76: var(--color-purple-74);
-    --color-prm-80: var(--color-purple-78);
-    --color-prm-84: var(--color-purple-82);
-
-
-
+    --color-prm-2: var(--color-purple-2);
+    --color-prm-6: var(--color-purple-6);
+    --color-prm-10: var(--color-purple-10);
+    --color-prm-14: var(--color-purple-14);
+    --color-prm-18: var(--color-purple-18);
+    --color-prm-22: var(--color-purple-22);
+    --color-prm-26: var(--color-purple-26);
+    --color-prm-30: var(--color-purple-30);
+    --color-prm-34: var(--color-purple-34);
+    --color-prm-38: var(--color-purple-38);
+    --color-prm-42: var(--color-purple-42);
+    --color-prm-46: var(--color-purple-46);
+    --color-prm-50: var(--color-purple-50);
+    --color-prm-54: var(--color-purple-54);
+    --color-prm-58: var(--color-purple-58);
+    --color-prm-62: var(--color-purple-62);
+    --color-prm-66: var(--color-purple-66);
+    --color-prm-70: var(--color-purple-70);
+    --color-prm-74: var(--color-purple-74);
+    --color-prm-78: var(--color-purple-78);
+    --color-prm-82: var(--color-purple-82);
+    --color-prm-86: var(--color-purple-86);
+    --color-prm-90: var(--color-purple-90);
+    --color-prm-94: var(--color-purple-94);
+    --color-prm-98: var(--color-purple-98);
 
 
 

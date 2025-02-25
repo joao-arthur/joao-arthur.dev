@@ -1,5 +1,5 @@
 <script lang="ts">
-    const { children, onclick } = $props();
+    const { children, onclick,title } = $props();
 </script>
 
 <style>
@@ -10,38 +10,38 @@
         height: 60px;
         border-radius: 25px;
         cursor: pointer;
-        background-color: var(--color-prm-56);
-        color: var(--color-prm-40);
+        background-color: var(--color-prm-78);
+        color: var(--color-prm-50);
     }
 
     button:hover {
-        background-color: var(--color-prm-52);
-        color: var(--color-prm-36);
+        background-color: var(--color-prm-70);
+        color: var(--color-prm-42);
     }
 
     button:active {
-        background-color: var(--color-prm-48);
-        color: var(--color-prm-32);
+        background-color: var(--color-prm-62);
+        color: var(--color-prm-34);
     }
 
     :global(.dark) {
         button {
-            background-color: var(--color-prm-20);
-            color: var(--color-prm-52);
+            background-color: var(--color-prm-26);
+            color: var(--color-prm-62);
         }
 
         button:hover {
-            background-color: var(--color-prm-24);
-            color: var(--color-prm-56);
+            background-color: var(--color-prm-34);
+            color: var(--color-prm-70);
         }
 
         button:active {
-            background-color: var(--color-prm-28);
-            color: var(--color-prm-60);
+            background-color: var(--color-prm-42);
+            color: var(--color-prm-78);
         }
     }
 </style>
 
-<button type="button" {onclick}>
+<button type="button" {onclick} {title}>
     {@render children?.()}
 </button>

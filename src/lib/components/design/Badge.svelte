@@ -4,11 +4,20 @@
     const { children, color } = $props();
 
     function get_class() {
-        if (color === "blue") {
-            return "blue";
+        if (color === "red") {
+            return "red";
         }
         if (color === "yellow") {
             return "yellow";
+        }
+        if (color === "green") {
+            return "green";
+        }
+        if (color === "blue") {
+            return "blue";
+        }
+        if (color === "pink") {
+            return "pink";
         }
         return "";
     }
@@ -21,22 +30,47 @@
         overflow: hidden;
     }
 
-    .blue {
-        background-color: #a3a3ff;
+    .red {
+        background-color: #d73c3c;
     }
 
     .yellow {
         background-color: #d7d73c;
     }
 
+    .green {
+        background-color: #3cd7c5;
+    }
+
+    .blue {
+        background-color: #3c7ad7;
+    }
+
+    .pink {
+        background-color: #d73c8f;
+    }
+
     :global(.dark) {
-        .blue {
-            background-color: #2a2a84;
+        .red {
+            background-color: #421414;
         }
 
         .yellow {
-            background-color: #484818;
+            background-color: #424214;
         }
+
+        .green {
+            background-color: #14423d;
+        }
+
+        .blue {
+            background-color: #1b1b61;
+        }
+
+        .pink {
+            background-color: #42142d;
+        }
+
     }
 </style>
 
