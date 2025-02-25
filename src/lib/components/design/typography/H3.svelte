@@ -16,7 +16,6 @@
         color: var(--color-sec-50);
     }
 
-
     :global(.dark) {
         h3 {
             color: var(--color-prm-70);

@@ -70,7 +70,6 @@
         .pink {
             background-color: #42142d;
         }
-
     }
 </style>
 

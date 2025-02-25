@@ -34,28 +34,6 @@ body {
     margin: 0;
     font-family: Ubuntu Mono;
 
-    --color-old-green-4: #000A01;
-    --color-old-green-8: #001902;
-    --color-old-green-12: #001D02;
-    --color-old-green-16: #002C04;
-    --color-old-green-20: #003104;
-    --color-old-green-24: #004205;
-    --color-old-green-28: #005307;
-    --color-old-green-32: #006508;
-    --color-old-green-36: #00760A;
-    --color-old-green-40: #00870B;
-    --color-old-green-44: #00BA0F;
-    --color-old-green-48: #00CC11;
-    --color-old-green-52: #00DD12;
-    --color-old-green-56: #00EE14;
-    --color-old-green-60: #00FF15;
-    --color-old-green-64: #1AFF2C;
-    --color-old-green-68: #4CFF5B;
-    --color-old-green-72: #80FF8A;
-    --color-old-green-76: #B3FFB9;
-    --color-old-green-80: #CCFFD0;
-    --color-old-green-84: #E6FFE8;
-
     --color-purple-2: #060208;
     --color-purple-6: #130618;
     --color-purple-10: #1f0b28;
@@ -186,12 +164,6 @@ body {
     --color-prm-94: var(--color-purple-94);
     --color-prm-98: var(--color-purple-98);
 
-
-
-
-
-
-    
     --color-sec-10: #131c2a;
     --color-sec-50: #6f7789;
     --color-sec-70: #a3abbe;

@@ -56,12 +56,12 @@
 <footer>
     <nav>
         <A href="http://github.com/joao-arthur" target="_blank">
-            <div >
+            <div>
                 <ComGithub size={50}></ComGithub>
             </div>
         </A>
         <A href="https://www.linkedin.com/in/joao-lothamer" target="_blank">
-            <div >
+            <div>
                 <ComLinkedin size={50}></ComLinkedin>
             </div>
         </A>

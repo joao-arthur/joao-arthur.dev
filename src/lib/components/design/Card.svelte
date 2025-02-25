@@ -19,6 +19,6 @@
     }
 </style>
 
-<li title={title}>
+<li {title}>
     {@render children?.()}
 </li>

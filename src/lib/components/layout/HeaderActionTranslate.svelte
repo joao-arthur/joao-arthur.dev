@@ -156,7 +156,6 @@
         .footer button:active {
             background-color: var(--color-prm-38);
         }
-
     }
 </style>
 

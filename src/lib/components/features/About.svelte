@@ -26,6 +26,7 @@
         src="/images/myself.jpg"
         style="align-self: center; width: 300px; height: auto; border-radius: 30%"
         alt={locale.about_myself_title}
+        title={locale.about_myself_title}
     />
     <H1>{locale.about_title}</H1>
     <P justify>{locale.about_subtitle}</P>
