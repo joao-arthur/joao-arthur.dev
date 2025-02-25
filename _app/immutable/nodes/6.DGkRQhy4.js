@@ -1,1 +1,0 @@
-import{h as a}from"../chunks/Bv4VJJ99.js";import{p as r,a as e,$ as s}from"../chunks/B4rLlicd.js";import{P as p}from"../chunks/DaL_-51z.js";function f(t,o){r(o,!0),a(n=>{s.title="Portfolio | João Arthur"}),p(t,{language:"en-US",get posts(){return o.data.posts},feature:"portfolio"}),e()}export{f as component};

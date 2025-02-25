@@ -1,1 +1,0 @@
-import{h as a}from"../chunks/Bv4VJJ99.js";import{p as r,a as e,$ as s}from"../chunks/B4rLlicd.js";import{P as p}from"../chunks/DaL_-51z.js";function i(o,t){r(t,!0),a(m=>{s.title="Blog | João Arthur"}),p(o,{language:"pt-BR",get posts(){return t.data.posts},feature:"blog"}),e()}export{i as component};
