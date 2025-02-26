@@ -1,1 +1,0 @@
-import{h as t}from"../chunks/WeQXqaOV.js";import"../chunks/DZ-DIwRQ.js";import{$ as r}from"../chunks/Bbc5DNbi.js";import{A as a}from"../chunks/B0lsWnQQ.js";function u(o){t(m=>{r.title="About | João Arthur"}),a(o,{language:"en-US"})}export{u as component};
