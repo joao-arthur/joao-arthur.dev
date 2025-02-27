@@ -2,8 +2,9 @@
 title: "Interfaces"
 description: "Is there a way to make a big project easy to implement, easy to test and type-safe?"
 created_at: "2023-08-12"
-updated_at: "2025-02-20"
+updated_at: "2025-02-27"
 technologies:
+  - "JavaScript"
   - "TypeScript"
   - "Java"
   - "Rust"
@@ -63,7 +64,7 @@ export const createUserServiceErrorStub: CreateUserService = {
 
 > Sample service to create a user, that also exports its _stubs_
 
-Any functions that has a **CreateUserService** argument can be tested using
+Any function that receives a **CreateUserService** argument can be tested using
 **createUserServiceStub** and **createUserServiceErrorStub** instead of mocking all dependencies.
 This abstracts implementation and let you think about **input** and **output**.
 
@@ -122,8 +123,8 @@ function createUser(
 
 Java provides:
 
-- Annotation syntax that allows for `@Nullable` and `@NotNull` (There are many implementations from
-  different libs)
+- Annotation syntax that allows for required and nullable values, although there is no
+  implementation of this in the standard library
 - **throws** keyword to make error handling explicit
 - _Mockito_ and similar libraries to mock injected dependencies during runtime
 
@@ -150,21 +151,41 @@ Rust has a unique type-system because it has:
 - _Option_ data structure to handle present or absent values
 - _Result_ data structure to handle success or error values
 
-The _Option_ and _Result_ are enums, so it is necessary to handle each case:
+The _Option_ and _Result_ are enums, and because Rust demands enum exhaustiveness, this forces the
+developer to handle each case:
 
 ```rust
+enum CreateUserErr {
+    Repo(RepoErr),
+    MissingRepo(MissingRepoErr)
+}
+
 pub fn create_user(
     user: User,
     repo: Option<UserRepo>,
-) -> Result<DBUser, RepoErr> {
+) -> Result<DBUser, CreateUserErr> {
     match repository {
-        Some(r) => Ok(r.save(user)),
-        None => Err("repository is required!"),
+        Some(r) => r
+            .save(user)
+            .map_err(|e|
+                CreateUserErr::Repo(
+                    e
+                )            
+            ),
+        None => Err(
+            CreateUserErr::MissingRepo(
+                MissingRepoErr
+            )
+        ),
     }
 }
 ```
 
 ## Conclusion
 
-Interfaces, like any **abstraction**, can _hide errors_. If null and errors are **explicit**, these
-errors can be avoided, at the cost of verbose code. Personally, I like the **Rust** solution.
+The more rigorous a type system of a programming language, less prone to errors and more verbose the
+code. **Interfaces** are powerful tools, but they can **hide errors and null values**, according to
+the programming language.
+
+The way of handling with these limitations will depend mostly on what is the tolerance to bugs of
+the project, however objectively, a software with less bugs is **better**.

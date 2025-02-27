@@ -3,8 +3,9 @@ title: "Interfaces"
 description: "Existe alguma forma de tornar um projeto grande fácil de implementar, fácil de testar testar e
 com segurança de tipos?"
 created_at: "2023-08-12"
-updated_at: "2025-02-20"
+updated_at: "2025-02-27"
 technologies:
+  - "JavaScript"
   - "TypeScript"
   - "Java"
   - "Rust"
@@ -27,12 +28,12 @@ Isso permite:
 
 - Múltiplas implementações
 - Esconder a injeção de dependências
-- Objetos planos para o teste
+- Plain objects testáveis
 
 ## Por que?
 
 ```ts
-type CriarUsuarioServico = {
+export type CriarUsuarioServico = {
     criar: (
         usuario: UsuarioCriar,
         validador: UsuarioValidador,
@@ -42,7 +43,7 @@ type CriarUsuarioServico = {
     ) => Promise<User>;
 };
 
-export const criarUsuarioServicoActual: CriarUsuarioServico = {
+export const criarUsuarioServicoReal: CriarUsuarioServico = {
     criar: (
         usuario: UsuarioCriar,
         validador: UsuarioValidador,
@@ -56,7 +57,7 @@ export const criarUsuarioServicoStub: CriarUsuarioServico = {
     criar: () => Promise.resolve(userStub),
 };
 
-export const criarUsuarioServicoErrorStub: CriarUsuarioServico = {
+export const criarUsuarioServicoErroStub: CriarUsuarioServico = {
     criar: () => {
         throw new Error();
     },
@@ -66,8 +67,8 @@ export const criarUsuarioServicoErrorStub: CriarUsuarioServico = {
 > Exemplo de um serviço para criar um usuário, que também exporta os seus _stubs_
 
 Qualquer função que receba um argumento do tipo **CriarUsuarioServico** pode ser testada usando
-**criarUsuarioServicoStub** e **criarUsuarioServicoErrorStub** ao invés de mockar todas as
-dependências. Isso abstrai a implementação e permite você pensa sobre **entrada** e **saída**.
+**criarUsuarioServicoStub** e **criarUsuarioServicoErroStub** ao invés de mockar todas as
+dependências. Isso abstrai a implementação e permite você pensar apenas em **entrada** e **saída**.
 
 ## Armadilhas
 
@@ -81,7 +82,7 @@ dependências. Isso abstrai a implementação e permite você pensa sobre **entr
   - **Valores null**
   - **Gerenciamento de erros**
 
-## Linguagem por linguagem
+## Linguagem Por Linguagem
 
 Veja o seguinte exemplo em _JavaScript_:
 
@@ -99,19 +100,19 @@ async function criarUsuario(
 
 Para poder comparar esse código com outras linguagens, suponha:
 
-- **repository** pode ser null
-- **repository** pode lançar um erro
-- **user** é um argumento obrigatório
-- Se **user** for corretamente salvo, o usuário salvo é retornado
+- **repositorio** pode ser null
+- **repositorio** pode lançar um erro
+- **usuario** é um argumento obrigatório
+- Se **usuario** for corretamente salvo, o usuário salvo é retornado
 
-### Typescript
+### TypeScript
 
-Typescript supporta tipos de união, o que permite tipar valores requiridos e nulos:
+TypeScript supporta união de tipos, o que permite tipar valores obrigatórios e nulos:
 
 ```ts
 function criarUsuario(
-    user: Usuario,
-    repository: UsuarioRepositorio | null,
+    usuario: Usuario,
+    repositorio: UsuarioRepositorio | null,
 ): BDUsuario {
     if (!repositorio) {
         throw new Error("repositorio é obrigatório!");
@@ -124,9 +125,9 @@ function criarUsuario(
 
 Java provê:
 
-- Sintaxe de anotação que permite **@Nullable** e **@NotNull** (Existem muitas implementações de
-  diversas bibliotecas)
-- Palavra reservada **throws** para tornar o gerenciamento de error explícito
+- Sintaxe de anotação que permite criar anotações para valores obrigatórios e que podem ser nulos,
+  embora não haja uma implementação disso na biblioteca padrão
+- Palavra reservada **throws** para tornar o gerenciamento de erro explícito
 - _Mockito_ e bibliotecas similares para mockar injeção de dependências em tempo de execução
 
 ```java
@@ -148,26 +149,45 @@ public BDUsuario criarUsuario(
 
 Rust possui um sistema de tipos único, porque possui:
 
-- Não há ponteiro _null_
+- Ausência de ponteiro _null_
 - Estrutura de dado _Option_ para lidar com valores presentes ou ausentes
 - Estrutura de dado _Result_ para lidar com valores de sucesso ou erro
 
-_Option_ e _Result_ funcionam como enums, então é necessário lidar com cada caso:
+_Option_ e _Result_ são enums, e como Rust obriga a exaustividade de enums, isso obriga o
+desenvolvedor a lidar com cada cada caso:
 
 ```rust
+enum CriarUsuarioErr {
+    Repo(RepoErr),
+    RepoNaoInformado(RepoNaoInformadoErr)
+}
+
 pub fn criar_usuario(
     usuario: Usuario,
     repo: Option<UsuarioRepo>,
-) -> Result<BDUsuario, RepoErr> {
+) -> Result<BDUsuario, CriarUsuarioErr> {
     match repo {
-        Some(r) => Ok(r.salvar(usuario)),
-        None => Err("repositorio é obrigatório!"),
+        Some(r) => r
+            .salvar(usuario)
+            .map_err(|e|
+                CriarUsuarioErr::Repo(
+                    e
+                )
+            ),
+        None => Err(
+            CriarUsuarioErr::RepoNaoInformado(
+                RepoNaoInformadoErr
+            )
+        ),
     }
 }
 ```
 
 ## Conclusão
 
-Interfaces, como qualquer **abstração**, pode _esconder erros_. Se null e erros são **explícitos**,
-esses erros podem ser evitados, ao custo de código verboso. Pessoalmente, eu gosto da solução do
-**Rust**.
+Quanto mais rigoroso o sistema de tipos de uma linguagem de programação, menos suscetível a erros e
+mais verboso será o código. **Interfaces** são ferramentas poderosas, mas que podem **esconder erros
+e valores nulos**, de acordo com a linguagem de programação.
+
+A escolha de como lidar com essas limitações vai depender principalmente de qual a tolerancia a bugs
+do projeto, porém objetivamente, um software com menos bugs é **melhor**.
