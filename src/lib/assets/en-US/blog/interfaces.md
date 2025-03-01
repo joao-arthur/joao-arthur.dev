@@ -17,7 +17,7 @@ Is there a way to make a _big project_ easy to _implement_, easy to _test_ and _
 ## Data Types
 
 In any programming language, data has types. Numbers, text, binaries, all of them have a _specific
-type_. The same way, an object can be defined by a type, referred to as an _interface_ in most
+type_. In the same way, an object can be defined by a type, referred to as an _interface_ in most
 languages.
 
 > An interface is a set of operations with arguments and return types.
@@ -66,7 +66,7 @@ export const createUserServiceErrorStub: CreateUserService = {
 
 Any function that receives a **CreateUserService** argument can be tested using
 **createUserServiceStub** and **createUserServiceErrorStub** instead of mocking all dependencies.
-This abstracts implementation and let you think about **input** and **output**.
+This abstracts implementation and leaves room for you to think about **input** and **output**.
 
 ## Pitfalls
 
@@ -96,11 +96,11 @@ async function createUser(
 }
 ```
 
-In order to compare this code to another languages, suppose:
+To compare this code with other programming languages, suppose:
 
 - **repository** can be null
 - **repository** can throw an error
-- **user** is an required argument
+- **user** is a required argument
 - If **user** is correctly saved, the saved user is returned
 
 ### TypeScript
@@ -183,9 +183,9 @@ pub fn create_user(
 
 ## Conclusion
 
-The more rigorous a type system of a programming language, less prone to errors and more verbose the
+The more rigorous a type system of a programming language, the less prone to errors and the more verbose the
 code. **Interfaces** are powerful tools, but they can **hide errors and null values**, according to
 the programming language.
 
-The way of handling with these limitations will depend mostly on what is the tolerance to bugs of
-the project, however objectively, a software with less bugs is **better**.
+The way of handling these limitations will depend mostly on what is the tolerance to bugs of
+the project, however objectively, a software with fewer bugs is **better**.

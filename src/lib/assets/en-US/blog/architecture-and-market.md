@@ -1,13 +1,13 @@
 ---
 title: "Clean Architecture, DDD And Market"
-description: "Reusable architecture has prooven to be powerful. Why nobody uses it?"
+description: "Reusable architecture has proven to be powerful. Why does nobody use it?"
 created_at: "2023-08-11"
 updated_at: "2025-02-27"
 ---
 
 # Architecture And Market
 
-Reusable architecture has prooven to be powerful. Why nobody uses it?
+Reusable architecture has proven to be powerful. Why does nobody use it?
 
 ## Technology
 
@@ -28,15 +28,15 @@ the standard library of the programming language), this is accomplished with int
 
 This approach offers the following advantages:
 
-- **Focus on the domain:** Allows to think in an isolatted manner on the **entities** and
-  **operations** of the application, using an ubiquitous language
-- **Testability:** The capacity of testing the whole domain code, ensuring a reduced number of bugs
-- **Reusability:** The domain can be used as an library in any application: Desktop app, mobile app,
+- **Focus on the domain:** Allows to think in an isolated manner on the **entities** and
+  **operations** of the application, using a ubiquitous language
+- **Testability:** The capacity to test the whole domain code, ensuring a reduced number of bugs
+- **Reusability:** The domain can be used as a library in any application: Desktop app, mobile app,
   REST API, web frontend, etc.
 
 ## Architectures
 
-Many people already thought of architectured that apply these concepts. The most prominents are:
+Many people already thought of architectures that apply these concepts. The most prominents are:
 
 - **Hexagonal Architecture (Alistair Cockburn):** Prioritizes a clear segregation of the application
   core and the external interfaces
@@ -45,18 +45,18 @@ Many people already thought of architectured that apply these concepts. The most
 
 ## Corporative Problem
 
-In the professional environment, software development has a tight deadlight, that forces developers
-to use the most out of the stack. This prevents to create a deeper model or a reusable architecture,
+In the professional environment, software development has a tight deadline, that forces developers
+to use the most out of the stack. This prevents the creation of a deeper model or a reusable architecture,
 accumulating **technical debt**.
 
 When some years pass, and the project will be migrated (from desktop to the web, from the web
 to mobile, etc.), the natural tendency is that it will be rewritten, restarting the same process.
 
-A software with bugs, still will have clients using it, since most bugs are in less used routines,
+A software with bugs still will have clients using it, since most bugs are in less-used routines,
 that are less important to the client. This means that a corporation can profit more from a buggy
-software today, than with a perfect software tomorrow, at least on the short term.
+software today, than with a perfect software tomorrow, at least in the short term.
 
 ## Conclusion
 
-Architectures that leverages the value of a software also delay the development on the short term,
-what becomes a uninteresting objetive for most firms.
+Architectures that leverage the value of a software also delay the development in the short term,
+what becomes an uninteresting objective for most firms.

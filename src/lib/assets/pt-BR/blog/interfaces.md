@@ -1,6 +1,6 @@
 ---
 title: "Interfaces"
-description: "Existe alguma forma de tornar um projeto grande fácil de implementar, fácil de testar testar e
+description: "Existe alguma forma de tornar um projeto grande fácil de implementar, fácil de testar e
 com segurança de tipos?"
 created_at: "2023-08-12"
 updated_at: "2025-02-27"
@@ -13,13 +13,13 @@ technologies:
 
 # Interfaces
 
-Existe alguma forma de tornar um _projeto grande_ fácil de _implementar_, fácil de testar _testar_ e
+Existe alguma forma de tornar um _projeto grande_ fácil de _implementar_, fácil de _testar_ e
 com _segurança de tipos_?
 
 ## Tipos De Dado
 
 Em qualquer linguagem de programação, dados possuem tipo. Números, texto, binários, todos eles
-possuem um _tipo específico_. Da mesma forma, um objeto pode ser definido por um tipo, referido como
+possuem um _tipo específico_. Do mesmo modo, um objeto pode ser definido por um tipo, referido como
 _interface_ na maioria das linguagens.
 
 > Uma interface é um conjunto de operações com argumentos e tipagem de retorno.
@@ -30,7 +30,7 @@ Isso permite:
 - Esconder a injeção de dependências
 - Plain objects testáveis
 
-## Por que?
+## Por quê?
 
 ```ts
 export type CriarUsuarioServico = {
@@ -72,12 +72,12 @@ dependências. Isso abstrai a implementação e permite você pensar apenas em *
 
 ## Armadilhas
 
-- Se você aplicar interfaces exaustivamente, a indireção do código torna difícil seguir o código.
+- Se você aplicar interfaces exaustivamente, a indireção dificulta seguir o código.
   Como uma boa prática, use interfaces para: **Recursos externos** (requisições HTTP, conexão com
   bancos de dados...) e **injeção de dependência** (Quando os recursos são passados via argumentos
   da função, exatamente como no exemplo anterior)
 
-- Existe depois problemas que um sistema de tipos pode não cobrir:
+- Existem dois problemas que um sistema de tipos pode não cobrir:
 
   - **Valores null**
   - **Gerenciamento de erros**
@@ -98,7 +98,7 @@ async function criarUsuario(
 }
 ```
 
-Para poder comparar esse código com outras linguagens, suponha:
+Para comparar esse código com outras linguagens de programção, suponha:
 
 - **repositorio** pode ser null
 - **repositorio** pode lançar um erro
@@ -107,7 +107,7 @@ Para poder comparar esse código com outras linguagens, suponha:
 
 ### TypeScript
 
-TypeScript supporta união de tipos, o que permite tipar valores obrigatórios e nulos:
+TypeScript suporta união de tipos, o que permite tipar valores obrigatórios e nulos:
 
 ```ts
 function criarUsuario(
@@ -154,7 +154,7 @@ Rust possui um sistema de tipos único, porque possui:
 - Estrutura de dado _Result_ para lidar com valores de sucesso ou erro
 
 _Option_ e _Result_ são enums, e como Rust obriga a exaustividade de enums, isso obriga o
-desenvolvedor a lidar com cada cada caso:
+desenvolvedor a lidar com cada caso:
 
 ```rust
 enum CriarUsuarioErr {
@@ -187,7 +187,7 @@ pub fn criar_usuario(
 
 Quanto mais rigoroso o sistema de tipos de uma linguagem de programação, menos suscetível a erros e
 mais verboso será o código. **Interfaces** são ferramentas poderosas, mas que podem **esconder erros
-e valores nulos**, de acordo com a linguagem de programação.
+e valores nulos**, conforme a linguagem de programação.
 
-A escolha de como lidar com essas limitações vai depender principalmente de qual a tolerancia a bugs
+A escolha de como lidar com essas limitações vai depender principalmente de qual a tolerância a bugs
 do projeto, porém objetivamente, um software com menos bugs é **melhor**.

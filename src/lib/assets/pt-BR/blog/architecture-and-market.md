@@ -1,13 +1,13 @@
 ---
 title: "Arquitetura e Mercado"
-description: "A arquitetura reutilísável já se provou poderosa. Por que ninguém usa?"
+description: "A arquitetura reutilizável já se provou poderosa. Por que ninguém usa?"
 created_at: "2023-08-11"
 updated_at: "2025-02-27"
 ---
 
 # Arquitetura e Mercado
 
-A arquitetura reutilísável já se provou poderosa. Por que ninguém usa?
+A arquitetura reutilizável já se provou poderosa. Por que ninguém usa?
 
 ## Tecnologia
 
@@ -22,7 +22,7 @@ Um software de verdade depende de várias tecnologias:
 
 ## Interfaces
 
-É possível isolar os conceitos principais de uma aplicação de todo o resto, em uma **camada de
+É possível isolar os conceitos principais de uma aplicação do resto, em uma **camada de
 domínio**. Nesse caso, quando é necessário utilizar alguma tecnologia (algo que não faça parte do
 domínio da aplicação ou da biblioteca padrão da linguagem de programação), isso é feito através de
 interfaces.
@@ -52,10 +52,10 @@ desenvolvedores a usar o máximo da stack. Isso impede de criar um modelo profun
 reutilizável, acumulando **dívida técnica**.
 
 Quando se passam alguns anos, e o projeto vai ser migrado (de desktop para web, de web para mobile,
-etc.), a tendencia natural é ele ser reescrito, reiniciando o mesmo processo.
+etc.), a tendência natural é ele ser reescrito, reiniciando o mesmo processo.
 
-Um software que possui bugs, ainda vai possuir clientes utilizando, já que a maioria dos bugs está
-em rotinas menos utilizadas, de menor importancia para o cliente. Isso significa que uma empresa
+Um software que possui bugs ainda vai possuir clientes utilizando, já que a maioria dos bugs está
+em rotinas menos utilizadas, de menor importância para o cliente. Isso significa que uma empresa
 pode ganhar mais dinheiro com um software bugado hoje, do que com um software perfeito amanhã, pelo
 menos no curto prazo.
 
