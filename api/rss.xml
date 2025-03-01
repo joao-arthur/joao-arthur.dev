@@ -6,6 +6,12 @@
 <link>https://github.com/josh-collinsworth/sveltekit-blog-starter</link>
 <atom:link href="https://joao-arthur.dev/api/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
+<guid isPermaLink="true">https://joao-arthur.dev/blog/architecture-and-market</guid>
+<title>Clean Architecture, DDD And Market</title>
+<link>https://joao-arthur.dev/blog/architecture-and-market</link>
+<description>undefined</description>
+<pubDate>Invalid Date</pubDate>
+</item><item>
 <guid isPermaLink="true">https://joao-arthur.dev/blog/html-and-components</guid>
 <title>HTML And Components</title>
 <link>https://joao-arthur.dev/blog/html-and-components</link>
@@ -15,12 +21,6 @@
 <guid isPermaLink="true">https://joao-arthur.dev/blog/interfaces</guid>
 <title>Interfaces</title>
 <link>https://joao-arthur.dev/blog/interfaces</link>
-<description>undefined</description>
-<pubDate>Invalid Date</pubDate>
-</item><item>
-<guid isPermaLink="true">https://joao-arthur.dev/blog/layered-architecture-ddd-and-market</guid>
-<title>Clean Architecture, DDD And Market</title>
-<link>https://joao-arthur.dev/blog/layered-architecture-ddd-and-market</link>
 <description>undefined</description>
 <pubDate>Invalid Date</pubDate>
 </item><item>
