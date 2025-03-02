@@ -14,11 +14,14 @@ Why React became so popular? How was the way here?
 
 ## Components
 
-Web projects are made of **HTML**, **CSS** and **JS**, which correspond to layout, style and
-behavior.
+Web projects are made of:
 
-A **component** is a concept that represent the union of these characteristics into a defined piece
-of layout: a header, a menu, a badge, an input, and so on.
+- **HTML:** Corresponds to **layout**
+- **CSS:** Corresponds to **style**
+- **JS:** Corresponds to **behavior**
+
+A **component** is a concept that represent the union of the three languages into a reusable unit.
+For example: a header, a menu, a badge, an input...
 
 ```html
 <!DOCTYPE html>
@@ -51,20 +54,18 @@ of layout: a header, a menu, a badge, an input, and so on.
 
 > A red square "component" in plain **HTML**
 
-In order to possess a component, we need to reuse and to divide **CSS**, **JS** and **HTML** in many
-files.
+In order to have a component, we must embed the code its into a single **HTML** page. It has always
+been easy to reuse **CSS** and **JS**, however the same was not true for **HTML**, until recently.
 
-It has always been easy to reuse **CSS** and **JS**, however the same was not true for **HTML**,
-until recently.
+Web applications serve pages through an **application server**. For each route, they return
+an **HTML** file, in the form of an **HTTP** response. The **HTML** can link many **CSS** and
+**JS** files, but no other **HTML** ones.
 
 ## Templates
 
-Web applications serve pages through an **application server**. For each route, they have to return
-an **HTML** content, as an **HTTP** response. The **HTML** can link many **CSS** and **JS** files,
-but no other **HTML** ones. The solution was to build the **HTML** dinamically on the server.
-
-The technique for this was to use **templates**. The concept is to define a special syntax for text
-files, in order to replace the original string with binded values in runtime.
+In the beginning of the web, the solution was to build the **HTML** dinamically on the server. The technique
+for this was to use **templates**. The concept is to define a special syntax for text files, in order
+to replace the original string with binded values in runtime.
 
 ```html
 <p>Hello, my name is <TMPL_VAR NAME=USER>!</p>
@@ -72,21 +73,20 @@ files, in order to replace the original string with binded values in runtime.
 
 > **Perl** template in (HTML-Template)[https://metacpan.org/pod/HTML::Template]
 
-```html
+```php
 <p>Hello, my name is {{user}}!</p>
 ```
 
 > **PHP** template in (Twig)[https://twig.symfony.com/]
 
-```html
+```php
 <p>Hello, my name is <?=$this->e($name)?></p>
 ```
 
 > **PHP** template in (Plates)[https://platesphp.com]
 
-Templates solved a problem: Now it was possible to reuse **HTML**, **CSS** and **JS**. But there was
-no union between these concepts directly, unless the developer intended to, with project folder or
-architectural organization.
+Each template could then be reused in many **HTML** files. This solved a problem: Now it was possible to reuse **HTML**, **CSS** and **JS**.
+However, styles and js functions are global, so there was no way to scope these contents into a component.
 
 ## JQuery
 
@@ -181,7 +181,7 @@ Currently, even on **vanilla JavaScript**, it is possible to create custom **HTM
 
 > A red square webcomponent
 
-## Sailing another seas
+## Android
 
 The idea of **components** is so powerful that it did not only affected web developmente scenario. A
 worth example is the **Android** applications. Android uses natively a **XML** API to define layout,
@@ -211,3 +211,7 @@ on components, and **Flutter** was development with that in mind.
 Since the web was born, developers searched was to reuse the code. Componentization showed itself to
 be a _very effective way_, and it ended impacting even other tecnologies, such as mobile apps
 development.
+
+## Reference
+
+https://legacy.reactjs.org/docs/components-and-props.html
