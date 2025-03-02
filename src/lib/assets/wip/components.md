@@ -12,6 +12,14 @@ technologies:
 
 Why React became so popular? How was the way here?
 
+## components
+## templates
+## angular
+## react
+## android
+## gtk
+## qt
+
 ## Components
 
 Web projects are made of:

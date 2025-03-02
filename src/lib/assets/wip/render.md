@@ -12,6 +12,13 @@ technologies:
 
 Why React became so popular? How was the way here?
 
+## ssr in templates
+## csr in jquery
+## csr in angular
+## csr in react
+## ssr in react
+## csr now
+
 ## Components
 
 Web projects are made of:
