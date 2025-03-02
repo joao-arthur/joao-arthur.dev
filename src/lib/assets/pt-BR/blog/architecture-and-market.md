@@ -22,10 +22,9 @@ Um software de verdade depende de várias tecnologias:
 
 ## Interfaces
 
-É possível isolar os conceitos principais de uma aplicação do resto, em uma **camada de
-domínio**. Nesse caso, quando é necessário utilizar alguma tecnologia (algo que não faça parte do
-domínio da aplicação ou da biblioteca padrão da linguagem de programação), isso é feito através de
-interfaces.
+É possível isolar os conceitos principais de uma aplicação do resto, em uma **camada de domínio**.
+Nesse caso, quando é necessário utilizar alguma tecnologia (algo que não faça parte do domínio da
+aplicação ou da biblioteca padrão da linguagem de programação), isso é feito através de interfaces.
 
 Essa abordagem oferece as seguintes vantagens:
 
@@ -54,10 +53,10 @@ reutilizável, acumulando **dívida técnica**.
 Quando se passam alguns anos, e o projeto vai ser migrado (de desktop para web, de web para mobile,
 etc.), a tendência natural é ele ser reescrito, reiniciando o mesmo processo.
 
-Um software que possui bugs ainda vai possuir clientes utilizando, já que a maioria dos bugs está
-em rotinas menos utilizadas, de menor importância para o cliente. Isso significa que uma empresa
-pode ganhar mais dinheiro com um software bugado hoje, do que com um software perfeito amanhã, pelo
-menos no curto prazo.
+Um software que possui bugs ainda vai possuir clientes utilizando, já que a maioria dos bugs está em
+rotinas menos utilizadas, de menor importância para o cliente. Isso significa que uma empresa pode
+ganhar mais dinheiro com um software bugado hoje, do que com um software perfeito amanhã, pelo menos
+no curto prazo.
 
 ## Conclusão
 

@@ -11,11 +11,11 @@
     import table from "../design/post/Table.svelte";
     import thead from "../design/post/THead.svelte";
 
-    export { h1, h2, h3, h4, h5, h6, li, p, span, table , thead};
+    export { h1, h2, h3, h4, h5, h6, li, p, span, table, thead };
 </script>
 
 <script lang="ts">
-    const {children} = $props();
+    const { children } = $props();
 </script>
 
 <style>

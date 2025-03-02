@@ -46,11 +46,11 @@ Many people already thought of architectures that apply these concepts. The most
 ## Corporative Problem
 
 In the professional environment, software development has a tight deadline, that forces developers
-to use the most out of the stack. This prevents the creation of a deeper model or a reusable architecture,
-accumulating **technical debt**.
+to use the most out of the stack. This prevents the creation of a deeper model or a reusable
+architecture, accumulating **technical debt**.
 
-When some years pass, and the project will be migrated (from desktop to the web, from the web
-to mobile, etc.), the natural tendency is that it will be rewritten, restarting the same process.
+When some years pass, and the project will be migrated (from desktop to the web, from the web to
+mobile, etc.), the natural tendency is that it will be rewritten, restarting the same process.
 
 A software with bugs still will have clients using it, since most bugs are in less-used routines,
 that are less important to the client. This means that a corporation can profit more from a buggy

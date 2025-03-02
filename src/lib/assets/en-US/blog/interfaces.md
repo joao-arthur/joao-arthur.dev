@@ -183,9 +183,9 @@ pub fn create_user(
 
 ## Conclusion
 
-The more rigorous a type system of a programming language, the less prone to errors and the more verbose the
-code. **Interfaces** are powerful tools, but they can **hide errors and null values**, according to
-the programming language.
+The more rigorous a type system of a programming language, the less prone to errors and the more
+verbose the code. **Interfaces** are powerful tools, but they can **hide errors and null values**,
+according to the programming language.
 
-The way of handling these limitations will depend mostly on what is the tolerance to bugs of
-the project, however objectively, a software with fewer bugs is **better**.
+The way of handling these limitations will depend mostly on what is the tolerance to bugs of the
+project, however objectively, a software with fewer bugs is **better**.

@@ -13,8 +13,8 @@ technologies:
 
 # Interfaces
 
-Existe alguma forma de tornar um _projeto grande_ fácil de _implementar_, fácil de _testar_ e
-com _segurança de tipos_?
+Existe alguma forma de tornar um _projeto grande_ fácil de _implementar_, fácil de _testar_ e com
+_segurança de tipos_?
 
 ## Tipos De Dado
 
@@ -72,10 +72,10 @@ dependências. Isso abstrai a implementação e permite você pensar apenas em *
 
 ## Armadilhas
 
-- Se você aplicar interfaces exaustivamente, a indireção dificulta seguir o código.
-  Como uma boa prática, use interfaces para: **Recursos externos** (requisições HTTP, conexão com
-  bancos de dados...) e **injeção de dependência** (Quando os recursos são passados via argumentos
-  da função, exatamente como no exemplo anterior)
+- Se você aplicar interfaces exaustivamente, a indireção dificulta seguir o código. Como uma boa
+  prática, use interfaces para: **Recursos externos** (requisições HTTP, conexão com bancos de
+  dados...) e **injeção de dependência** (Quando os recursos são passados via argumentos da função,
+  exatamente como no exemplo anterior)
 
 - Existem dois problemas que um sistema de tipos pode não cobrir:
 
