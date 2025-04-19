@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ae as h}from"./chunks/framework.CD99uXui.js";const o=JSON.parse('{"title":"last","description":"","frontmatter":{},"headers":[],"relativePath":"prm/last.md","filePath":"prm/last.md"}'),e={name:"prm/last.md"};function l(n,s,p,k,r,E){return t(),a("div",null,s[0]||(s[0]=[h("",6)]))}const g=i(e,[["render",l]]);export{o as __pageData,g as default};

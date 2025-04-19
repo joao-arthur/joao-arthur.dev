@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ae as e}from"./chunks/framework.CD99uXui.js";const E=JSON.parse('{"title":"self","description":"","frontmatter":{},"headers":[],"relativePath":"std/self.md","filePath":"std/self.md"}'),l={name:"std/self.md"};function h(n,s,p,k,d,r){return t(),a("div",null,s[0]||(s[0]=[e("",5)]))}const g=i(l,[["render",h]]);export{E as __pageData,g as default};

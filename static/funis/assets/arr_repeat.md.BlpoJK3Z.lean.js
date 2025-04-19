@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ae as h}from"./chunks/framework.CD99uXui.js";const g=JSON.parse('{"title":"repeat","description":"","frontmatter":{},"headers":[],"relativePath":"arr/repeat.md","filePath":"arr/repeat.md"}'),e={name:"arr/repeat.md"};function k(p,s,n,l,r,d){return t(),a("div",null,s[0]||(s[0]=[h("",5)]))}const y=i(e,[["render",k]]);export{g as __pageData,y as default};

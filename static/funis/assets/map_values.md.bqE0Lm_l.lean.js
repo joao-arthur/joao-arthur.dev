@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as t}from"./chunks/framework.CD99uXui.js";const g=JSON.parse('{"title":"values","description":"","frontmatter":{},"headers":[],"relativePath":"map/values.md","filePath":"map/values.md"}'),l={name:"map/values.md"};function e(h,s,p,k,r,d){return n(),a("div",null,s[0]||(s[0]=[t("",6)]))}const o=i(l,[["render",e]]);export{g as __pageData,o as default};
