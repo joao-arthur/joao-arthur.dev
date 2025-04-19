@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as h,ae as n}from"./chunks/framework.CD99uXui.js";const g=JSON.parse('{"title":"pipe","description":"","frontmatter":{},"headers":[],"relativePath":"std/pipe.md","filePath":"std/pipe.md"}'),t={name:"std/pipe.md"};function k(p,s,l,e,E,r){return h(),a("div",null,s[0]||(s[0]=[n("",6)]))}const y=i(t,[["render",k]]);export{g as __pageData,y as default};

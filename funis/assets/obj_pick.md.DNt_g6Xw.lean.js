@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as t}from"./chunks/framework.CD99uXui.js";const g=JSON.parse('{"title":"pick","description":"","frontmatter":{},"headers":[],"relativePath":"obj/pick.md","filePath":"obj/pick.md"}'),p={name:"obj/pick.md"};function h(l,s,k,e,E,d){return n(),a("div",null,s[0]||(s[0]=[t("",6)]))}const c=i(p,[["render",h]]);export{g as __pageData,c as default};

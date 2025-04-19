@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ae as n}from"./chunks/framework.CD99uXui.js";const E=JSON.parse('{"title":"random","description":"","frontmatter":{},"headers":[],"relativePath":"arr/random.md","filePath":"arr/random.md"}'),e={name:"arr/random.md"};function h(l,s,p,k,r,d){return t(),a("div",null,s[0]||(s[0]=[n("",6)]))}const g=i(e,[["render",h]]);export{E as __pageData,g as default};

@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as h}from"./chunks/framework.CD99uXui.js";const g=JSON.parse('{"title":"clamp","description":"","frontmatter":{},"headers":[],"relativePath":"num/clamp.md","filePath":"num/clamp.md"}'),k={name:"num/clamp.md"};function p(l,s,t,e,E,d){return n(),a("div",null,s[0]||(s[0]=[h("",9)]))}const y=i(k,[["render",p]]);export{g as __pageData,y as default};

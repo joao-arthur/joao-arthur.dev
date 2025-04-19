@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ae as e}from"./chunks/framework.CD99uXui.js";const E=JSON.parse('{"title":"ge","description":"","frontmatter":{},"headers":[],"relativePath":"cb/ge.md","filePath":"cb/ge.md"}'),h={name:"cb/ge.md"};function l(n,s,p,k,d,r){return t(),a("div",null,s[0]||(s[0]=[e("",6)]))}const o=i(h,[["render",l]]);export{E as __pageData,o as default};
