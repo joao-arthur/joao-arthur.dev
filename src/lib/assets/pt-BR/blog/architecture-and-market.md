@@ -7,7 +7,7 @@ updated_at: "2025-02-27"
 
 # Arquitetura e Mercado
 
-A arquitetura reutilizável já se provou poderosa. Por que ninguém usa?
+A arquitetura reutilizável se provou poderosa. Por que ninguém usa?
 
 ## Tecnologia
 

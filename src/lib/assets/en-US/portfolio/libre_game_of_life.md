@@ -10,7 +10,7 @@ programming_languages:
   - "TypeScript"
 technologies:
   - "Web Assembly"
-  - "NextJS"
+  - "Svelte"
 img_url: "/images/libre_game_of_life.png"
 app_url: "/app/libre_game_of_life/index.html"
 ---
