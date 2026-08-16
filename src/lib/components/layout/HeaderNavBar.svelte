@@ -19,7 +19,7 @@
         return "en-US";
     })();
 
-    const locale = m(language);
+    const locale = $derived(m(language));
 </script>
 
 <style>

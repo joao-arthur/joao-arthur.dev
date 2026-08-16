@@ -33,8 +33,8 @@ export async function GET() {
     );
 }
 
-const render = (posts) =>
-    `<?xml version="1.0" encoding="UTF-8" ?>
+function render(posts: readonly Post[]): string {
+    return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>João Arthur</title>
@@ -42,19 +42,18 @@ const render = (posts) =>
 <link>https://github.com/josh-collinsworth/sveltekit-blog-starter</link>
 <atom:link href="https://joao-arthur.dev/api/rss.xml" rel="self" type="application/rss+xml"/>
 ${
-        posts
-            .map(
-                (post) =>
-                    `<item>
+        posts.map((post) =>
+            `<item>
 <guid isPermaLink="true">https://joao-arthur.dev/blog/${post.slug}</guid>
 <title>${post.title}</title>
 <link>https://joao-arthur.dev/blog/${post.slug}</link>
-<description>${post.excerpt}</description>
-<pubDate>${new Date(post.date).toUTCString()}</pubDate>
-</item>`,
-            )
+<description>${post.description}</description>
+<pubDate>${new Date(post.created_at).toUTCString()}</pubDate>
+</item>`
+        )
             .join("")
     }
 </channel>
 </rss>
 `;
+}

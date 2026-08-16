@@ -22,7 +22,7 @@
 
     let component: HTMLDialogElement | null = null;
 
-    const locale = m(language);
+    const locale = $derived(m(language));
 </script>
 
 <style>

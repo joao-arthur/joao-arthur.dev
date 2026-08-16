@@ -1,6 +1,7 @@
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex } from "mdsvex";
+import path from "node:path";
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -11,7 +12,7 @@ export default {
     preprocess: [
         vitePreprocess({ script: true }),
         mdsvex({
-            layout: "./src/lib/components/layout/PostLayout.svelte",
+            layout: path.resolve("./src/lib/components/layout/PostLayout.svelte"),
             extensions: [".md"],
         }),
     ],

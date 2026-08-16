@@ -1,40 +1,26 @@
 <script lang="ts">
-    import type { Language, Theme } from "$lib/src/types.js";
     import { appTheme } from "../../src/store.js";
     import ThemeDark from "../design/icons/ThemeDark.svelte";
     import ThemeLight from "../design/icons/ThemeLight.svelte";
     import IconButton from "../design/IconButton.svelte";
     import { page } from "$app/state";
     import { m } from "$lib/src/i18n/m.js";
+    import { get_language } from "$lib/src/language.js";
 
-    let theme: Theme;
-    appTheme.subscribe((value) => {
-        theme = value;
-    });
-    const pathname = new URL(page.url).pathname;
-    const language = (function get_language(): Language {
-        if (pathname.startsWith("/en-US")) {
-            return "en-US";
-        }
-        if (pathname.startsWith("/pt-BR")) {
-            return "pt-BR";
-        }
-        return "en-US";
-    })();
-    const locale = m(language);
+    const locale = $derived(m(get_language(page.url.pathname)));
 </script>
 
 <IconButton
     onclick={() => {
-        if (theme === "dark") {
+        if ($appTheme === "dark") {
             appTheme.set("light");
         } else {
             appTheme.set("dark");
         }
     }}
-    title={theme === "dark" ? locale.header_title_dark_theme : locale.header_title_light_theme}
+    title={$appTheme === "dark" ? locale.header_title_dark_theme : locale.header_title_light_theme}
 >
-    {#if theme === "dark"}
+    {#if $appTheme === "dark"}
         <ThemeDark></ThemeDark>
     {:else}
         <ThemeLight></ThemeLight>

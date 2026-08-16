@@ -13,7 +13,7 @@
     };
 
     const { language, post, Component }: Props = $props();
-    const locale = m(language);
+    const locale = $derived(m(language));
 </script>
 
 <Content>
