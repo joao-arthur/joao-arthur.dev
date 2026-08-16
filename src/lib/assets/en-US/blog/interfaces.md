@@ -4,10 +4,10 @@ description: "Is there a way to make a big project easy to implement, easy to te
 created_at: "2023-08-12"
 updated_at: "2025-02-27"
 technologies:
-  - "JavaScript"
-  - "TypeScript"
-  - "Java"
-  - "Rust"
+    - "JavaScript"
+    - "TypeScript"
+    - "Java"
+    - "Rust"
 ---
 
 # Interfaces

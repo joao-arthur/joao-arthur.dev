@@ -4,8 +4,8 @@ description: "Why sometimes everything seems messy on Linux? why the whole free 
 created_at: "2024-06-30"
 updated_at: "2025-02-20"
 technologies:
-  - "Linux"
-  - "C"
+    - "Linux"
+    - "C"
 ---
 
 # UNIX-Like And Packages

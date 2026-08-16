@@ -4,8 +4,8 @@ description: "Por que as vezes tudo parece uma bagunça no Linux? Por que toda a
 created_at: "2024-06-30"
 updated_at: "2025-02-20"
 technologies:
-  - "Linux"
-  - "C"
+    - "Linux"
+    - "C"
 ---
 
 # UNIX-Like E Pacotes

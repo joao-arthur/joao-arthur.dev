@@ -6,9 +6,9 @@ repository: "https://github.com/joao-arthur/precise_schedule"
 created_at: "2023-08-11"
 updated_at: "2025-02-12"
 programming_languages:
-  - "TypeScript"
+    - "TypeScript"
 technologies:
-  - "NextJS"
+    - "NextJS"
 img_url: "/images/precise_schedule.png"
 app_url: "/app/precise_schedule/index.html"
 ---

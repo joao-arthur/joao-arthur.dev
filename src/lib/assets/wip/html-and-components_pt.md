@@ -4,8 +4,8 @@ description: "Por que o React se tornou tão popular? Como foi o caminho até aq
 created_at: "2024-06-31"
 updated_at: "2025-02-20"
 technologies:
-  - "HTML"
-  - "React"
+    - "HTML"
+    - "React"
 ---
 
 # HTML E Componentes

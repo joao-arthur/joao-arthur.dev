@@ -1,14 +1,14 @@
 ---
 title: "Interfaces"
 description: "Existe alguma forma de tornar um projeto grande fácil de implementar, fácil de testar e
-com segurança de tipos?"
+    com segurança de tipos?"
 created_at: "2023-08-12"
 updated_at: "2025-02-27"
 technologies:
-  - "JavaScript"
-  - "TypeScript"
-  - "Java"
-  - "Rust"
+    - "JavaScript"
+    - "TypeScript"
+    - "Java"
+    - "Rust"
 ---
 
 # Interfaces

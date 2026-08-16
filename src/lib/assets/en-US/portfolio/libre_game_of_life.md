@@ -6,11 +6,11 @@ repository: "https://github.com/joao-arthur/libre_game_of_life"
 created_at: "2023-05-07"
 updated_at: "2025-02-12"
 programming_languages:
-  - "Rust"
-  - "TypeScript"
+    - "Rust"
+    - "TypeScript"
 technologies:
-  - "Web Assembly"
-  - "Svelte"
+    - "Web Assembly"
+    - "Svelte"
 img_url: "/images/libre_game_of_life.png"
 app_url: "/app/libre_game_of_life/index.html"
 ---
