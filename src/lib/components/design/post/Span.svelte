@@ -14,12 +14,12 @@
         margin: 0;
         font-size: 1.5rem;
         line-height: 1.5rem;
-        color: black;
+        color: var(--color-content-light);
     }
 
     :global(.dark) {
         span {
-            color: white;
+            color: var(--color-content-dark);
         }
     }
 </style>

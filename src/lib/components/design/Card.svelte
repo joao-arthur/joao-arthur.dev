@@ -16,12 +16,12 @@
         border-radius: 20px;
         overflow: hidden;
         list-style: none;
-        background-color: var(--color-prm-86);
+        background-color: var(--color-surface-light);
     }
 
     :global(.dark) {
         li {
-            background-color: var(--color-prm-14);
+            background-color: var(--color-surface-dark);
         }
     }
 </style>

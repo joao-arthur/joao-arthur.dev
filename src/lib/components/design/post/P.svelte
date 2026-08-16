@@ -14,13 +14,13 @@
         margin: 0;
         font-size: 1.5rem;
         line-height: 1.75rem;
-        color: black;
+        color: var(--color-content-light);
         text-align: justify;
     }
 
     :global(.dark) {
         p {
-            color: white;
+            color: var(--color-content-dark);
         }
     }
 </style>

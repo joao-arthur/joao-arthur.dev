@@ -14,12 +14,12 @@
         margin: 0;
         font-size: 1.5rem;
         line-height: 1.75rem;
-        color: black;
+        color: var(--color-content-light);
     }
 
     :global(.dark) {
         li {
-            color: white;
+            color: var(--color-content-dark);
         }
     }
 </style>

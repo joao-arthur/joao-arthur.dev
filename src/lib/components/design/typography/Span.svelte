@@ -16,12 +16,12 @@
         font-size: 1.5rem;
         line-height: 2rem;
         align-items: center;
-        color: black;
+        color: var(--color-content-light);
     }
 
     :global(.dark) {
         span {
-            color: white;
+            color: var(--color-content-dark);
         }
     }
 </style>

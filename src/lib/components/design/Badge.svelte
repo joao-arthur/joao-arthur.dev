@@ -4,33 +4,19 @@
 
     type Props = {
         readonly children: Snippet;
-        readonly color:
-            | "red"
-            | "yellow"
-            | "green"
-            | "blue"
-            | "pink";
+        readonly color: "red" | "yellow" | "green" | "blue";
     };
 
     const { children, color }: Props = $props();
 
     function get_class() {
-        if (color === "red") {
-            return "red";
+        switch (color) {
+            case  "red": return "red";
+            case "yellow": return "yellow";
+            case "green": return "green";
+            case "blue": return "blue";
+            default: return "";
         }
-        if (color === "yellow") {
-            return "yellow";
-        }
-        if (color === "green") {
-            return "green";
-        }
-        if (color === "blue") {
-            return "blue";
-        }
-        if (color === "pink") {
-            return "pink";
-        }
-        return "";
     }
 </script>
 
@@ -57,10 +43,6 @@
         background-color: #3c7ad7;
     }
 
-    .pink {
-        background-color: #d73c8f;
-    }
-
     :global(.dark) {
         .red {
             background-color: #421414;
@@ -76,10 +58,6 @@
 
         .blue {
             background-color: #1b1b61;
-        }
-
-        .pink {
-            background-color: #42142d;
         }
     }
 </style>

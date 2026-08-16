@@ -18,18 +18,14 @@
         padding-bottom: 10px;
         padding: 15px 20px;
         gap: 1rem;
-        background-color: var(--color-prm-86);
+        background-color: var(--color-surface-light);
+        color: var(--color-content-light);
     }
 
     :global(.dark) {
         header {
-            background-color: var(--color-prm-14);
-        }
-    }
-
-    @media (max-width: 450px) {
-        header {
-            flex-direction: column;
+            background-color: var(--color-surface-dark);
+            color: var(--color-content-dark);
         }
     }
 </style>

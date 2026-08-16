@@ -33,25 +33,16 @@
 </style>
 
 <div>
-    <HeaderNavItem href={`/${language}/about`} disabled={page.url.pathname.endsWith("about")}>
+    <HeaderNavItem href={`/${language}/about`} selected={page.url.pathname.endsWith("about")}>
         <Person size={35}></Person>
-        <H2 disabled={page.url.pathname === `/${language}/about`}>
-            {locale.header_about}
-        </H2>
+        <H2>{locale.header_about}</H2>
     </HeaderNavItem>
-    <HeaderNavItem
-        href={`/${language}/portfolio/`}
-        disabled={page.url.pathname.endsWith("portfolio")}
-    >
+    <HeaderNavItem href={`/${language}/portfolio`} selected={page.url.pathname.endsWith("portfolio")}>
         <Computer size={35}></Computer>
-        <H2 disabled={page.url.pathname === `/${language}/portfolio`}>
-            {locale.header_portfolio}
-        </H2>
+        <H2>{locale.header_portfolio}</H2>
     </HeaderNavItem>
-    <HeaderNavItem href={`/${language}/blog/`} disabled={page.url.pathname.endsWith("blog")}>
+    <HeaderNavItem href={`/${language}/blog`} selected={page.url.pathname.endsWith("blog")}>
         <RSS size={35}></RSS>
-        <H2 disabled={page.url.pathname === `/${language}/blog`}>
-            {locale.header_blog}
-        </H2>
+        <H2>{locale.header_blog}</H2>
     </HeaderNavItem>
 </div>

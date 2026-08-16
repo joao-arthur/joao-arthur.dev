@@ -12,6 +12,7 @@
         width: 100%;
         min-height: 100vh;
         justify-content: center;
+        color: var(--color-content-light);
     }
 
     div {
@@ -23,6 +24,13 @@
         flex-grow: 1 1 0;
         padding: 40px 20px;
     }
+
+    :global(.dark) {
+        section {
+            color: var(--color-content-dark);
+        }
+    }
+
 </style>
 
 <section>

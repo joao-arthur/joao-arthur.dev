@@ -27,7 +27,7 @@
 
 <style>
     .header {
-        background-color: var(--color-prm-86);
+        background-color: var(--color-surface-light);
         display: flex;
         align-items: center;
         padding: 30px;
@@ -35,7 +35,7 @@
     }
 
     .footer {
-        background-color: var(--color-prm-86);
+        background-color: var(--color-surface-light);
         display: flex;
         padding: 30px;
         align-items: center;
@@ -59,8 +59,8 @@
         padding: 0;
         border: none;
         border-radius: 1rem;
-        background-color: var(--color-prm-94);
         min-width: 410px;
+        color: var(--color-content-light);
     }
 
     @media (max-width: 450px) {
@@ -76,7 +76,7 @@
     }
 
     dialog::backdrop {
-        background-color: var(--color-prm-22);
+        background-color: var(--color-sec-10);
         opacity: 0.5;
     }
 
@@ -86,15 +86,7 @@
         padding-top: 2rem;
         padding-bottom: 2rem;
         border-radius: 1rem;
-        background-color: var(--color-prm-78);
-    }
-
-    button:hover {
-        background-color: var(--color-prm-70);
-    }
-
-    button:active {
-        background-color: var(--color-prm-62);
+        background-color: var(--color-primary);
     }
 
     button:disabled {
@@ -103,42 +95,27 @@
     }
 
     .footer button {
-        background-color: var(--color-prm-78);
-    }
-
-    .footer button:hover {
-        background-color: var(--color-prm-70);
-    }
-
-    .footer button:active {
-        background-color: var(--color-prm-62);
+        background-color: var(--color-primary);
     }
 
     :global(.dark) {
         dialog {
-            background-color: var(--color-prm-6);
+            background-color: var(--color-background-dark);
+            color: var(--color-content-dark);
         }
 
         .header, .footer {
-            background-color: var(--color-prm-14);
+            background-color: var(--color-surface-dark);
         }
 
         dialog::backdrop {
-            background-color: var(--color-prm-74);
+            background-color: var(--color-sec-10);
             opacity: 0.5;
         }
 
         button {
-            background-color: var(--color-prm-22);
-            color: white;
-        }
-
-        button:hover {
-            background-color: var(--color-prm-30);
-        }
-
-        button:active {
-            background-color: var(--color-prm-38);
+            background-color: var(--color-primary);
+            color: var(--color-content-dark);
         }
 
         button:disabled {
@@ -146,15 +123,7 @@
         }
 
         .footer button {
-            background-color: var(--color-prm-22);
-        }
-
-        .footer button:hover {
-            background-color: var(--color-prm-30);
-        }
-
-        .footer button:active {
-            background-color: var(--color-prm-38);
+            background-color: var(--color-primary);
         }
     }
 </style>
@@ -178,7 +147,7 @@
                     goto(`/en-US/${page.url.pathname.slice(7)}`);
                 }}
             >
-                <H3 disabled={language === "en-US"}>🇺🇸 English</H3>
+                <H3>🇺🇸 English</H3>
             </button>
             <button
                 disabled={language === "pt-BR"}
@@ -186,7 +155,7 @@
                     goto(`/pt-BR/${page.url.pathname.slice(7)}`);
                 }}
             >
-                <H3 disabled={language === "pt-BR"}>🇧🇷 Português</H3>
+                <H3>🇧🇷 Português</H3>
             </button>
         </div>
         <div class="footer">

@@ -5,7 +5,7 @@
     import IconButton from "../design/IconButton.svelte";
     import { page } from "$app/state";
     import { m } from "$lib/src/i18n/m.js";
-    import { get_language } from "$lib/src/language.js";
+    import { get_language } from "$lib/src/getLanguage.js";
 
     const locale = $derived(m(get_language(page.url.pathname)));
 </script>

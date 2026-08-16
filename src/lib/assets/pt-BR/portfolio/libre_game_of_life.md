@@ -78,6 +78,6 @@ Assembly_. Atualmente, as configurações são as seguintes:
 - **Size:** A quantidade de zoom na tela
 - **FPS:** O FPS desejado para a renderização
 
-## Referência
+## Referências
 
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life

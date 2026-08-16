@@ -17,6 +17,7 @@
         padding: 0;
         text-decoration: none;
         align-content: center;
+        color: currentColor;
     }
 
     .decorated {

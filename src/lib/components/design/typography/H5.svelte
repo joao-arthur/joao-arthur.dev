@@ -3,10 +3,9 @@
 
     type Props = {
         readonly children: Snippet;
-        readonly disabled?: boolean;
     };
 
-    const { children, disabled = false }: Props = $props();
+    const { children }: Props = $props();
 </script>
 
 <style>
@@ -16,16 +15,9 @@
         font-weight: bold;
         font-size: 1rem;
         line-height: 1.5rem;
-        color: var(--color-prm-30);
-    }
-
-    :global(.dark) {
-        h5 {
-            color: var(--color-prm-70);
-        }
     }
 </style>
 
-<h5 class={disabled ? "disabled" : ""}>
+<h5>
     {@render children?.()}
 </h5>

@@ -10,12 +10,12 @@
     footer {
         width: 100%;
         padding-bottom: 2rem;
-        background-color: var(--color-prm-86);
+        background-color: var(--color-surface-light);
     }
 
     :global(.dark) {
         footer {
-            background-color: var(--color-prm-14);
+            background-color: var(--color-surface-dark);
         }
     }
 
@@ -27,53 +27,23 @@
     }
 
     div {
-        color: var(--color-prm-26);
-    }
-
-    div:hover {
-        color: var(--color-prm-34);
-    }
-
-    div:active {
-        color: var(--color-prm-42);
-    }
-
-    :global(.dark) {
-        div {
-            color: var(--color-prm-82);
-        }
-
-        div:hover {
-            color: var(--color-prm-74);
-        }
-
-        div:active {
-            color: var(--color-prm-66);
-        }
+        color: var(--color-primary);
     }
 </style>
 
 <footer>
     <nav>
         <A href="http://github.com/joao-arthur" target="_blank">
-            <div>
-                <ComGithub size={50}></ComGithub>
-            </div>
+            <div><ComGithub size={50}></ComGithub></div>
         </A>
         <A href="https://www.linkedin.com/in/joao-lothamer" target="_blank">
-            <div>
-                <ComLinkedin size={50}></ComLinkedin>
-            </div>
+            <div><ComLinkedin size={50}></ComLinkedin></div>
         </A>
         <A href="mailto://joao.lothamer@gmail.com" target="_blank">
-            <div>
-                <Mail size={50}></Mail>
-            </div>
+            <div><Mail size={50}></Mail></div>
         </A>
         <A href="https://joao-arthur.dev/api/rss.xml" target="_blank">
-            <div>
-                <RSS size={50}></RSS>
-            </div>
+            <div><RSS size={50}></RSS></div>
         </A>
     </nav>
 </footer>
