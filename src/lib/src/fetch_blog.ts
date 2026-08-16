@@ -12,15 +12,19 @@ function posts_by_language(language: Language) {
 
 export async function fetch_blog(language: Language): Promise<readonly Post[]> {
     const importedPosts = posts_by_language(language);
-    const posts = await Promise.all(
+    const posts: readonly (Post | undefined)[] = await Promise.all(
         Object.entries(importedPosts).map(
             async ([path, resolver]) => {
-                const { metadata } = await resolver();
-                const slug = path.split(/[\/|\.]/).at(-2);
-                return { ...metadata, slug };
+                const result = await resolver();
+                if (typeof result === "object" && result !== null && "metadata" in result) {
+                    const slug = path.split("/").pop()?.split(".").shift() || "";
+                    return { ...result.metadata as Post, slug };
+                }
+                return undefined;
             },
         ),
     );
-    posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-    return posts;
+    return posts.filter((post): post is Post => !!post).toSorted((a, b) =>
+        b.created_at.localeCompare(a.created_at)
+    );
 }

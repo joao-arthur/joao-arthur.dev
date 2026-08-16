@@ -1,5 +1,12 @@
 <script lang="ts">
-    const { children, justify = false } = $props();
+    import type { Snippet } from "svelte";
+
+    type Props = {
+        readonly children: Snippet;
+        readonly justify?: boolean;
+    };
+
+    const { children, justify = false }: Props = $props();
 </script>
 
 <style>

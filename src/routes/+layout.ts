@@ -9,6 +9,8 @@ export async function load({ url }) {
             path: url.pathname,
         };
     } catch (err) {
-        error(500, err);
+        if (err instanceof Error) {
+            error(500, { message: err.message });
+        }
     }
 }

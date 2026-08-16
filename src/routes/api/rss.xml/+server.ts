@@ -1,20 +1,25 @@
+import type { Post } from "$lib/src/types";
+
 export const prerender = true;
 
 export async function GET() {
-    const data = await Promise.all(
-        Object.entries(import.meta.glob("$lib/assets/en-US/blog/*.md")).map(
-            async ([path, page]) => {
-                const { metadata } = await page();
-                const slug = path.split("/").pop().split(".").shift();
-                return { ...metadata, slug };
-            },
-        ),
-    )
-        .then((posts) => {
-            return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-        });
-
-    const body = render(data);
+    const posts: readonly (Post | undefined)[] = await Promise.all(
+        Object.entries(import.meta.glob("$lib/assets/en-US/blog/*.md"))
+            .map(
+                async ([path, resolver]) => {
+                    const result = await resolver();
+                    if (typeof result === "object" && result !== null && "metadata" in result) {
+                        const slug = path.split("/").pop()?.split(".").shift() || "";
+                        return { ...result.metadata as Post, slug };
+                    }
+                    return undefined;
+                },
+            ),
+    );
+    const postsSorted = posts.filter((post): post is Post => !!post).toSorted((a, b) =>
+        b.created_at.localeCompare(a.created_at)
+    );
+    const body = render(postsSorted);
     const headers = {
         "Cache-Control": `max-age=0, s-max-age=${600}`,
         "Content-Type": "application/xml",

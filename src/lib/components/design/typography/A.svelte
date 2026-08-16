@@ -1,5 +1,14 @@
 <script lang="ts">
-    const { children, href, target = undefined, decorated = false } = $props();
+    import type { Snippet } from "svelte";
+
+    type Props = {
+        readonly children: Snippet;
+        readonly href: string;
+        readonly target?: "_blank";
+        readonly decorated?: boolean;
+    };
+
+    const { children, href, target = undefined, decorated = false }: Props = $props();
 </script>
 
 <style>

@@ -6,6 +6,8 @@ export async function load({ params }) {
         const blogPost = await fetch_post_blog("pt-BR", params.post);
         return blogPost;
     } catch (err) {
-        error(404, err);
+        if (err instanceof Error) {
+            error(404, { message: err.message });
+        }
     }
 }

@@ -1,7 +1,18 @@
 <script lang="ts">
+    import type { Snippet } from "svelte";
     import Span from "./typography/Span.svelte";
 
-    const { children, color } = $props();
+    type Props = {
+        readonly children: Snippet;
+        readonly color:
+            | "red"
+            | "yellow"
+            | "green"
+            | "blue"
+            | "pink";
+    };
+
+    const { children, color }: Props = $props();
 
     function get_class() {
         if (color === "red") {

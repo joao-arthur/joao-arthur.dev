@@ -1,5 +1,12 @@
 <script lang="ts">
-    const { children } = $props();
+    import type { Snippet } from "svelte";
+
+    type Props = {
+        readonly children: Snippet;
+        readonly disabled?: boolean;
+    };
+
+    const { children, disabled = false }: Props = $props();
 </script>
 
 <style>
@@ -19,6 +26,6 @@
     }
 </style>
 
-<h5>
+<h5 class={disabled ? "disabled" : ""}>
     {@render children?.()}
 </h5>

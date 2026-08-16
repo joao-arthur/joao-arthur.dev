@@ -161,7 +161,7 @@
 
 <IconButton
     onclick={() => {
-        component.showModal();
+        component?.showModal();
     }}
 >
     <Translate></Translate>

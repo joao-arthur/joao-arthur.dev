@@ -73,14 +73,14 @@
                 {#if post.app_url || post.repository || post.license}
                     <BadgeContainer>
                         {#if post.app_url}
-                            <A href={post.app_url} target="blank">
+                            <A href={post.app_url} target="_blank">
                                 <IconButton>
                                     <Play></Play>
                                 </IconButton>
                             </A>
                         {/if}
                         {#if post.repository}
-                            <A href={post.repository} target="blank">
+                            <A href={post.repository} target="_blank">
                                 <IconButton>
                                     <ComGithub></ComGithub>
                                 </IconButton>

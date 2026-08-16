@@ -1,5 +1,13 @@
 <script lang="ts">
-    const { children, onclick, title } = $props();
+    import type { Snippet } from "svelte";
+
+    type Props = {
+        readonly children: Snippet;
+        readonly onclick?: () => void;
+        readonly title?: string;
+    };
+
+    const { children, onclick, title }: Props = $props();
 </script>
 
 <style>

@@ -6,6 +6,8 @@ export async function load({ params }) {
         const portfolioPost = await fetch_post_portfolio("pt-BR", params.post);
         return portfolioPost;
     } catch (err) {
-        error(404, err);
+        if (err instanceof Error) {
+            error(404, { message: err.message });
+        }
     }
 }

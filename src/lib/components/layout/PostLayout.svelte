@@ -15,7 +15,13 @@
 </script>
 
 <script lang="ts">
-    const { children } = $props();
+    import type { Snippet } from "svelte";
+
+    type Props = {
+        readonly children: Snippet;
+    };
+
+    const { children }: Props = $props();
 </script>
 
 <style>
