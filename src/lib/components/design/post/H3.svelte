@@ -12,7 +12,7 @@
     h3 {
         font-weight: bold;
         font-size: 2rem;
-        line-height: 2.5rem;
+        line-height: 1rem;
         color: black;
     }
 

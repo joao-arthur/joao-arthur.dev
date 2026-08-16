@@ -12,7 +12,7 @@
     h2 {
         font-weight: bold;
         font-size: 2.5rem;
-        line-height: 3rem;
+        line-height: 1rem;
         color: black;
     }
 

@@ -39,22 +39,6 @@
     </A>
     <Card>
         <CardContent>
-            <H2>{locale.about_programming_languages_title}</H2>
-            <P>{locale.about_programming_languages_subtitle}</P>
-            <br />
-            <H3>TypeScript</H3>
-            <P>{locale.about_typescript}</P>
-            <br />
-            <H3>Java</H3>
-            <P>{locale.about_java}</P>
-            <br />
-            <H3>Rust</H3>
-            <P>{locale.about_rust}</P>
-        </CardContent>
-    </Card>
-    <Card>
-        <CardContent>
-            <H2>Frontend</H2>
             <P>{locale.about_frontend}</P>
             <BadgeContainer>
                 <Badge color="green">React</Badge>
@@ -65,7 +49,6 @@
     </Card>
     <Card>
         <CardContent>
-            <H2>Backend</H2>
             <P>{locale.about_backend}</P>
             <BadgeContainer>
                 <Badge color="green">Spring</Badge>
@@ -75,7 +58,6 @@
     </Card>
     <Card>
         <CardContent>
-            <H2>Desktop</H2>
             <P>{locale.about_desktop}</P>
             <BadgeContainer>
                 <Badge color="green">GTK</Badge>
@@ -85,7 +67,6 @@
     </Card>
     <Card>
         <CardContent>
-            <H2>Mobile</H2>
             <P>{locale.about_mobile}</P>
             <BadgeContainer>
                 <Badge color="green">React Native</Badge>
@@ -97,10 +78,9 @@
     </Card>
     <Card>
         <CardContent>
-            <H2>OS</H2>
             <P>{locale.about_os}</P>
             <BadgeContainer>
-                <Badge color="green">Arch</Badge>
+                <Badge color="green">Arch Linux</Badge>
                 <Badge color="green">Debian</Badge>
             </BadgeContainer>
         </CardContent>

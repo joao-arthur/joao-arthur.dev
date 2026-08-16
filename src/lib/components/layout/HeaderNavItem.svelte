@@ -7,7 +7,7 @@
 <style>
     div {
         display: flex;
-        width: 250px;
+        width: 240px;
         align-items: center;
         justify-content: center;
     }
