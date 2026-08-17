@@ -140,6 +140,24 @@
         border-radius: 1rem;
         background-color: var(--primary);
     }
+
+    .footer button:hover {
+        background-color: color-mix(in srgb, var(--primary) 80%, white);
+    }
+
+    .footer button:active {
+        background-color: color-mix(in srgb, var(--primary) 65%, white);
+    }
+
+    :global(.dark) {
+        .footer button:hover {
+            background-color: color-mix(in srgb, var(--primary) 85%, black);
+        }
+
+        .footer button:active {
+            background-color: color-mix(in srgb, var(--primary) 65%, black);
+        }
+    }
 </style>
 
 <IconButton
