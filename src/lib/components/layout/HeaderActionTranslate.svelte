@@ -26,8 +26,40 @@
 </script>
 
 <style>
+    dialog {
+        padding: 0;
+        border: none;
+        border-radius: 1rem;
+        min-width: 410px;
+        background-color: var(--background-light);
+        color: var(--content-light);
+    }
+
+    dialog::backdrop {
+        background-color: var(--surface-dark);
+        opacity: 0.5;
+    }
+
+    :global(.dark) {
+        dialog {
+            background-color: var(--background-dark);
+            color: var(--content-dark);
+        }
+
+        dialog::backdrop {
+            background-color: var(--surface-light);
+            opacity: 0.3;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
     .header {
-        background-color: var(--color-surface-light);
+        background-color: var(--surface-light);
         display: flex;
         align-items: center;
         padding: 30px;
@@ -35,17 +67,63 @@
     }
 
     .footer {
-        background-color: var(--color-surface-light);
+        background-color: var(--surface-light);
         display: flex;
         padding: 30px;
         align-items: center;
         justify-content: end;
     }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    :global(.dark) {
+        .header, .footer {
+            background-color: var(--surface-dark);
+        }
+    }
+
+    .option {
+        cursor: pointer;
+        border: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 1rem;
+        background-color: transparent;
+        color: var(--content-light);
+    }
+
+    :global(.dark) {
+        .option {
+            color: var(--content-dark);
+        }
+    }
+
+    .option:hover {
+        background-color: color-mix(in srgb, var(--primary) 30%, white);
+    }
+
+    .option:active {
+        background-color: color-mix(in srgb, var(--primary) 45%, white);
+    }
+
+    :global(.dark) {
+        .option:hover {
+            background-color: color-mix(in srgb, var(--primary) 15%, black);
+        }
+
+        .option:active {
+            background-color: color-mix(in srgb, var(--primary) 20%, black);
+        }
+    }
+
+    .option-selected {
+        cursor: unset;
+        border: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: transparent;
+        color: var(--primary);
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 5px;
     }
 
     .content {
@@ -55,80 +133,17 @@
         row-gap: 1rem;
     }
 
-    dialog {
-        padding: 0;
-        border: none;
-        border-radius: 1rem;
-        min-width: 410px;
-        color: var(--color-content-light);
-    }
-
-    @media (max-width: 450px) {
-        dialog {
-            width: 100vw;
-            height: 100vh;
-            min-width: unset;
-        }
-
-        .content {
-            flex-grow: 1;
-        }
-    }
-
-    dialog::backdrop {
-        background-color: var(--color-sec-10);
-        opacity: 0.5;
-    }
-
-    button {
+    .footer button {
         cursor: pointer;
         border: none;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 2rem 1rem;
         border-radius: 1rem;
-        background-color: var(--color-primary);
-    }
-
-    button:disabled {
-        cursor: unset;
-        background-color: var(--color-sec-90);
-    }
-
-    .footer button {
-        background-color: var(--color-primary);
-    }
-
-    :global(.dark) {
-        dialog {
-            background-color: var(--color-background-dark);
-            color: var(--color-content-dark);
-        }
-
-        .header, .footer {
-            background-color: var(--color-surface-dark);
-        }
-
-        dialog::backdrop {
-            background-color: var(--color-sec-10);
-            opacity: 0.5;
-        }
-
-        button {
-            background-color: var(--color-primary);
-            color: var(--color-content-dark);
-        }
-
-        button:disabled {
-            background-color: var(--color-sec-10);
-        }
-
-        .footer button {
-            background-color: var(--color-primary);
-        }
+        background-color: var(--primary);
     }
 </style>
 
 <IconButton
+    title={locale.language}
     onclick={() => {
         component?.showModal();
     }}
@@ -138,10 +153,11 @@
 <dialog bind:this={component}>
     <div class="container">
         <div class="header">
-            <H2>{locale.dialog_title}</H2>
+            <H2>{locale.language}</H2>
         </div>
         <div class="content">
             <button
+                class={language === "en-US" ? "option-selected" : "option"}
                 disabled={language === "en-US"}
                 onclick={() => {
                     goto(`/en-US/${page.url.pathname.slice(7)}`);
@@ -150,6 +166,7 @@
                 <H3>🇺🇸 English</H3>
             </button>
             <button
+                class={language === "pt-BR" ? "option-selected" : "option"}
                 disabled={language === "pt-BR"}
                 onclick={() => {
                     goto(`/pt-BR/${page.url.pathname.slice(7)}`);
@@ -164,7 +181,7 @@
                     component?.close();
                 }}
             >
-                <H3>{locale.dialog_close}</H3>
+                <H3>{locale.close}</H3>
             </button>
         </div>
     </div>

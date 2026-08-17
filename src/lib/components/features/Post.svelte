@@ -20,7 +20,7 @@
     <article>
         <img style="border-radius: 20px" src={post.img_url} alt="" />
         {#if post.app_url}
-            <A href={post.app_url}><h2>{locale.post_try}</h2></A>
+            <A decorated href={post.app_url}><h2>{locale.post_try}</h2></A>
         {/if}
         <Component></Component>
         <PostFooter {language} {post}></PostFooter>

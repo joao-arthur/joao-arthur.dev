@@ -18,7 +18,7 @@
             appTheme.set("dark");
         }
     }}
-    title={$appTheme === "dark" ? locale.header_title_dark_theme : locale.header_title_light_theme}
+    title={$appTheme === "dark" ? locale.dark_theme : locale.light_theme}
 >
     {#if $appTheme === "dark"}
         <ThemeDark></ThemeDark>

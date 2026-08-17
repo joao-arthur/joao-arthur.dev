@@ -11,11 +11,16 @@
 
     function get_class() {
         switch (color) {
-            case  "red": return "red";
-            case "yellow": return "yellow";
-            case "green": return "green";
-            case "blue": return "blue";
-            default: return "";
+            case "red":
+                return "red";
+            case "yellow":
+                return "yellow";
+            case "green":
+                return "green";
+            case "blue":
+                return "blue";
+            default:
+                return "";
         }
     }
 </script>

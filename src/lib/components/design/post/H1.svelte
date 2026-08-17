@@ -13,12 +13,12 @@
         font-weight: bold;
         font-size: 3rem;
         line-height: 4rem;
-        color: var(--color-content-light);
+        color: var(--content-light);
     }
 
     :global(.dark) {
         h1 {
-            color: var(--color-content-dark);
+            color: var(--content-dark);
         }
     }
 </style>

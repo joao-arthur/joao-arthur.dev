@@ -34,45 +34,13 @@ body {
     margin: 0;
     font-family: Ubuntu Mono;
 
-    --color-prm-2: #060208;
-    --color-prm-6: #130618;
-    --color-prm-10: #1f0b28;
-    --color-prm-14: #2c0f38;
-    --color-prm-18: #391348;
-    --color-prm-22: #451858;
-    --color-prm-26: #521c68;
-    --color-prm-30: #5e2079;
-    --color-prm-34: #6b2589;
-    --color-prm-38: #772999;
-    --color-prm-42: #842da9;
-    --color-prm-46: #9132b9;
-    --color-prm-50: #9d36c9;
-    --color-prm-54: #a546cd;
-    --color-prm-58: #ad56d2;
-    --color-prm-62: #b566d6;
-    --color-prm-66: #bc76da;
-    --color-prm-70: #c486df;
-    --color-prm-74: #cc97e3;
-    --color-prm-78: #d4a7e7;
-    --color-prm-82: #dcb7ec;
-    --color-prm-86: #e4c7f0;
-    --color-prm-90: #ebd7f4;
-    --color-prm-94: #f3e7f9;
-    --color-prm-98: #fbf7fd;
+    --background-light: #e6e6e6;
+    --surface-light: #d1d1d1;
+    --content-light: #0f0f0f;
 
-    --color-content-light: #1f0b28;
-    --color-content-dark: #f3e7f9;
+    --background-dark: #0f0f0f;
+    --surface-dark: #1c1c1c;
+    --content-dark: #e6e6e6;
 
-    --color-background-light: #fbf7fd;
-    --color-background-dark: #060208;
-
-    --color-surface-light: #f3e7f9;
-    --color-surface-dark: #1f0b28;
-
-    --color-primary: #9132b9;
-
-    --color-sec-10: #131c2a;
-    --color-sec-50: #6f7789;
-    --color-sec-70: #a3abbe;
-    --color-sec-90: #dae3f6;
+    --primary: #34A853;
 }

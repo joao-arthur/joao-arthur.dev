@@ -2,13 +2,11 @@
     "header_about": "Sobre",
     "header_portfolio": "Portifólio",
     "header_blog": "Blog",
-    "header_title_dark_theme": "Tema escuro",
-    "header_title_light_theme": "Tema claro",
-    "header_title_translate": "Língua",
-    "about_myself_title": "João Arthur",
-    "about_title": "Olá, eu sou João Arthur",
+    "dark_theme": "Tema escuro",
+    "light_theme": "Tema claro",
+    "joao_arthur": "João Arthur",
     "about_subtitle": "Desenvolvedor brasileiro de 26 anos. Há mais de 7 anos resolvendo problemas em TypeScript e NodeJS. Experiência prática com Código Limpo e Arquitetura Limpa",
-    "about_download_cv": "Baixe meu currículo aqui",
+    "about_download_cv": "Baixe meu currículo",
     "about_frontend": "Sites que se adaptam em qualquer tamanho de tela, aplicando Design Systems e integrando dados",
     "about_backend": "APIs RESTful em ecossistema cloud com microserviços",
     "about_desktop": "Aplicações desktop multiplataforma e nativas",
@@ -21,6 +19,6 @@
     "post_license": "Licença",
     "post_programming_languages": "Linguagens de programação",
     "post_technologies": "Tecnologias",
-    "dialog_title": "Língua",
-    "dialog_close": "Fechar"
+    "language": "Língua",
+    "close": "Fechar"
 }

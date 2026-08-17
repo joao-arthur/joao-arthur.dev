@@ -2,13 +2,11 @@
     "header_about": "About",
     "header_portfolio": "Portfolio",
     "header_blog": "Blog",
-    "header_title_dark_theme": "Dark theme",
-    "header_title_light_theme": "Light theme",
-    "header_title_translate": "Language",
-    "about_myself_title": "João Arthur",
-    "about_title": "Hi, I'm João Arthur",
+    "dark_theme": "Dark theme",
+    "light_theme": "Light theme",
+    "joao_arthur": "João Arthur",
     "about_subtitle": "A 26 years old brazilian developer. I've been solving problems for over 7 years using JavaScript, TypeScript and NodeJS. I apply Clean Code, Clean Architecture and Unit Tests when it is possible.",
-    "about_download_cv": "Download my curriculum here",
+    "about_download_cv": "Download my curriculum",
     "about_frontend": "Websites that adapt to any screen size, appling Design Systems and integrating data",
     "about_backend": "RESTful APIs in cloud ecosystem with microservices",
     "about_desktop": "Cross platform and native desktop applications",
@@ -21,6 +19,6 @@
     "post_license": "License",
     "post_programming_languages": "Programming languages",
     "post_technologies": "Technologies",
-    "dialog_title": "Language",
-    "dialog_close": "Close"
+    "language": "Language",
+    "close": "Close"
 }

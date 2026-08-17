@@ -31,13 +31,8 @@
         padding-right: 20px;
         height: 60px;
         border-radius: 25px;
-        background-color: var(--color-primary);
-    }
-
-    :global(.dark) {
-        div {
-            background-color: var(--color-primary);
-        }
+        color: var(--content-light);
+        background-color: var(--primary);
     }
 </style>
 

@@ -18,12 +18,25 @@
         height: 60px;
         border-radius: 25px;
         cursor: pointer;
-        background-color: var(--color-primary);
+        color: var(--content-light);
+        background-color: var(--primary);
+    }
+
+    button:hover {
+        background-color: color-mix(in srgb, var(--primary) 80%, white);
+    }
+
+    button:active {
+        background-color: color-mix(in srgb, var(--primary) 65%, white);
     }
 
     :global(.dark) {
-        button {
-            background-color: var(--color-primary);
+        button:hover {
+            background-color: color-mix(in srgb, var(--primary) 85%, black);
+        }
+
+        button:active {
+            background-color: color-mix(in srgb, var(--primary) 65%, black);
         }
     }
 </style>

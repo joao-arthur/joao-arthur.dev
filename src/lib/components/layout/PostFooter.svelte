@@ -1,8 +1,9 @@
 <script lang="ts">
     import type { Language, Post } from "$lib/src/types";
     import { m } from "$lib/src/i18n/m";
-    import P from "../design/typography/P.svelte";
     import Card from "../design/Card.svelte";
+    import P from "../design/typography/P.svelte";
+    import H4 from "../design/typography/H4.svelte";
 
     type Props = {
         readonly language: Language;
@@ -20,29 +21,52 @@
     }
 
     .container {
+        display: flex;
         padding: 10px;
+        flex-direction: column;
+    }
+
+    .content {
+        display: flex;
+        column-gap: 1.5rem;
     }
 </style>
 
 <section>
-<Card>
-<div class="container">
-    <P><b>{locale.post_created_at}</b> {post.created_at}</P>
-    <P><b>{locale.post_updated_at}</b> {post.updated_at}</P>
-    {#if post.license}
-        <P><b>{locale.post_license}</b> {post.license}</P>
-    {/if}
-    {#if post.repository}
-        <P><b>{locale.post_repository}</b> {post.repository}</P>
-    {/if}
-    {#if post.programming_languages}
-        <P>
-            <b>{locale.post_programming_languages}:</b> {post.programming_languages.join(", ")}
-        </P>
-    {/if}
-    {#if post.technologies}
-        <P><b>{locale.post_technologies}</b> {post.technologies.join(", ")}</P>
-    {/if}
-</div>
-</Card>
+    <Card>
+        <div class="container">
+            <div class="content">
+                <H4>{locale.post_created_at}</H4>
+                <P>{post.created_at}</P>
+            </div>
+            <div class="content">
+                <H4>{locale.post_updated_at}</H4>
+                <P>{post.updated_at}</P>
+            </div>
+            {#if post.license}
+                <div class="content">
+                    <H4>{locale.post_license}</H4>
+                    <P>{post.license}</P>
+                </div>
+            {/if}
+            {#if post.repository}
+                <div class="content">
+                    <H4>{locale.post_repository}</H4>
+                    <P>{post.repository}</P>
+                </div>
+            {/if}
+            {#if post.programming_languages}
+                <div class="content">
+                    <H4>{locale.post_programming_languages}</H4>
+                    <P>{post.programming_languages.join(", ")}</P>
+                </div>
+            {/if}
+            {#if post.technologies}
+                <div class="content">
+                    <H4>{locale.post_technologies}</H4>
+                    <P>{post.technologies.join(", ")}</P>
+                </div>
+            {/if}
+        </div>
+    </Card>
 </section>

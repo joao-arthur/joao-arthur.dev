@@ -12,13 +12,13 @@
         width: 100%;
         min-height: 100vh;
         justify-content: center;
-        color: var(--color-content-light);
+        color: var(--content-light);
     }
 
     div {
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        row-gap: 30px;
         max-width: 800px;
         min-width: 0px;
         flex-grow: 1 1 0;
@@ -27,10 +27,9 @@
 
     :global(.dark) {
         section {
-            color: var(--color-content-dark);
+            color: var(--content-dark);
         }
     }
-
 </style>
 
 <section>

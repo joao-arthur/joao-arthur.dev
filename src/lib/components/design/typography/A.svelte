@@ -24,6 +24,7 @@
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration-thickness: 5px;
+        color: var(--primary);
     }
 </style>
 

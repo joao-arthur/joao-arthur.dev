@@ -13,7 +13,10 @@
     }
 
     .selected {
-        color: var(--color-primary);
+        color: var(--primary);
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 5px;
     }
 </style>
 

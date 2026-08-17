@@ -18,14 +18,14 @@
         padding-bottom: 10px;
         padding: 15px 20px;
         gap: 1rem;
-        background-color: var(--color-surface-light);
-        color: var(--color-content-light);
+        background-color: var(--surface-light);
+        color: var(--content-light);
     }
 
     :global(.dark) {
         header {
-            background-color: var(--color-surface-dark);
-            color: var(--color-content-dark);
+            background-color: var(--surface-dark);
+            color: var(--content-dark);
         }
     }
 </style>

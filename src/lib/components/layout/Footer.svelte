@@ -10,13 +10,7 @@
     footer {
         width: 100%;
         padding-bottom: 2rem;
-        background-color: var(--color-surface-light);
-    }
-
-    :global(.dark) {
-        footer {
-            background-color: var(--color-surface-dark);
-        }
+        background-color: var(--surface-light);
     }
 
     nav {
@@ -27,7 +21,25 @@
     }
 
     div {
-        color: var(--color-primary);
+        color: var(--content-light);
+    }
+
+    :global(.dark) {
+        footer {
+            background-color: var(--surface-dark);
+        }
+
+        div {
+            color: var(--content-dark);
+        }
+
+        div:hover {
+            color: color-mix(in srgb, var(--primary) 50%, white);
+        }
+
+        div:active {
+            color: color-mix(in srgb, var(--primary) 70%, white);
+        }
     }
 </style>
 

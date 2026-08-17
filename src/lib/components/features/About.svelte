@@ -2,13 +2,11 @@
     import type { Language } from "$lib/src/types";
     import Card from "$lib/components/design/Card.svelte";
     import Content from "$lib/components/layout/Content.svelte";
-    import H1 from "$lib/components/design/typography/H1.svelte";
+    import H2 from "$lib/components/design/typography/H2.svelte";
     import P from "$lib/components/design/typography/P.svelte";
     import Badge from "$lib/components/design/Badge.svelte";
     import BadgeContainer from "$lib/components/design/BadgeContainer.svelte";
     import CardContent from "$lib/components/design/CardContent.svelte";
-    import H2 from "$lib/components/design/typography/H2.svelte";
-    import H3 from "$lib/components/design/typography/H3.svelte";
     import H4 from "$lib/components/design/typography/H4.svelte";
     import A from "$lib/components/design/typography/A.svelte";
     import { m } from "$lib/src/i18n/m";
@@ -25,10 +23,10 @@
     <img
         src="/images/myself.jpg"
         style="align-self: center; width: 300px; height: auto; border-radius: 30%"
-        alt={locale.about_myself_title}
-        title={locale.about_myself_title}
+        alt={locale.joao_arthur}
+        title={locale.joao_arthur}
     />
-    <H1>{locale.about_title}</H1>
+    <H2>{locale.joao_arthur}</H2>
     <P justify>{locale.about_subtitle}</P>
     <A
         href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-pt.pdf"

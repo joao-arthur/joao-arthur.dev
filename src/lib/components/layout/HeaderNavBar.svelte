@@ -37,7 +37,10 @@
         <Person size={35}></Person>
         <H2>{locale.header_about}</H2>
     </HeaderNavItem>
-    <HeaderNavItem href={`/${language}/portfolio`} selected={page.url.pathname.endsWith("portfolio")}>
+    <HeaderNavItem
+        href={`/${language}/portfolio`}
+        selected={page.url.pathname.endsWith("portfolio")}
+    >
         <Computer size={35}></Computer>
         <H2>{locale.header_portfolio}</H2>
     </HeaderNavItem>

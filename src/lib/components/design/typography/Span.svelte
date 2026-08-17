@@ -16,13 +16,6 @@
         font-size: 1.5rem;
         line-height: 2rem;
         align-items: center;
-        color: var(--color-content-light);
-    }
-
-    :global(.dark) {
-        span {
-            color: var(--color-content-dark);
-        }
     }
 </style>
 

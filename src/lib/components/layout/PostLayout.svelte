@@ -69,10 +69,6 @@
         color: #f8f8f2;
     }
 
-    :global(.namespace) {
-        opacity: 0.7;
-    }
-
     :global(.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted) {
         color: #ff79c6;
     }

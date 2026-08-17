@@ -10,12 +10,12 @@
 
 <style>
     h6 {
-        color: var(--color-content-light);
+        color: var(--content-light);
     }
 
     :global(.dark) {
         h6 {
-            color: var(--color-content-dark);
+            color: var(--content-dark);
         }
     }
 </style>

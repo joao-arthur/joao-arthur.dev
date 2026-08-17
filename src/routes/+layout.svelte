@@ -34,12 +34,12 @@
         overflow-y: auto;
         overflow-x: hidden;
         min-width: 0;
-        background-color: var(--color-background-light);
+        background-color: var(--background-light);
     }
 
     :global(.dark) {
         main {
-            background-color: var(--color-background-dark);
+            background-color: var(--background-dark);
         }
     }
 
