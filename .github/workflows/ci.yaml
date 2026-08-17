@@ -11,6 +11,8 @@ jobs:
             - uses: pnpm/setup@v2
               with:
                   cache: true
+                  install: false
+            - run: pnpm install --frozen-lockfile
             - run: pnpm build
             - uses: peaceiris/actions-gh-pages@v4
               with:
