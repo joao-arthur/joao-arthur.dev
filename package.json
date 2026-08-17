@@ -4,6 +4,9 @@
     "version": "1.0.0",
     "private": true,
     "type": "module",
+    "devEngines": {
+        "runtime": { "name": "node", "version": ">=26.0.0", "onFail": "download" }
+    },
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
