@@ -21,7 +21,7 @@ importers:
         specifier: 0.12.8
         version: 0.12.8(svelte@5.56.9)
       node:
-        specifier: runtime:>=26.0.0
+        specifier: runtime:>=26.7.0
         version: runtime:26.7.0
       svelte:
         specifier: 5.56.9
