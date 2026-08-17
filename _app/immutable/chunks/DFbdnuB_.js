@@ -1,0 +1,1 @@
+import{$ as e,C as t,P as n,R as r,a as i,d as a,et as o,m as s,u as c,x as l}from"./B6dmbj3G.js";import"./xihTtKlq.js";var u=t(`<p><!></p>`);function d(t,d){let f=i(d,`justify`,3,!1);var p=u(),m=r(p);s(m,()=>d.children??o),e(p),n(()=>c(p,1,a(f()?`justify`:``),`svelte-coaxdh`)),l(t,p)}export{d as t};

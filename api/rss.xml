@@ -6,17 +6,17 @@
 <link>https://github.com/josh-collinsworth/sveltekit-blog-starter</link>
 <atom:link href="https://joao-arthur.dev/api/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
-<guid isPermaLink="true">https://joao-arthur.dev/blog/architecture-and-market</guid>
-<title>Clean Architecture, DDD And Market</title>
-<link>https://joao-arthur.dev/blog/architecture-and-market</link>
-<description>undefined</description>
-<pubDate>Invalid Date</pubDate>
-</item><item>
 <guid isPermaLink="true">https://joao-arthur.dev/blog/interfaces</guid>
 <title>Interfaces</title>
 <link>https://joao-arthur.dev/blog/interfaces</link>
-<description>undefined</description>
-<pubDate>Invalid Date</pubDate>
+<description>Is there a way to make a big project easy to implement, easy to test and type-safe?</description>
+<pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://joao-arthur.dev/blog/architecture-and-market</guid>
+<title>Clean Architecture, DDD And Market</title>
+<link>https://joao-arthur.dev/blog/architecture-and-market</link>
+<description>Reusable architecture has proven to be powerful. Why does nobody use it?</description>
+<pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

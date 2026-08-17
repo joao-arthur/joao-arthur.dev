@@ -1,0 +1,1 @@
+import{$ as e,C as t,P as n,R as r,a as i,d as a,et as o,l as s,m as c,u as l,x as u}from"./B6dmbj3G.js";import"./xihTtKlq.js";var d=t(`<a><!></a>`);function f(t,f){let p=i(f,`target`,3,void 0),m=i(f,`decorated`,3,!1);var h=d(),g=r(h);c(g,()=>f.children??o),e(h),n(()=>{s(h,`href`,f.href),s(h,`target`,p()),l(h,1,a(m()?`decorated`:``),`svelte-ztd5oy`)}),u(t,h)}export{f as t};

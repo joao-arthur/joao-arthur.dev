@@ -1,0 +1,1 @@
+import{L as e,N as t,f as n}from"../chunks/B6dmbj3G.js";import"../chunks/xihTtKlq.js";import"../chunks/BqhHGllz.js";import{t as r}from"../chunks/Gn-GehKe.js";function i(i){n(`fvpr6m`,n=>{t(()=>{e.title=`Sobre | João Arthur`})}),r(i,{language:`pt-BR`})}export{i as component};
