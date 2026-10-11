@@ -29,8 +29,9 @@
     <H2>{locale.joao_arthur}</H2>
     <P justify>{locale.about_subtitle}</P>
     <A
-        href="https://github.com/joao-arthur/aboutme.md/releases/latest/download/curriculum-joao-arthur-pt.pdf"
+        href={`https://github.com/joao-arthur/Joao-Arthur/releases/download/v1.0.0/cv_${language}.pdf`}
         target="_blank"
+        download="CV João Arthur"
         decorated
     >
         <H4>{locale.about_download_cv}</H4>

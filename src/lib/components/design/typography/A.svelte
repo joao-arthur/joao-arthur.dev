@@ -6,9 +6,16 @@
         readonly href: string;
         readonly target?: "_blank";
         readonly decorated?: boolean;
+        readonly download?: string;
     };
 
-    const { children, href, target = undefined, decorated = false }: Props = $props();
+    const {
+        children,
+        href,
+        target = undefined,
+        decorated = false,
+        download,
+    }: Props = $props();
 </script>
 
 <style>
@@ -28,6 +35,6 @@
     }
 </style>
 
-<a {href} {target} class={decorated ? "decorated" : ""}>
+<a {href} {target} class={decorated ? "decorated" : ""} {download}>
     {@render children?.()}
 </a>
